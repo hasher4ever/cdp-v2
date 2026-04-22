@@ -69,6 +69,8 @@ If an existing non-domain test already covers a section end-to-end (e.g. `udaf-l
 
 ### Step 1A: API Reference Freshness
 
+**Prologue — env gate.** Run `npm run qa:env` first. If exit code is 1 (backend DOWN), halt the whole run and report env.json's failing checks. No point writing domain tests against a broken backend.
+
 CDP uses REST, not GraphQL. The authoritative surface map is `docs/API-REFERENCE.md` (77+ endpoints) — **do not regenerate it automatically**; it's maintained by humans. Only check:
 
 1. It exists. If missing, halt and tell the user to restore it from git.
@@ -234,6 +236,14 @@ Use Bash tool timeout `120000` (2 min) per memory entry "Test Run Timeout". If t
 
 **CRITICAL: Parse JSON output only.** Read `reports/domain-scenarios-result.json`. Never parse terminal output.
 
+**Then run the triage wrapper for deterministic pass/fail classification:**
+
+```bash
+npm run qa:triage
+```
+
+The wrapper writes `reports/triage.json` with `{verdict: PASS|WARN|FAIL, summary: {passed, failed, unexpected_failures[], expected_failures[]}}`. It reconciles failures against `reports/expected-failures.json` so known-bug failures don't poison the verdict. Downstream logic should consume `reports/triage.json`, NOT grep raw vitest output.
+
 ### Step 3B: Triage Failures
 
 | Failure Type | Detection | Action |
@@ -267,6 +277,14 @@ Append to `reports/QA_WRITE_LOG.md` — see `references/qa-output-templates.md` 
 - Files written table (path, tests added, pass/fail)
 
 Append one row to `reports/SKILL_STATS.md`.
+
+**Closeout snapshot.** After logging, run:
+
+```bash
+npm run qa:finished
+```
+
+This writes `reports/closeout.json` with git state, report verdicts, modified files, and a punchlist — used by `/finished` to author the final narrative.
 
 ---
 

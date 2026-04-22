@@ -6,6 +6,7 @@
 
 | Document | Purpose | Audience |
 |----------|---------|----------|
+| [QA Pipeline](QA-PIPELINE.md) | QA tooling architecture — scripts, wrappers, skills, report contracts, npm commands | QA engineers, AI |
 | [QA Handbook](QA-HANDBOOK.md) | Onboarding, architecture, environment setup, key concepts, style | New QA engineers |
 | [Auth](AUTH.md) | Correct auth flow, gotchas, .env setup | QA, developers, AI |
 | [Bug Triage](BUG-TRIAGE.md) | Triage rules, bug ID policy, report template | QA engineers, AI |
@@ -44,3 +45,4 @@
 - **UI change** → update Russian labels in [Manual Frontend Testing](MANUAL-FRONTEND-TESTING.md)
 - **New feature** → add section to [Regression Checklist](REGRESSION-CHECKLIST.md) + [Test Cases](TEST-CASES.md) + [Manual Frontend Testing](MANUAL-FRONTEND-TESTING.md)
 - **Architecture change** → update [QA Handbook](QA-HANDBOOK.md)
+- **QA tooling change** (new script/wrapper, contract change, npm script) → update [QA Pipeline](QA-PIPELINE.md) and run `npm run qa:self` to verify trilogy consistency

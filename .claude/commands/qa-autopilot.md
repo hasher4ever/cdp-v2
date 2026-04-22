@@ -76,8 +76,9 @@ ORCHESTRATOR (~3K tokens per cycle)
 3. Read last `reports/.autopilot-journal-s{N-1}.md` (limit: 40) — previous session's findings and recommendations
 4. **Increment Improvement Tracker.** For every OPEN item in the tracker, increment `Sessions Since` by 1. This happens once per session, unconditionally — it tracks how long issues have been open.
 5. **Pre-flight cleanup:** rm test-results/
-6. **Env check:** 3 curls inline (signin + health + tenant check). If DOWN, abort.
-7. Note session number. If session % 3 == 0 → self-improvement phase in ITERATE step (expanded).
+6. **Env check:** `npm run qa:env` (deterministic — reads `reports/env.json`). Exit code is 1 if backend is DOWN: abort the session. No more inline curls here.
+7. **Next-action hint:** `npm run qa:next` — writes `reports/next.json`. If `top.severity === "BLOCKER"` and the action is not addressed by this session's thesis, the thesis MUST include it. This replaces ad-hoc "what do I tackle first" judgment with a deterministic decision-tree output.
+8. Note session number. If session % 3 == 0 → self-improvement phase in ITERATE step (expanded).
 
 Announce: *"Autopilot v4. Session {N}. Env: {status}."*
 
@@ -165,8 +166,8 @@ Analyze all test results from /qa-autopilot Session {N}.
 
 READ:
 - reports/.autopilot-state.md § Cycle Log (this session only)
-- Any test result files from this session
-- bugs.md (limit: 20 — for cross-referencing)
+- `reports/triage.json` — deterministic pass/fail/new-regression inventory for this session's test runs (produced by `npm run qa:triage`, no LLM needed to classify)
+- `reports/bugs-mechanical.json` — structured bug ledger (from `npm run qa:bugs`); use this instead of re-reading bugs.md
 
 ANALYZE — don't just classify failures. Answer:
 1. PATTERNS: Do failures cluster in one area? What does that tell us?
@@ -313,8 +314,8 @@ PROPOSALS: {max 5 actionable items}
 Rollback guard for auto-fixes:
 1. Copy the file before editing: `cp {file} {file}.bak`
 2. Apply the fix
-3. Run `/qa-self --structural` on just that file
-4. If structural check fails → restore from .bak
+3. Run `npm run qa:self` — deterministic structural + contract audit, exits 0 on PASS/WARN, 1 on FAIL
+4. If qa:self exits 1 OR any FAIL finding newly mentions the edited file → restore from .bak
 5. Clean up .bak files after verification
 
 **Budget cap:** Self-improvement uses at most 3 of the 12 cycles. Meta-work must not starve real work.
@@ -374,12 +375,16 @@ Spawn a **Sonnet sub-agent** to write:
 - Improvement Tracker (updated)
 - Handoff notes referencing journal
 
-#### 3. Regenerate reports
+#### 3. Closeout snapshot + regenerate reports
 
 ```bash
+npm run qa:finished        # writes reports/closeout.json — deterministic git+verdict+punchlist snapshot
+npm run qa:self --strict   # verify script/wrapper/report trilogy; exit 1 if drifted
 npm run report:bugs
 npm run report:dashboard
 ```
+
+The journal's `## Metrics` and `## Improvement Tracker Updates` sections should cite `reports/closeout.json` verdicts directly — no re-probing needed. If `qa:self` exits 1, add an IMP-{N} tracker entry for the drift before closing the session.
 
 Print: *"Session {N} complete. Journal: reports/.autopilot-journal-s{N}.md"*
 

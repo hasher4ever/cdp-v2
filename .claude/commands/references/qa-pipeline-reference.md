@@ -1,175 +1,146 @@
-# QA Pipeline Reference (Static)
+# QA Pipeline Reference
 
-> This file is read ONLY during Tier 3 (full rescan) of `/qa-next`.
-> It contains the pipeline graph, skill inventory, dependency rules, and output templates.
+> Canonical map of the QA tooling. Read this (or `docs/QA-PIPELINE.md`) whenever you need the full layout.
 
-## Pipeline Graph (22 QA skills)
+## Pipeline graph
 
 ```
-DISCOVERY TRACK (what exists on each page)
-  /qa-env → /website-crawl → /qa-crawl → /qa-write (L1-L2) → /qa-triage
-                                 |              ^
-                                 +-→ /ux-audit -+ (reads UX findings for priority)
+ENV GATE
+  npm run qa:env  -> reports/env.json  (overall: UP | DEGRADED | DOWN)
 
-FLOW TRACK (how data moves between pages)
-  /qa-flows --explore → /qa-flows --review → /qa-write (L3-L4)
-                        (human answers)       (data flow tests)
-       |                                 ^
-       +-→ /qa-probe -------------------+ (component recipes)
-       |
-       +-→ /qa-synthesize --------------+ (doc-derived flows, no browser)
+DISCOVERY / COVERAGE
+  npm run qa:crawl -> reports/coverage.json (files, endpoints, bugCoverage, summary)
 
-DOMAIN TRACK (backend + E2E from business logic)
-  /qa-domain-tests → tests_business/domain-*.test.ts
-  /qa-domain-e2e   → tests/specs/workflows/*.spec.ts
+AUTHORING (LLM)
+  /qa-write          -> tests_business/*.test.ts, tests_backend/*.test.ts
+  /qa-domain-tests   -> tests_business/domain-*.test.ts
+  /qa-spec           -> shift-left testability review (console)
 
-RELEASE TRACK (deploy readiness)
-  /qa-triage → /qa-perf → /qa-gate → PASS/WARN/FAIL verdict
+TEST RUN
+  npm run test:backend + npm run test:business
+  npm run qa:triage  -> reports/triage.json (verdict, summary, expected_failures)
 
-SCORING & ORCHESTRATION
-  /qa-health, /qa-next, /qa-self, /qa-nightshift
+INVENTORY
+  npm run qa:bugs    -> reports/bugs-mechanical.json (bugs, totals, issues, coverage)
 
-SHIFT-LEFT (before code is written)
-  /qa-spec → reviews specs/tickets for testability before implementation
+PERFORMANCE
+  npm run qa:perf            -> reports/perf.json  (verdict, diff[])
+  npm run qa:perf:baseline   -> resets baseline
 
-SESSION CLEANUP
-  /finished → end-of-session: updates CLAUDE.md, memory, logs skill edits
+SCORING + NEXT
+  npm run qa:health  -> reports/health.json (verdict, composite)
+  npm run qa:next    -> reports/next.json   (actions[], inputs)
 
-AUTONOMOUS (full pipeline in one loop)
-  /qa-autopilot → dispatches sub-agents from all tracks + files bugs + brainstorms
+RELEASE GATE
+  npm run qa:gate    -> console PASS/WARN/FAIL
 
-UTILITIES
-  /qa-bugs → formalizes session findings into 3-file bug system
-  /qa-skill-factory → meta-skill for creating/refactoring QA skills
+META
+  npm run qa:self     -> reports/self.json (tooling trilogy audit)
+  npm run qa:finished -> reports/closeout.json (session snapshot + punchlist)
+
+ORCHESTRATION (LLM)
+  /qa-autopilot       -> consumes env.json, triage.json, bugs-mechanical.json, next.json
+  /finished           -> reads closeout.json, authors narrative memory / skill improvements
 ```
 
-## Skill Inventory
+## Active entry points
 
-| # | Skill | Track | Output |
-|---|-------|-------|--------|
-| 1 | /website-crawl | Discovery | `page_crawl/` |
-| 2 | /qa-crawl | Discovery | `reports/QA_COVERAGE.md`, `qa_coverage/` |
-| 3 | /ux-audit | Discovery | `reports/UX_AUDIT.md`, `ux_audit/` |
-| 4 | /qa-write | Discovery+Flow | `reports/QA_WRITE_LOG.md`, `tests/specs/` |
-| 5 | /qa-triage | Discovery | `reports/QA_TRIAGE_REPORT.md` |
-| 6 | /qa-flows | Flow | `data_flows/index.md`, `data_flows/discovered-*.md` |
-| 7 | /qa-probe | Flow | `component_recipes/_index.md` |
-| 8 | /qa-synthesize | Flow | `data_flows/synthesized-*.md` |
-| 9 | /qa-nightshift | Flow | `tests/specs/` |
-| 10 | /qa-domain-tests | Domain | `tests_business/domain-*.test.ts` |
-| 11 | /qa-domain-e2e | Domain | `tests/specs/workflows/*.spec.ts` |
-| 12 | /qa-health | Scoring | Alias for /qa-next (health focus) |
-| 13 | /qa-self | Meta | (console) |
-| 14 | /qa-autopilot | Autonomous | full pipeline loop + bugs + brainstorm |
-| 15 | /qa-bugs | Utility | `bugs.md`, `bugs_journeys.md`, `bugs-data.ts` |
-| 16 | /qa-skill-factory | Meta | (guides new skill creation) |
-| 17 | /qa-gate | Release | `reports/release-gate-{date}.md` |
-| 18 | /qa-env | Infra | (console — env health status) |
-| 19 | /qa-perf | Release | `reports/perf-baseline.md` |
-| 20 | /qa-next | Orchestration | `state.md`, recommendations |
-| 21 | /qa-spec | Shift-left | (console — spec quality review) |
-| 22 | /finished | Meta | session cleanup, updates CLAUDE.md + memory |
+| Path | Purpose |
+|------|---------|
+| `/qa-env`       | thin wrapper -> npm run qa:env |
+| `/qa-triage`    | thin wrapper -> npm run qa:triage |
+| `/qa-perf`      | thin wrapper -> npm run qa:perf |
+| `/qa-health`    | thin wrapper -> npm run qa:health |
+| `/qa-next`      | thin wrapper -> npm run qa:next |
+| `/qa-crawl`     | thin wrapper -> npm run qa:crawl |
+| `/qa-bugs`      | thin wrapper -> npm run qa:bugs |
+| `/qa-gate`      | thin wrapper -> npm run qa:gate |
+| `/qa-self`      | thin wrapper -> npm run qa:self |
+| `/qa-finished`  | thin wrapper -> npm run qa:finished |
+| `/finished`     | routing wrapper: runs qa:finished then delegates to legacy narrative |
+| `/qa-autopilot` | full autonomous loop; consumes all reports |
+| `/qa-domain-tests` | domain-driven backend test writer |
+| `/qa-write`     | L1/L2 page-driven test writer |
+| `/qa-spec`      | shift-left spec review |
+| `/qa-synthesize` | doc-derived flow synthesis |
+| `/qa-skill-factory` | meta-skill for creating/refactoring QA skills |
 
-## Reference Files
+## Legacy narrative companions (`.claude/commands/legacy/`)
 
-| File | Loaded By | Content |
-|------|-----------|---------|
-| `references/qa-pipeline-reference.md` | /qa-next (Tier 3) | Pipeline graph, dependencies, priorities |
-| `references/qa-shared-rules.md` | All QA skills (on-demand) | Selector rules, verify-first, bug docs, context hygiene, quality standards |
-| `references/qa-output-templates.md` | Skills that write output files | All markdown templates (journal, coverage, triage, flows, health) |
-| `references/qa-crawl-extensions.md` | /qa-crawl (--api/--rules/--docs) | API drift, business rule, docs freshness scan procedures |
+Invoked explicitly when authoring / judgment is needed; not on the critical path.
 
-## File Ownership (parallel-safe)
+| File | When to use |
+|------|-------------|
+| `finished-narrative.md` | Step 2 of `/finished` — author memory, log skill mods, update CLAUDE.md |
+| `qa-bugs-narrative.md`  | Draft a new BUG-NNN entry with curl repro (starts from `issues.nextFreeId`) |
+| `qa-self-narrative.md`  | Behavioral-regression or strategic trend pass after skill edits |
+| `qa-{crawl,env,gate,health,next,perf,triage}.md` | Original LLM-driven versions, preserved for reference only |
 
-Each output file has ONE writer. Other skills read only. Prevents corruption when skills run concurrently.
+## Parked skills (`.claude/commands/parked/`)
 
-| File | Writer (ONLY) | Readers |
-|------|--------------|---------|
-| `page_crawl/{page}.md` | /website-crawl | qa-crawl, ux-audit, qa-write, qa-probe |
-| `reports/QA_COVERAGE.md` | /qa-crawl | qa-write, qa-next, qa-health, qa-gate |
-| `qa_coverage/{page}.md` | /qa-crawl | qa-write, qa-next |
-| `reports/UX_AUDIT.md` | /ux-audit | qa-health, qa-next, qa-gate |
-| `ux_audit/{page}.md` | /ux-audit | qa-write, qa-health |
-| `reports/QA_WRITE_LOG.md` | /qa-write (owner, full rewrite of architecture sections); /qa-triage, /qa-domain-tests, /qa-domain-e2e (append-only Run History + Failing Tests rows) | qa-next, qa-nightshift, qa-gate |
-| `reports/QA_TRIAGE_REPORT.md` | /qa-triage | qa-next, qa-gate, qa-bugs |
-| `reports/QA_HEALTH.md` | /qa-next (health mode), /qa-health | qa-gate |
-| `reports/SKILL_STATS.md` | /qa-domain-tests (append-only) | /qa-self |
-| `data_flows/.nightshift-summary-*.md` | /qa-nightshift | human, qa-next |
-| `bugs.md` | /qa-bugs | qa-health, qa-next, qa-gate, qa-triage |
-| `bugs_journeys.md` | /qa-bugs | (human reading) |
-| `tests_backend/src/bugs-data.ts` | /qa-bugs | npm run report:bugs |
-| `data_flows/discovered-*.md` | /qa-flows (--explore) | qa-flows (--review), qa-nightshift, qa-domain-e2e, qa-write |
-| `data_flows/synthesized-*.md` | /qa-synthesize | qa-nightshift, qa-domain-e2e, qa-write |
-| `data_flows/{human-slug}.md` | /qa-flows (--interview/--review only, sets `source: human`) | qa-nightshift, qa-domain-e2e, qa-write |
-| `data_flows/index.md` | /qa-flows, /qa-synthesize (append-only; each adds rows for its own files) | all flow readers |
-| `component_recipes/` | /qa-probe | qa-domain-e2e, qa-write |
-| `state.md` | /qa-next | qa-autopilot, qa-gate, qa-write |
-| `reports/.autopilot-state.md` | /qa-autopilot | qa-autopilot (next session) |
-| `reports/release-gate-*.md` | /qa-gate | (human reading) |
-| `reports/skill-improvements.md` | /qa-autopilot (Step 6), /qa-self | Human reviews periodically |
-| `reports/.autopilot-history.md` | /qa-autopilot (Step 6a) | /qa-autopilot self-improvement |
-| `reports/perf-baseline.md` | /qa-perf | qa-gate |
-| `tests/specs/*.spec.ts` | /qa-write, /qa-nightshift | qa-triage |
-| `tests/specs/workflows/*.spec.ts` | /qa-domain-e2e | qa-triage |
-| `tests_business/domain-*.test.ts` | /qa-domain-tests | qa-triage |
+Flow/browser-oriented skills not on the current pipeline. See `.claude/commands/parked/README.md` for reactivation notes. Files: `qa-flows`, `qa-domain-e2e`, `qa-nightshift`, `qa-probe`, `website-crawl`, `ux-audit`.
 
-**Handoff files** (produced by one skill specifically for another):
+## Report contracts (enforced by `qa-self`)
 
-| From | To | Via |
-|------|----|-----|
-| /qa-triage | /qa-bugs | `reports/QA_TRIAGE_REPORT.md` § Regressions table |
-| /qa-domain-tests | /qa-bugs | Test comments `// §{N} FINDING:` in scenario files |
+| File | Required keys |
+|------|---------------|
+| `env.json` | overall, checks |
+| `triage.json` | verdict, summary |
+| `perf.json` | verdict, diff |
+| `health.json` | verdict |
+| `next.json` | actions, inputs |
+| `coverage.json` | files, endpoints, summary |
+| `bugs-mechanical.json` | bugs, totals, issues |
+| `expected-failures.json` | entries |
+| `self.json` | verdict, counts, findings, inventory |
+| `closeout.json` | git, reports, modified, punchlist |
 
-## Dependency Rules
+## Writer ownership (parallel-safe)
 
-| Downstream | Prerequisite | Check |
-|-----------|-------------|-------|
-| /qa-crawl | /website-crawl | page_crawl/{page}.md must exist |
-| /ux-audit | /website-crawl | page_crawl/{page}.md must exist |
-| /qa-write L1-L2 | /qa-crawl | qa_coverage/{page}.md must exist |
-| /qa-triage | /qa-write | QA_WRITE_LOG.md must exist |
-| /qa-flows --review | /qa-flows --explore | data_flows/index.md has discovered entries |
-| /qa-write L3-L4 | /qa-flows --review | data_flows/index.md has validated: true |
-| /qa-nightshift | /qa-flows --review | validated flows required |
-| /qa-domain-e2e | /qa-flows --review + /qa-probe | validated flows + recipes |
-| /qa-domain-tests | docs/BACKEND-SPEC.md | always available |
+Each report file has exactly one writer. Other tools read only.
 
-## Recommendation Priority (highest first)
+| File | Writer |
+|------|--------|
+| `reports/env.json`              | scripts/qa-env.ts |
+| `reports/triage.json`           | scripts/qa-triage.ts |
+| `reports/perf.json`             | scripts/qa-perf.ts |
+| `reports/health.json`           | scripts/qa-health.ts |
+| `reports/next.json`             | scripts/qa-next.ts |
+| `reports/coverage.json`         | scripts/qa-crawl.ts |
+| `reports/bugs-mechanical.json`  | scripts/qa-bugs.ts |
+| `reports/expected-failures.json`| scripts/qa-triage.ts (bootstrap) + scripts/qa-annotate-ef.ts |
+| `reports/self.json`             | scripts/qa-self.ts |
+| `reports/closeout.json`         | scripts/qa-finished.ts |
+| `reports/QA_WRITE_LOG.md`       | /qa-write (owner); /qa-domain-tests, /qa-triage (append-only rows) |
+| `reports/skill-improvements.md` | /finished narrative, /qa-self-narrative |
+| `bugs.md`                       | /qa-bugs-narrative (authoring) |
 
-1. No page-crawl data -> `/website-crawl`
-2. No flow data -> `/qa-flows --explore`
-3. Pages crawled, no qa-crawl -> `/qa-crawl`
-4. Flows discovered, not reviewed -> `/qa-flows --review`
-5. Coverage gaps, no L1-L2 tests -> `/qa-write`
-6. Validated flows, no L3-L4 -> `/qa-nightshift`
-7. No backend domain tests -> `/qa-domain-tests`
-8. Validated flows + recipes, no domain E2E -> `/qa-domain-e2e`
-9. Complex components not probed -> `/qa-probe`
-10. No ux-audit -> `/ux-audit`
-11. No qa-health -> `/qa-health`
-12. Tests exist, never triaged -> `/qa-triage`
-13. Stale crawl (>7 days) -> reminder
-14. Skills modified since /qa-self -> `/qa-self`
-15. Bug docs incomplete -> review bugs.md
-16. All caught up -> pipeline current
+## Dependency rules
 
-## Staleness Thresholds
+| Downstream | Prerequisite |
+|-----------|-------------|
+| qa:gate     | qa:env PASS, qa:triage reports present, qa:perf reports present |
+| qa:health   | qa:triage, qa:perf, qa:bugs |
+| qa:next     | qa:health (and any fresh inputs) |
+| qa:finished | nothing — runs on whatever the session produced |
+| qa:self     | nothing — audits the tooling itself |
+| /qa-autopilot | qa:env PASS before writing/running tests |
+| /qa-domain-tests | qa:env PASS; docs/BACKEND-SPEC.md present |
 
-| Condition | Status |
-|-----------|--------|
-| File doesn't exist | **Never run** |
-| >7 days old | **Stale** |
-| 3-7 days old | **Aging** |
-| <3 days old | **Fresh** |
-| Some pages done | **Partial** |
+## Exit code policy
 
-## Quality Gates
+| Code | Meaning |
+|------|---------|
+| 0 | PASS, or WARN without `--strict` |
+| 1 | FAIL, or WARN with `--strict` |
+| 2 | Script error (thrown exception, unreadable input) |
 
-| Gate | Source | Target |
-|------|--------|--------|
-| Element coverage | reports/QA_COVERAGE.md | >90% |
-| Flow validation | data_flows/index.md | 100% validated |
-| Bug curl quality | bugs.md | 100% have curls |
-| P1 UX issues | reports/UX_AUDIT.md | 0 |
-| Failing tests | reports/QA_WRITE_LOG.md | tracked |
-| Page health grades | reports/QA_HEALTH.md | 0 at C or below |
+## Self-audit (trilogy consistency)
+
+`npm run qa:self` runs on every change to `scripts/qa-*.ts`, `scripts/skill-wrappers/*.md`, or an `qa:*` npm script. Checks:
+
+1. Every `qa:*` npm command resolves to an existing script OR composite.
+2. Every first-class script has a wrapper in `scripts/skill-wrappers/` and an activated copy in `.claude/commands/`.
+3. Every wrapper has valid frontmatter matching its filename.
+4. Every canonical `reports/*.json` parses and carries its required keys.
+5. Expected-failures debt ratio stays below 50%.
