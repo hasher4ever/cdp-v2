@@ -1,0 +1,39 @@
+{
+  "name": "cdp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:backend": "vitest run",
+    "test:backend:watch": "vitest watch",
+    "test:backend:ui": "vitest --ui",
+    "test:e2e": "npx playwright test",
+    "test:e2e:headed": "npx playwright test --headed",
+    "test:e2e:ui": "npx playwright test --ui",
+    "test:e2e:report": "npx playwright show-report",
+    "test:business": "vitest run --config vitest.business.config.ts",
+    "test:all": "npm run test:backend && npm run test:business && npm run test:e2e",
+    "report:generate": "npx allure generate allure-results --clean -o allure-report",
+    "report:open": "npx allure open allure-report",
+    "report": "npm run report:generate && npm run report:open",
+    "report:bugs": "npx tsx scripts/generate-report.ts",
+    "report:dashboard": "npx tsx scripts/generate-qa-dashboard.ts",
+    "test:udaf:diagnostic": "npx tsx scripts/udaf-timing-diagnostic.ts",
+    "test:udaf:setup": "npx tsx scripts/udaf-phase1-setup.ts",
+    "test:udaf:assert": "vitest run --config vitest.udaf-phase2.config.ts",
+    "cleanup:udafs": "npx tsx scripts/cleanup-test-udafs.ts",
+    "cleanup:udafs:dry": "npx tsx scripts/cleanup-test-udafs.ts --dry-run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "allure-commandline": "^2.38.1",
+    "allure-vitest": "^3.6.0",
+    "dotenv": "^17.3.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  }
+}

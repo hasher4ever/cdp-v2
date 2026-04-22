@@ -1,0 +1,82 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Панель управления" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+          - generic [ref=e9]: Панель управления
+        - generic [ref=e10]:
+          - paragraph [ref=e11]: Данные
+          - generic [ref=e12]:
+            - link "Клиенты" [ref=e13] [cursor=pointer]:
+              - /url: /data/clients
+              - img [ref=e14]
+              - generic [ref=e16]: Клиенты
+            - button "События" [ref=e17] [cursor=pointer]:
+              - img [ref=e18]
+              - generic [ref=e20]: События
+            - link "Сценарий" [ref=e21] [cursor=pointer]:
+              - /url: /data/scenario
+              - img [ref=e22]
+              - generic [ref=e24]: Сценарий
+            - link "Файлы" [ref=e25] [cursor=pointer]:
+              - /url: /data/files
+              - img [ref=e26]
+              - generic [ref=e30]: Файлы
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: Маркетинг
+          - generic [ref=e33]:
+            - link "Агрегаты" [ref=e34] [cursor=pointer]:
+              - /url: /marketing/aggregate
+              - img [ref=e35]
+              - generic [ref=e48]: Агрегаты
+            - link "Сегменты" [ref=e49] [cursor=pointer]:
+              - /url: /marketing/segments
+              - img [ref=e50]
+              - generic [ref=e53]: Сегменты
+            - link "Рассылки" [ref=e54] [cursor=pointer]:
+              - /url: /marketing/campaigns
+              - img [ref=e55]
+              - generic [ref=e57]: Рассылки
+            - link "Коммуникации" [ref=e58] [cursor=pointer]:
+              - /url: /marketing/communication
+              - img [ref=e59]
+              - generic [ref=e61]: Коммуникации
+        - generic [ref=e62]:
+          - paragraph [ref=e63]: Аналитика
+          - link "Статистика полей" [ref=e65] [cursor=pointer]:
+            - /url: /statistics/field
+            - img [ref=e66]
+            - generic [ref=e91]: Статистика полей
+      - generic [ref=e92]:
+        - separator [ref=e93]
+        - generic [ref=e95]:
+          - generic [ref=e97]: c
+          - paragraph [ref=e98] [cursor=pointer]: cdp_1762934640267
+    - generic [ref=e103]:
+      - paragraph [ref=e106]: Клиенты
+      - separator [ref=e107]
+      - generic [ref=e108]:
+        - button "Сбросить фильтры" [ref=e109] [cursor=pointer]:
+          - generic [ref=e111]: Сбросить фильтры
+        - button "Фильтры" [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]:
+            - img [ref=e115]
+            - generic [ref=e117]: Фильтры
+        - button "Добавить столбцы" [ref=e118] [cursor=pointer]:
+          - generic [ref=e120]: Добавить столбцы
+      - generic:
+        - generic:
+          - table:
+            - rowgroup:
+              - row
+            - rowgroup
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - paragraph [ref=e123]: "Всего:"
+          - generic [ref=e125]: "0"
+        - generic [ref=e128]:
+          - textbox [ref=e129] [cursor=pointer]: "10"
+          - generic:
+            - img
+  - region "Notifications Alt+T"

@@ -1,0 +1,2301 @@
+openapi: "3.0.3"
+info:
+  title: "CDP Cluster management project"
+  version: "0.0.1"
+  description: "Cluster management API doc"
+servers: []
+tags:
+  - name: auth
+  - name: tenant
+  - name: schema
+  - name: admin
+  - name: udafs
+  - name: segmentation
+  - name: field
+  - name: commchan
+  - name: campaign
+paths:
+  /api/tenants/schema/draft-schema/status:
+    get:
+      tags:
+        - "tenant"
+        - "schema"
+      summary: "Get Number of changes need to be applyed"
+      description: "This api returns number of commands should be run to the backend"
+      operationId: "getPlanDraftStatus"
+      responses:
+        '409': {'$ref': '#/components/responses/StandardError'}
+        '200':
+          description: "Successfully draft was applied"
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [numberOfChanges]
+                properties:
+                  numberOfChanges: {type: integer,  nullable: false}
+  /api/tenants/schema/draft-schema/cancel:
+    delete:
+      tags:
+        - "schema"
+      summary: "Cancel Drafted changes"
+      description: "cancel and delete all drafted changes"
+      operationId: "cancelDraftSchema"
+      responses:
+        '409': {'$ref': '#/components/responses/StandardError'}
+        '200':
+          description: "drafted data successfully deleted"
+
+  /api/tenants/schema/draft-schema/apply:
+    post:
+      tags:
+        - "schema"
+      summary: "Apply Drafted changes"
+      description: "Will be used to aplly draft changes to schema"
+      operationId: "applyDraftPlan"
+      responses:
+        '409': {'$ref': '#/components/responses/StandardError'}
+        '200':
+          description: "Successfully draft was applied"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/IdItemUUID'
+
+  /api/tenants/schema/events/validate-api-name/{eventTypeId}:
+    post:
+      tags:
+        - "schema"
+      summary: "Validate api name of customer field"
+      operationId:  validateEventApiNameField
+      description:  "Validates ApiName of Customer Fields for create or update"
+      parameters:
+        - in: query
+          name: update_id
+          required: false
+          schema:
+            type: string
+            format: uuid
+            description:  "currently updating customer id, in order to exclude old value from validition"
+        - in: query
+          name: api_name
+          required: true
+          schema:
+            type: string
+            pattern: "^[a-z0-9]+([\\_a-z0-9]+)*$"
+            minLength: 3
+            maxLength: 255
+            nullable: false
+            description:  "api name should be in lower cases and should start with only latter, checkout pattern"
+        - in: path
+          name: eventTypeId
+          schema: {type: integer}
+          required: true
+          description: 'event type id (not uid)'
+      responses:
+        '200':
+          description: "Customer field validation completed"
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [valid, message]
+                properties:
+                  valid: {type: boolean}
+                  message: {type: string}
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+  /api/tenants/schema/customers/validate-api-name:
+    post:
+      tags:
+        - "schema"
+      summary: "Validate api name of customer field"
+      operationId:  validateCustomerApiNameField
+      description:  "Validates ApiName of Customer Fields for create or update"
+      parameters:
+        - in: query
+          name: update_id
+          required: false
+          schema:
+            type: string
+            format: uuid
+            description:  "currently updating customer id, in order to exclude old value from validition"
+        - in: query
+          name: api_name
+          required: true
+          schema:
+            type: string
+            pattern: "^[a-z0-9]+([\\_a-z0-9]+)*$"
+            minLength: 3
+            maxLength: 255
+            nullable: false
+            description:  "api name should be in lower cases and should start with only latter, checkout pattern"
+      responses:
+        '200':
+          description: "Customer field validation completed"
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [valid, message]
+                properties:
+                  valid: {type: boolean}
+                  message: {type: string}
+        '409': { '$ref': '#/components/responses/StandardError' }
+  /api/tenants/schema/customers/fields:
+    get:
+      tags:
+        - "schema"
+      summary: "List customers fields"
+      operationId: listCustomersFields
+      description:  "List Customers specific fields"
+      parameters:
+        - in: query
+          name: exclude_draft
+          required: false
+          schema:
+            type: boolean
+            default: false
+
+      responses:
+        '409': { '$ref': '#/components/responses/StandardError' }
+        '200':
+          description: "list of customers fields"
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [list]
+                properties:
+                  list:
+                    type: array
+                    items:  {'$ref': '#/components/schemas/MappedFieldRes'}
+    post:
+      tags:
+        - "schema"
+      summary: "Create Customer Field"
+      operationId: createCustomerField
+      description:  "Creates field for customer as draft"
+      requestBody:
+        description: "Field Create body for selectd customer"
+        content:
+          application/json:
+            schema: {'$ref': '#/components/schemas/MappedFieldCreateReq'}
+      responses:
+        '200':
+          description: "Successfully added to draft field"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/IdItemUUID'
+        '409': { '$ref': '#/components/responses/StandardError' }
+    put:
+      tags:
+        - "schema"
+      summary: "Update Customers Field"
+      operationId: updateCustomerField
+      description:  "Updates all fields of draft field or some (apiName, displayName) of non draf fields"
+      parameters:
+        - in: query
+          name: field_id
+          schema: {type: string, format: uuid}
+          required: true
+          description: 'event type field id'
+      requestBody:
+        description: "Field Create body for selectd event type"
+        content:
+          application/json:
+            schema: {'$ref': '#/components/schemas/MappedFieldCreateReq'}
+      responses:
+        '200':
+          description: "Successfully added to draft field"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/IdItemUUID'
+        '409': { '$ref': '#/components/responses/StandardError' }
+    delete:
+      tags:
+        - "schema"
+      summary: "Delete Customers fields"
+      operationId: "deleteCustomerField"
+      description:  "Delete Customer specific fields"
+      parameters:
+        - in: query
+          name: field_id
+          schema: {type: string, format: uuid}
+          required: true
+          description: 'event type field id'
+      responses:
+        '204': { description: "Successfully deleted" }
+        '409': { '$ref': '#/components/responses/StandardError' }
+  /api/tenants/schema/events/fields/{eventTypeId}:
+    get:
+      tags:
+        - "schema"
+      summary: "List Event Type fields"
+      operationId: listEventTypeFields
+      description:  "List Event Types specific fields"
+      parameters:
+        - in: path
+          name: eventTypeId
+          schema: {type: integer}
+          required: true
+          description: 'event type id (not uid)'
+        - in: query
+          name: exclude_draft
+          required: false
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '409': { '$ref': '#/components/responses/StandardError' }
+        '200':
+          description: "list of event types"
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [list]
+                properties:
+                  list:
+                    type: array
+                    items:  {'$ref': '#/components/schemas/MappedFieldRes'}
+    post:
+      tags:
+        - "schema"
+      summary: "Create Event Type Field"
+      operationId: createEventTypeField
+      description:  "Creates field for event type as draft"
+      parameters:
+        - in: path
+          name: eventTypeId
+          schema: {type: integer}
+          required: true
+          description: 'event type id (not uid)'
+      requestBody:
+        description: "Field Create body for selectd event type"
+        content:
+          application/json:
+            schema: {'$ref': '#/components/schemas/MappedFieldCreateReq'}
+      responses:
+        '200':
+          description: "Successfully added to draft field"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/IdItemUUID'
+        '409': { '$ref': '#/components/responses/StandardError' }
+    put:
+      tags:
+        - "schema"
+      summary: "Update Event Type Field"
+      operationId: updateEventTypeField
+      description:  "Updates all fields of draft field or some (apiName, displayName) of non draf fields"
+      parameters:
+        - in: path
+          name: eventTypeId
+          schema: {type: integer}
+          required: true
+          description: 'event type id (not uid)'
+        - in: query
+          name: field_id
+          schema: {type: string, format: uuid}
+          required: true
+          description: 'event type field id'
+      requestBody:
+        description: "Field Create body for selectd event type"
+        content:
+          application/json:
+            schema: {'$ref': '#/components/schemas/MappedFieldCreateReq'}
+      responses:
+        '200':
+          description: "Successfully added to draft field"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/IdItemUUID'
+        '409': { '$ref': '#/components/responses/StandardError' }
+    delete:
+      tags:
+        - "schema"
+      summary: "Delete Event Type fields"
+      operationId: "deleteEventTypeField"
+      description:  "Delete Event Types specific fields"
+      parameters:
+        - in: path
+          name: eventTypeId
+          schema: {type: integer}
+          required: true
+          description: 'event type id (not uid)'
+        - in: query
+          name: field_id
+          schema: {type: string, format: uuid}
+          required: true
+          description: 'event type field id'
+      responses:
+        '204': { description: "Successfully deleted" }
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+  /api/tenants/schema/event-types-name-exists:
+    post:
+      tags:
+        - "schema"
+      summary: "Check name that exists"
+      operationId: eventTypeNameExists
+      description:  "checks name that exists, in case of update please send current uid"
+      parameters:
+        - in: query
+          name: update_id
+          schema: {type: string, format: uuid}
+          description: 'event type uid'
+        - in: query
+          name: name
+          schema: {type: string}
+          required: true
+          description: 'name of event type id'
+      responses:
+        '200':
+          description: "Successfully new event type added as draft"
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [exists]
+                properties:
+                  exists: {type: boolean}
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+  /api/tenants/schema/event-types/get-by-id:
+    get:
+      tags:
+        - "schema"
+      summary: "Get one event type by id"
+      operationId: getEventTypeById
+      description:  "List Event Types"
+      parameters:
+        - in: query
+          name:  id
+          schema: {type: string, format: uuid}
+          required: true
+          description: 'event type uuid'
+      responses:
+        '200':
+          description: success response
+          content:
+            application/json:
+              schema:  {'$ref': '#/components/schemas/EventTypeRes'}
+        '409': { '$ref': '#/components/responses/StandardError' }
+  /api/tenants/schema/event-types:
+    get:
+      tags:
+        - "schema"
+      summary: "List Event Type"
+      operationId: listEventTypes
+      description:  "List Event Types"
+      parameters:
+        - in: query
+          name: exclude_draft
+          required: false
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '409': { '$ref': '#/components/responses/StandardError' }
+        '200':
+          description: "list of event types"
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/EventTypeListRes'}
+    put:
+      tags:
+        - "schema"
+      summary: "Update Event Type"
+      operationId: updateEventType
+      description:  "Update Event Type as draft"
+      parameters:
+        - in: query
+          name:  id
+          schema: {type: string, format: uuid}
+          required: true
+          description: 'event type uuid for update'
+      requestBody:
+        description: "Event update request body"
+        content:
+          application/json:
+            schema: {'$ref': '#/components/schemas/EventTypeCreateReq'}
+      responses:
+        '204': { description: "Successfully new event type added as draft for update" }
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+    delete:
+      tags:
+        - "schema"
+      summary: delete event type drafted data
+      description: can be used to delete or rollback drafted event type values, deleting acutual event type not allowed
+      operationId: deleteDraftEventType
+      parameters:
+        - in: query
+          name:  id
+          schema: {type: string, format: uuid}
+          required: true
+          description: 'event type uuid for delete'
+      responses:
+        '200': { description: "Successfully  deleted from drafts" }
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+    post:
+      tags:
+        - "schema"
+      summary: "Create Event Type"
+      operationId: createEventType
+      description:  "Create Event Type"
+      requestBody:
+        description: "Event create request body"
+        content:
+          application/json:
+            schema: {'$ref': '#/components/schemas/EventTypeCreateReq'}
+      responses:
+        '200':
+          description: "Successfully new event type added as draft"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/IdItemUUID'
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+
+  /api/tenants/schema/internal/{table}/fields/info:
+    get:
+      tags:
+        - "tenant"
+        - "schema"
+      summary: "Get fields information"
+      description: "table : [customers|events]"
+      operationId: getFieldsInfo
+      parameters:
+        - in: path
+          name: table
+          schema: {type: string, enum: [customers, events]}
+          required: true
+          description: 'table resource'
+      responses:
+        '409': {'$ref': '#/components/responses/StandardError'}
+        '200':
+          description: "Successfully responsed with fields data"
+          content:
+            application/json:
+              schema:
+                required: [fields]
+                type: object
+                properties:
+                  fields: {type: array, items: {'$ref': '#/components/schemas/Field'}}
+  /api/tenants/info:
+    get:
+      tags:
+        - "tenant"
+        - "schema"
+      summary: "Get Tenant Info"
+      description: "responses with tenant info"
+      operationId: "getTenantInfo"
+      responses:
+        '404':
+          description: "tenant not found"
+        '200':
+          description: Success response tenant info
+          content:
+            application/json:
+              schema:
+               '$ref': '#/components/schemas/TenantInfo'
+
+  /api/tenants/campaign/compute/send:
+    post:
+      tags:
+        - campaign
+      description: Start sending campaigns to customers by id, id is required
+      summary: send campaign
+      operationId: sendCampaign
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            '$ref': '#/components/schemas/UUID'
+      responses:
+        '204': {description: "Campaign Send Successfully started"}
+        '409': {'$ref': '#/components/responses/StandardError'}
+  /api/tenants/campaign/compute/preview:
+    post:
+      tags:
+        - campaign
+      description: preview custom count of campaign, please send campaignID or Body but not both at the same time
+      summary: Preview Campaign Customer by id or body
+      operationId: previewCampaign
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            '$ref': '#/components/schemas/UUID'
+      requestBody:
+        description: "Campaign data for campaign create"
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data: {'$ref': '#/components/schemas/CampaignReq'}
+      responses:
+        '200':
+          description: "successfully coputed campaign"
+          content:
+            application/json:
+              schema: {'$ref':'#/components/schemas/CampaignPeviewRes'}
+        '409': {'$ref': '#/components/responses/StandardError'}
+
+  /api/tenants/campaign/{id}:
+    put:
+      tags:
+        - campaign
+      description: Update existing campaign By ID
+      summary: Update capaign
+      operationId: updateCampaignById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            '$ref': '#/components/schemas/UUID'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CampaignReq'
+      responses:
+        '200':
+          description: Campaign successfully updated
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/CampaignRes'}
+        '409': {'$ref': '#/components/responses/StandardError'}
+    get:
+      tags:
+        - campaign
+      description: Get Campaign by id
+      summary: Get Campaign by id
+      operationId: getCampaignID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            '$ref': '#/components/schemas/UUID'
+      responses:
+        '200':
+          description: Get Campaign Name
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/CampaignRes'}
+        '404': {description: campaign not found}
+  /api/tenants/campaign:
+    post:
+      tags:
+        - campaign
+      description: Create Campaign
+      operationId: createCampaign
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CampaignReq'
+      responses:
+        '200':
+          description: Campaign successfully created
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/CampaignRes'}
+        '409': {'$ref': '#/components/responses/StandardError'}
+    get:
+      tags:
+        - campaign
+      description: Get Campaign names
+      operationId: listCampaignNames
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema: {type: integer, default: 0}
+        - name: size
+          in: query
+          required: false
+          schema: {type: integer, default: 0}
+      responses:
+        '200':
+          description: Paged response of camapign name items
+          content:
+            application/json:
+              schema: { '$ref': "#/components/schemas/NameItemUUIDArr" }
+        '409': {'$ref': '#/components/responses/StandardError'}
+
+  /api/tenants/commchan/validate:
+    post:
+      tags:
+        - commchan
+      operationId: validateCommChan
+      summary: verify communication channel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CommChanReq'
+      responses:
+        '200':
+          description: 'verification result of communication channel'
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/CommChanValidationResult'}
+
+  /api/tenants/commchan/{id}/verify:
+    post:
+      tags:
+        - commchan
+      operationId: verifyCommChan
+      summary: verify communication channel
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            '$ref': '#/components/schemas/UUID'
+      responses:
+        '200':
+          description: 'verification result of communication channel'
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/CommChanVerificaitonRes'}
+        '409': {'$ref': '#/components/responses/StandardError'}
+  /api/tenants/commchan/{id}:
+    get:
+      tags:
+        - commchan
+      operationId: getCommChan
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            '$ref': '#/components/schemas/UUID'
+      responses:
+        '200':
+          description: 'Communication channel names'
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/CommChanRes'}
+        '404': {description: 'commchan not found'}
+  /api/tenants/commchan:
+    get:
+      tags:
+        - commchan
+      description: 'Get List of Communication Name items'
+      operationId: listCommChans
+      parameters:
+        - name: verified
+          in: query
+          required: false
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: 'Communication channel names'
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items: {'$ref': '#/components/schemas/CommChanNameItem'}
+    post:
+      tags:
+        - commchan
+      summary: Create Communication Channel
+      description: ''
+      operationId: createCommChan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/CommChanReq'
+      responses:
+        '200':
+          description: "Communication channel successfully created"
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/CommChanRes'}
+        '409': {'$ref': '#/components/responses/StandardError'}
+  /api/tenant/specific-fields:
+    put:
+      tags:
+      - tenant
+      summary: Create Specific Field Mappings
+      description: ''
+      operationId: createOrUpdateSpecificFields
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {'$ref': '#/components/schemas/SpecificFieldsReq'}
+      responses:
+        '201':
+          description: "Specific Field is created Successfully"
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id]
+                properties:
+                  id: {type: string, format: uuid}
+
+    get:
+      tags:
+        - tenant
+      summary: Get Specific Field Name Mappings
+      description: 'Return Specific Field Name Mappings for a tenant'
+      operationId: getSpecificFields
+      responses:
+        '200':
+          description: "Special Field List"
+          content:
+            application/json:
+              schema: { '$ref': '#/components/schemas/GetSpecificFieldsResp'}
+
+  /api/tenant/template:
+    post:
+      tags:
+        - campaign
+      summary: Create Tenant Template
+      description: ''
+      operationId: createTemplate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/TemplateReq'
+      responses:
+        '201':
+          description: "Template successfully created"
+          content:
+            application/json:
+              schema: { '$ref': '#/components/schemas/TemplateRes' }
+        '409': {'$ref': '#/components/responses/StandardError'}
+    get:
+      tags:
+        - campaign
+      summary: Get Tenant Template List
+      description: 'Returns list of template with pagination'
+      operationId: pageTemplates
+      parameters:
+        - in: query
+          name: page
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 0
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 10
+      responses:
+        '200':
+          description: 'Template list with pagination'
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/PageTemplateRes'}
+
+  /api/tenant/template/{id}:
+    get:
+      tags:
+        - campaign
+      summary: Get Tenant Template
+      description: 'Returns Template by id'
+      operationId: getTemplate
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            '$ref': '#/components/schemas/UUID'
+      responses:
+        '200':
+          description: 'Template details'
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/TemplateDetailsRes'}
+        '409': {'$ref': '#/components/responses/StandardError'}
+        '404':
+          description: 'Template not found'
+
+    put:
+      tags:
+        - campaign
+      summary: Update Template
+      description: 'Updates Template'
+      operationId: putTemplate
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            '$ref': '#/components/schemas/UUID'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/TemplateReq'
+      responses:
+        '200':
+          description: 'Updated Template details'
+          content:
+            application/json:
+              schema: { '$ref': '#/components/schemas/TemplateDetailsRes' }
+        '409': { '$ref': '#/components/responses/StandardError' }
+        '404':
+          description: 'Template not found'
+
+
+  /api/tenants/segmentation/preview:
+    post:
+      tags:
+        - segmentation
+      summary: Preview Segmentation
+      description: Preview segmentation
+      operationId: getPreviewSegmentation
+      parameters:
+        - name: segmentationId
+          in: query
+          required: false
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        description: Segmentation preview description
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                segmentation:
+                  $ref: "#/components/schemas/SegmentationCreateReq"
+      responses:
+        '200':
+          description: Segmentation Preview Response
+          content:
+            application/json:
+              schema: { '$ref': "#/components/schemas/SegmentationPreviewRes" }
+        '404': {description: 'segmentation not found'}
+        '409': {'$ref': '#/components/responses/StandardError'}
+
+  /api/tenants/segmentation:
+    get:
+      tags:
+        - segmentation
+      summary: Get list of Segmentation
+      description: Get list of Segmentation, Name and Ids
+      operationId: pageSegmentations
+      parameters:
+        - in: query
+          name: page
+          required: false
+          schema:
+            type: integer
+            default: 0
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Segment Name List
+          content:
+            application/json:
+              schema: { '$ref': "#/components/schemas/PageNameItemUUID" }
+        '409': {'$ref': '#/components/responses/StandardError'}
+    post:
+      tags:
+        - segmentation
+      summary: Create Segmentation
+      operationId: create_segmentation
+      requestBody:
+        required: true
+        description: Segmentation definitition to create
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SegmentationCreateReq"
+      responses:
+        '200':
+          description: "Segmentation created successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SegmentationRes"
+        '409': {'$ref': '#/components/responses/StandardError'}
+
+  /api/tenants/segmentation/{segmentationId}:
+    put:
+      tags:
+        - segmentation
+      summary: Update Segmentation
+      description: Update Segmentation
+      operationId: update_segmentation
+      parameters:
+        - name: segmentationId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        description: Segmentation definitition to update
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SegmentationUpdateReq"
+      responses:
+        '200':
+          description: "Segmentation updated successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SegmentationRes"
+        '404': {description: 'segmentation not found'}
+        '409': {'$ref': '#/components/responses/StandardError'}
+
+    get:
+      tags:
+        - segmentation
+      summary: Get Segmentation
+      description: Get Segmentation Detailes
+      operationId: getSegmentationDetails
+      parameters:
+        - name: segmentationId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Sementation Response
+          content:
+            application/json:
+              schema: { '$ref': "#/components/schemas/SegmentationRes" }
+        '404': {description: "segmentation not exists"}
+        '409': {'$ref': '#/components/responses/StandardError'}
+
+  /api/tenants/udafs/types:
+    get:
+      summary: List UDAF names and types
+      description: List UDAF names and IDs adn types for a tenant
+      tags:
+        - udafs
+      operationId: listUdafNamesWithTypes
+      responses:
+        '200':
+          description: "List of UDAF names and IDs"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UDAFDefinitionArr"
+        '409': {'$ref': '#/components/responses/StandardError'}
+  /api/tenants/udafs:
+    post:
+      tags:
+        - udafs
+      summary: Create UDAF
+      description: Create a new UDAF for a tenant
+      operationId: create_udaf
+      requestBody:
+        required: true
+        description: UDAF definitition to create
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UDAFReq"
+      responses:
+        '200':
+          description: "UDAF created successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UDAFRes"
+        '409': {'$ref': '#/components/responses/StandardError'}
+    get:
+      summary: List UDAF names
+      description: List UDAF names and IDs for a tenant
+      tags:
+        - udafs
+      operationId: list_udafs
+      responses:
+        '200':
+          description: "List of UDAF names and IDs"
+          content:
+            application/json:
+              schema: {$ref: "#/components/schemas/NameItemUUIDArr"}
+        '409': {'$ref': '#/components/responses/StandardError'}
+  /api/tenants/udafs/{udafId}:
+    get:
+      tags:
+        - udafs
+      summary: Get UDAF
+      operationId: get_udaf_by_id
+      description: API to get UDAF by it's own ID
+      parameters:
+        - in: path
+          name: udafId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: 'udaf ID to get UDAF'
+      responses:
+        '200':
+          description: "UDAF created successfully"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UDAFRes"
+        '404': {description: "UDAF not found"}
+        '409': {'$ref': '#/components/responses/StandardError'}
+  /api/tenants/udafs/{udafId}/calculate:
+    post:
+      tags:
+        - udafs
+      summary: Calculate UDAF
+      operationId: calculate_udaf
+      description: API to calculate UDAF
+      parameters:
+        - in: path
+          name: udafId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: 'udaf ID to calculate UDAF'
+        - in: query
+          name: primaryId
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: 'Primary ID for calculation'
+      responses:
+          '200':
+            description: "UDAF created successfully"
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    result: {}
+          '404': {description: "UDAF not found"}
+          '409': {'$ref': '#/components/responses/StandardError'}
+  /public/api/signup:
+    post:
+      tags:
+        - "tenant"
+      summary: Create a Tenant
+      operationId: "createTenant"
+      description: "API to create a shop or tenant"
+      requestBody:
+        description: "Body to create Tenant"
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/TenantCreateReq'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+               '$ref': '#/components/schemas/TenantCreateRes'
+        '409': { '$ref': '#/components/responses/StandardError' }
+  /api/tenant/employee:
+    post:
+      tags:
+        - "auth"
+      summary: Create Tenant User for Tenant
+      operationId: "createEmployee"
+      description: "API to create user for tenant by owner"
+      requestBody:
+        description: "Body to create an tenant user"
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/EmployeeCreateReq'
+      responses:
+        '409': { '$ref': '#/components/responses/StandardError' }
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/EmployeeCreateResp'
+
+  /public/api/signin:
+    post:
+      tags:
+        - "auth"
+      summary: Sign In
+      operationId: "signIn"
+      description: "API to sign into system"
+      requestBody:
+        description: "Body to sign in"
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/SignInReq'
+      responses:
+        '401':
+          description: Wrong credentials
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/SignInResp'
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+  /api/tenant/data/count:
+    get:
+      tags:
+        - tenant
+      summary: "Get Customers And Events Total Count"
+      operationId: getDataTotalCount
+      description: "Returns Customers and Events Total Count"
+      responses:
+        '200':
+          description: "Total count"
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/GetDataTotalCountResp'}
+
+  /api/tenant/data/event-types/count:
+    get:
+      tags:
+        - tenant
+      summary: "Get Event Types Count"
+      operationId: getEventTypesCount
+      description: "Returns Events count"
+      parameters:
+        - in: query
+          name: primaryId
+          required: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema: {'$ref': '#/components/schemas/GetEventTypesCountResp'}
+
+  /api/tenant/data/customers:
+    post:
+      summary: "Get list of customers"
+      operationId: pageCustomersData
+      description: "Get list of customers"
+      parameters:
+        - in: query
+          name: desc
+          required: false
+          schema:
+            type: boolean
+            default: true
+        - in: query
+          name: page
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 0
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 10
+      tags:
+        - tenant
+      requestBody:
+        description: "List of field names"
+        content:
+          application/json:
+            schema: { '$ref': '#/components/schemas/FieldNamesReq' }
+      responses:
+        '200':
+          description: "List of customers"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/FieldValuesPageCustomersRes'
+        '404':
+          description: Tenant not found
+
+  /api/tenant/data/customers/{primaryId}:
+    get:
+      summary: "Get customer details"
+      operationId: getCustomerProfile
+      description: "Get customer details"
+      parameters:
+        - in: path
+          name: primaryId
+          required: true
+          schema:
+            type: integer
+            format: int64
+      tags:
+        - tenant
+      responses:
+        '200':
+          description: "Customer details"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/FieldValuesRes'
+        '404':
+          description: Customer not found
+
+  /api/tenant/data/reports/field-values:
+    get:
+      summary: "Get fields report"
+      operationId: pageReportFieldValues
+      description: "This API considers only varchar fields"
+      parameters:
+        - in: query
+          name: table
+          required: true
+          schema:
+            type: string
+            enum: [customers, events]
+            example: events
+        - in: query
+          name: field
+          required: true
+          schema:
+            type: string
+            example: product_name
+        - in: query
+          name: event_type_id
+          required: false
+          schema:
+            type: integer
+            example: 100
+        - in: query
+          name: order_by
+          required: false
+          schema:
+            type: string
+            enum: [value, count]
+            default: count
+        - in: query
+          name: sort_order
+          required: false
+          schema:
+            type: string
+            enum: [asc, desc]
+            default: desc
+        - in: query
+          name: page
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 0
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 10
+      tags:
+        - tenant
+      responses:
+        '200':
+          description: 'Field report'
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/FieldReportPageRes'
+        '409': { '$ref': '#/components/responses/StandardError' }
+  /api/tenant/data/autocomplete/field-values:
+    get:
+      summary: "List field values"
+      operationId: listAutocompleteFieldValues
+      description: "This API considers only varchar fields"
+      parameters:
+        - in: query
+          name: table
+          required: true
+          schema:
+            type: string
+            enum: [customers, events]
+            example: events
+        - in: query
+          name: field
+          required: true
+          schema:
+            type: string
+            example: name
+        - in: query
+          name: value
+          required: false
+          schema:
+            type: string
+            example: MacBook
+        - in: query
+          name: event_type
+          required: false
+          schema:
+            type: string
+            example: order
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 10
+      tags:
+        - tenant
+      responses:
+        '200':
+          description: 'Field values list'
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [list]
+                properties:
+                  list:
+                    type: array
+                    items:
+                      type: string
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+  /api/tenant/data/events/{eventCompositeId}:
+    get:
+      summary: "Get event details"
+      operationId: getEventProfile
+      description: "Get event details"
+      parameters:
+        - in: path
+          name: eventCompositeId
+          required: true
+          schema:
+            type: string
+      tags:
+        - tenant
+      responses:
+        '200':
+          description: "Event details"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/FieldValuesRes'
+        '404':
+          description: Event not found
+
+  /api/tenant/data/events:
+    post:
+      summary: "Get list of events"
+      operationId: pageEventsData
+      description: "Get list of events"
+      parameters:
+        - in: query
+          name: event_type_id
+          required: true
+          schema:
+            type: integer
+            format: int16
+        - in: query
+          name: desc
+          required: false
+          schema:
+            type: boolean
+            default: false
+        - in: query
+          name: primary_id
+          required: false
+          schema:
+            type: integer
+            format: int64
+            default: 0
+        - in: query
+          name: page
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 0
+        - in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+            format: int
+            default: 0
+      tags:
+        - tenant
+      requestBody:
+        description: "List of field names"
+        content:
+          application/json:
+            schema: { '$ref': '#/components/schemas/FieldNamesReq' }
+      responses:
+        '200':
+          description: "List of events"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/FieldValuesPageEventsRes'
+        '404':
+          description: Tenant not found
+
+  /api/tenant/ui/settings:
+    post:
+      tags:
+        - "tenant"
+      summary: "Save settings for UI"
+      operationId: postUISettings
+      description: "Post ui settings"
+      requestBody:
+        description: "Request Body for UI Settings"
+        content:
+          application/json:
+            schema:
+              '$ref': '#/components/schemas/UISettingsCreateReq'
+      responses:
+        '204':
+          description: 'UI Settings is created SuccessFully1'
+        '409': { '$ref': '#/components/responses/StandardError' }
+
+    get:
+      tags:
+        - tenant
+      summary: "UI Settings List"
+      operationId: listUISettings
+      description: "UI Settings"
+      responses:
+        '200':
+          description: "List of UI Settings"
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {'$ref': '#/components/schemas/ListUISettingsRespObj'}
+
+  /api/tenant/ui/settings/by-key:
+    get:
+      tags:
+        - tenant
+      summary: "Get UI Settings By Key"
+      operationId: getUISettingsByKey
+      description: "UI Settings With Key"
+      parameters:
+        - in: query
+          name: key
+          schema:
+            type: string
+          required: true
+          description: 'UI Settings Key to get'
+      responses:
+        '200':
+          description: 'UI Settings details by Key'
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/UISettingsDetailsResp'
+        '404':
+          description: 'UI Settings Not found'
+
+components:
+  responses:
+    StandardError:
+      description: 'StandardError reponse for validation and bissunies logic conflict'
+      content:
+        application/json:
+          schema:
+            '$ref': '#/components/schemas/ErrorCodeResponse'
+  schemas:
+    ErrorCodeResponse:
+      type: object
+      required: [code, description, data]
+      properties:
+        code: {type: integer}
+        description: {type: string}
+        data: {type: object, additionalProperties: true}
+    IdItemUUID:
+      type: object
+      required: [ID]
+      additionalProperties: false
+      properties:
+        ID: {type: string, format: uuid, nullable: false}
+    UDAFDefinitionArr:
+      type: object
+      required: ["items"]
+      additionalProperties: false
+      properties:
+        items:
+          type: array
+          nullable: false
+          items: {'$ref': '#/components/schemas/UDAFDefinition'}
+    UDAFDefinition:
+      type: object
+      required: [id,name,types]
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string, maxLength: 255}
+        types: {$ref: '#/components/schemas/UDAFPramDef'}
+    UDAFPramDef:
+      type: object
+      required: [valueType, paramType]
+      properties:
+        valueType: {type: string}
+        paramType: {type: array, items: {type: string}}
+
+    PageNameItemUUID:
+      type: object
+      required: [ "items", "totalCount"]
+      additionalProperties: false
+      properties:
+        items:
+          type: array
+          nullable: false
+          items: { '$ref': '#/components/schemas/NameItemUUID' }
+        totalCount: {type: integer, nullable: false}
+    NameItemUUIDArr:
+      type: object
+      required: ["items"]
+      additionalProperties: false
+      properties:
+        items:
+          type: array
+          nullable: false
+          items: { '$ref': '#/components/schemas/NameItemUUID' }
+
+    NameItemUUID:
+      type: object
+      additionalProperties: false
+      required: [id, name]
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string }
+    UUID:
+      type: string
+      x-go-type: uuid.UUID
+      x-go-type-import:
+        path: github.com/google/uuid
+        name: uuid
+    Artifact:
+      type: object
+      additionalProperties: false
+      x-go-type-import:
+        path: cdp.uz/cmd/clustermeta/internal/infra/db
+        name: entity
+      x-go-type: db.NamedArtifact
+      properties:
+        name: {type: string, maxLength: 120, example: "my-tenant", nullable: false}
+        isPresent: {type: boolean, nullable: false}
+      required: [name, isPresent]
+    FieldDataType:
+      type: string
+      enum: [BOOL, BIGINT, DOUBLE, VARCHAR, DATE, DATETIME, JSON]
+      description: "The data type of the new field. Choose one of BOOL, BIGINT, DOUBLE, VARCHAR, DATE, or DATETIME."
+    FieldAccessType:
+      type: string
+      enum: [field_hidden, field_optional, field_required]
+      description: "REQUIRED makes field required on API ingest, HIDDEN makes api to reject the field if it was sent"
+    MappedFieldCreateReq:
+      type: object
+      required: [apiName, displayName, flagMulti, access, dataType]
+      properties:
+        displayName: {type: string, minLength: 1, maxLength: 255}
+        apiName:
+          type: string
+          pattern: "^[a-z0-9]+([\\_a-z0-9]+)*$"
+          minLength: 3
+          maxLength: 255
+          nullable: false
+          description:  "field name should be in lower cases and should start with only latter, checkout pattern"
+        flagMulti: {type: boolean}
+        dataType: {'$ref': '#/components/schemas/FieldDataType'}
+        access: {'$ref': '#/components/schemas/FieldAccessType'}
+    FieldReadyState:
+      type: string
+      enum: [field_draft, field_not_ready, field_ready]
+    MappedFieldRes:
+      type: object
+      required: [id, apiName, displayName, dataType, flagMulti, status, flagSystemField, access, flagTypesUpdatable]
+      properties:
+        id: {type: string, format: uuid}
+        apiName: {type: string}
+        displayName: {type: string}
+        fieldName: {type: string}
+        dataType: {'$ref': '#/components/schemas/FieldDataType'}
+        status: {'$ref': '#/components/schemas/FieldReadyState'}
+        flagMulti: {type: boolean}
+        flagSystemField: {type: boolean}
+        access: {'$ref': '#/components/schemas/FieldAccessType'}
+        flagTypesUpdatable: {type: boolean}
+
+    EventTypeListRes:
+      type: object
+      required: [list]
+      properties:
+        list:
+          type: array
+          items: {'$ref': '#/components/schemas/EventTypeRes'}
+    EventTypeRes:
+      type: object
+      required: [eventTypeName, eventTypeId, systemEvent, draft, uid]
+      properties:
+        eventTypeName: {type: string}
+        eventTypeId: {type: integer}
+        systemEvent: {type: boolean}
+        draft: {type: boolean}
+        uid: {type: string, format: uuid}
+    EventTypeCreateReq:
+      type: object
+      additionalProperties: false
+      required: [name]
+      properties:
+        name:
+          type: string
+          pattern: "^[a-z0-9]+([\\_a-z0-9]+)*$"
+          minLength: 3
+          maxLength: 100
+          nullable: false
+    EmployeeCreateReq:
+      type: object
+      required: [username, password, firstName, lastName]
+      additionalProperties: false
+      properties:
+        username:
+          type: string
+          maxLength: 255
+        password:
+          type: string
+          maxLength: 255
+        firstName:
+          type: string
+          maxLength: 255
+        lastName:
+          type: string
+          maxLength: 255
+
+
+    EmployeeCreateResp:
+      type: object
+      required: [userID]
+      properties:
+        userID:
+          type: string
+          format: uuid
+
+    SignInReq:
+      type: object
+      required: [username, password, domainName]
+      additionalProperties: false
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        domainName:
+          type: string
+    SignInResp:
+      type: object
+      required: [jwtToken]
+      properties:
+        jwtToken:
+          type: string
+
+    FieldValuesRes:
+      type: object
+      required: [fields, schema]
+      properties:
+        fields:
+          type: object
+          additionalProperties: true
+        schema:
+          type: object
+          additionalProperties: true
+
+    FieldNamesReq:
+      type: object
+      required: [ fieldNames ]
+      properties:
+        fieldNames:
+          type: array
+          items:
+            type: string
+
+
+    FieldValuesPageCustomersRes:
+      type: object
+      required: [ schema, list, totalCount ]
+      properties:
+        schema:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        list:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        totalCount: { type: integer }
+
+    FieldValuesPageEventsRes:
+      type: object
+      required: [ schema, event_type, list, totalCount]
+      properties:
+        schema:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        event_type:
+          type: object
+          additionalProperties: true
+
+        list:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        totalCount: {type: integer}
+
+    FieldReportPageRes:
+      type: object
+      required: [list, totalCount]
+      properties:
+        list:
+          type: array
+          items:
+            type: object
+            required: [value, count]
+            properties:
+              value: {type: string, example: Macbook}
+              count: {type: integer, example: 4}
+        totalCount: {type: integer, example: 10}
+
+    TenantCreateReq:
+      type: object
+      required: [name, domainName, user]
+      additionalProperties: false
+      properties:
+        name: {type: string, example: Acme, maxLength: 100, minLength: 1, nullable: false}
+        domainName: {type: string, example: example.cdp.com, maxLength: 100, minLength: 3, nullable: false }
+        user: { '$ref': '#/components/schemas/TenantUserCreate' }
+    TenantUserCreate:
+      type: object
+      required: [ email, password, firstName, lastName ]
+      additionalProperties: false
+      properties:
+        email: { type: string, example: shop@cdp.ru, maxLength: 100, minLength: 5, nullable: false }
+        password: { type: string }
+        firstName: { type: string, example: Sergey, maxLength: 100, minLength: 2 }
+        lastName: { type: string, example: Brin, maxLength: 100, minLength: 2 }
+    TenantInfo:
+      type: object
+      required: [tenant, customerFields, eventFields]
+      additionalProperties: false
+      properties:
+        tenant: {$ref: '#/components/schemas/TenantState'}
+        customerFields:
+          type: array
+          items: {$ref: '#/components/schemas/Field'}
+        eventFields:
+          type: array
+          items: {$ref: '#/components/schemas/Field'}
+    TenantCreateRes:
+      allOf:
+        - "$ref": '#/components/schemas/TenantInfo'
+    FieldFlags:
+      type: object
+      required: [sortKey, tableBuildIn, internalUse]
+      additionalProperties: false
+      properties:
+        sortKey: {type: boolean, nullable: false}
+        tableBuildIn: {type: boolean, nullable: false}
+        internalUse: {type: boolean, nullable: false}
+    Field:
+      type: object
+      required: [id, name, flags, createAt, updatedAt, type, size, nullable, state]
+      additionalProperties: false
+      properties:
+        id: {type: string,  nullable: false, example: 'faccc5e8-5380-44f6-bda8-bfc4cbcb7ad6'}
+        name: {type: string, maxLength: 100, nullable: false}
+        flags: {$ref: '#/components/schemas/FieldFlags'}
+        createAt: {type: string, format: date-time, nullable: false}
+        updatedAt:  {type: string, format: date-time, nullable: false}
+        type: {type: string, nullable: false}
+        size: {type: integer, format: int32, nullable: true}
+        nullable: {type: boolean, nullable: false}
+        state: {type: string, enum: [absent, planned, present]}
+    TenantState:
+      type: object
+      additionalProperties: false
+      properties:
+        tenantId: {type: integer, format: int64}
+        name: {type: string, nullable: false}
+        database: {$ref: '#/components/schemas/Artifact'}
+        tableCustomer: {$ref: '#/components/schemas/Artifact'}
+        tableEvents: {$ref: '#/components/schemas/Artifact'}
+        topicCustomer: {$ref: '#/components/schemas/Artifact'}
+        topicEvents: {$ref: '#/components/schemas/Artifact'}
+        loadJobCustomers: {$ref: '#/components/schemas/Artifact'}
+        loadJobEvents: {$ref: '#/components/schemas/Artifact'}
+        isReady:
+          type: boolean
+      required: [tenantId, name, database, tableCustomer, tableEvents, topicCustomer, topicEvents, loadJobCustomers, loadJobEvents, isReady]
+
+    PredicateFieldValue:
+      type: object
+      properties:
+        string: {type: array, items: {type: string, maxLength: 1000}}
+        time: {type: array, items: {type: string, format: date-time }}
+        float64: {type: array, items: {type: number, format: float64}, x-go-type: '[]float64'}
+        int64: {type: array, items: {type: integer, format: int64 }}
+        bool: {type: array, items: {type: boolean }}
+
+    ConditionParamMeta:
+      type: object
+      required: [kind]
+      properties:
+        kind: {type: string, enum: [field,udaf,expr]}
+        fieldName: {type: string, minLength: 1, maxLength: 255}
+        artifactId: {type: string, format: uuid}
+        extraResult:
+          type: object
+          additionalProperties: true
+    UDAFCondition:
+      type: object
+      required: [param,operator,value]
+      properties:
+        param: {'$ref': '#/components/schemas/ConditionParamMeta'}
+        operator: {type: string, enum: ["=","!=",">","<",">=","<=","in","is null","is not null"]}
+        value: {$ref: '#/components/schemas/PredicateFieldValue'}
+
+    UDAFGroup:
+      type: object
+      required: [logicalOp, predicates]
+      properties:
+        logicalOp: { type: string, enum: [AND, OR], example: AND}
+        predicates: {type: array, items: {$ref: '#/components/schemas/UDAFPredicate'}}
+        negate: {type: boolean, default: false, example: false, nullable: false}
+
+    UDAFPredicate:
+      type: object
+      required: [type]
+      additionalProperties: false
+      properties:
+        type:  {type: string, enum: [condition, group]}
+        group: {$ref: '#/components/schemas/UDAFGroup'}
+        condition: {$ref: '#/components/schemas/UDAFCondition'}
+
+    EventTypeItem:
+      type: object
+      required: [id]
+      properties:
+        name: {type: string}
+        flagSystemEvent: {type: boolean}
+        id: {type: integer, x-go-type: int16}
+
+    UDAFEventFilter:
+      type: object
+      required: [eventType, predicate, timeWindow]
+      properties:
+        eventType: { $ref: "#/components/schemas/EventTypeItem"}
+        predicate: { $ref: "#/components/schemas/UDAFPredicate"}
+        timeWindow: { $ref: "#/components/schemas/PredicateTimeWindow"}
+
+    UDAFGroupingOpt:
+      type: object
+      required: [enable]
+      properties:
+        enable: {type: boolean}
+        field: { $ref: "#/components/schemas/ParamNameItem" }
+        take: {type: string, enum: [LAST, FIRST]}
+
+    PredicateTimeValue:
+      type: object
+      required: [kind]
+      properties:
+        kind:
+          type: string
+          enum: [ABSOLUTE, RELATIVE]
+        relativeDuration:  {type: integer}
+        relativeUnit: {type: string, enum: [DAY, WEEK, MONTH, YEAR]}
+        absoluteTime: {type: string, format: date-time}
+
+    PredicateTimeWindow:
+      type: object
+      properties:
+        from: { $ref: "#/components/schemas/PredicateTimeValue"}
+        to: { $ref: "#/components/schemas/PredicateTimeValue"}
+
+    ParamNameItem:
+      type: object
+      required: [fieldName]
+      properties:
+        mfieldId: {type: string, format: uuid, description: mapped field id}
+        fieldName: {type: string}
+        displayName: {type: string}
+
+    UDAFReq:
+      type: object
+      required: [name, aggType, params, filter, grouping]
+      properties:
+        name:
+          type: string
+          description: "Name of the UDAF (e.g., ltv)"
+        aggType:
+          type: string
+          enum: [SUM, COUNT, AVG, MIN, MAX]
+          description: "Aggregate function type, (e.g., SUM, COUNT)"
+        params:
+          type: array
+          items: { $ref: "#/components/schemas/ParamNameItem" }
+          description: "List of field names for aggregate"
+        grouping:
+          $ref: "#/components/schemas/UDAFGroupingOpt"
+        filter:
+          $ref: "#/components/schemas/UDAFEventFilter"
+
+    UDAFRes:
+      type: object
+      allOf:
+        - $ref: "#/components/schemas/UDAFReq"
+        - type: object
+          required: [id, createdAt, updatedAt, tenantId]
+          properties:
+            id:
+              type: string
+              format: uuid
+            createdAt:
+              type: string
+              format: date-time
+            updatedAt:
+              type: string
+              format: date-time
+            tenantId:
+              type: integer
+              format: int64
+    CampaignRes:
+      type: object
+      required: [id, name, commChan, includeSegment, excludeSegment]
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string, maxLength: 100}
+        commChan: {"$ref": "#/components/schemas/CommChanNameItem"}
+        template: {"$ref": "#/components/schemas/TemplateDetailsRes"}
+        includeSegment:
+          type: array
+          items: {$ref: "#/components/schemas/SegmentRefRes"}
+        excludeSegment:
+          type: array
+          items: {$ref: "#/components/schemas/SegmentRefRes"}
+    SegmentRefRes:
+      type: object
+      required: [segmentationID,segmentationName,segmentID,segmentName]
+      properties:
+        segmentationID: {type: string, format: uuid}
+        segmentationName: {type: string}
+        segmentID: {type: string, format: uuid}
+        segmentName: {type: string}
+
+    CampaignPeviewRes:
+      type: object
+      required: [numberOfCustomer]
+      properties:
+        numberOfCustomer: {type: integer, format: int64}
+    CampaignReq:
+      type: object
+      required: [name, commChanId, includeSegment, excludeSegment]
+      properties:
+        name: {type: string, maxLength: 100}
+        commChanId: {type: string, format: uuid}
+        includeSegment:
+          type: array
+          items: {type: string, format: uuid}
+        excludeSegment:
+          type: array
+          items: {type: string, format: uuid}
+        templateId:
+          type: string
+          format: uuid
+
+    CommChanNameItem:
+      type: object
+      required: [id, name, kind, verified]
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string, maxLength: 100}
+        kind: {type: string, maxLength: 100}
+        verified: {type: boolean, nullable: false}
+
+    KeyedMessage:
+      type: object
+      required: [key, message]
+      properties:
+        key: {type: string, nullable: false}
+        message: {type: string, nullable: false}
+    CommChanValidationResult:
+      type: object
+      required: [valid, message, configError, missingFields]
+      properties:
+        valid: {type: boolean, nullable: false}
+        message: {type: string, nullable: false}
+        configError:
+          type: array
+          items: {'$ref': '#/components/schemas/KeyedMessage'}
+        missingFields:
+          type: array
+          items: {type: string}
+    CommChanVerificaitonRes:
+      type: object
+      required: [verified, message]
+      properties:
+        verified: {type: boolean, nullable: false}
+        message: {type: string, nullable: false}
+    CommChanRes:
+      type: object
+      required: [id, name, kind, mappings, chanconf, createdAt, updatedAt, verified]
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string, maxLength: 100}
+        kind: {type: string, maxLength: 100}
+        verified: {type: boolean, nullable: false}
+        mappings: {type: object, additionalProperties: {type: string}}
+        chanconf: {type: object, additionalProperties: {type: string}}
+        createdAt: {type: string, format: date-time}
+        updatedAt: {type: string, format: date-time}
+    CommChanReq:
+      type: object
+      required: [name, kind, mappings, chanconf]
+      properties:
+        name: {type: string, maxLength: 100}
+        kind: {type: string, maxLength: 100}
+        mappings: {type: object, additionalProperties: {type: string}}
+        chanconf: {type: object, additionalProperties: {type: string}}
+    SpecificFieldsReq:
+      type: object
+      required: [field_type, field_name]
+      properties:
+        field_type: {type: string, enum: [email, phone]}
+        field_name: {type: string}
+
+    GetSpecificFieldsResp:
+      type: object
+      additionalProperties: true
+
+    SpecificFieldsResp:
+      type: object
+      required: [id, field_type, field_name, field_api_name, field_display_name]
+      properties:
+        id: {type: string, format: uuid}
+        field_type: {type: string}
+        field_name: {type: string}
+        field_api_name: {type: string}
+        field_display_name: {type: string}
+
+    TemplateReq:
+      type: object
+      required: [content_type, name, subject, content, variables]
+      properties:
+        content_type: {type: string, enum: [html, text, json]}
+        name: {type: string, maxLength: 100}
+        subject: {type: string, maxLength: 100}
+        content: {type: string}
+        variables: {type: object, additionalProperties: {type: string}}
+
+    TemplateRes:
+      type: object
+      required: [id]
+      properties:
+        id: {type: string, format: uuid}
+
+    PageTemplateRes:
+      type: object
+      required: [ list, totalCount ]
+      properties:
+        list:
+          type: array
+          items: {'$ref':  '#/components/schemas/PageTemplateObjRes'}
+        totalCount: {type: integer, format: int64, nullable: false}
+
+    PageTemplateObjRes:
+      type: object
+      required: [id, template_name, subject, content_type]
+      properties:
+        id: { type: string, format: uuid }
+        template_name: { type: string }
+        content_type: { type: string }
+        subject: { type: string }
+
+    TemplateDetailsRes:
+      type: object
+      required: [ id, template_name, content_type, subject, content, variables ]
+      properties:
+        id: { type: string, format: uuid }
+        template_name: {type: string}
+        content_type: {type: string}
+        subject: {type: string}
+        content: {type: string}
+        variables: {type: object, additionalProperties: true}
+
+    SegmentCreateReq:
+      type: object
+      required: ['name', 'customerProfileFilter']
+      properties:
+        name:
+          type: string
+          maxLength: 255
+          minLength: 1
+        customerProfileFilter: { $ref: '#/components/schemas/UDAFPredicate' }
+    SegmentationCreateReq:
+      type: object
+      required: ['name', 'segments']
+      properties:
+        name:
+          type: string
+        segments:
+          type: array
+          items: { $ref: '#/components/schemas/SegmentCreateReq' }
+    SegmentationUpdateReq:
+      type: object
+      required: ['name', 'segments']
+      properties:
+        name:
+          type: string
+        segments:
+          type: array
+          items: { $ref: '#/components/schemas/SegmentUpdateReq' }
+    SegmentUpdateReq:
+      type: object
+      required: [id, name, customerProfileFilter]
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+          maxLength: 255
+          minLength: 1
+        customerProfileFilter: { $ref: '#/components/schemas/UDAFPredicate' }
+    SegmentRes:
+      type: object
+      required: [id, name, customerProfileFilter]
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+          maxLength: 255
+          minLength: 1
+        customerProfileFilter: { $ref: '#/components/schemas/UDAFPredicate' }
+    SegmentationRes:
+      type: object
+      required: [id, name, createdAt, updatedAt, segments]
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        segments:
+          type: array
+          items: { $ref: '#/components/schemas/SegmentRes' }
+
+    SegmentPreviewRes:
+      type: object
+      required: [name, numberOfCustomer]
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string}
+        numberOfCustomer: {type: integer, format: int64}
+    SegmentationPreviewRes:
+      type: object
+      required: [segments]
+      properties:
+        segments:
+          type: array
+          items: { '$ref': '#/components/schemas/SegmentPreviewRes'}
+
+    UISettingsCreateReq:
+      type: object
+      required: [ key, data ]
+      properties:
+        key: { type: string }
+        data: { type: object, additionalProperties: true }
+
+    UISettingsCreateResp:
+      type: object
+      required: [ userId, key, data ]
+      properties:
+        userId: {type: string, format: uuid}
+        key: { type: string }
+        data: { type: object, additionalProperties: true }
+
+    ListUISettingsRespObj:
+      type: object
+      required: [ key, data ]
+      properties:
+        key: {type: string}
+        data: { type: object, additionalProperties: true }
+
+    UISettingsDetailsResp:
+      type: object
+      required: [ key, data ]
+      properties:
+        key: { type: string }
+        data: { type: object, additionalProperties: true }
+
+    GetDataTotalCountResp:
+      type: object
+      required: [eventCount, customerCount]
+      properties:
+        eventCount: {type: integer, format: int}
+        customerCount: {type: integer, format: int}
+
+    GetEventTypesCountResp:
+      type: array
+      items:
+        type: object
+        additionalProperties: true

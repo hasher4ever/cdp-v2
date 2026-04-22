@@ -1,0 +1,662 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "Панель управления" [ref=e8] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e9]: Панель управления
+          - generic [ref=e10]:
+            - paragraph [ref=e11]: Данные
+            - generic [ref=e41]:
+              - link "Клиенты 342279" [ref=e42] [cursor=pointer]:
+                - /url: /data/clients
+                - img [ref=e43]
+                - generic [ref=e45]: Клиенты
+                - generic [ref=e47]: "342279"
+              - button "События 66245" [ref=e48] [cursor=pointer]:
+                - img [ref=e49]
+                - generic [ref=e51]: События
+                - generic [ref=e53]: "66245"
+              - link "Сценарий" [ref=e54] [cursor=pointer]:
+                - /url: /data/scenario
+                - img [ref=e55]
+                - generic [ref=e57]: Сценарий
+              - link "Файлы" [ref=e58] [cursor=pointer]:
+                - /url: /data/files
+                - img [ref=e59]
+                - generic [ref=e63]: Файлы
+          - generic [ref=e12]:
+            - paragraph [ref=e13]: Маркетинг
+            - generic [ref=e64]:
+              - link "Агрегаты" [ref=e65] [cursor=pointer]:
+                - /url: /marketing/aggregate
+                - img [ref=e66]
+                - generic [ref=e79]: Агрегаты
+              - link "Сегменты" [ref=e80] [cursor=pointer]:
+                - /url: /marketing/segments
+                - img [ref=e81]
+                - generic [ref=e84]: Сегменты
+              - link "Рассылки" [ref=e85] [cursor=pointer]:
+                - /url: /marketing/campaigns
+                - img [ref=e86]
+                - generic [ref=e88]: Рассылки
+              - link "Коммуникации" [ref=e89] [cursor=pointer]:
+                - /url: /marketing/communication
+                - img [ref=e90]
+                - generic [ref=e92]: Коммуникации
+          - generic [ref=e14]:
+            - paragraph [ref=e15]: Аналитика
+            - link "Статистика полей" [ref=e94] [cursor=pointer]:
+              - /url: /statistics/field
+              - img [ref=e95]
+              - generic [ref=e120]: Статистика полей
+        - generic [ref=e16]:
+          - separator [ref=e17]
+          - generic [ref=e19]:
+            - generic [ref=e21]: c
+            - paragraph [ref=e121] [cursor=pointer]: cdp_1762934640267
+      - generic [ref=e28]:
+        - paragraph [ref=e31]: Рассылки
+        - separator [ref=e32]
+        - button "Добавить" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]:
+            - img [ref=e37]
+            - generic [ref=e38]: Добавить
+        - table [ref=e124]:
+          - rowgroup [ref=e125]:
+            - row "ID Название" [ref=e126]:
+              - columnheader "ID" [ref=e127]
+              - columnheader "Название" [ref=e128]
+              - columnheader [ref=e129]
+          - rowgroup [ref=e130]:
+            - row "a1688047-2b49-457f-9984-c62d601f3580 test thu dec 11" [ref=e131]:
+              - cell "a1688047-2b49-457f-9984-c62d601f3580" [ref=e132] [cursor=pointer]
+              - cell "test thu dec 11" [ref=e133] [cursor=pointer]
+              - cell [ref=e134] [cursor=pointer]:
+                - button [ref=e135]:
+                  - img [ref=e137]
+            - row "082e7aa5-a399-4d3a-b7da-89b762facf1a test thu dec 11 2" [ref=e141]:
+              - cell "082e7aa5-a399-4d3a-b7da-89b762facf1a" [ref=e142] [cursor=pointer]
+              - cell "test thu dec 11 2" [ref=e143] [cursor=pointer]
+              - cell [ref=e144] [cursor=pointer]:
+                - button [ref=e145]:
+                  - img [ref=e147]
+            - row "93f9924f-5599-4ae5-bf38-faa00e1a2a35 test thu dec 11 3" [ref=e151]:
+              - cell "93f9924f-5599-4ae5-bf38-faa00e1a2a35" [ref=e152] [cursor=pointer]
+              - cell "test thu dec 11 3" [ref=e153] [cursor=pointer]
+              - cell [ref=e154] [cursor=pointer]:
+                - button [ref=e155]:
+                  - img [ref=e157]
+            - row "de22dca9-0e2f-49ec-84bb-64e026b9d933 campaign for avg del cost" [ref=e161]:
+              - cell "de22dca9-0e2f-49ec-84bb-64e026b9d933" [ref=e162] [cursor=pointer]
+              - cell "campaign for avg del cost" [ref=e163] [cursor=pointer]
+              - cell [ref=e164] [cursor=pointer]:
+                - button [ref=e165]:
+                  - img [ref=e167]
+            - row "ed3d4903-1868-4bfe-8a59-246d6775fede test 12.15" [ref=e171]:
+              - cell "ed3d4903-1868-4bfe-8a59-246d6775fede" [ref=e172] [cursor=pointer]
+              - cell "test 12.15" [ref=e173] [cursor=pointer]
+              - cell [ref=e174] [cursor=pointer]:
+                - button [ref=e175]:
+                  - img [ref=e177]
+            - row "0cd4aea7-2caa-4ae9-84ed-40abf7bf972d Email campaign 2.12.2025" [ref=e181]:
+              - cell "0cd4aea7-2caa-4ae9-84ed-40abf7bf972d" [ref=e182] [cursor=pointer]
+              - cell "Email campaign 2.12.2025" [ref=e183] [cursor=pointer]
+              - cell [ref=e184] [cursor=pointer]:
+                - button [ref=e185]:
+                  - img [ref=e187]
+            - row "37b49153-2506-498e-a3c2-0367823c3b3c Email campaign 2.12.2025" [ref=e191]:
+              - cell "37b49153-2506-498e-a3c2-0367823c3b3c" [ref=e192] [cursor=pointer]
+              - cell "Email campaign 2.12.2025" [ref=e193] [cursor=pointer]
+              - cell [ref=e194] [cursor=pointer]:
+                - button [ref=e195]:
+                  - img [ref=e197]
+            - row "3d85c0f1-8803-4e8b-b4ef-501838365f0c 123123" [ref=e201]:
+              - cell "3d85c0f1-8803-4e8b-b4ef-501838365f0c" [ref=e202] [cursor=pointer]
+              - cell "123123" [ref=e203] [cursor=pointer]
+              - cell [ref=e204] [cursor=pointer]:
+                - button [ref=e205]:
+                  - img [ref=e207]
+            - row "c71c98f5-bfe6-4413-bc30-29183e9e33cc retet" [ref=e211]:
+              - cell "c71c98f5-bfe6-4413-bc30-29183e9e33cc" [ref=e212] [cursor=pointer]
+              - cell "retet" [ref=e213] [cursor=pointer]
+              - cell [ref=e214] [cursor=pointer]:
+                - button [ref=e215]:
+                  - img [ref=e217]
+            - row "ab7406ef-922b-478e-bf99-fec8575d0490 retet" [ref=e221]:
+              - cell "ab7406ef-922b-478e-bf99-fec8575d0490" [ref=e222] [cursor=pointer]
+              - cell "retet" [ref=e223] [cursor=pointer]
+              - cell [ref=e224] [cursor=pointer]:
+                - button [ref=e225]:
+                  - img [ref=e227]
+            - row "3605454a-f9f3-4220-a7c3-b86c47fc8ec3 test email" [ref=e231]:
+              - cell "3605454a-f9f3-4220-a7c3-b86c47fc8ec3" [ref=e232] [cursor=pointer]
+              - cell "test email" [ref=e233] [cursor=pointer]
+              - cell [ref=e234] [cursor=pointer]:
+                - button [ref=e235]:
+                  - img [ref=e237]
+            - row "8c719f56-7920-4caa-9f6f-b145e800ad98 test on personal gmail of Abubakr" [ref=e241]:
+              - cell "8c719f56-7920-4caa-9f6f-b145e800ad98" [ref=e242] [cursor=pointer]
+              - cell "test on personal gmail of Abubakr" [ref=e243] [cursor=pointer]
+              - cell [ref=e244] [cursor=pointer]:
+                - button [ref=e245]:
+                  - img [ref=e247]
+            - row "b2765a69-ac56-4742-9665-bf05e0764157 test on personal gmail of Abubakr just string" [ref=e251]:
+              - cell "b2765a69-ac56-4742-9665-bf05e0764157" [ref=e252] [cursor=pointer]
+              - cell "test on personal gmail of Abubakr just string" [ref=e253] [cursor=pointer]
+              - cell [ref=e254] [cursor=pointer]:
+                - button [ref=e255]:
+                  - img [ref=e257]
+            - row "54d3e8d6-c153-4e20-9bff-f8520acaf668 bug fix" [ref=e261]:
+              - cell "54d3e8d6-c153-4e20-9bff-f8520acaf668" [ref=e262] [cursor=pointer]
+              - cell "bug fix" [ref=e263] [cursor=pointer]
+              - cell [ref=e264] [cursor=pointer]:
+                - button [ref=e265]:
+                  - img [ref=e267]
+            - row "4e73c9c8-cf81-4004-98eb-f0e8106820a2 test 25-02-26" [ref=e271]:
+              - cell "4e73c9c8-cf81-4004-98eb-f0e8106820a2" [ref=e272] [cursor=pointer]
+              - cell "test 25-02-26" [ref=e273] [cursor=pointer]
+              - cell [ref=e274] [cursor=pointer]:
+                - button [ref=e275]:
+                  - img [ref=e277]
+            - row "54f0a2e0-d489-48ad-96b7-182f58414e73 test_campaign_1774681793608" [ref=e281]:
+              - cell "54f0a2e0-d489-48ad-96b7-182f58414e73" [ref=e282] [cursor=pointer]
+              - cell "test_campaign_1774681793608" [ref=e283] [cursor=pointer]
+              - cell [ref=e284] [cursor=pointer]:
+                - button [ref=e285]:
+                  - img [ref=e287]
+            - row "743e94a4-e083-42da-af5b-b21e2c2e0f9d test_campaign_1774681833853" [ref=e291]:
+              - cell "743e94a4-e083-42da-af5b-b21e2c2e0f9d" [ref=e292] [cursor=pointer]
+              - cell "test_campaign_1774681833853" [ref=e293] [cursor=pointer]
+              - cell [ref=e294] [cursor=pointer]:
+                - button [ref=e295]:
+                  - img [ref=e297]
+            - row "4ec90951-b59f-471b-8603-93392eee0239 test_campaign_1774681858052" [ref=e301]:
+              - cell "4ec90951-b59f-471b-8603-93392eee0239" [ref=e302] [cursor=pointer]
+              - cell "test_campaign_1774681858052" [ref=e303] [cursor=pointer]
+              - cell [ref=e304] [cursor=pointer]:
+                - button [ref=e305]:
+                  - img [ref=e307]
+            - row "093b6f9f-808b-4cb4-b24e-48bffeb12f16 test_campaign_1774681865322" [ref=e311]:
+              - cell "093b6f9f-808b-4cb4-b24e-48bffeb12f16" [ref=e312] [cursor=pointer]
+              - cell "test_campaign_1774681865322" [ref=e313] [cursor=pointer]
+              - cell [ref=e314] [cursor=pointer]:
+                - button [ref=e315]:
+                  - img [ref=e317]
+            - row "113fd950-96fe-4937-bdf6-2b8638dfc552 test_campaign_1774681888873" [ref=e321]:
+              - cell "113fd950-96fe-4937-bdf6-2b8638dfc552" [ref=e322] [cursor=pointer]
+              - cell "test_campaign_1774681888873" [ref=e323] [cursor=pointer]
+              - cell [ref=e324] [cursor=pointer]:
+                - button [ref=e325]:
+                  - img [ref=e327]
+            - row "6748865c-b11b-446d-8df1-7b4cb87937a7 biz_campaign_1774681895846" [ref=e331]:
+              - cell "6748865c-b11b-446d-8df1-7b4cb87937a7" [ref=e332] [cursor=pointer]
+              - cell "biz_campaign_1774681895846" [ref=e333] [cursor=pointer]
+              - cell [ref=e334] [cursor=pointer]:
+                - button [ref=e335]:
+                  - img [ref=e337]
+            - row "50cf2de9-c74f-4603-9f47-b9cb75444279 biz_incl_excl_1774681895923" [ref=e341]:
+              - cell "50cf2de9-c74f-4603-9f47-b9cb75444279" [ref=e342] [cursor=pointer]
+              - cell "biz_incl_excl_1774681895923" [ref=e343] [cursor=pointer]
+              - cell [ref=e344] [cursor=pointer]:
+                - button [ref=e345]:
+                  - img [ref=e347]
+            - row "5c95d0c1-439f-4228-84c9-953217d9f1f1 biz_campaign_1774681902410" [ref=e351]:
+              - cell "5c95d0c1-439f-4228-84c9-953217d9f1f1" [ref=e352] [cursor=pointer]
+              - cell "biz_campaign_1774681902410" [ref=e353] [cursor=pointer]
+              - cell [ref=e354] [cursor=pointer]:
+                - button [ref=e355]:
+                  - img [ref=e357]
+            - row "ea7563c8-d289-4880-ac34-04edb0efcc86 biz_incl_excl_1774681902498" [ref=e361]:
+              - cell "ea7563c8-d289-4880-ac34-04edb0efcc86" [ref=e362] [cursor=pointer]
+              - cell "biz_incl_excl_1774681902498" [ref=e363] [cursor=pointer]
+              - cell [ref=e364] [cursor=pointer]:
+                - button [ref=e365]:
+                  - img [ref=e367]
+            - row "5df53a77-47c0-4457-acd5-1fe2e15a325d biz_campaign_1774681963408" [ref=e371]:
+              - cell "5df53a77-47c0-4457-acd5-1fe2e15a325d" [ref=e372] [cursor=pointer]
+              - cell "biz_campaign_1774681963408" [ref=e373] [cursor=pointer]
+              - cell [ref=e374] [cursor=pointer]:
+                - button [ref=e375]:
+                  - img [ref=e377]
+            - row "3818b8ff-2608-4806-9397-41ebd430d1e7 biz_incl_excl_1774681963494" [ref=e381]:
+              - cell "3818b8ff-2608-4806-9397-41ebd430d1e7" [ref=e382] [cursor=pointer]
+              - cell "biz_incl_excl_1774681963494" [ref=e383] [cursor=pointer]
+              - cell [ref=e384] [cursor=pointer]:
+                - button [ref=e385]:
+                  - img [ref=e387]
+            - row "5e9f0baf-3074-47b3-a39a-9252e4529c94 biz_campaign_1774681970018" [ref=e391]:
+              - cell "5e9f0baf-3074-47b3-a39a-9252e4529c94" [ref=e392] [cursor=pointer]
+              - cell "biz_campaign_1774681970018" [ref=e393] [cursor=pointer]
+              - cell [ref=e394] [cursor=pointer]:
+                - button [ref=e395]:
+                  - img [ref=e397]
+            - row "99d15bba-2a38-4a61-accc-9322d1ecdf54 biz_incl_excl_1774681970108" [ref=e401]:
+              - cell "99d15bba-2a38-4a61-accc-9322d1ecdf54" [ref=e402] [cursor=pointer]
+              - cell "biz_incl_excl_1774681970108" [ref=e403] [cursor=pointer]
+              - cell [ref=e404] [cursor=pointer]:
+                - button [ref=e405]:
+                  - img [ref=e407]
+            - row "3372a24b-5e8b-4a11-a8d2-7a58d938dd59 biz_campaign_1774682011317" [ref=e411]:
+              - cell "3372a24b-5e8b-4a11-a8d2-7a58d938dd59" [ref=e412] [cursor=pointer]
+              - cell "biz_campaign_1774682011317" [ref=e413] [cursor=pointer]
+              - cell [ref=e414] [cursor=pointer]:
+                - button [ref=e415]:
+                  - img [ref=e417]
+            - row "28d1ab48-dd67-4d0c-a482-edb3ad59f4af biz_incl_excl_1774682011386" [ref=e421]:
+              - cell "28d1ab48-dd67-4d0c-a482-edb3ad59f4af" [ref=e422] [cursor=pointer]
+              - cell "biz_incl_excl_1774682011386" [ref=e423] [cursor=pointer]
+              - cell [ref=e424] [cursor=pointer]:
+                - button [ref=e425]:
+                  - img [ref=e427]
+            - row "82372fe0-d1ef-470b-bbc1-b13fcd12b599 biz_campaign_1774682024972" [ref=e431]:
+              - cell "82372fe0-d1ef-470b-bbc1-b13fcd12b599" [ref=e432] [cursor=pointer]
+              - cell "biz_campaign_1774682024972" [ref=e433] [cursor=pointer]
+              - cell [ref=e434] [cursor=pointer]:
+                - button [ref=e435]:
+                  - img [ref=e437]
+            - row "0c572859-bbee-4ce7-8c01-802cd5ec8a71 biz_incl_excl_1774682025046" [ref=e441]:
+              - cell "0c572859-bbee-4ce7-8c01-802cd5ec8a71" [ref=e442] [cursor=pointer]
+              - cell "biz_incl_excl_1774682025046" [ref=e443] [cursor=pointer]
+              - cell [ref=e444] [cursor=pointer]:
+                - button [ref=e445]:
+                  - img [ref=e447]
+            - row "a6745302-acef-4393-a94d-9c2755ae9120 test_campaign_1774682032304" [ref=e451]:
+              - cell "a6745302-acef-4393-a94d-9c2755ae9120" [ref=e452] [cursor=pointer]
+              - cell "test_campaign_1774682032304" [ref=e453] [cursor=pointer]
+              - cell [ref=e454] [cursor=pointer]:
+                - button [ref=e455]:
+                  - img [ref=e457]
+            - row "d5774c79-c820-4914-bc89-74fe1e7216eb biz_campaign_1774682034644" [ref=e461]:
+              - cell "d5774c79-c820-4914-bc89-74fe1e7216eb" [ref=e462] [cursor=pointer]
+              - cell "biz_campaign_1774682034644" [ref=e463] [cursor=pointer]
+              - cell [ref=e464] [cursor=pointer]:
+                - button [ref=e465]:
+                  - img [ref=e467]
+            - row "0c310614-0f8f-4fa0-be04-79f37f50cb4f biz_incl_excl_1774682034728" [ref=e471]:
+              - cell "0c310614-0f8f-4fa0-be04-79f37f50cb4f" [ref=e472] [cursor=pointer]
+              - cell "biz_incl_excl_1774682034728" [ref=e473] [cursor=pointer]
+              - cell [ref=e474] [cursor=pointer]:
+                - button [ref=e475]:
+                  - img [ref=e477]
+            - row "cb7af369-533b-4cff-b320-adac5dcec160 cdptest_1774682743111_campaign" [ref=e481]:
+              - cell "cb7af369-533b-4cff-b320-adac5dcec160" [ref=e482] [cursor=pointer]
+              - cell "cdptest_1774682743111_campaign" [ref=e483] [cursor=pointer]
+              - cell [ref=e484] [cursor=pointer]:
+                - button [ref=e485]:
+                  - img [ref=e487]
+            - row "7fd7b699-6cd5-4301-8ec4-d7c470ad8701 cdptest_1774682820458_campaign" [ref=e491]:
+              - cell "7fd7b699-6cd5-4301-8ec4-d7c470ad8701" [ref=e492] [cursor=pointer]
+              - cell "cdptest_1774682820458_campaign" [ref=e493] [cursor=pointer]
+              - cell [ref=e494] [cursor=pointer]:
+                - button [ref=e495]:
+                  - img [ref=e497]
+            - row "1d333d89-c497-4625-883f-d91f95b72270 cdptest_1774682910577_campaign" [ref=e501]:
+              - cell "1d333d89-c497-4625-883f-d91f95b72270" [ref=e502] [cursor=pointer]
+              - cell "cdptest_1774682910577_campaign" [ref=e503] [cursor=pointer]
+              - cell [ref=e504] [cursor=pointer]:
+                - button [ref=e505]:
+                  - img [ref=e507]
+            - row "5fef2e8c-8cb1-46de-8f4e-9562eb896b0a test_campaign_1774682918900" [ref=e511]:
+              - cell "5fef2e8c-8cb1-46de-8f4e-9562eb896b0a" [ref=e512] [cursor=pointer]
+              - cell "test_campaign_1774682918900" [ref=e513] [cursor=pointer]
+              - cell [ref=e514] [cursor=pointer]:
+                - button [ref=e515]:
+                  - img [ref=e517]
+            - row "6ad6149d-5fba-419f-9f27-bfcdffb27506 test_campaign_1774682925660" [ref=e521]:
+              - cell "6ad6149d-5fba-419f-9f27-bfcdffb27506" [ref=e522] [cursor=pointer]
+              - cell "test_campaign_1774682925660" [ref=e523] [cursor=pointer]
+              - cell [ref=e524] [cursor=pointer]:
+                - button [ref=e525]:
+                  - img [ref=e527]
+            - row "bcc0a330-a11d-46ff-8aa4-959f03d32402 test_campaign_1774682951791" [ref=e531]:
+              - cell "bcc0a330-a11d-46ff-8aa4-959f03d32402" [ref=e532] [cursor=pointer]
+              - cell "test_campaign_1774682951791" [ref=e533] [cursor=pointer]
+              - cell [ref=e534] [cursor=pointer]:
+                - button [ref=e535]:
+                  - img [ref=e537]
+            - row "fc3a7ade-c31a-4ba2-8abf-2886dd7f1501 cdptest_1774682954169_campaign" [ref=e541]:
+              - cell "fc3a7ade-c31a-4ba2-8abf-2886dd7f1501" [ref=e542] [cursor=pointer]
+              - cell "cdptest_1774682954169_campaign" [ref=e543] [cursor=pointer]
+              - cell [ref=e544] [cursor=pointer]:
+                - button [ref=e545]:
+                  - img [ref=e547]
+            - row "b47bb50f-6f76-48ad-ac1a-560a4730d169 cdptest_1774686294496_campaign" [ref=e551]:
+              - cell "b47bb50f-6f76-48ad-ac1a-560a4730d169" [ref=e552] [cursor=pointer]
+              - cell "cdptest_1774686294496_campaign" [ref=e553] [cursor=pointer]
+              - cell [ref=e554] [cursor=pointer]:
+                - button [ref=e555]:
+                  - img [ref=e557]
+            - row "dd3a2f32-1c8d-4fe4-a1ba-4be1c34256d7 test_campaign_1774686302012" [ref=e561]:
+              - cell "dd3a2f32-1c8d-4fe4-a1ba-4be1c34256d7" [ref=e562] [cursor=pointer]
+              - cell "test_campaign_1774686302012" [ref=e563] [cursor=pointer]
+              - cell [ref=e564] [cursor=pointer]:
+                - button [ref=e565]:
+                  - img [ref=e567]
+            - row "6c34c25b-f39b-492d-b216-599ed163492b test_campaign_1774687170466" [ref=e571]:
+              - cell "6c34c25b-f39b-492d-b216-599ed163492b" [ref=e572] [cursor=pointer]
+              - cell "test_campaign_1774687170466" [ref=e573] [cursor=pointer]
+              - cell [ref=e574] [cursor=pointer]:
+                - button [ref=e575]:
+                  - img [ref=e577]
+            - row "3ef26f82-a7d9-45e8-859f-261557ec40d4 test_campaign_1774689413352" [ref=e581]:
+              - cell "3ef26f82-a7d9-45e8-859f-261557ec40d4" [ref=e582] [cursor=pointer]
+              - cell "test_campaign_1774689413352" [ref=e583] [cursor=pointer]
+              - cell [ref=e584] [cursor=pointer]:
+                - button [ref=e585]:
+                  - img [ref=e587]
+            - row "253c1780-5b8f-4806-bb29-50b25997e76b test_campaign_1774689492605" [ref=e591]:
+              - cell "253c1780-5b8f-4806-bb29-50b25997e76b" [ref=e592] [cursor=pointer]
+              - cell "test_campaign_1774689492605" [ref=e593] [cursor=pointer]
+              - cell [ref=e594] [cursor=pointer]:
+                - button [ref=e595]:
+                  - img [ref=e597]
+            - row "7ff59d9a-07cc-4b7b-9930-1e6c69292b54 test_campaign_1774690972644" [ref=e601]:
+              - cell "7ff59d9a-07cc-4b7b-9930-1e6c69292b54" [ref=e602] [cursor=pointer]
+              - cell "test_campaign_1774690972644" [ref=e603] [cursor=pointer]
+              - cell [ref=e604] [cursor=pointer]:
+                - button [ref=e605]:
+                  - img [ref=e607]
+            - row "bc79fbbd-c239-4251-9593-26f458778b9e test_campaign_1774691597973" [ref=e611]:
+              - cell "bc79fbbd-c239-4251-9593-26f458778b9e" [ref=e612] [cursor=pointer]
+              - cell "test_campaign_1774691597973" [ref=e613] [cursor=pointer]
+              - cell [ref=e614] [cursor=pointer]:
+                - button [ref=e615]:
+                  - img [ref=e617]
+            - row "48eff06f-ab28-4549-be20-79d660a250eb test_campaign_1774691605934" [ref=e621]:
+              - cell "48eff06f-ab28-4549-be20-79d660a250eb" [ref=e622] [cursor=pointer]
+              - cell "test_campaign_1774691605934" [ref=e623] [cursor=pointer]
+              - cell [ref=e624] [cursor=pointer]:
+                - button [ref=e625]:
+                  - img [ref=e627]
+            - row "35cdc71f-9d1e-49d0-bbdc-7a28bd98d28f test_campaign_1774692097961" [ref=e631]:
+              - cell "35cdc71f-9d1e-49d0-bbdc-7a28bd98d28f" [ref=e632] [cursor=pointer]
+              - cell "test_campaign_1774692097961" [ref=e633] [cursor=pointer]
+              - cell [ref=e634] [cursor=pointer]:
+                - button [ref=e635]:
+                  - img [ref=e637]
+            - row "08f31898-ba92-4a5f-ae80-6b548082ab24 test_campaign_1774692180334" [ref=e641]:
+              - cell "08f31898-ba92-4a5f-ae80-6b548082ab24" [ref=e642] [cursor=pointer]
+              - cell "test_campaign_1774692180334" [ref=e643] [cursor=pointer]
+              - cell [ref=e644] [cursor=pointer]:
+                - button [ref=e645]:
+                  - img [ref=e647]
+            - row "92bca5f6-6660-4f3f-8402-70f4ff2c5fe9 test_campaign_1774692188524" [ref=e651]:
+              - cell "92bca5f6-6660-4f3f-8402-70f4ff2c5fe9" [ref=e652] [cursor=pointer]
+              - cell "test_campaign_1774692188524" [ref=e653] [cursor=pointer]
+              - cell [ref=e654] [cursor=pointer]:
+                - button [ref=e655]:
+                  - img [ref=e657]
+            - row "69713ac6-a493-4128-8a9a-b8791c81713e test_campaign_1774692486939" [ref=e661]:
+              - cell "69713ac6-a493-4128-8a9a-b8791c81713e" [ref=e662] [cursor=pointer]
+              - cell "test_campaign_1774692486939" [ref=e663] [cursor=pointer]
+              - cell [ref=e664] [cursor=pointer]:
+                - button [ref=e665]:
+                  - img [ref=e667]
+            - row "8d41d4d6-b0f6-4340-9cc3-caeb434d6fe6 test_campaign_1774693804351" [ref=e671]:
+              - cell "8d41d4d6-b0f6-4340-9cc3-caeb434d6fe6" [ref=e672] [cursor=pointer]
+              - cell "test_campaign_1774693804351" [ref=e673] [cursor=pointer]
+              - cell [ref=e674] [cursor=pointer]:
+                - button [ref=e675]:
+                  - img [ref=e677]
+            - row "3bfabf1e-6919-4023-a60a-404aaef188f6 test_campaign_1774693812679" [ref=e681]:
+              - cell "3bfabf1e-6919-4023-a60a-404aaef188f6" [ref=e682] [cursor=pointer]
+              - cell "test_campaign_1774693812679" [ref=e683] [cursor=pointer]
+              - cell [ref=e684] [cursor=pointer]:
+                - button [ref=e685]:
+                  - img [ref=e687]
+            - row "1e14e17f-9ebe-47e9-98b4-36803bcb0830 test_campaign_1774695215747" [ref=e691]:
+              - cell "1e14e17f-9ebe-47e9-98b4-36803bcb0830" [ref=e692] [cursor=pointer]
+              - cell "test_campaign_1774695215747" [ref=e693] [cursor=pointer]
+              - cell [ref=e694] [cursor=pointer]:
+                - button [ref=e695]:
+                  - img [ref=e697]
+            - row "ebad4405-1b7b-46ab-a390-510a061e7e0b test_campaign_1774696157974" [ref=e701]:
+              - cell "ebad4405-1b7b-46ab-a390-510a061e7e0b" [ref=e702] [cursor=pointer]
+              - cell "test_campaign_1774696157974" [ref=e703] [cursor=pointer]
+              - cell [ref=e704] [cursor=pointer]:
+                - button [ref=e705]:
+                  - img [ref=e707]
+            - row "59475456-d5ff-4ea1-9852-ca880b9dde2d test_campaign_1774702006566" [ref=e711]:
+              - cell "59475456-d5ff-4ea1-9852-ca880b9dde2d" [ref=e712] [cursor=pointer]
+              - cell "test_campaign_1774702006566" [ref=e713] [cursor=pointer]
+              - cell [ref=e714] [cursor=pointer]:
+                - button [ref=e715]:
+                  - img [ref=e717]
+            - row "148d2753-9537-486d-95d9-4d212b0405e9 test_campaign_1774780374632" [ref=e721]:
+              - cell "148d2753-9537-486d-95d9-4d212b0405e9" [ref=e722] [cursor=pointer]
+              - cell "test_campaign_1774780374632" [ref=e723] [cursor=pointer]
+              - cell [ref=e724] [cursor=pointer]:
+                - button [ref=e725]:
+                  - img [ref=e727]
+            - row "db1e72ac-7700-4144-b0d6-ed284d0e4556 test_campaign_1774780383272" [ref=e731]:
+              - cell "db1e72ac-7700-4144-b0d6-ed284d0e4556" [ref=e732] [cursor=pointer]
+              - cell "test_campaign_1774780383272" [ref=e733] [cursor=pointer]
+              - cell [ref=e734] [cursor=pointer]:
+                - button [ref=e735]:
+                  - img [ref=e737]
+            - row "f5b07611-a263-44ce-bc29-b96a7961e50c test_campaign_1774780490843" [ref=e741]:
+              - cell "f5b07611-a263-44ce-bc29-b96a7961e50c" [ref=e742] [cursor=pointer]
+              - cell "test_campaign_1774780490843" [ref=e743] [cursor=pointer]
+              - cell [ref=e744] [cursor=pointer]:
+                - button [ref=e745]:
+                  - img [ref=e747]
+            - row "744f3181-9bd7-4fe4-9043-1f3dfa81d78c test_campaign_1774780498507" [ref=e751]:
+              - cell "744f3181-9bd7-4fe4-9043-1f3dfa81d78c" [ref=e752] [cursor=pointer]
+              - cell "test_campaign_1774780498507" [ref=e753] [cursor=pointer]
+              - cell [ref=e754] [cursor=pointer]:
+                - button [ref=e755]:
+                  - img [ref=e757]
+            - row "a2e92c9d-b3ef-4de6-bdce-2eb3c6beb1eb test_campaign_1774780530143" [ref=e761]:
+              - cell "a2e92c9d-b3ef-4de6-bdce-2eb3c6beb1eb" [ref=e762] [cursor=pointer]
+              - cell "test_campaign_1774780530143" [ref=e763] [cursor=pointer]
+              - cell [ref=e764] [cursor=pointer]:
+                - button [ref=e765]:
+                  - img [ref=e767]
+            - row "22825e2f-46aa-444c-826b-2ef78c844837 test_campaign_1774780609045" [ref=e771]:
+              - cell "22825e2f-46aa-444c-826b-2ef78c844837" [ref=e772] [cursor=pointer]
+              - cell "test_campaign_1774780609045" [ref=e773] [cursor=pointer]
+              - cell [ref=e774] [cursor=pointer]:
+                - button [ref=e775]:
+                  - img [ref=e777]
+            - row "d34c02d1-3c94-4aa6-8f78-b142cd9fa287 test_campaign_1774849397600" [ref=e781]:
+              - cell "d34c02d1-3c94-4aa6-8f78-b142cd9fa287" [ref=e782] [cursor=pointer]
+              - cell "test_campaign_1774849397600" [ref=e783] [cursor=pointer]
+              - cell [ref=e784] [cursor=pointer]:
+                - button [ref=e785]:
+                  - img [ref=e787]
+            - row "34f57d70-2465-46a8-a7ae-176878a64a16 test_campaign_1774849410988" [ref=e791]:
+              - cell "34f57d70-2465-46a8-a7ae-176878a64a16" [ref=e792] [cursor=pointer]
+              - cell "test_campaign_1774849410988" [ref=e793] [cursor=pointer]
+              - cell [ref=e794] [cursor=pointer]:
+                - button [ref=e795]:
+                  - img [ref=e797]
+            - row "cbd8f186-81ff-42cf-a0a2-2a4d8e1979de test_campaign_1774851113978" [ref=e801]:
+              - cell "cbd8f186-81ff-42cf-a0a2-2a4d8e1979de" [ref=e802] [cursor=pointer]
+              - cell "test_campaign_1774851113978" [ref=e803] [cursor=pointer]
+              - cell [ref=e804] [cursor=pointer]:
+                - button [ref=e805]:
+                  - img [ref=e807]
+            - row "aff71161-b98d-4bac-a3cf-bfbcce48622e test_delete_camp_1775016556396" [ref=e811]:
+              - cell "aff71161-b98d-4bac-a3cf-bfbcce48622e" [ref=e812] [cursor=pointer]
+              - cell "test_delete_camp_1775016556396" [ref=e813] [cursor=pointer]
+              - cell [ref=e814] [cursor=pointer]:
+                - button [ref=e815]:
+                  - img [ref=e817]
+            - row "7a5b4a19-4e9a-465a-a40b-351b296e299a test_delete_camp_1775016807769" [ref=e821]:
+              - cell "7a5b4a19-4e9a-465a-a40b-351b296e299a" [ref=e822] [cursor=pointer]
+              - cell "test_delete_camp_1775016807769" [ref=e823] [cursor=pointer]
+              - cell [ref=e824] [cursor=pointer]:
+                - button [ref=e825]:
+                  - img [ref=e827]
+            - row "daec7daa-01ef-488d-bf8e-120bb5eb100a test_delete_camp_1775016859085" [ref=e831]:
+              - cell "daec7daa-01ef-488d-bf8e-120bb5eb100a" [ref=e832] [cursor=pointer]
+              - cell "test_delete_camp_1775016859085" [ref=e833] [cursor=pointer]
+              - cell [ref=e834] [cursor=pointer]:
+                - button [ref=e835]:
+                  - img [ref=e837]
+            - row "e9bb51ae-4f91-4260-80c0-a29f7aa184bc test_campaign_1775016866868" [ref=e841]:
+              - cell "e9bb51ae-4f91-4260-80c0-a29f7aa184bc" [ref=e842] [cursor=pointer]
+              - cell "test_campaign_1775016866868" [ref=e843] [cursor=pointer]
+              - cell [ref=e844] [cursor=pointer]:
+                - button [ref=e845]:
+                  - img [ref=e847]
+            - row "3ed1a4ee-a6e0-46cb-a972-53f64c812aaf test_delete_camp_1775016867690" [ref=e851]:
+              - cell "3ed1a4ee-a6e0-46cb-a972-53f64c812aaf" [ref=e852] [cursor=pointer]
+              - cell "test_delete_camp_1775016867690" [ref=e853] [cursor=pointer]
+              - cell [ref=e854] [cursor=pointer]:
+                - button [ref=e855]:
+                  - img [ref=e857]
+            - row "3a9de463-72fe-4ea1-b8bb-9f41b4614037 test_campaign_1775016895374" [ref=e861]:
+              - cell "3a9de463-72fe-4ea1-b8bb-9f41b4614037" [ref=e862] [cursor=pointer]
+              - cell "test_campaign_1775016895374" [ref=e863] [cursor=pointer]
+              - cell [ref=e864] [cursor=pointer]:
+                - button [ref=e865]:
+                  - img [ref=e867]
+            - row "032d61fc-a4c7-463c-add4-a7481b3c6023 test_delete_camp_1775016895385" [ref=e871]:
+              - cell "032d61fc-a4c7-463c-add4-a7481b3c6023" [ref=e872] [cursor=pointer]
+              - cell "test_delete_camp_1775016895385" [ref=e873] [cursor=pointer]
+              - cell [ref=e874] [cursor=pointer]:
+                - button [ref=e875]:
+                  - img [ref=e877]
+            - row "764bb6a0-37dc-46b9-a845-659ecd957264 test_delete_camp_1775019998752" [ref=e881]:
+              - cell "764bb6a0-37dc-46b9-a845-659ecd957264" [ref=e882] [cursor=pointer]
+              - cell "test_delete_camp_1775019998752" [ref=e883] [cursor=pointer]
+              - cell [ref=e884] [cursor=pointer]:
+                - button [ref=e885]:
+                  - img [ref=e887]
+            - row "c8225ffb-815f-4fcd-b643-3d721a510c09 test_campaign_1775019998838" [ref=e891]:
+              - cell "c8225ffb-815f-4fcd-b643-3d721a510c09" [ref=e892] [cursor=pointer]
+              - cell "test_campaign_1775019998838" [ref=e893] [cursor=pointer]
+              - cell [ref=e894] [cursor=pointer]:
+                - button [ref=e895]:
+                  - img [ref=e897]
+            - row "bc183a04-3af9-4f2e-a0e9-59eeb7ef8693 test_campaign_1775020094437" [ref=e901]:
+              - cell "bc183a04-3af9-4f2e-a0e9-59eeb7ef8693" [ref=e902] [cursor=pointer]
+              - cell "test_campaign_1775020094437" [ref=e903] [cursor=pointer]
+              - cell [ref=e904] [cursor=pointer]:
+                - button [ref=e905]:
+                  - img [ref=e907]
+            - row "87ce6b77-1fe4-4953-b8b3-9ccca3bafc5a test_campaign_1775020100419" [ref=e911]:
+              - cell "87ce6b77-1fe4-4953-b8b3-9ccca3bafc5a" [ref=e912] [cursor=pointer]
+              - cell "test_campaign_1775020100419" [ref=e913] [cursor=pointer]
+              - cell [ref=e914] [cursor=pointer]:
+                - button [ref=e915]:
+                  - img [ref=e917]
+            - row "f6366bd9-a179-4b16-9098-522ba893aaf0 test_campaign_1775020117010" [ref=e921]:
+              - cell "f6366bd9-a179-4b16-9098-522ba893aaf0" [ref=e922] [cursor=pointer]
+              - cell "test_campaign_1775020117010" [ref=e923] [cursor=pointer]
+              - cell [ref=e924] [cursor=pointer]:
+                - button [ref=e925]:
+                  - img [ref=e927]
+            - row "8366f799-2590-4838-9ccb-fc5f6283e696 test_campaign_1775020277914" [ref=e931]:
+              - cell "8366f799-2590-4838-9ccb-fc5f6283e696" [ref=e932] [cursor=pointer]
+              - cell "test_campaign_1775020277914" [ref=e933] [cursor=pointer]
+              - cell [ref=e934] [cursor=pointer]:
+                - button [ref=e935]:
+                  - img [ref=e937]
+            - row "569460da-46ff-4480-a8b8-8b4aaa9babf9 test_delete_camp_1775020277916" [ref=e941]:
+              - cell "569460da-46ff-4480-a8b8-8b4aaa9babf9" [ref=e942] [cursor=pointer]
+              - cell "test_delete_camp_1775020277916" [ref=e943] [cursor=pointer]
+              - cell [ref=e944] [cursor=pointer]:
+                - button [ref=e945]:
+                  - img [ref=e947]
+            - row "cf133db5-5e02-4ce5-bff1-4e7adcde04ab test_delete_camp_1775024996502" [ref=e951]:
+              - cell "cf133db5-5e02-4ce5-bff1-4e7adcde04ab" [ref=e952] [cursor=pointer]
+              - cell "test_delete_camp_1775024996502" [ref=e953] [cursor=pointer]
+              - cell [ref=e954] [cursor=pointer]:
+                - button [ref=e955]:
+                  - img [ref=e957]
+            - row "533f02f9-642f-4da8-b9bb-e2dabb5d025e test_campaign_1775024996537" [ref=e961]:
+              - cell "533f02f9-642f-4da8-b9bb-e2dabb5d025e" [ref=e962] [cursor=pointer]
+              - cell "test_campaign_1775024996537" [ref=e963] [cursor=pointer]
+              - cell [ref=e964] [cursor=pointer]:
+                - button [ref=e965]:
+                  - img [ref=e967]
+            - row "378e8fe5-652d-4f76-b15b-93502ea2b5a9 test_campaign_1775028070782" [ref=e971]:
+              - cell "378e8fe5-652d-4f76-b15b-93502ea2b5a9" [ref=e972] [cursor=pointer]
+              - cell "test_campaign_1775028070782" [ref=e973] [cursor=pointer]
+              - cell [ref=e974] [cursor=pointer]:
+                - button [ref=e975]:
+                  - img [ref=e977]
+            - row "26ff752c-014f-4379-bb9c-966e11baa4da test_delete_camp_1775028070859" [ref=e981]:
+              - cell "26ff752c-014f-4379-bb9c-966e11baa4da" [ref=e982] [cursor=pointer]
+              - cell "test_delete_camp_1775028070859" [ref=e983] [cursor=pointer]
+              - cell [ref=e984] [cursor=pointer]:
+                - button [ref=e985]:
+                  - img [ref=e987]
+            - row "95ad1af7-7542-4562-ad8a-86dd7a98bfb9 test_delete_camp_1775028081700" [ref=e991]:
+              - cell "95ad1af7-7542-4562-ad8a-86dd7a98bfb9" [ref=e992] [cursor=pointer]
+              - cell "test_delete_camp_1775028081700" [ref=e993] [cursor=pointer]
+              - cell [ref=e994] [cursor=pointer]:
+                - button [ref=e995]:
+                  - img [ref=e997]
+            - row "75081c5c-db13-4af2-9fe0-c212671e2a58 test_campaign_1775028081734" [ref=e1001]:
+              - cell "75081c5c-db13-4af2-9fe0-c212671e2a58" [ref=e1002] [cursor=pointer]
+              - cell "test_campaign_1775028081734" [ref=e1003] [cursor=pointer]
+              - cell [ref=e1004] [cursor=pointer]:
+                - button [ref=e1005]:
+                  - img [ref=e1007]
+    - region "Notifications Alt+T"
+  - dialog "Создать рассылку" [ref=e1012]:
+    - banner [ref=e1013]:
+      - heading "Создать рассылку" [level=2] [ref=e1014]
+      - button [active] [ref=e1015] [cursor=pointer]:
+        - img [ref=e1016]
+    - generic [ref=e1019]:
+      - generic [ref=e1020]:
+        - generic [ref=e1021]: Название кампании *
+        - textbox "Название кампании" [ref=e1023]:
+          - /placeholder: Введите название рассылки
+      - generic [ref=e1024]:
+        - generic [ref=e1025]: Канал коммуникации *
+        - generic [ref=e1026]:
+          - textbox "Канал коммуникации" [ref=e1027]:
+            - /placeholder: Выберите канал
+          - generic:
+            - img
+      - generic [ref=e1028]:
+        - generic [ref=e1029]: Шаблон *
+        - generic [ref=e1030]:
+          - textbox "Шаблон" [ref=e1031]:
+            - /placeholder: Выберите шаблон
+          - generic:
+            - img
+      - generic [ref=e1032]:
+        - generic [ref=e1033]:
+          - generic [ref=e1034]: Сегментация *
+          - generic [ref=e1035]:
+            - textbox "Сегментация" [ref=e1036]:
+              - /placeholder: Выберите сегментацию
+            - generic:
+              - img
+        - generic [ref=e1037]:
+          - generic [ref=e1038]: Включить сегменты
+          - generic [ref=e1039]:
+            - textbox "Включить сегменты" [disabled] [ref=e1042]:
+              - /placeholder: Сначала выберите канал коммуникации
+            - generic:
+              - img
+      - generic [ref=e1043]:
+        - generic [ref=e1044]:
+          - generic [ref=e1045]: Сегментация
+          - generic [ref=e1046]:
+            - textbox "Сегментация" [ref=e1047]:
+              - /placeholder: Выберите сегментацию
+            - generic:
+              - img
+        - generic [ref=e1048]:
+          - generic [ref=e1049]: Исключить сегменты
+          - generic [ref=e1050]:
+            - textbox "Исключить сегменты" [disabled] [ref=e1053]:
+              - /placeholder: Сначала выберите канал коммуникации
+            - generic:
+              - img
+      - generic [ref=e1055]:
+        - button "Предпросмотр" [disabled] [ref=e1056]:
+          - generic [ref=e1058]: Предпросмотр
+        - button "Создать рассылку" [ref=e1059] [cursor=pointer]:
+          - generic [ref=e1061]: Создать рассылку
+        - button "Сбросить" [ref=e1062] [cursor=pointer]:
+          - generic [ref=e1064]: Сбросить

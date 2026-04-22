@@ -1,0 +1,1166 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "Панель управления" [ref=e8] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e9]: Панель управления
+          - generic [ref=e10]:
+            - paragraph [ref=e11]: Данные
+            - generic [ref=e12]:
+              - link "Клиенты 342279" [ref=e116] [cursor=pointer]:
+                - /url: /data/clients
+                - img [ref=e14]
+                - generic [ref=e16]: Клиенты
+                - generic [ref=e118]: "342279"
+              - button "События 66245" [ref=e119] [cursor=pointer]:
+                - img [ref=e18]
+                - generic [ref=e20]: События
+                - generic [ref=e121]: "66245"
+              - link "Сценарий" [ref=e21] [cursor=pointer]:
+                - /url: /data/scenario
+                - img [ref=e22]
+                - generic [ref=e24]: Сценарий
+              - link "Файлы" [ref=e25] [cursor=pointer]:
+                - /url: /data/files
+                - img [ref=e26]
+                - generic [ref=e30]: Файлы
+          - generic [ref=e31]:
+            - paragraph [ref=e32]: Маркетинг
+            - generic [ref=e33]:
+              - link "Агрегаты" [ref=e34] [cursor=pointer]:
+                - /url: /marketing/aggregate
+                - img [ref=e35]
+                - generic [ref=e48]: Агрегаты
+              - link "Сегменты" [ref=e49] [cursor=pointer]:
+                - /url: /marketing/segments
+                - img [ref=e50]
+                - generic [ref=e53]: Сегменты
+              - link "Рассылки" [ref=e54] [cursor=pointer]:
+                - /url: /marketing/campaigns
+                - img [ref=e55]
+                - generic [ref=e57]: Рассылки
+              - link "Коммуникации" [ref=e58] [cursor=pointer]:
+                - /url: /marketing/communication
+                - img [ref=e59]
+                - generic [ref=e61]: Коммуникации
+          - generic [ref=e62]:
+            - paragraph [ref=e63]: Аналитика
+            - link "Статистика полей" [ref=e65] [cursor=pointer]:
+              - /url: /statistics/field
+              - img [ref=e66]
+              - generic [ref=e91]: Статистика полей
+        - generic [ref=e92]:
+          - separator [ref=e93]
+          - generic [ref=e95]:
+            - generic [ref=e97]: c
+            - paragraph [ref=e98] [cursor=pointer]: cdp_1762934640267
+      - generic [ref=e103]:
+        - paragraph [ref=e106]: Агрегаты
+        - separator [ref=e107]
+        - button "Добавить" [ref=e109] [cursor=pointer]:
+          - generic [ref=e110]:
+            - img [ref=e112]
+            - generic [ref=e113]: Добавить
+        - table [ref=e124]:
+          - rowgroup [ref=e125]:
+            - row "ID Название" [ref=e126]:
+              - columnheader "ID" [ref=e127]
+              - columnheader "Название" [ref=e128]
+          - rowgroup [ref=e129]:
+            - row "88ba260f-ca6f-4a27-afaf-af64e576c909 test_count_1775028125312" [ref=e130]:
+              - cell "88ba260f-ca6f-4a27-afaf-af64e576c909" [ref=e131] [cursor=pointer]
+              - cell "test_count_1775028125312" [ref=e132] [cursor=pointer]
+            - row "74846e8e-5881-41ef-8be5-6e39873f1575 test_dup_1775028125244" [ref=e133]:
+              - cell "74846e8e-5881-41ef-8be5-6e39873f1575" [ref=e134] [cursor=pointer]
+              - cell "test_dup_1775028125244" [ref=e135] [cursor=pointer]
+            - row "ec7e9a5b-a4b7-4479-abbf-a28a471fbec6 test_dup_1775028125244" [ref=e136]:
+              - cell "ec7e9a5b-a4b7-4479-abbf-a28a471fbec6" [ref=e137] [cursor=pointer]
+              - cell "test_dup_1775028125244" [ref=e138] [cursor=pointer]
+            - row "ccfc7d2f-5c00-47b8-aea8-2443111badd0 test_delete_1775028125168" [ref=e139]:
+              - cell "ccfc7d2f-5c00-47b8-aea8-2443111badd0" [ref=e140] [cursor=pointer]
+              - cell "test_delete_1775028125168" [ref=e141] [cursor=pointer]
+            - row "8642c1cf-43fb-4512-b964-f4a28a8b4d09 test_update_1775028125058" [ref=e142]:
+              - cell "8642c1cf-43fb-4512-b964-f4a28a8b4d09" [ref=e143] [cursor=pointer]
+              - cell "test_update_1775028125058" [ref=e144] [cursor=pointer]
+            - row "b4460b4a-fa3a-4b3b-b89e-140e30e196bc test_count_1775028119003" [ref=e145]:
+              - cell "b4460b4a-fa3a-4b3b-b89e-140e30e196bc" [ref=e146] [cursor=pointer]
+              - cell "test_count_1775028119003" [ref=e147] [cursor=pointer]
+            - row "acd9a08e-d53a-4b52-b1e8-d02b035a1a2d test_dup_1775028118943" [ref=e148]:
+              - cell "acd9a08e-d53a-4b52-b1e8-d02b035a1a2d" [ref=e149] [cursor=pointer]
+              - cell "test_dup_1775028118943" [ref=e150] [cursor=pointer]
+            - row "b47daae7-6069-4189-9dd7-225b61fcb294 test_dup_1775028118943" [ref=e151]:
+              - cell "b47daae7-6069-4189-9dd7-225b61fcb294" [ref=e152] [cursor=pointer]
+              - cell "test_dup_1775028118943" [ref=e153] [cursor=pointer]
+            - row "419477f2-dbe2-49a0-a63b-e6f6a0b3bf02 test_delete_1775028118875" [ref=e154]:
+              - cell "419477f2-dbe2-49a0-a63b-e6f6a0b3bf02" [ref=e155] [cursor=pointer]
+              - cell "test_delete_1775028118875" [ref=e156] [cursor=pointer]
+            - row "9eed0add-78e3-4ae8-95c2-213ec383c572 test_update_1775028118743" [ref=e157]:
+              - cell "9eed0add-78e3-4ae8-95c2-213ec383c572" [ref=e158] [cursor=pointer]
+              - cell "test_update_1775028118743" [ref=e159] [cursor=pointer]
+            - row "21232816-5dcb-488e-ac7f-6cab69eaaf06 1; DELETE FROM events WHERE 1=1" [ref=e160]:
+              - cell "21232816-5dcb-488e-ac7f-6cab69eaaf06" [ref=e161] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e162] [cursor=pointer]
+            - row "a053cd53-b7c0-4df6-94bc-9f883abaab87 ' UNION SELECT * FROM users --" [ref=e163]:
+              - cell "a053cd53-b7c0-4df6-94bc-9f883abaab87" [ref=e164] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e165] [cursor=pointer]
+            - row "c2d77873-1180-4303-89ef-2ba6ba3c68aa 1 OR 1=1" [ref=e166]:
+              - cell "c2d77873-1180-4303-89ef-2ba6ba3c68aa" [ref=e167] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e168] [cursor=pointer]
+            - row "77806f01-c4f6-4e0b-90ad-ea6695467893 '; DROP TABLE customers; --" [ref=e169]:
+              - cell "77806f01-c4f6-4e0b-90ad-ea6695467893" [ref=e170] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e171] [cursor=pointer]
+            - row "0869b629-6140-4940-bd12-b66a54bdc475" [ref=e172]:
+              - cell "0869b629-6140-4940-bd12-b66a54bdc475" [ref=e173] [cursor=pointer]
+              - cell [ref=e174] [cursor=pointer]
+            - row "96dc8ad1-6907-4367-b36f-b42ce2b93cdd test_count_1775028081115" [ref=e175]:
+              - cell "96dc8ad1-6907-4367-b36f-b42ce2b93cdd" [ref=e176] [cursor=pointer]
+              - cell "test_count_1775028081115" [ref=e177] [cursor=pointer]
+            - row "52b42417-39f4-4c60-9d34-a1df01072013 test_udaf_1775028081093" [ref=e178]:
+              - cell "52b42417-39f4-4c60-9d34-a1df01072013" [ref=e179] [cursor=pointer]
+              - cell "test_udaf_1775028081093" [ref=e180] [cursor=pointer]
+            - row "316699b5-135b-4a5b-84ac-9a1b8ca05bbb test_dup_1775028081060" [ref=e181]:
+              - cell "316699b5-135b-4a5b-84ac-9a1b8ca05bbb" [ref=e182] [cursor=pointer]
+              - cell "test_dup_1775028081060" [ref=e183] [cursor=pointer]
+            - row "3dd9324d-459e-4324-a7ab-279489cde7f0 test_dup_1775028081060" [ref=e184]:
+              - cell "3dd9324d-459e-4324-a7ab-279489cde7f0" [ref=e185] [cursor=pointer]
+              - cell "test_dup_1775028081060" [ref=e186] [cursor=pointer]
+            - row "27743e15-d4da-4591-aca8-8a3e3385b58b test_delete_1775028080972" [ref=e187]:
+              - cell "27743e15-d4da-4591-aca8-8a3e3385b58b" [ref=e188] [cursor=pointer]
+              - cell "test_delete_1775028080972" [ref=e189] [cursor=pointer]
+            - row "fa253a0a-9156-41a6-8c9d-785a9f48cf4e test_update_1775028080766" [ref=e190]:
+              - cell "fa253a0a-9156-41a6-8c9d-785a9f48cf4e" [ref=e191] [cursor=pointer]
+              - cell "test_update_1775028080766" [ref=e192] [cursor=pointer]
+            - row "38266fc7-fdfe-43a3-ab79-e26209b20bd1 1; DELETE FROM events WHERE 1=1" [ref=e193]:
+              - cell "38266fc7-fdfe-43a3-ab79-e26209b20bd1" [ref=e194] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e195] [cursor=pointer]
+            - row "3344e841-0705-45ca-a5ba-d62224bb8594 ' UNION SELECT * FROM users --" [ref=e196]:
+              - cell "3344e841-0705-45ca-a5ba-d62224bb8594" [ref=e197] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e198] [cursor=pointer]
+            - row "08ced05b-f069-4758-bfaa-22f949f59e5f 1 OR 1=1" [ref=e199]:
+              - cell "08ced05b-f069-4758-bfaa-22f949f59e5f" [ref=e200] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e201] [cursor=pointer]
+            - row "07a90b44-8513-4c2c-a7fd-4937568995d0 '; DROP TABLE customers; --" [ref=e202]:
+              - cell "07a90b44-8513-4c2c-a7fd-4937568995d0" [ref=e203] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e204] [cursor=pointer]
+            - row "11034190-b447-4490-a8aa-71991324f2fc" [ref=e205]:
+              - cell "11034190-b447-4490-a8aa-71991324f2fc" [ref=e206] [cursor=pointer]
+              - cell [ref=e207] [cursor=pointer]
+            - row "5239ee05-ec08-4d8a-9fc6-3b5dc8f5edf4 test_count_1775028070301" [ref=e208]:
+              - cell "5239ee05-ec08-4d8a-9fc6-3b5dc8f5edf4" [ref=e209] [cursor=pointer]
+              - cell "test_count_1775028070301" [ref=e210] [cursor=pointer]
+            - row "e8fe677a-4b9b-41f8-98cf-cd9d5383c28e test_udaf_1775028070274" [ref=e211]:
+              - cell "e8fe677a-4b9b-41f8-98cf-cd9d5383c28e" [ref=e212] [cursor=pointer]
+              - cell "test_udaf_1775028070274" [ref=e213] [cursor=pointer]
+            - row "9af15997-e922-4ae5-beaa-14e060b84245 test_dup_1775028070216" [ref=e214]:
+              - cell "9af15997-e922-4ae5-beaa-14e060b84245" [ref=e215] [cursor=pointer]
+              - cell "test_dup_1775028070216" [ref=e216] [cursor=pointer]
+            - row "a1f85ac1-1a80-4d00-92d2-2236acab896c test_dup_1775028070216" [ref=e217]:
+              - cell "a1f85ac1-1a80-4d00-92d2-2236acab896c" [ref=e218] [cursor=pointer]
+              - cell "test_dup_1775028070216" [ref=e219] [cursor=pointer]
+            - row "96099bbd-2232-4b17-bc57-6856432d17bb test_delete_1775028070152" [ref=e220]:
+              - cell "96099bbd-2232-4b17-bc57-6856432d17bb" [ref=e221] [cursor=pointer]
+              - cell "test_delete_1775028070152" [ref=e222] [cursor=pointer]
+            - row "932e0a9f-4d22-46bf-ab90-12967f12ba16 test_update_1775028069496" [ref=e223]:
+              - cell "932e0a9f-4d22-46bf-ab90-12967f12ba16" [ref=e224] [cursor=pointer]
+              - cell "test_update_1775028069496" [ref=e225] [cursor=pointer]
+            - row "a3bbb4e6-0a61-4ed3-bcb9-3e67957c4cb7 1; DELETE FROM events WHERE 1=1" [ref=e226]:
+              - cell "a3bbb4e6-0a61-4ed3-bcb9-3e67957c4cb7" [ref=e227] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e228] [cursor=pointer]
+            - row "916fefb8-8dc7-46a9-a004-8b25c43825d8 ' UNION SELECT * FROM users --" [ref=e229]:
+              - cell "916fefb8-8dc7-46a9-a004-8b25c43825d8" [ref=e230] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e231] [cursor=pointer]
+            - row "5c55cea4-b1b7-42cd-8235-e1e1e85ab4f5 1 OR 1=1" [ref=e232]:
+              - cell "5c55cea4-b1b7-42cd-8235-e1e1e85ab4f5" [ref=e233] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e234] [cursor=pointer]
+            - row "dc98caeb-1bae-4217-a0c0-e187b4535070 '; DROP TABLE customers; --" [ref=e235]:
+              - cell "dc98caeb-1bae-4217-a0c0-e187b4535070" [ref=e236] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e237] [cursor=pointer]
+            - row "04b25670-c5e0-40d9-881b-c135ce9e4af7" [ref=e238]:
+              - cell "04b25670-c5e0-40d9-881b-c135ce9e4af7" [ref=e239] [cursor=pointer]
+              - cell [ref=e240] [cursor=pointer]
+            - row "49897824-630f-43b3-97cf-62cd53a1d38e test_count_1775024996005" [ref=e241]:
+              - cell "49897824-630f-43b3-97cf-62cd53a1d38e" [ref=e242] [cursor=pointer]
+              - cell "test_count_1775024996005" [ref=e243] [cursor=pointer]
+            - row "06ac0f39-e9f4-4eb9-bb76-7719abc9a80a test_udaf_1775024995969" [ref=e244]:
+              - cell "06ac0f39-e9f4-4eb9-bb76-7719abc9a80a" [ref=e245] [cursor=pointer]
+              - cell "test_udaf_1775024995969" [ref=e246] [cursor=pointer]
+            - row "4be3830f-8829-48ff-8293-3c8f116e7d27 test_dup_1775024995946" [ref=e247]:
+              - cell "4be3830f-8829-48ff-8293-3c8f116e7d27" [ref=e248] [cursor=pointer]
+              - cell "test_dup_1775024995946" [ref=e249] [cursor=pointer]
+            - row "24fb87a7-af5b-4465-8571-a75ce65dc3de test_dup_1775024995946" [ref=e250]:
+              - cell "24fb87a7-af5b-4465-8571-a75ce65dc3de" [ref=e251] [cursor=pointer]
+              - cell "test_dup_1775024995946" [ref=e252] [cursor=pointer]
+            - row "910df7b2-6e35-4a71-9b80-eac2827aeeeb test_delete_1775024995791" [ref=e253]:
+              - cell "910df7b2-6e35-4a71-9b80-eac2827aeeeb" [ref=e254] [cursor=pointer]
+              - cell "test_delete_1775024995791" [ref=e255] [cursor=pointer]
+            - row "07c08e31-9b51-4298-afba-6dff4c830a30 test_update_1775024995592" [ref=e256]:
+              - cell "07c08e31-9b51-4298-afba-6dff4c830a30" [ref=e257] [cursor=pointer]
+              - cell "test_update_1775024995592" [ref=e258] [cursor=pointer]
+            - row "513ffee9-ec01-401e-a122-30c2668312e4 1; DELETE FROM events WHERE 1=1" [ref=e259]:
+              - cell "513ffee9-ec01-401e-a122-30c2668312e4" [ref=e260] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e261] [cursor=pointer]
+            - row "7da06086-0838-4279-a115-3788c1c8a205 ' UNION SELECT * FROM users --" [ref=e262]:
+              - cell "7da06086-0838-4279-a115-3788c1c8a205" [ref=e263] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e264] [cursor=pointer]
+            - row "913ddf40-3953-4e71-9e92-9dfa45c87bb9 1 OR 1=1" [ref=e265]:
+              - cell "913ddf40-3953-4e71-9e92-9dfa45c87bb9" [ref=e266] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e267] [cursor=pointer]
+            - row "90ed09da-fd0c-45fb-816e-ea8c55428f8a '; DROP TABLE customers; --" [ref=e268]:
+              - cell "90ed09da-fd0c-45fb-816e-ea8c55428f8a" [ref=e269] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e270] [cursor=pointer]
+            - row "ac834844-4971-4d1a-8213-0662e25fc78a" [ref=e271]:
+              - cell "ac834844-4971-4d1a-8213-0662e25fc78a" [ref=e272] [cursor=pointer]
+              - cell [ref=e273] [cursor=pointer]
+            - row "f991ad00-8d45-4307-81f0-4ef53b0e487f test_udaf_1775020277410" [ref=e274]:
+              - cell "f991ad00-8d45-4307-81f0-4ef53b0e487f" [ref=e275] [cursor=pointer]
+              - cell "test_udaf_1775020277410" [ref=e276] [cursor=pointer]
+            - row "7aa949b6-5c9f-48d0-a546-eeb6361a41df test_count_1775020277372" [ref=e277]:
+              - cell "7aa949b6-5c9f-48d0-a546-eeb6361a41df" [ref=e278] [cursor=pointer]
+              - cell "test_count_1775020277372" [ref=e279] [cursor=pointer]
+            - row "68e2f328-be43-4563-9bc8-a05415d71808 test_dup_1775020277286" [ref=e280]:
+              - cell "68e2f328-be43-4563-9bc8-a05415d71808" [ref=e281] [cursor=pointer]
+              - cell "test_dup_1775020277286" [ref=e282] [cursor=pointer]
+            - row "f4e57b64-ce17-49c2-a9d7-5024f8ef6d7e test_dup_1775020277286" [ref=e283]:
+              - cell "f4e57b64-ce17-49c2-a9d7-5024f8ef6d7e" [ref=e284] [cursor=pointer]
+              - cell "test_dup_1775020277286" [ref=e285] [cursor=pointer]
+            - row "629db678-6140-4ee4-8f35-4bfddfe3374f test_delete_1775020277203" [ref=e286]:
+              - cell "629db678-6140-4ee4-8f35-4bfddfe3374f" [ref=e287] [cursor=pointer]
+              - cell "test_delete_1775020277203" [ref=e288] [cursor=pointer]
+            - row "fd1ac9ff-b5ec-4c0b-bffb-3750aef402c2 test_update_1775020277043" [ref=e289]:
+              - cell "fd1ac9ff-b5ec-4c0b-bffb-3750aef402c2" [ref=e290] [cursor=pointer]
+              - cell "test_update_1775020277043" [ref=e291] [cursor=pointer]
+            - row "d891320c-aacb-4626-8987-9e735ad3433f 1; DELETE FROM events WHERE 1=1" [ref=e292]:
+              - cell "d891320c-aacb-4626-8987-9e735ad3433f" [ref=e293] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e294] [cursor=pointer]
+            - row "fc808dff-ddd9-4585-b76f-3a2a228e7fbb ' UNION SELECT * FROM users --" [ref=e295]:
+              - cell "fc808dff-ddd9-4585-b76f-3a2a228e7fbb" [ref=e296] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e297] [cursor=pointer]
+            - row "8a4c5465-52ea-4efd-8ba7-d7e06be0bc23 1 OR 1=1" [ref=e298]:
+              - cell "8a4c5465-52ea-4efd-8ba7-d7e06be0bc23" [ref=e299] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e300] [cursor=pointer]
+            - row "15763638-bbb9-4ec4-9f99-7f010cc82281 '; DROP TABLE customers; --" [ref=e301]:
+              - cell "15763638-bbb9-4ec4-9f99-7f010cc82281" [ref=e302] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e303] [cursor=pointer]
+            - row "abfe98f4-353f-4281-9974-6b9a52fdb3f5" [ref=e304]:
+              - cell "abfe98f4-353f-4281-9974-6b9a52fdb3f5" [ref=e305] [cursor=pointer]
+              - cell [ref=e306] [cursor=pointer]
+            - row "ca58f277-c1f5-42bd-9022-2d470610ff46 test_count_1775019998116" [ref=e307]:
+              - cell "ca58f277-c1f5-42bd-9022-2d470610ff46" [ref=e308] [cursor=pointer]
+              - cell "test_count_1775019998116" [ref=e309] [cursor=pointer]
+            - row "ce8762a5-aa26-4bcb-adfb-aa405e44d1f4 test_udaf_1775019998108" [ref=e310]:
+              - cell "ce8762a5-aa26-4bcb-adfb-aa405e44d1f4" [ref=e311] [cursor=pointer]
+              - cell "test_udaf_1775019998108" [ref=e312] [cursor=pointer]
+            - row "97674f40-ca87-4c17-9df3-5e96dca8cab1 test_dup_1775019998057" [ref=e313]:
+              - cell "97674f40-ca87-4c17-9df3-5e96dca8cab1" [ref=e314] [cursor=pointer]
+              - cell "test_dup_1775019998057" [ref=e315] [cursor=pointer]
+            - row "6bf09344-f662-480f-9fa3-82b44a374266 test_dup_1775019998057" [ref=e316]:
+              - cell "6bf09344-f662-480f-9fa3-82b44a374266" [ref=e317] [cursor=pointer]
+              - cell "test_dup_1775019998057" [ref=e318] [cursor=pointer]
+            - row "65717303-4c61-4212-b0b4-3ade1c3c58c1 test_delete_1775019997987" [ref=e319]:
+              - cell "65717303-4c61-4212-b0b4-3ade1c3c58c1" [ref=e320] [cursor=pointer]
+              - cell "test_delete_1775019997987" [ref=e321] [cursor=pointer]
+            - row "78862670-c01d-4624-8bc9-521cd3e4bcc6 test_update_1775019997830" [ref=e322]:
+              - cell "78862670-c01d-4624-8bc9-521cd3e4bcc6" [ref=e323] [cursor=pointer]
+              - cell "test_update_1775019997830" [ref=e324] [cursor=pointer]
+            - row "8df8f70d-f52e-4ea3-8352-f9eb106287be 1; DELETE FROM events WHERE 1=1" [ref=e325]:
+              - cell "8df8f70d-f52e-4ea3-8352-f9eb106287be" [ref=e326] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e327] [cursor=pointer]
+            - row "88bda316-700e-4985-86b9-df015a5368b2 ' UNION SELECT * FROM users --" [ref=e328]:
+              - cell "88bda316-700e-4985-86b9-df015a5368b2" [ref=e329] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e330] [cursor=pointer]
+            - row "42db4d2f-8220-4013-a237-364fcf676920 1 OR 1=1" [ref=e331]:
+              - cell "42db4d2f-8220-4013-a237-364fcf676920" [ref=e332] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e333] [cursor=pointer]
+            - row "85bac72d-6dd0-4d33-b820-f14c06fcc1e3 '; DROP TABLE customers; --" [ref=e334]:
+              - cell "85bac72d-6dd0-4d33-b820-f14c06fcc1e3" [ref=e335] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e336] [cursor=pointer]
+            - row "24dc112e-2017-4445-9b77-b557a2ecd945" [ref=e337]:
+              - cell "24dc112e-2017-4445-9b77-b557a2ecd945" [ref=e338] [cursor=pointer]
+              - cell [ref=e339] [cursor=pointer]
+            - row "0ebacb0b-599e-4158-b36f-cbd1840e1485 test_count_1775016894971" [ref=e340]:
+              - cell "0ebacb0b-599e-4158-b36f-cbd1840e1485" [ref=e341] [cursor=pointer]
+              - cell "test_count_1775016894971" [ref=e342] [cursor=pointer]
+            - row "8193de90-6b5c-44e3-9bee-626b1dc74003 test_dup_1775016894910" [ref=e343]:
+              - cell "8193de90-6b5c-44e3-9bee-626b1dc74003" [ref=e344] [cursor=pointer]
+              - cell "test_dup_1775016894910" [ref=e345] [cursor=pointer]
+            - row "f0ec0902-6e52-425d-9610-3bbe1d081a4b test_udaf_1775016894907" [ref=e346]:
+              - cell "f0ec0902-6e52-425d-9610-3bbe1d081a4b" [ref=e347] [cursor=pointer]
+              - cell "test_udaf_1775016894907" [ref=e348] [cursor=pointer]
+            - row "6d65e275-f3c7-45f9-bea4-8835ba8b85a9 test_dup_1775016894910" [ref=e349]:
+              - cell "6d65e275-f3c7-45f9-bea4-8835ba8b85a9" [ref=e350] [cursor=pointer]
+              - cell "test_dup_1775016894910" [ref=e351] [cursor=pointer]
+            - row "b683c628-4d82-469e-9ae1-2940d2c68131 test_delete_1775016894771" [ref=e352]:
+              - cell "b683c628-4d82-469e-9ae1-2940d2c68131" [ref=e353] [cursor=pointer]
+              - cell "test_delete_1775016894771" [ref=e354] [cursor=pointer]
+            - row "53d52a15-2ce7-40a6-89ab-984830e23a9d test_update_1775016894608" [ref=e355]:
+              - cell "53d52a15-2ce7-40a6-89ab-984830e23a9d" [ref=e356] [cursor=pointer]
+              - cell "test_update_1775016894608" [ref=e357] [cursor=pointer]
+            - row "25c57b26-526c-4c3b-8392-286ce623308c 1; DELETE FROM events WHERE 1=1" [ref=e358]:
+              - cell "25c57b26-526c-4c3b-8392-286ce623308c" [ref=e359] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e360] [cursor=pointer]
+            - row "2d709b66-6848-4765-b422-19597ded3cdd ' UNION SELECT * FROM users --" [ref=e361]:
+              - cell "2d709b66-6848-4765-b422-19597ded3cdd" [ref=e362] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e363] [cursor=pointer]
+            - row "92244806-d7f5-4779-9788-e07cf34b44d0 1 OR 1=1" [ref=e364]:
+              - cell "92244806-d7f5-4779-9788-e07cf34b44d0" [ref=e365] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e366] [cursor=pointer]
+            - row "7008c3ac-7656-48c9-9c2b-b17711ac6d8c '; DROP TABLE customers; --" [ref=e367]:
+              - cell "7008c3ac-7656-48c9-9c2b-b17711ac6d8c" [ref=e368] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e369] [cursor=pointer]
+            - row "102c363b-efd4-4de4-bd56-671c14957a7e" [ref=e370]:
+              - cell "102c363b-efd4-4de4-bd56-671c14957a7e" [ref=e371] [cursor=pointer]
+              - cell [ref=e372] [cursor=pointer]
+            - row "7ffb3e39-c5fd-4231-a84c-59ff0927a4e1 test_udaf_1775016867167" [ref=e373]:
+              - cell "7ffb3e39-c5fd-4231-a84c-59ff0927a4e1" [ref=e374] [cursor=pointer]
+              - cell "test_udaf_1775016867167" [ref=e375] [cursor=pointer]
+            - row "1402219c-5595-4283-aafa-69eb5f330a78 test_count_1775016867166" [ref=e376]:
+              - cell "1402219c-5595-4283-aafa-69eb5f330a78" [ref=e377] [cursor=pointer]
+              - cell "test_count_1775016867166" [ref=e378] [cursor=pointer]
+            - row "379804d8-f337-4d24-95b4-86dd50ceb64c test_dup_1775016867099" [ref=e379]:
+              - cell "379804d8-f337-4d24-95b4-86dd50ceb64c" [ref=e380] [cursor=pointer]
+              - cell "test_dup_1775016867099" [ref=e381] [cursor=pointer]
+            - row "c1101254-4c3f-4b60-a764-4acf90109214 test_dup_1775016867099" [ref=e382]:
+              - cell "c1101254-4c3f-4b60-a764-4acf90109214" [ref=e383] [cursor=pointer]
+              - cell "test_dup_1775016867099" [ref=e384] [cursor=pointer]
+            - row "58f138d6-43fe-49b3-b24f-5ee6b2c0420c test_delete_1775016867023" [ref=e385]:
+              - cell "58f138d6-43fe-49b3-b24f-5ee6b2c0420c" [ref=e386] [cursor=pointer]
+              - cell "test_delete_1775016867023" [ref=e387] [cursor=pointer]
+            - row "78e55d6a-5406-4a5e-95e7-7069fe2ef98d test_update_1775016866869" [ref=e388]:
+              - cell "78e55d6a-5406-4a5e-95e7-7069fe2ef98d" [ref=e389] [cursor=pointer]
+              - cell "test_update_1775016866869" [ref=e390] [cursor=pointer]
+            - row "9c663d57-1dcc-47b0-8b78-5cafc79f0f70 bug025_original_name" [ref=e391]:
+              - cell "9c663d57-1dcc-47b0-8b78-5cafc79f0f70" [ref=e392] [cursor=pointer]
+              - cell "bug025_original_name" [ref=e393] [cursor=pointer]
+            - row "2a34e948-68a4-49fc-829a-b82a81c97806" [ref=e394]:
+              - cell "2a34e948-68a4-49fc-829a-b82a81c97806" [ref=e395] [cursor=pointer]
+              - cell [ref=e396] [cursor=pointer]
+            - row "cac1e3f2-f951-4706-9bb8-ff1d05940a50 1; DELETE FROM events WHERE 1=1" [ref=e397]:
+              - cell "cac1e3f2-f951-4706-9bb8-ff1d05940a50" [ref=e398] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e399] [cursor=pointer]
+            - row "04459548-af9b-4eab-8007-71729d34053f ' UNION SELECT * FROM users --" [ref=e400]:
+              - cell "04459548-af9b-4eab-8007-71729d34053f" [ref=e401] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e402] [cursor=pointer]
+            - row "4fb201cd-ea55-4bd4-a5e8-bcb305dff7c7 1 OR 1=1" [ref=e403]:
+              - cell "4fb201cd-ea55-4bd4-a5e8-bcb305dff7c7" [ref=e404] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e405] [cursor=pointer]
+            - row "3936b46b-0cdb-41ed-b699-5ada606c94ae '; DROP TABLE customers; --" [ref=e406]:
+              - cell "3936b46b-0cdb-41ed-b699-5ada606c94ae" [ref=e407] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e408] [cursor=pointer]
+            - row "44cc6f05-6f16-4a68-bae4-0f422dd6f0aa" [ref=e409]:
+              - cell "44cc6f05-6f16-4a68-bae4-0f422dd6f0aa" [ref=e410] [cursor=pointer]
+              - cell [ref=e411] [cursor=pointer]
+            - row "48fc339e-ffd2-4124-85ca-9934b9809a35 test_count_1774989981646" [ref=e412]:
+              - cell "48fc339e-ffd2-4124-85ca-9934b9809a35" [ref=e413] [cursor=pointer]
+              - cell "test_count_1774989981646" [ref=e414] [cursor=pointer]
+            - row "b9b6dfc0-5c43-492c-9bd1-f1c82ed7032d test_dup_1774989981592" [ref=e415]:
+              - cell "b9b6dfc0-5c43-492c-9bd1-f1c82ed7032d" [ref=e416] [cursor=pointer]
+              - cell "test_dup_1774989981592" [ref=e417] [cursor=pointer]
+            - row "5819abfb-8213-44ed-aaba-041fb730b5f0 test_udaf_1774989981594" [ref=e418]:
+              - cell "5819abfb-8213-44ed-aaba-041fb730b5f0" [ref=e419] [cursor=pointer]
+              - cell "test_udaf_1774989981594" [ref=e420] [cursor=pointer]
+            - row "cb4ea66e-c65f-445f-be51-8c75bd455361 test_dup_1774989981592" [ref=e421]:
+              - cell "cb4ea66e-c65f-445f-be51-8c75bd455361" [ref=e422] [cursor=pointer]
+              - cell "test_dup_1774989981592" [ref=e423] [cursor=pointer]
+            - row "5293d98a-ac39-4182-a8f9-ceb574fcf7e0 test_delete_1774989981519" [ref=e424]:
+              - cell "5293d98a-ac39-4182-a8f9-ceb574fcf7e0" [ref=e425] [cursor=pointer]
+              - cell "test_delete_1774989981519" [ref=e426] [cursor=pointer]
+            - row "b1c1fbb4-5952-48d7-9b0e-dd2c4ae1e6eb test_update_1774989981353" [ref=e427]:
+              - cell "b1c1fbb4-5952-48d7-9b0e-dd2c4ae1e6eb" [ref=e428] [cursor=pointer]
+              - cell "test_update_1774989981353" [ref=e429] [cursor=pointer]
+            - row "dce4fd4f-d40e-4152-a56e-fa2ab0a7c045 1; DELETE FROM events WHERE 1=1" [ref=e430]:
+              - cell "dce4fd4f-d40e-4152-a56e-fa2ab0a7c045" [ref=e431] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e432] [cursor=pointer]
+            - row "5276a820-ab2f-429a-b2bd-3a60deb2f7ab ' UNION SELECT * FROM users --" [ref=e433]:
+              - cell "5276a820-ab2f-429a-b2bd-3a60deb2f7ab" [ref=e434] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e435] [cursor=pointer]
+            - row "5ef8fcb6-7cd9-4d20-ab9b-4cd848ac3a7d 1 OR 1=1" [ref=e436]:
+              - cell "5ef8fcb6-7cd9-4d20-ab9b-4cd848ac3a7d" [ref=e437] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e438] [cursor=pointer]
+            - row "efb78cf5-50a7-4bba-be83-1ed72e75e222 '; DROP TABLE customers; --" [ref=e439]:
+              - cell "efb78cf5-50a7-4bba-be83-1ed72e75e222" [ref=e440] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e441] [cursor=pointer]
+            - row "ed994b4f-fe25-491d-940d-31e4d92fb4cd" [ref=e442]:
+              - cell "ed994b4f-fe25-491d-940d-31e4d92fb4cd" [ref=e443] [cursor=pointer]
+              - cell [ref=e444] [cursor=pointer]
+            - row "41f92b86-8a12-4e3e-bd2f-4cdb063c6253 test_udaf_1774851114294" [ref=e445]:
+              - cell "41f92b86-8a12-4e3e-bd2f-4cdb063c6253" [ref=e446] [cursor=pointer]
+              - cell "test_udaf_1774851114294" [ref=e447] [cursor=pointer]
+            - row "8a7f5eab-4cf0-4cc8-972c-c4618cf604c3 test_count_1774851114247" [ref=e448]:
+              - cell "8a7f5eab-4cf0-4cc8-972c-c4618cf604c3" [ref=e449] [cursor=pointer]
+              - cell "test_count_1774851114247" [ref=e450] [cursor=pointer]
+            - row "20548a20-6226-4841-83f0-adad0dbbfb37 test_dup_1774851114137" [ref=e451]:
+              - cell "20548a20-6226-4841-83f0-adad0dbbfb37" [ref=e452] [cursor=pointer]
+              - cell "test_dup_1774851114137" [ref=e453] [cursor=pointer]
+            - row "d004b6fe-e27b-4d68-90b4-eeb342846792 test_dup_1774851114137" [ref=e454]:
+              - cell "d004b6fe-e27b-4d68-90b4-eeb342846792" [ref=e455] [cursor=pointer]
+              - cell "test_dup_1774851114137" [ref=e456] [cursor=pointer]
+            - row "bc54b20f-fb76-4599-80fd-e2d27ed630b4 test_delete_1774851114072" [ref=e457]:
+              - cell "bc54b20f-fb76-4599-80fd-e2d27ed630b4" [ref=e458] [cursor=pointer]
+              - cell "test_delete_1774851114072" [ref=e459] [cursor=pointer]
+            - row "5cee58a0-81b7-4cd4-b86a-0abb7bfdbc9a test_update_1774851113892" [ref=e460]:
+              - cell "5cee58a0-81b7-4cd4-b86a-0abb7bfdbc9a" [ref=e461] [cursor=pointer]
+              - cell "test_update_1774851113892" [ref=e462] [cursor=pointer]
+            - row "08b2bfa3-dc50-4174-a0fb-ec0de30365f5 1; DELETE FROM events WHERE 1=1" [ref=e463]:
+              - cell "08b2bfa3-dc50-4174-a0fb-ec0de30365f5" [ref=e464] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e465] [cursor=pointer]
+            - row "7a8cac94-206b-4acb-ac2c-5c89b5b500f5 ' UNION SELECT * FROM users --" [ref=e466]:
+              - cell "7a8cac94-206b-4acb-ac2c-5c89b5b500f5" [ref=e467] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e468] [cursor=pointer]
+            - row "bf332031-b38d-4b4b-9b6e-f2a6945ab602 1 OR 1=1" [ref=e469]:
+              - cell "bf332031-b38d-4b4b-9b6e-f2a6945ab602" [ref=e470] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e471] [cursor=pointer]
+            - row "5463332b-b602-4100-96e6-06d66082eab8 '; DROP TABLE customers; --" [ref=e472]:
+              - cell "5463332b-b602-4100-96e6-06d66082eab8" [ref=e473] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e474] [cursor=pointer]
+            - row "6fc2d8b6-32c9-4d02-9714-57f27d8eddb5" [ref=e475]:
+              - cell "6fc2d8b6-32c9-4d02-9714-57f27d8eddb5" [ref=e476] [cursor=pointer]
+              - cell [ref=e477] [cursor=pointer]
+            - row "afd5889d-239e-430c-9ba5-b8194d545881 test_count_1774849411235" [ref=e478]:
+              - cell "afd5889d-239e-430c-9ba5-b8194d545881" [ref=e479] [cursor=pointer]
+              - cell "test_count_1774849411235" [ref=e480] [cursor=pointer]
+            - row "c2cbf90f-bd76-419b-8271-fcebe519e4a4 test_dup_1774849411154" [ref=e481]:
+              - cell "c2cbf90f-bd76-419b-8271-fcebe519e4a4" [ref=e482] [cursor=pointer]
+              - cell "test_dup_1774849411154" [ref=e483] [cursor=pointer]
+            - row "37a2533e-4a53-40e2-b52e-28b8fc915d87 test_udaf_1774849411191" [ref=e484]:
+              - cell "37a2533e-4a53-40e2-b52e-28b8fc915d87" [ref=e485] [cursor=pointer]
+              - cell "test_udaf_1774849411191" [ref=e486] [cursor=pointer]
+            - row "38dab5f6-aae5-44fa-84a0-b7df537018a5 test_dup_1774849411154" [ref=e487]:
+              - cell "38dab5f6-aae5-44fa-84a0-b7df537018a5" [ref=e488] [cursor=pointer]
+              - cell "test_dup_1774849411154" [ref=e489] [cursor=pointer]
+            - row "4b6aa3f1-288f-428c-a989-949df9062387 test_delete_1774849410895" [ref=e490]:
+              - cell "4b6aa3f1-288f-428c-a989-949df9062387" [ref=e491] [cursor=pointer]
+              - cell "test_delete_1774849410895" [ref=e492] [cursor=pointer]
+            - row "58107a4b-d7c6-4254-af8a-6e80117b4af3 test_update_1774849410677" [ref=e493]:
+              - cell "58107a4b-d7c6-4254-af8a-6e80117b4af3" [ref=e494] [cursor=pointer]
+              - cell "test_update_1774849410677" [ref=e495] [cursor=pointer]
+            - row "a050ad23-1408-4ab5-8a5f-bf0ebeb21f9b 1; DELETE FROM events WHERE 1=1" [ref=e496]:
+              - cell "a050ad23-1408-4ab5-8a5f-bf0ebeb21f9b" [ref=e497] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e498] [cursor=pointer]
+            - row "c5e5eb05-c109-4d5f-bc96-03df7ff9364c ' UNION SELECT * FROM users --" [ref=e499]:
+              - cell "c5e5eb05-c109-4d5f-bc96-03df7ff9364c" [ref=e500] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e501] [cursor=pointer]
+            - row "0cfd5789-51d3-49f0-980f-74d966a24803 1 OR 1=1" [ref=e502]:
+              - cell "0cfd5789-51d3-49f0-980f-74d966a24803" [ref=e503] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e504] [cursor=pointer]
+            - row "a48efc10-a558-462a-acd4-276d99cb5bfe '; DROP TABLE customers; --" [ref=e505]:
+              - cell "a48efc10-a558-462a-acd4-276d99cb5bfe" [ref=e506] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e507] [cursor=pointer]
+            - row "ced1f1b2-8ad6-4f6a-9df2-9a392b31add9" [ref=e508]:
+              - cell "ced1f1b2-8ad6-4f6a-9df2-9a392b31add9" [ref=e509] [cursor=pointer]
+              - cell [ref=e510] [cursor=pointer]
+            - row "724ff1ef-e612-40e4-9a4d-a304b556c7d9 test_count_1774849397817" [ref=e511]:
+              - cell "724ff1ef-e612-40e4-9a4d-a304b556c7d9" [ref=e512] [cursor=pointer]
+              - cell "test_count_1774849397817" [ref=e513] [cursor=pointer]
+            - row "29e22220-f527-4481-8bbe-b5ddb4c5ca73 test_dup_1774849397739" [ref=e514]:
+              - cell "29e22220-f527-4481-8bbe-b5ddb4c5ca73" [ref=e515] [cursor=pointer]
+              - cell "test_dup_1774849397739" [ref=e516] [cursor=pointer]
+            - row "c2c37178-ad36-49f5-a966-43c28a5878be test_dup_1774849397739" [ref=e517]:
+              - cell "c2c37178-ad36-49f5-a966-43c28a5878be" [ref=e518] [cursor=pointer]
+              - cell "test_dup_1774849397739" [ref=e519] [cursor=pointer]
+            - row "ba4a5f70-45b1-4d1a-8793-2810ac921e38 test_udaf_1774849397727" [ref=e520]:
+              - cell "ba4a5f70-45b1-4d1a-8793-2810ac921e38" [ref=e521] [cursor=pointer]
+              - cell "test_udaf_1774849397727" [ref=e522] [cursor=pointer]
+            - row "6e3de0c6-f8b9-460b-aa5b-751f8504789e test_delete_1774849397668" [ref=e523]:
+              - cell "6e3de0c6-f8b9-460b-aa5b-751f8504789e" [ref=e524] [cursor=pointer]
+              - cell "test_delete_1774849397668" [ref=e525] [cursor=pointer]
+            - row "54e5f860-b5ca-4d5b-9eb3-3fb4147794ef test_update_1774849397501" [ref=e526]:
+              - cell "54e5f860-b5ca-4d5b-9eb3-3fb4147794ef" [ref=e527] [cursor=pointer]
+              - cell "test_update_1774849397501" [ref=e528] [cursor=pointer]
+            - row "9132e540-8546-48ea-bf4a-e3b061899a5d triage_bug002_filtered_samarkand" [ref=e529]:
+              - cell "9132e540-8546-48ea-bf4a-e3b061899a5d" [ref=e530] [cursor=pointer]
+              - cell "triage_bug002_filtered_samarkand" [ref=e531] [cursor=pointer]
+            - row "6cb1cb4f-1067-4477-9a59-321f53cd1d52 triage_bug002_unfiltered_count" [ref=e532]:
+              - cell "6cb1cb4f-1067-4477-9a59-321f53cd1d52" [ref=e533] [cursor=pointer]
+              - cell "triage_bug002_unfiltered_count" [ref=e534] [cursor=pointer]
+            - row "14a75be3-3100-4d84-8942-9eb18db263ca 1; DELETE FROM events WHERE 1=1" [ref=e535]:
+              - cell "14a75be3-3100-4d84-8942-9eb18db263ca" [ref=e536] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e537] [cursor=pointer]
+            - row "1b2ed680-85ff-4307-8f80-207f66b35da7 ' UNION SELECT * FROM users --" [ref=e538]:
+              - cell "1b2ed680-85ff-4307-8f80-207f66b35da7" [ref=e539] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e540] [cursor=pointer]
+            - row "ae04b15b-623a-4dc9-953d-77dfe17f7900 1 OR 1=1" [ref=e541]:
+              - cell "ae04b15b-623a-4dc9-953d-77dfe17f7900" [ref=e542] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e543] [cursor=pointer]
+            - row "2b04345d-102b-441a-aaaf-90f21153dfd2 '; DROP TABLE customers; --" [ref=e544]:
+              - cell "2b04345d-102b-441a-aaaf-90f21153dfd2" [ref=e545] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e546] [cursor=pointer]
+            - row "06925f63-9729-4993-9712-8b60c36d0791" [ref=e547]:
+              - cell "06925f63-9729-4993-9712-8b60c36d0791" [ref=e548] [cursor=pointer]
+              - cell [ref=e549] [cursor=pointer]
+            - row "cf7283d3-d9cb-4d47-975b-78946bd83dc0 test_count_1774780609203" [ref=e550]:
+              - cell "cf7283d3-d9cb-4d47-975b-78946bd83dc0" [ref=e551] [cursor=pointer]
+              - cell "test_count_1774780609203" [ref=e552] [cursor=pointer]
+            - row "c2c9df39-5d75-4277-a639-2b42ea5b5d96 test_udaf_1774780609184" [ref=e553]:
+              - cell "c2c9df39-5d75-4277-a639-2b42ea5b5d96" [ref=e554] [cursor=pointer]
+              - cell "test_udaf_1774780609184" [ref=e555] [cursor=pointer]
+            - row "e13fba4d-22b1-4a19-a7dc-3af54d3f9759 test_dup_1774780609142" [ref=e556]:
+              - cell "e13fba4d-22b1-4a19-a7dc-3af54d3f9759" [ref=e557] [cursor=pointer]
+              - cell "test_dup_1774780609142" [ref=e558] [cursor=pointer]
+            - row "58422e16-2540-4084-8c2f-b239da8970bd test_dup_1774780609142" [ref=e559]:
+              - cell "58422e16-2540-4084-8c2f-b239da8970bd" [ref=e560] [cursor=pointer]
+              - cell "test_dup_1774780609142" [ref=e561] [cursor=pointer]
+            - row "1befef08-cc2b-4f38-93e5-79cdcc3a86da test_delete_1774780609068" [ref=e562]:
+              - cell "1befef08-cc2b-4f38-93e5-79cdcc3a86da" [ref=e563] [cursor=pointer]
+              - cell "test_delete_1774780609068" [ref=e564] [cursor=pointer]
+            - row "253d2eac-e1dc-4aee-a10c-cad5129421ce test_update_1774780608902" [ref=e565]:
+              - cell "253d2eac-e1dc-4aee-a10c-cad5129421ce" [ref=e566] [cursor=pointer]
+              - cell "test_update_1774780608902" [ref=e567] [cursor=pointer]
+            - row "5ad5bbc6-825a-4ee9-8d18-80f11032275d 1; DELETE FROM events WHERE 1=1" [ref=e568]:
+              - cell "5ad5bbc6-825a-4ee9-8d18-80f11032275d" [ref=e569] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e570] [cursor=pointer]
+            - row "fc255d38-c8e0-4520-ac70-03efc6574d76 ' UNION SELECT * FROM users --" [ref=e571]:
+              - cell "fc255d38-c8e0-4520-ac70-03efc6574d76" [ref=e572] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e573] [cursor=pointer]
+            - row "db579309-9fea-4dd1-ba86-dc45b31af444 1 OR 1=1" [ref=e574]:
+              - cell "db579309-9fea-4dd1-ba86-dc45b31af444" [ref=e575] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e576] [cursor=pointer]
+            - row "33e54e32-a682-449a-97aa-d27a510878f1 '; DROP TABLE customers; --" [ref=e577]:
+              - cell "33e54e32-a682-449a-97aa-d27a510878f1" [ref=e578] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e579] [cursor=pointer]
+            - row "0ac125aa-0a39-4f9d-bdc1-836dcab0d4e6" [ref=e580]:
+              - cell "0ac125aa-0a39-4f9d-bdc1-836dcab0d4e6" [ref=e581] [cursor=pointer]
+              - cell [ref=e582] [cursor=pointer]
+            - row "da9ca982-8d26-4df8-af5f-4007c4f14ef0 test_count_1774780559244" [ref=e583]:
+              - cell "da9ca982-8d26-4df8-af5f-4007c4f14ef0" [ref=e584] [cursor=pointer]
+              - cell "test_count_1774780559244" [ref=e585] [cursor=pointer]
+            - row "72d2822c-9211-4bf9-afec-2b0c35486cce test_dup_1774780559137" [ref=e586]:
+              - cell "72d2822c-9211-4bf9-afec-2b0c35486cce" [ref=e587] [cursor=pointer]
+              - cell "test_dup_1774780559137" [ref=e588] [cursor=pointer]
+            - row "8590fc5f-f841-46c5-97bc-b31f1a2e80b8 test_dup_1774780559137" [ref=e589]:
+              - cell "8590fc5f-f841-46c5-97bc-b31f1a2e80b8" [ref=e590] [cursor=pointer]
+              - cell "test_dup_1774780559137" [ref=e591] [cursor=pointer]
+            - row "a3e8959f-7caf-4220-aa93-20a9691f4f17 test_delete_1774780559056" [ref=e592]:
+              - cell "a3e8959f-7caf-4220-aa93-20a9691f4f17" [ref=e593] [cursor=pointer]
+              - cell "test_delete_1774780559056" [ref=e594] [cursor=pointer]
+            - row "9cda5374-a08e-48f1-aa34-41faaa661a4b test_update_1774780558920" [ref=e595]:
+              - cell "9cda5374-a08e-48f1-aa34-41faaa661a4b" [ref=e596] [cursor=pointer]
+              - cell "test_update_1774780558920" [ref=e597] [cursor=pointer]
+            - row "2a17ed34-7ba4-44e3-86a4-579af5f0fdcb 1; DELETE FROM events WHERE 1=1" [ref=e598]:
+              - cell "2a17ed34-7ba4-44e3-86a4-579af5f0fdcb" [ref=e599] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e600] [cursor=pointer]
+            - row "df76c58d-9560-489f-9136-e4726ddbc73b ' UNION SELECT * FROM users --" [ref=e601]:
+              - cell "df76c58d-9560-489f-9136-e4726ddbc73b" [ref=e602] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e603] [cursor=pointer]
+            - row "5a8e9604-4d26-42e9-a9be-9834d655520a 1 OR 1=1" [ref=e604]:
+              - cell "5a8e9604-4d26-42e9-a9be-9834d655520a" [ref=e605] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e606] [cursor=pointer]
+            - row "b1b177ac-ee96-4c22-b192-f716d235ef8f '; DROP TABLE customers; --" [ref=e607]:
+              - cell "b1b177ac-ee96-4c22-b192-f716d235ef8f" [ref=e608] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e609] [cursor=pointer]
+            - row "a8ce3aa6-cf7f-4903-8b3b-6dc26a0962e8" [ref=e610]:
+              - cell "a8ce3aa6-cf7f-4903-8b3b-6dc26a0962e8" [ref=e611] [cursor=pointer]
+              - cell [ref=e612] [cursor=pointer]
+            - row "8ac2771f-d057-44ce-9861-59ed9ef26a8b test_count_1774780530405" [ref=e613]:
+              - cell "8ac2771f-d057-44ce-9861-59ed9ef26a8b" [ref=e614] [cursor=pointer]
+              - cell "test_count_1774780530405" [ref=e615] [cursor=pointer]
+            - row "359b9749-4ad2-4641-8381-10b735f8cea9 test_dup_1774780530331" [ref=e616]:
+              - cell "359b9749-4ad2-4641-8381-10b735f8cea9" [ref=e617] [cursor=pointer]
+              - cell "test_dup_1774780530331" [ref=e618] [cursor=pointer]
+            - row "2a0d02f0-ef51-4be2-a0eb-a9c3cbaf7f27 test_udaf_1774780530349" [ref=e619]:
+              - cell "2a0d02f0-ef51-4be2-a0eb-a9c3cbaf7f27" [ref=e620] [cursor=pointer]
+              - cell "test_udaf_1774780530349" [ref=e621] [cursor=pointer]
+            - row "85937c93-3274-4866-af00-4f5110c6af0c test_dup_1774780530331" [ref=e622]:
+              - cell "85937c93-3274-4866-af00-4f5110c6af0c" [ref=e623] [cursor=pointer]
+              - cell "test_dup_1774780530331" [ref=e624] [cursor=pointer]
+            - row "a23d2172-f8db-4d0b-a0f8-a327d3fd08ee test_delete_1774780530078" [ref=e625]:
+              - cell "a23d2172-f8db-4d0b-a0f8-a327d3fd08ee" [ref=e626] [cursor=pointer]
+              - cell "test_delete_1774780530078" [ref=e627] [cursor=pointer]
+            - row "20e27ee9-1041-411a-b895-8cebc98cb32a test_update_1774780529834" [ref=e628]:
+              - cell "20e27ee9-1041-411a-b895-8cebc98cb32a" [ref=e629] [cursor=pointer]
+              - cell "test_update_1774780529834" [ref=e630] [cursor=pointer]
+            - row "8dd6a78d-e9b9-4d3b-8b73-eb904ff3d3fb 1; DELETE FROM events WHERE 1=1" [ref=e631]:
+              - cell "8dd6a78d-e9b9-4d3b-8b73-eb904ff3d3fb" [ref=e632] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e633] [cursor=pointer]
+            - row "a043c1ce-d221-4425-991a-d8a5151cda34 ' UNION SELECT * FROM users --" [ref=e634]:
+              - cell "a043c1ce-d221-4425-991a-d8a5151cda34" [ref=e635] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e636] [cursor=pointer]
+            - row "52508d6b-7e52-4425-bb7d-e4520c540449 1 OR 1=1" [ref=e637]:
+              - cell "52508d6b-7e52-4425-bb7d-e4520c540449" [ref=e638] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e639] [cursor=pointer]
+            - row "0efa2116-cd49-4bdb-8db4-d19d88d17833 '; DROP TABLE customers; --" [ref=e640]:
+              - cell "0efa2116-cd49-4bdb-8db4-d19d88d17833" [ref=e641] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e642] [cursor=pointer]
+            - row "f5708e5e-20d4-4978-b5d0-653306058f50" [ref=e643]:
+              - cell "f5708e5e-20d4-4978-b5d0-653306058f50" [ref=e644] [cursor=pointer]
+              - cell [ref=e645] [cursor=pointer]
+            - row "52c561d7-664e-419f-bc5d-5d40e002c0c7 1; DELETE FROM events WHERE 1=1" [ref=e646]:
+              - cell "52c561d7-664e-419f-bc5d-5d40e002c0c7" [ref=e647] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e648] [cursor=pointer]
+            - row "d541340c-d9a5-493d-8502-308a9af9ff98 ' UNION SELECT * FROM users --" [ref=e649]:
+              - cell "d541340c-d9a5-493d-8502-308a9af9ff98" [ref=e650] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e651] [cursor=pointer]
+            - row "3c4ad933-beb5-4e87-9bb3-ab3e43291bcd 1 OR 1=1" [ref=e652]:
+              - cell "3c4ad933-beb5-4e87-9bb3-ab3e43291bcd" [ref=e653] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e654] [cursor=pointer]
+            - row "8f3898d7-170b-4f07-b7a1-734b14f0ebc6 '; DROP TABLE customers; --" [ref=e655]:
+              - cell "8f3898d7-170b-4f07-b7a1-734b14f0ebc6" [ref=e656] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e657] [cursor=pointer]
+            - row "226c2aed-0d56-4739-a715-b46fc5bfa6c6" [ref=e658]:
+              - cell "226c2aed-0d56-4739-a715-b46fc5bfa6c6" [ref=e659] [cursor=pointer]
+              - cell [ref=e660] [cursor=pointer]
+            - row "f17d4c12-e1a5-4e69-a5cc-0243e108deba 1; DELETE FROM events WHERE 1=1" [ref=e661]:
+              - cell "f17d4c12-e1a5-4e69-a5cc-0243e108deba" [ref=e662] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e663] [cursor=pointer]
+            - row "fa6ffc5a-7732-47ab-b30e-3802553b1def ' UNION SELECT * FROM users --" [ref=e664]:
+              - cell "fa6ffc5a-7732-47ab-b30e-3802553b1def" [ref=e665] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e666] [cursor=pointer]
+            - row "32ee097b-8273-4451-b28d-d4d756c4169f 1 OR 1=1" [ref=e667]:
+              - cell "32ee097b-8273-4451-b28d-d4d756c4169f" [ref=e668] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e669] [cursor=pointer]
+            - row "dccb2ce3-9f7d-492a-b66c-5427818c6547 '; DROP TABLE customers; --" [ref=e670]:
+              - cell "dccb2ce3-9f7d-492a-b66c-5427818c6547" [ref=e671] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e672] [cursor=pointer]
+            - row "60bbea72-6714-47a3-abc5-65e0a1e38351" [ref=e673]:
+              - cell "60bbea72-6714-47a3-abc5-65e0a1e38351" [ref=e674] [cursor=pointer]
+              - cell [ref=e675] [cursor=pointer]
+            - row "7be76c80-73f7-4c6b-a026-c936a4e40abc test_delete_1774780498505" [ref=e676]:
+              - cell "7be76c80-73f7-4c6b-a026-c936a4e40abc" [ref=e677] [cursor=pointer]
+              - cell "test_delete_1774780498505" [ref=e678] [cursor=pointer]
+            - row "57088ec5-0b43-4881-ad8d-918851316b40 test_update_1774780498342" [ref=e679]:
+              - cell "57088ec5-0b43-4881-ad8d-918851316b40" [ref=e680] [cursor=pointer]
+              - cell "test_update_1774780498342" [ref=e681] [cursor=pointer]
+            - row "afaf2faf-b433-448c-b7ad-2a2c5dd4dfac 1; DELETE FROM events WHERE 1=1" [ref=e682]:
+              - cell "afaf2faf-b433-448c-b7ad-2a2c5dd4dfac" [ref=e683] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e684] [cursor=pointer]
+            - row "b8f9c51c-d305-4fa4-a349-3f6df59570f0 ' UNION SELECT * FROM users --" [ref=e685]:
+              - cell "b8f9c51c-d305-4fa4-a349-3f6df59570f0" [ref=e686] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e687] [cursor=pointer]
+            - row "6d74f2ae-af30-4ff2-a4ee-0cbd40d481f4 1 OR 1=1" [ref=e688]:
+              - cell "6d74f2ae-af30-4ff2-a4ee-0cbd40d481f4" [ref=e689] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e690] [cursor=pointer]
+            - row "d3414e2f-d2f6-430f-a3a9-10bef428150b '; DROP TABLE customers; --" [ref=e691]:
+              - cell "d3414e2f-d2f6-430f-a3a9-10bef428150b" [ref=e692] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e693] [cursor=pointer]
+            - row "2a73b1ca-ed02-4b9d-bd94-39a87c200e7b" [ref=e694]:
+              - cell "2a73b1ca-ed02-4b9d-bd94-39a87c200e7b" [ref=e695] [cursor=pointer]
+              - cell [ref=e696] [cursor=pointer]
+            - row "d9b6d9ea-3dfb-4d10-9013-0deda77a261e test_count_1774780490956" [ref=e697]:
+              - cell "d9b6d9ea-3dfb-4d10-9013-0deda77a261e" [ref=e698] [cursor=pointer]
+              - cell "test_count_1774780490956" [ref=e699] [cursor=pointer]
+            - row "da592c46-d0fa-4848-a50f-91028e323547 test_dup_1774780490907" [ref=e700]:
+              - cell "da592c46-d0fa-4848-a50f-91028e323547" [ref=e701] [cursor=pointer]
+              - cell "test_dup_1774780490907" [ref=e702] [cursor=pointer]
+            - row "079bb2ce-9d02-42ea-9db7-6f24fa40aa61 test_dup_1774780490907" [ref=e703]:
+              - cell "079bb2ce-9d02-42ea-9db7-6f24fa40aa61" [ref=e704] [cursor=pointer]
+              - cell "test_dup_1774780490907" [ref=e705] [cursor=pointer]
+            - row "fe17d380-30ae-416b-9750-99c95e491c2b test_udaf_1774780490897" [ref=e706]:
+              - cell "fe17d380-30ae-416b-9750-99c95e491c2b" [ref=e707] [cursor=pointer]
+              - cell "test_udaf_1774780490897" [ref=e708] [cursor=pointer]
+            - row "2176994f-f9e1-483a-a231-317b68d826d6 test_delete_1774780490839" [ref=e709]:
+              - cell "2176994f-f9e1-483a-a231-317b68d826d6" [ref=e710] [cursor=pointer]
+              - cell "test_delete_1774780490839" [ref=e711] [cursor=pointer]
+            - row "7185d8b0-25d1-4b85-b9df-49f220c7a473 test_update_1774780490695" [ref=e712]:
+              - cell "7185d8b0-25d1-4b85-b9df-49f220c7a473" [ref=e713] [cursor=pointer]
+              - cell "test_update_1774780490695" [ref=e714] [cursor=pointer]
+            - row "213e092b-0701-475c-bfc1-bcf02d8b59b5 1; DELETE FROM events WHERE 1=1" [ref=e715]:
+              - cell "213e092b-0701-475c-bfc1-bcf02d8b59b5" [ref=e716] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e717] [cursor=pointer]
+            - row "78764dd7-b1a5-41a6-add8-9e87633a461e ' UNION SELECT * FROM users --" [ref=e718]:
+              - cell "78764dd7-b1a5-41a6-add8-9e87633a461e" [ref=e719] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e720] [cursor=pointer]
+            - row "74846a73-f5c8-49c6-9434-d8ade18a4d2d 1 OR 1=1" [ref=e721]:
+              - cell "74846a73-f5c8-49c6-9434-d8ade18a4d2d" [ref=e722] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e723] [cursor=pointer]
+            - row "49b86535-f6fc-4e4a-85d9-5900e61b4b29 '; DROP TABLE customers; --" [ref=e724]:
+              - cell "49b86535-f6fc-4e4a-85d9-5900e61b4b29" [ref=e725] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e726] [cursor=pointer]
+            - row "cd9bdc33-703e-40db-a8e7-7b8f49d1cb4e" [ref=e727]:
+              - cell "cd9bdc33-703e-40db-a8e7-7b8f49d1cb4e" [ref=e728] [cursor=pointer]
+              - cell [ref=e729] [cursor=pointer]
+            - row "05331a06-2a50-48f8-b4eb-babcfa583c48 1; DELETE FROM events WHERE 1=1" [ref=e730]:
+              - cell "05331a06-2a50-48f8-b4eb-babcfa583c48" [ref=e731] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e732] [cursor=pointer]
+            - row "c5c45442-7518-487c-9f3b-8c84da7dee59 ' UNION SELECT * FROM users --" [ref=e733]:
+              - cell "c5c45442-7518-487c-9f3b-8c84da7dee59" [ref=e734] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e735] [cursor=pointer]
+            - row "1cc5017e-5c3d-404c-ac41-108b96009236 1 OR 1=1" [ref=e736]:
+              - cell "1cc5017e-5c3d-404c-ac41-108b96009236" [ref=e737] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e738] [cursor=pointer]
+            - row "bc52ac27-d71b-4f47-a5fe-c81544dfedb3 '; DROP TABLE customers; --" [ref=e739]:
+              - cell "bc52ac27-d71b-4f47-a5fe-c81544dfedb3" [ref=e740] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e741] [cursor=pointer]
+            - row "56a7a0d7-ee66-4227-81f4-0804bbb1080f" [ref=e742]:
+              - cell "56a7a0d7-ee66-4227-81f4-0804bbb1080f" [ref=e743] [cursor=pointer]
+              - cell [ref=e744] [cursor=pointer]
+            - row "daacf6a0-2fc2-4071-96f9-d9b5304d75ae test_count_1774780383491" [ref=e745]:
+              - cell "daacf6a0-2fc2-4071-96f9-d9b5304d75ae" [ref=e746] [cursor=pointer]
+              - cell "test_count_1774780383491" [ref=e747] [cursor=pointer]
+            - row "cbd9b847-e758-49a3-a007-4cf94208dd9f test_dup_1774780383412" [ref=e748]:
+              - cell "cbd9b847-e758-49a3-a007-4cf94208dd9f" [ref=e749] [cursor=pointer]
+              - cell "test_dup_1774780383412" [ref=e750] [cursor=pointer]
+            - row "3ff28c0d-f959-440d-b1ad-a890a7eea78b test_dup_1774780383412" [ref=e751]:
+              - cell "3ff28c0d-f959-440d-b1ad-a890a7eea78b" [ref=e752] [cursor=pointer]
+              - cell "test_dup_1774780383412" [ref=e753] [cursor=pointer]
+            - row "94826d10-fdc5-46ca-9cf3-1e32388cb9ec test_udaf_1774780383375" [ref=e754]:
+              - cell "94826d10-fdc5-46ca-9cf3-1e32388cb9ec" [ref=e755] [cursor=pointer]
+              - cell "test_udaf_1774780383375" [ref=e756] [cursor=pointer]
+            - row "32f0b3d8-90b2-43b2-8831-57e20a2f470e test_delete_1774780383354" [ref=e757]:
+              - cell "32f0b3d8-90b2-43b2-8831-57e20a2f470e" [ref=e758] [cursor=pointer]
+              - cell "test_delete_1774780383354" [ref=e759] [cursor=pointer]
+            - row "b91853f5-61d6-4034-b040-6271bc81fe79 test_update_1774780383178" [ref=e760]:
+              - cell "b91853f5-61d6-4034-b040-6271bc81fe79" [ref=e761] [cursor=pointer]
+              - cell "test_update_1774780383178" [ref=e762] [cursor=pointer]
+            - row "44ebce33-1eed-4072-aa55-b12deae62aa9 1; DELETE FROM events WHERE 1=1" [ref=e763]:
+              - cell "44ebce33-1eed-4072-aa55-b12deae62aa9" [ref=e764] [cursor=pointer]
+              - cell "1; DELETE FROM events WHERE 1=1" [ref=e765] [cursor=pointer]
+            - row "65eac73e-2a73-4e34-9837-77994229a0ac ' UNION SELECT * FROM users --" [ref=e766]:
+              - cell "65eac73e-2a73-4e34-9837-77994229a0ac" [ref=e767] [cursor=pointer]
+              - cell "' UNION SELECT * FROM users --" [ref=e768] [cursor=pointer]
+            - row "196f0ea7-63d0-432b-8c9a-5ac01cc328e9 1 OR 1=1" [ref=e769]:
+              - cell "196f0ea7-63d0-432b-8c9a-5ac01cc328e9" [ref=e770] [cursor=pointer]
+              - cell "1 OR 1=1" [ref=e771] [cursor=pointer]
+            - row "2aad58f1-37ef-4d7f-8ae2-d5bd21a2ebec '; DROP TABLE customers; --" [ref=e772]:
+              - cell "2aad58f1-37ef-4d7f-8ae2-d5bd21a2ebec" [ref=e773] [cursor=pointer]
+              - cell "'; DROP TABLE customers; --" [ref=e774] [cursor=pointer]
+            - row "8da22175-55bc-41a5-83e6-ae3b59897a3a" [ref=e775]:
+              - cell "8da22175-55bc-41a5-83e6-ae3b59897a3a" [ref=e776] [cursor=pointer]
+              - cell [ref=e777] [cursor=pointer]
+            - row "4aa3af66-7921-492b-bde0-ab053672506d test_count_1774780374811" [ref=e778]:
+              - cell "4aa3af66-7921-492b-bde0-ab053672506d" [ref=e779] [cursor=pointer]
+              - cell "test_count_1774780374811" [ref=e780] [cursor=pointer]
+            - row "2e47674b-bc61-401f-876e-be37fff60422 test_dup_1774780374728" [ref=e781]:
+              - cell "2e47674b-bc61-401f-876e-be37fff60422" [ref=e782] [cursor=pointer]
+              - cell "test_dup_1774780374728" [ref=e783] [cursor=pointer]
+            - row "8a117844-1237-413b-8441-0277992fcae7 test_dup_1774780374728" [ref=e784]:
+              - cell "8a117844-1237-413b-8441-0277992fcae7" [ref=e785] [cursor=pointer]
+              - cell "test_dup_1774780374728" [ref=e786] [cursor=pointer]
+            - row "fa716fd3-03f3-492f-a4cf-5c63153f3b10 test_delete_1774780374657" [ref=e787]:
+              - cell "fa716fd3-03f3-492f-a4cf-5c63153f3b10" [ref=e788] [cursor=pointer]
+              - cell "test_delete_1774780374657" [ref=e789] [cursor=pointer]
+            - row "87e71964-957c-4205-b6da-078b60697e19 test_udaf_1774780374496" [ref=e790]:
+              - cell "87e71964-957c-4205-b6da-078b60697e19" [ref=e791] [cursor=pointer]
+              - cell "test_udaf_1774780374496" [ref=e792] [cursor=pointer]
+            - row "56e72edf-eea0-44d8-a3b6-a5f39b59a08e test_update_1774780374474" [ref=e793]:
+              - cell "56e72edf-eea0-44d8-a3b6-a5f39b59a08e" [ref=e794] [cursor=pointer]
+              - cell "test_update_1774780374474" [ref=e795] [cursor=pointer]
+            - row "b7f8e959-5b71-4804-a2f2-4d23a2359f24 test_udaf_1774702006744" [ref=e796]:
+              - cell "b7f8e959-5b71-4804-a2f2-4d23a2359f24" [ref=e797] [cursor=pointer]
+              - cell "test_udaf_1774702006744" [ref=e798] [cursor=pointer]
+            - row "101c626c-75e3-41f9-a071-8553a0883771 test_udaf_1774696158141" [ref=e799]:
+              - cell "101c626c-75e3-41f9-a071-8553a0883771" [ref=e800] [cursor=pointer]
+              - cell "test_udaf_1774696158141" [ref=e801] [cursor=pointer]
+            - row "d4f90491-176d-4250-950a-6bf09cb60799 test_udaf_1774695215942" [ref=e802]:
+              - cell "d4f90491-176d-4250-950a-6bf09cb60799" [ref=e803] [cursor=pointer]
+              - cell "test_udaf_1774695215942" [ref=e804] [cursor=pointer]
+            - row "aeaa9fde-3fa8-46e9-a174-90adffd29272 test_udaf_1774693812806" [ref=e805]:
+              - cell "aeaa9fde-3fa8-46e9-a174-90adffd29272" [ref=e806] [cursor=pointer]
+              - cell "test_udaf_1774693812806" [ref=e807] [cursor=pointer]
+            - row "4eeac309-720a-4208-b76e-f6146fbbbb10 test_udaf_1774693804415" [ref=e808]:
+              - cell "4eeac309-720a-4208-b76e-f6146fbbbb10" [ref=e809] [cursor=pointer]
+              - cell "test_udaf_1774693804415" [ref=e810] [cursor=pointer]
+            - row "41917f8e-925f-4e8d-861f-a676e0a52e8c test_udaf_1774692487092" [ref=e811]:
+              - cell "41917f8e-925f-4e8d-861f-a676e0a52e8c" [ref=e812] [cursor=pointer]
+              - cell "test_udaf_1774692487092" [ref=e813] [cursor=pointer]
+            - row "889cb975-3c87-4a33-9689-a7daded7cabf test_udaf_1774692188654" [ref=e814]:
+              - cell "889cb975-3c87-4a33-9689-a7daded7cabf" [ref=e815] [cursor=pointer]
+              - cell "test_udaf_1774692188654" [ref=e816] [cursor=pointer]
+            - row "491f2e35-4429-472f-ab63-f1bf0b14b680 test_udaf_1774692180464" [ref=e817]:
+              - cell "491f2e35-4429-472f-ab63-f1bf0b14b680" [ref=e818] [cursor=pointer]
+              - cell "test_udaf_1774692180464" [ref=e819] [cursor=pointer]
+            - row "b5d53195-ff2e-406b-9404-95735d419a00 test_udaf_1774692098034" [ref=e820]:
+              - cell "b5d53195-ff2e-406b-9404-95735d419a00" [ref=e821] [cursor=pointer]
+              - cell "test_udaf_1774692098034" [ref=e822] [cursor=pointer]
+            - row "25c00984-8943-459a-a230-e439ae4eec91 test_udaf_1774691606070" [ref=e823]:
+              - cell "25c00984-8943-459a-a230-e439ae4eec91" [ref=e824] [cursor=pointer]
+              - cell "test_udaf_1774691606070" [ref=e825] [cursor=pointer]
+            - row "baea82aa-dff0-45cd-84f7-36edd6ba7187 test_udaf_1774691598036" [ref=e826]:
+              - cell "baea82aa-dff0-45cd-84f7-36edd6ba7187" [ref=e827] [cursor=pointer]
+              - cell "test_udaf_1774691598036" [ref=e828] [cursor=pointer]
+            - row "51144b5f-0330-43f7-a8a4-d76959b25af9 test_udaf_1774690972716" [ref=e829]:
+              - cell "51144b5f-0330-43f7-a8a4-d76959b25af9" [ref=e830] [cursor=pointer]
+              - cell "test_udaf_1774690972716" [ref=e831] [cursor=pointer]
+            - row "28607074-46e4-4f24-97a8-f3bc66919367 test_udaf_1774689492757" [ref=e832]:
+              - cell "28607074-46e4-4f24-97a8-f3bc66919367" [ref=e833] [cursor=pointer]
+              - cell "test_udaf_1774689492757" [ref=e834] [cursor=pointer]
+            - row "29e4400d-4013-48c1-94dd-d3d984003b0d test_udaf_1774689413444" [ref=e835]:
+              - cell "29e4400d-4013-48c1-94dd-d3d984003b0d" [ref=e836] [cursor=pointer]
+              - cell "test_udaf_1774689413444" [ref=e837] [cursor=pointer]
+            - row "1c1bd150-7857-441b-adc8-7f8b5de309ea test_udaf_1774687170673" [ref=e838]:
+              - cell "1c1bd150-7857-441b-adc8-7f8b5de309ea" [ref=e839] [cursor=pointer]
+              - cell "test_udaf_1774687170673" [ref=e840] [cursor=pointer]
+            - row "3280754c-6cbc-436d-9f72-d60b36cf4be3 test_udaf_1774686302188" [ref=e841]:
+              - cell "3280754c-6cbc-436d-9f72-d60b36cf4be3" [ref=e842] [cursor=pointer]
+              - cell "test_udaf_1774686302188" [ref=e843] [cursor=pointer]
+            - row "97f286b4-c425-4e15-91dd-63b982a01ec7 cdptest_1774686294497_sum_tashkent" [ref=e844]:
+              - cell "97f286b4-c425-4e15-91dd-63b982a01ec7" [ref=e845] [cursor=pointer]
+              - cell "cdptest_1774686294497_sum_tashkent" [ref=e846] [cursor=pointer]
+            - row "3799e573-6035-408b-abcd-41986602b117 cdptest_1774686294497_count_30d" [ref=e847]:
+              - cell "3799e573-6035-408b-abcd-41986602b117" [ref=e848] [cursor=pointer]
+              - cell "cdptest_1774686294497_count_30d" [ref=e849] [cursor=pointer]
+            - row "b9b47bc8-5e1f-4ddc-b4cc-2735691ffc56 cdptest_1774686294497_avg_delivery" [ref=e850]:
+              - cell "b9b47bc8-5e1f-4ddc-b4cc-2735691ffc56" [ref=e851] [cursor=pointer]
+              - cell "cdptest_1774686294497_avg_delivery" [ref=e852] [cursor=pointer]
+            - row "a3960d9d-7745-4ea6-86c0-649b77dfb27d cdptest_1774686294497_count_purchases" [ref=e853]:
+              - cell "a3960d9d-7745-4ea6-86c0-649b77dfb27d" [ref=e854] [cursor=pointer]
+              - cell "cdptest_1774686294497_count_purchases" [ref=e855] [cursor=pointer]
+            - row "8015993b-3482-4eae-9e07-e09cbc60eefc cdptest_1774686294497_sum_price" [ref=e856]:
+              - cell "8015993b-3482-4eae-9e07-e09cbc60eefc" [ref=e857] [cursor=pointer]
+              - cell "cdptest_1774686294497_sum_price" [ref=e858] [cursor=pointer]
+            - row "a6d25b04-0274-41a1-87a0-267cfb635de7 cdptest_1774686275266_sum_tashkent" [ref=e859]:
+              - cell "a6d25b04-0274-41a1-87a0-267cfb635de7" [ref=e860] [cursor=pointer]
+              - cell "cdptest_1774686275266_sum_tashkent" [ref=e861] [cursor=pointer]
+            - row "42e8b046-6226-4425-be86-bb13ee047e09 cdptest_1774686275266_count_30d" [ref=e862]:
+              - cell "42e8b046-6226-4425-be86-bb13ee047e09" [ref=e863] [cursor=pointer]
+              - cell "cdptest_1774686275266_count_30d" [ref=e864] [cursor=pointer]
+            - row "51d80f04-518f-4f92-b836-d680ee543e31 cdptest_1774686275266_avg_delivery" [ref=e865]:
+              - cell "51d80f04-518f-4f92-b836-d680ee543e31" [ref=e866] [cursor=pointer]
+              - cell "cdptest_1774686275266_avg_delivery" [ref=e867] [cursor=pointer]
+            - row "bf63e18e-6095-4113-a59a-0298ede613b0 cdptest_1774686275266_count_purchases" [ref=e868]:
+              - cell "bf63e18e-6095-4113-a59a-0298ede613b0" [ref=e869] [cursor=pointer]
+              - cell "cdptest_1774686275266_count_purchases" [ref=e870] [cursor=pointer]
+            - row "9522d8d7-2d89-4587-a4c3-7cb4c828b60a cdptest_1774686268806_count_purchases" [ref=e871]:
+              - cell "9522d8d7-2d89-4587-a4c3-7cb4c828b60a" [ref=e872] [cursor=pointer]
+              - cell "cdptest_1774686268806_count_purchases" [ref=e873] [cursor=pointer]
+            - row "fb352be1-60fb-493a-a08f-4cc5b400cecc cdptest_1774682954170_sum_tashkent" [ref=e874]:
+              - cell "fb352be1-60fb-493a-a08f-4cc5b400cecc" [ref=e875] [cursor=pointer]
+              - cell "cdptest_1774682954170_sum_tashkent" [ref=e876] [cursor=pointer]
+            - row "f00b459b-42c2-4898-bd70-708403e32754 cdptest_1774682954170_count_30d" [ref=e877]:
+              - cell "f00b459b-42c2-4898-bd70-708403e32754" [ref=e878] [cursor=pointer]
+              - cell "cdptest_1774682954170_count_30d" [ref=e879] [cursor=pointer]
+            - row "35ca155c-226c-4694-aedd-1f00b91627bd cdptest_1774682954170_avg_delivery" [ref=e880]:
+              - cell "35ca155c-226c-4694-aedd-1f00b91627bd" [ref=e881] [cursor=pointer]
+              - cell "cdptest_1774682954170_avg_delivery" [ref=e882] [cursor=pointer]
+            - row "733b91c3-e637-4a0a-9189-bdebf1d03098 cdptest_1774682954170_count_purchases" [ref=e883]:
+              - cell "733b91c3-e637-4a0a-9189-bdebf1d03098" [ref=e884] [cursor=pointer]
+              - cell "cdptest_1774682954170_count_purchases" [ref=e885] [cursor=pointer]
+            - row "6c841392-a23b-4251-ac80-d2601e401b24 cdptest_1774682954170_sum_price" [ref=e886]:
+              - cell "6c841392-a23b-4251-ac80-d2601e401b24" [ref=e887] [cursor=pointer]
+              - cell "cdptest_1774682954170_sum_price" [ref=e888] [cursor=pointer]
+            - row "1b3da770-d989-4b82-8077-94063040f87f test_udaf_1774682951895" [ref=e889]:
+              - cell "1b3da770-d989-4b82-8077-94063040f87f" [ref=e890] [cursor=pointer]
+              - cell "test_udaf_1774682951895" [ref=e891] [cursor=pointer]
+            - row "65129f22-8f1e-4fa1-8221-c5e09191344b test_udaf_1774682932380" [ref=e892]:
+              - cell "65129f22-8f1e-4fa1-8221-c5e09191344b" [ref=e893] [cursor=pointer]
+              - cell "test_udaf_1774682932380" [ref=e894] [cursor=pointer]
+            - row "768948c9-5112-4dc3-b3e6-8a1c12bbfc27 test_udaf_1774682925758" [ref=e895]:
+              - cell "768948c9-5112-4dc3-b3e6-8a1c12bbfc27" [ref=e896] [cursor=pointer]
+              - cell "test_udaf_1774682925758" [ref=e897] [cursor=pointer]
+            - row "161e8c4b-5262-436a-9e19-4b1a1c446a93 test_udaf_1774682919034" [ref=e898]:
+              - cell "161e8c4b-5262-436a-9e19-4b1a1c446a93" [ref=e899] [cursor=pointer]
+              - cell "test_udaf_1774682919034" [ref=e900] [cursor=pointer]
+            - row "1e097fee-bf6b-4b0c-bc1e-38f6caec48af cdptest_1774682910577_sum_tashkent" [ref=e901]:
+              - cell "1e097fee-bf6b-4b0c-bc1e-38f6caec48af" [ref=e902] [cursor=pointer]
+              - cell "cdptest_1774682910577_sum_tashkent" [ref=e903] [cursor=pointer]
+            - row "a794b35e-938a-4924-af26-5b97cc184aa0 cdptest_1774682910577_count_30d" [ref=e904]:
+              - cell "a794b35e-938a-4924-af26-5b97cc184aa0" [ref=e905] [cursor=pointer]
+              - cell "cdptest_1774682910577_count_30d" [ref=e906] [cursor=pointer]
+            - row "0855b0c9-20b3-4890-a82b-ddf9f23fc71c cdptest_1774682910577_avg_delivery" [ref=e907]:
+              - cell "0855b0c9-20b3-4890-a82b-ddf9f23fc71c" [ref=e908] [cursor=pointer]
+              - cell "cdptest_1774682910577_avg_delivery" [ref=e909] [cursor=pointer]
+            - row "2d3568e2-4bbb-4cb6-abb6-822e6b6c3bb2 cdptest_1774682910577_count_purchases" [ref=e910]:
+              - cell "2d3568e2-4bbb-4cb6-abb6-822e6b6c3bb2" [ref=e911] [cursor=pointer]
+              - cell "cdptest_1774682910577_count_purchases" [ref=e912] [cursor=pointer]
+            - row "0d14551e-dd9e-4387-8cb9-8d1582c63fba cdptest_1774682910577_sum_price" [ref=e913]:
+              - cell "0d14551e-dd9e-4387-8cb9-8d1582c63fba" [ref=e914] [cursor=pointer]
+              - cell "cdptest_1774682910577_sum_price" [ref=e915] [cursor=pointer]
+            - row "669ac23f-a95f-4032-8a51-df3aabe52b76 cdptest_1774682820458_sum_tashkent" [ref=e916]:
+              - cell "669ac23f-a95f-4032-8a51-df3aabe52b76" [ref=e917] [cursor=pointer]
+              - cell "cdptest_1774682820458_sum_tashkent" [ref=e918] [cursor=pointer]
+            - row "90b0f6a3-7f75-409a-93a5-cfbeb24656a3 cdptest_1774682820458_count_30d" [ref=e919]:
+              - cell "90b0f6a3-7f75-409a-93a5-cfbeb24656a3" [ref=e920] [cursor=pointer]
+              - cell "cdptest_1774682820458_count_30d" [ref=e921] [cursor=pointer]
+            - row "511c361f-0f64-4870-9022-5b02903d98bc cdptest_1774682820458_avg_delivery" [ref=e922]:
+              - cell "511c361f-0f64-4870-9022-5b02903d98bc" [ref=e923] [cursor=pointer]
+              - cell "cdptest_1774682820458_avg_delivery" [ref=e924] [cursor=pointer]
+            - row "471bb5a8-3bb3-413a-b86c-69c6466dc7f4 cdptest_1774682820458_count_purchases" [ref=e925]:
+              - cell "471bb5a8-3bb3-413a-b86c-69c6466dc7f4" [ref=e926] [cursor=pointer]
+              - cell "cdptest_1774682820458_count_purchases" [ref=e927] [cursor=pointer]
+            - row "d46f8295-cd22-4d6a-a512-bbd4452f1c3a cdptest_1774682820458_sum_price" [ref=e928]:
+              - cell "d46f8295-cd22-4d6a-a512-bbd4452f1c3a" [ref=e929] [cursor=pointer]
+              - cell "cdptest_1774682820458_sum_price" [ref=e930] [cursor=pointer]
+            - row "467d70d7-1cf8-45f7-bdb5-63b795032460 cdptest_1774682743111_avg_delivery" [ref=e931]:
+              - cell "467d70d7-1cf8-45f7-bdb5-63b795032460" [ref=e932] [cursor=pointer]
+              - cell "cdptest_1774682743111_avg_delivery" [ref=e933] [cursor=pointer]
+            - row "08e6a358-6938-4615-98e0-7bf941ca9c33 cdptest_1774682743111_count_purchases" [ref=e934]:
+              - cell "08e6a358-6938-4615-98e0-7bf941ca9c33" [ref=e935] [cursor=pointer]
+              - cell "cdptest_1774682743111_count_purchases" [ref=e936] [cursor=pointer]
+            - row "a02cce23-d09a-4340-ac34-f12bc89b03e6 cdptest_1774682743111_sum_price" [ref=e937]:
+              - cell "a02cce23-d09a-4340-ac34-f12bc89b03e6" [ref=e938] [cursor=pointer]
+              - cell "cdptest_1774682743111_sum_price" [ref=e939] [cursor=pointer]
+            - row "e5e38ecf-bd36-4705-b973-dfb685ed70a2 biz_timewindow_1774682034862" [ref=e940]:
+              - cell "e5e38ecf-bd36-4705-b973-dfb685ed70a2" [ref=e941] [cursor=pointer]
+              - cell "biz_timewindow_1774682034862" [ref=e942] [cursor=pointer]
+            - row "5ab2746b-b700-4f6f-baff-e4af99e0e095 biz_max_1774682034818" [ref=e943]:
+              - cell "5ab2746b-b700-4f6f-baff-e4af99e0e095" [ref=e944] [cursor=pointer]
+              - cell "biz_max_1774682034818" [ref=e945] [cursor=pointer]
+            - row "b7e40d57-917a-4a78-9648-63f77c048674 biz_min_1774682034759" [ref=e946]:
+              - cell "b7e40d57-917a-4a78-9648-63f77c048674" [ref=e947] [cursor=pointer]
+              - cell "biz_min_1774682034759" [ref=e948] [cursor=pointer]
+            - row "a2a86f24-5198-4ac8-a4d8-b8f6b682b09d biz_avg_1774682034715" [ref=e949]:
+              - cell "a2a86f24-5198-4ac8-a4d8-b8f6b682b09d" [ref=e950] [cursor=pointer]
+              - cell "biz_avg_1774682034715" [ref=e951] [cursor=pointer]
+            - row "0e1c848e-4f9f-4ad2-9fa9-fe455574fcf0 biz_count_1774682034658" [ref=e952]:
+              - cell "0e1c848e-4f9f-4ad2-9fa9-fe455574fcf0" [ref=e953] [cursor=pointer]
+              - cell "biz_count_1774682034658" [ref=e954] [cursor=pointer]
+            - row "d5fc4ff4-7ae2-44ef-8c04-5b3436b65ccc biz_sum_1774682034603" [ref=e955]:
+              - cell "d5fc4ff4-7ae2-44ef-8c04-5b3436b65ccc" [ref=e956] [cursor=pointer]
+              - cell "biz_sum_1774682034603" [ref=e957] [cursor=pointer]
+            - row "84ba6c4e-50ee-4056-8234-9266a9b9ab28 test_udaf_1774682032350" [ref=e958]:
+              - cell "84ba6c4e-50ee-4056-8234-9266a9b9ab28" [ref=e959] [cursor=pointer]
+              - cell "test_udaf_1774682032350" [ref=e960] [cursor=pointer]
+            - row "6fc531d5-579c-4d55-acae-7742bc33b34e biz_timewindow_1774682025181" [ref=e961]:
+              - cell "6fc531d5-579c-4d55-acae-7742bc33b34e" [ref=e962] [cursor=pointer]
+              - cell "biz_timewindow_1774682025181" [ref=e963] [cursor=pointer]
+            - row "22050cd1-4d63-40c2-affe-298b682e68ba biz_max_1774682025136" [ref=e964]:
+              - cell "22050cd1-4d63-40c2-affe-298b682e68ba" [ref=e965] [cursor=pointer]
+              - cell "biz_max_1774682025136" [ref=e966] [cursor=pointer]
+            - row "c4c38cee-c6b0-45a2-b3c3-68ca19b4751e biz_min_1774682025080" [ref=e967]:
+              - cell "c4c38cee-c6b0-45a2-b3c3-68ca19b4751e" [ref=e968] [cursor=pointer]
+              - cell "biz_min_1774682025080" [ref=e969] [cursor=pointer]
+            - row "f5800b69-6e3b-4563-98d4-5d8926b4c708 biz_avg_1774682025036" [ref=e970]:
+              - cell "f5800b69-6e3b-4563-98d4-5d8926b4c708" [ref=e971] [cursor=pointer]
+              - cell "biz_avg_1774682025036" [ref=e972] [cursor=pointer]
+            - row "707e91b9-5bc6-4384-8b93-d0ea6f07df38 biz_count_1774682024987" [ref=e973]:
+              - cell "707e91b9-5bc6-4384-8b93-d0ea6f07df38" [ref=e974] [cursor=pointer]
+              - cell "biz_count_1774682024987" [ref=e975] [cursor=pointer]
+            - row "0cd1280e-f583-4765-910f-5c54f6966931 biz_sum_1774682024931" [ref=e976]:
+              - cell "0cd1280e-f583-4765-910f-5c54f6966931" [ref=e977] [cursor=pointer]
+              - cell "biz_sum_1774682024931" [ref=e978] [cursor=pointer]
+            - row "f33d9129-a969-4736-9b67-9c71dc39dbe2 biz_timewindow_1774682011521" [ref=e979]:
+              - cell "f33d9129-a969-4736-9b67-9c71dc39dbe2" [ref=e980] [cursor=pointer]
+              - cell "biz_timewindow_1774682011521" [ref=e981] [cursor=pointer]
+            - row "ec341cf6-e301-4cdd-be47-3c3476d1878f biz_max_1774682011468" [ref=e982]:
+              - cell "ec341cf6-e301-4cdd-be47-3c3476d1878f" [ref=e983] [cursor=pointer]
+              - cell "biz_max_1774682011468" [ref=e984] [cursor=pointer]
+            - row "c16e8c02-ff86-4762-85d6-0c6e219ad86c biz_min_1774682011416" [ref=e985]:
+              - cell "c16e8c02-ff86-4762-85d6-0c6e219ad86c" [ref=e986] [cursor=pointer]
+              - cell "biz_min_1774682011416" [ref=e987] [cursor=pointer]
+            - row "be1fe4c2-8c3a-4b72-8f74-e268ce7ceb59 biz_avg_1774682011374" [ref=e988]:
+              - cell "be1fe4c2-8c3a-4b72-8f74-e268ce7ceb59" [ref=e989] [cursor=pointer]
+              - cell "biz_avg_1774682011374" [ref=e990] [cursor=pointer]
+            - row "29890baf-69b9-41e3-b280-6cf93333843f biz_count_1774682011333" [ref=e991]:
+              - cell "29890baf-69b9-41e3-b280-6cf93333843f" [ref=e992] [cursor=pointer]
+              - cell "biz_count_1774682011333" [ref=e993] [cursor=pointer]
+            - row "02496d83-b6a3-4a69-afac-79a544b97e57 biz_sum_1774682011282" [ref=e994]:
+              - cell "02496d83-b6a3-4a69-afac-79a544b97e57" [ref=e995] [cursor=pointer]
+              - cell "biz_sum_1774682011282" [ref=e996] [cursor=pointer]
+            - row "c5decd7f-08a7-4edd-8cd0-92035b42545f biz_timewindow_1774681970265" [ref=e997]:
+              - cell "c5decd7f-08a7-4edd-8cd0-92035b42545f" [ref=e998] [cursor=pointer]
+              - cell "biz_timewindow_1774681970265" [ref=e999] [cursor=pointer]
+            - row "038a5b14-084d-4d55-9ecc-74b87c732bf5 biz_max_1774681970209" [ref=e1000]:
+              - cell "038a5b14-084d-4d55-9ecc-74b87c732bf5" [ref=e1001] [cursor=pointer]
+              - cell "biz_max_1774681970209" [ref=e1002] [cursor=pointer]
+            - row "0108104e-5f61-422d-91e6-2153a1a10112 biz_min_1774681970144" [ref=e1003]:
+              - cell "0108104e-5f61-422d-91e6-2153a1a10112" [ref=e1004] [cursor=pointer]
+              - cell "biz_min_1774681970144" [ref=e1005] [cursor=pointer]
+            - row "9c61b25e-970d-425c-8848-1b7638880b86 biz_avg_1774681970088" [ref=e1006]:
+              - cell "9c61b25e-970d-425c-8848-1b7638880b86" [ref=e1007] [cursor=pointer]
+              - cell "biz_avg_1774681970088" [ref=e1008] [cursor=pointer]
+            - row "4966f622-15a6-49e3-8c55-c43812e278f9 biz_count_1774681970019" [ref=e1009]:
+              - cell "4966f622-15a6-49e3-8c55-c43812e278f9" [ref=e1010] [cursor=pointer]
+              - cell "biz_count_1774681970019" [ref=e1011] [cursor=pointer]
+            - row "a1d3dd71-7028-4deb-b7ad-8dcedb7accae biz_sum_1774681969952" [ref=e1012]:
+              - cell "a1d3dd71-7028-4deb-b7ad-8dcedb7accae" [ref=e1013] [cursor=pointer]
+              - cell "biz_sum_1774681969952" [ref=e1014] [cursor=pointer]
+            - row "5e29582d-31a2-4f45-a48f-c336ae8a981d biz_timewindow_1774681963619" [ref=e1015]:
+              - cell "5e29582d-31a2-4f45-a48f-c336ae8a981d" [ref=e1016] [cursor=pointer]
+              - cell "biz_timewindow_1774681963619" [ref=e1017] [cursor=pointer]
+            - row "2d8d994f-75c1-4686-80ca-d3c470b4e1c0 biz_max_1774681963574" [ref=e1018]:
+              - cell "2d8d994f-75c1-4686-80ca-d3c470b4e1c0" [ref=e1019] [cursor=pointer]
+              - cell "biz_max_1774681963574" [ref=e1020] [cursor=pointer]
+            - row "c87ffc52-6bf0-40c3-822a-26ab1e3ddd5e biz_min_1774681963524" [ref=e1021]:
+              - cell "c87ffc52-6bf0-40c3-822a-26ab1e3ddd5e" [ref=e1022] [cursor=pointer]
+              - cell "biz_min_1774681963524" [ref=e1023] [cursor=pointer]
+            - row "9c1526b8-6ed3-4f26-b6cb-99a94a592693 biz_avg_1774681963474" [ref=e1024]:
+              - cell "9c1526b8-6ed3-4f26-b6cb-99a94a592693" [ref=e1025] [cursor=pointer]
+              - cell "biz_avg_1774681963474" [ref=e1026] [cursor=pointer]
+            - row "f2f990b8-2016-4246-821b-cc466d4ec8a5 biz_count_1774681963425" [ref=e1027]:
+              - cell "f2f990b8-2016-4246-821b-cc466d4ec8a5" [ref=e1028] [cursor=pointer]
+              - cell "biz_count_1774681963425" [ref=e1029] [cursor=pointer]
+            - row "ccaa4e74-38ac-40f9-b278-e3e3dd6caaff biz_sum_1774681963360" [ref=e1030]:
+              - cell "ccaa4e74-38ac-40f9-b278-e3e3dd6caaff" [ref=e1031] [cursor=pointer]
+              - cell "biz_sum_1774681963360" [ref=e1032] [cursor=pointer]
+            - row "c4bfa5a0-0041-4068-aff4-14c31f8bb3de biz_timewindow_1774681902617" [ref=e1033]:
+              - cell "c4bfa5a0-0041-4068-aff4-14c31f8bb3de" [ref=e1034] [cursor=pointer]
+              - cell "biz_timewindow_1774681902617" [ref=e1035] [cursor=pointer]
+            - row "b2ce8566-8790-4679-88b5-ccc7d05806eb biz_max_1774681902570" [ref=e1036]:
+              - cell "b2ce8566-8790-4679-88b5-ccc7d05806eb" [ref=e1037] [cursor=pointer]
+              - cell "biz_max_1774681902570" [ref=e1038] [cursor=pointer]
+            - row "d2322395-0bec-4236-a2ed-76c00542eb33 biz_min_1774681902518" [ref=e1039]:
+              - cell "d2322395-0bec-4236-a2ed-76c00542eb33" [ref=e1040] [cursor=pointer]
+              - cell "biz_min_1774681902518" [ref=e1041] [cursor=pointer]
+            - row "3a4d3d01-26c5-4a84-b2ea-25c3312dea3d biz_avg_1774681902466" [ref=e1042]:
+              - cell "3a4d3d01-26c5-4a84-b2ea-25c3312dea3d" [ref=e1043] [cursor=pointer]
+              - cell "biz_avg_1774681902466" [ref=e1044] [cursor=pointer]
+            - row "f2268676-b424-42de-86e9-c6c4543da9ae biz_count_1774681902406" [ref=e1045]:
+              - cell "f2268676-b424-42de-86e9-c6c4543da9ae" [ref=e1046] [cursor=pointer]
+              - cell "biz_count_1774681902406" [ref=e1047] [cursor=pointer]
+            - row "5a1ed1ce-6cc2-4641-8d24-2f80194e6dc4 biz_sum_1774681902350" [ref=e1048]:
+              - cell "5a1ed1ce-6cc2-4641-8d24-2f80194e6dc4" [ref=e1049] [cursor=pointer]
+              - cell "biz_sum_1774681902350" [ref=e1050] [cursor=pointer]
+            - row "9ef54846-e13a-4fc0-9a11-162168075923 biz_timewindow_1774681896062" [ref=e1051]:
+              - cell "9ef54846-e13a-4fc0-9a11-162168075923" [ref=e1052] [cursor=pointer]
+              - cell "biz_timewindow_1774681896062" [ref=e1053] [cursor=pointer]
+            - row "2501ed70-b8b8-4c3f-9ed8-b9ad27ff276a biz_max_1774681896015" [ref=e1054]:
+              - cell "2501ed70-b8b8-4c3f-9ed8-b9ad27ff276a" [ref=e1055] [cursor=pointer]
+              - cell "biz_max_1774681896015" [ref=e1056] [cursor=pointer]
+            - row "81a4b2be-5849-4c36-bc5a-c9b0bc702e23 biz_min_1774681895966" [ref=e1057]:
+              - cell "81a4b2be-5849-4c36-bc5a-c9b0bc702e23" [ref=e1058] [cursor=pointer]
+              - cell "biz_min_1774681895966" [ref=e1059] [cursor=pointer]
+            - row "476e51ae-ce94-4c84-a70a-1cf4fcc5e4e7 biz_avg_1774681895920" [ref=e1060]:
+              - cell "476e51ae-ce94-4c84-a70a-1cf4fcc5e4e7" [ref=e1061] [cursor=pointer]
+              - cell "biz_avg_1774681895920" [ref=e1062] [cursor=pointer]
+            - row "10543899-0f7d-4292-9f74-5199b324f2ea biz_count_1774681895869" [ref=e1063]:
+              - cell "10543899-0f7d-4292-9f74-5199b324f2ea" [ref=e1064] [cursor=pointer]
+              - cell "biz_count_1774681895869" [ref=e1065] [cursor=pointer]
+            - row "b4bbfac0-2015-47c8-ac8e-07c5447e5b88 biz_sum_1774681895819" [ref=e1066]:
+              - cell "b4bbfac0-2015-47c8-ac8e-07c5447e5b88" [ref=e1067] [cursor=pointer]
+              - cell "biz_sum_1774681895819" [ref=e1068] [cursor=pointer]
+            - row "44857e31-f4a0-4eb1-9594-eb8368e50bd8 test_udaf_1774681888989" [ref=e1069]:
+              - cell "44857e31-f4a0-4eb1-9594-eb8368e50bd8" [ref=e1070] [cursor=pointer]
+              - cell "test_udaf_1774681888989" [ref=e1071] [cursor=pointer]
+            - row "652e9391-b89c-4724-b587-f1059b50c03a test_udaf_1774681858176" [ref=e1072]:
+              - cell "652e9391-b89c-4724-b587-f1059b50c03a" [ref=e1073] [cursor=pointer]
+              - cell "test_udaf_1774681858176" [ref=e1074] [cursor=pointer]
+            - row "b0fbe200-100f-4216-8b0e-ad93e0222e25 test_udaf_1774681833936" [ref=e1075]:
+              - cell "b0fbe200-100f-4216-8b0e-ad93e0222e25" [ref=e1076] [cursor=pointer]
+              - cell "test_udaf_1774681833936" [ref=e1077] [cursor=pointer]
+            - row "f0bd9d9e-1fd3-45c4-ad99-018239c53398 test_udaf_1774681793703" [ref=e1078]:
+              - cell "f0bd9d9e-1fd3-45c4-ad99-018239c53398" [ref=e1079] [cursor=pointer]
+              - cell "test_udaf_1774681793703" [ref=e1080] [cursor=pointer]
+            - row "40a942ce-0434-4c77-99e1-dc6a82730bb6 Islombeks predicate" [ref=e1081]:
+              - cell "40a942ce-0434-4c77-99e1-dc6a82730bb6" [ref=e1082] [cursor=pointer]
+              - cell "Islombeks predicate" [ref=e1083] [cursor=pointer]
+            - row "8c4f3d13-1747-4567-9d10-5273e8a8928e Islombeks predicate" [ref=e1084]:
+              - cell "8c4f3d13-1747-4567-9d10-5273e8a8928e" [ref=e1085] [cursor=pointer]
+              - cell "Islombeks predicate" [ref=e1086] [cursor=pointer]
+            - row "2b844563-f774-4a0e-a64d-dad8ed47b604 Islombeks predicate" [ref=e1087]:
+              - cell "2b844563-f774-4a0e-a64d-dad8ed47b604" [ref=e1088] [cursor=pointer]
+              - cell "Islombeks predicate" [ref=e1089] [cursor=pointer]
+            - row "0427a560-7331-456d-9998-e6a7a16aae73 count test events for last 60 days" [ref=e1090]:
+              - cell "0427a560-7331-456d-9998-e6a7a16aae73" [ref=e1091] [cursor=pointer]
+              - cell "count test events for last 60 days" [ref=e1092] [cursor=pointer]
+            - row "4cc494a0-873f-41c3-b93a-e387dfafc747 good aggregate sum float" [ref=e1093]:
+              - cell "4cc494a0-873f-41c3-b93a-e387dfafc747" [ref=e1094] [cursor=pointer]
+              - cell "good aggregate sum float" [ref=e1095] [cursor=pointer]
+            - row "245e640d-f535-4991-921b-6e34be368ab6 good aggregate sum float" [ref=e1096]:
+              - cell "245e640d-f535-4991-921b-6e34be368ab6" [ref=e1097] [cursor=pointer]
+              - cell "good aggregate sum float" [ref=e1098] [cursor=pointer]
+            - row "49c2bca9-b82f-4b65-91ba-23e8b36c2a8e total_price_L" [ref=e1099]:
+              - cell "49c2bca9-b82f-4b65-91ba-23e8b36c2a8e" [ref=e1100] [cursor=pointer]
+              - cell "total_price_L" [ref=e1101] [cursor=pointer]
+            - row "cffaaf04-4449-4f85-92fd-a8e018bfc6a2 Sum Total Price" [ref=e1102]:
+              - cell "cffaaf04-4449-4f85-92fd-a8e018bfc6a2" [ref=e1103] [cursor=pointer]
+              - cell "Sum Total Price" [ref=e1104] [cursor=pointer]
+            - row "84bb55dd-37a8-4553-9cd3-b593200a0404 Islombeks predicate" [ref=e1105]:
+              - cell "84bb55dd-37a8-4553-9cd3-b593200a0404" [ref=e1106] [cursor=pointer]
+              - cell "Islombeks predicate" [ref=e1107] [cursor=pointer]
+            - row "19b2f522-01ef-4ed0-8102-12828047050b Islombeks predicate" [ref=e1108]:
+              - cell "19b2f522-01ef-4ed0-8102-12828047050b" [ref=e1109] [cursor=pointer]
+              - cell "Islombeks predicate" [ref=e1110] [cursor=pointer]
+            - row "d8b3fb6f-ef89-4130-9893-2279c6196374 sum_delivery_cost" [ref=e1111]:
+              - cell "d8b3fb6f-ef89-4130-9893-2279c6196374" [ref=e1112] [cursor=pointer]
+              - cell "sum_delivery_cost" [ref=e1113] [cursor=pointer]
+            - row "a7fefef2-9fd5-4de6-b0cd-1688dc117bc7 fsfes" [ref=e1114]:
+              - cell "a7fefef2-9fd5-4de6-b0cd-1688dc117bc7" [ref=e1115] [cursor=pointer]
+              - cell "fsfes" [ref=e1116] [cursor=pointer]
+            - row "77b15a80-214a-4cee-a058-d0388f94345a test" [ref=e1117]:
+              - cell "77b15a80-214a-4cee-a058-d0388f94345a" [ref=e1118] [cursor=pointer]
+              - cell "test" [ref=e1119] [cursor=pointer]
+            - row "ca2cdc2e-c816-4ce2-a31d-2a357ba7265a test" [ref=e1120]:
+              - cell "ca2cdc2e-c816-4ce2-a31d-2a357ba7265a" [ref=e1121] [cursor=pointer]
+              - cell "test" [ref=e1122] [cursor=pointer]
+            - row "697557f2-e6a9-4d26-af56-d9cd80b8990a test" [ref=e1123]:
+              - cell "697557f2-e6a9-4d26-af56-d9cd80b8990a" [ref=e1124] [cursor=pointer]
+              - cell "test" [ref=e1125] [cursor=pointer]
+            - row "60f7efb8-5030-4ab5-8f4c-4669de98d3c9 test" [ref=e1126]:
+              - cell "60f7efb8-5030-4ab5-8f4c-4669de98d3c9" [ref=e1127] [cursor=pointer]
+              - cell "test" [ref=e1128] [cursor=pointer]
+            - row "61709b3f-2d67-452b-b73d-027ca8a59987 sum by delivery cost" [ref=e1129]:
+              - cell "61709b3f-2d67-452b-b73d-027ca8a59987" [ref=e1130] [cursor=pointer]
+              - cell "sum by delivery cost" [ref=e1131] [cursor=pointer]
+            - row "dd0d1acf-8804-41f4-b8d6-756449ac14b4 test agg" [ref=e1132]:
+              - cell "dd0d1acf-8804-41f4-b8d6-756449ac14b4" [ref=e1133] [cursor=pointer]
+              - cell "test agg" [ref=e1134] [cursor=pointer]
+            - row "bb4d8231-4019-4d96-afec-b5bdcc7845c2 tertrwtr" [ref=e1135]:
+              - cell "bb4d8231-4019-4d96-afec-b5bdcc7845c2" [ref=e1136] [cursor=pointer]
+              - cell "tertrwtr" [ref=e1137] [cursor=pointer]
+            - row "de2c9ea4-bdef-4f93-afa4-8c9745878506 test" [ref=e1138]:
+              - cell "de2c9ea4-bdef-4f93-afa4-8c9745878506" [ref=e1139] [cursor=pointer]
+              - cell "test" [ref=e1140] [cursor=pointer]
+            - row "715cf8fd-86ee-4732-b6fe-55d950c489e5 avg delivery cost for purchase" [ref=e1141]:
+              - cell "715cf8fd-86ee-4732-b6fe-55d950c489e5" [ref=e1142] [cursor=pointer]
+              - cell "avg delivery cost for purchase" [ref=e1143] [cursor=pointer]
+            - row "43c8c97b-f771-4fb3-be8d-d5c06c2cccac count purchase 1" [ref=e1144]:
+              - cell "43c8c97b-f771-4fb3-be8d-d5c06c2cccac" [ref=e1145] [cursor=pointer]
+              - cell "count purchase 1" [ref=e1146] [cursor=pointer]
+            - row "91ecee24-b291-4343-a1a5-de8b8eb039ed sum purchase 1" [ref=e1147]:
+              - cell "91ecee24-b291-4343-a1a5-de8b8eb039ed" [ref=e1148] [cursor=pointer]
+              - cell "sum purchase 1" [ref=e1149] [cursor=pointer]
+            - row "4d2150bd-9b3e-4166-a812-5078855b6d3c sum purchase 2" [ref=e1150]:
+              - cell "4d2150bd-9b3e-4166-a812-5078855b6d3c" [ref=e1151] [cursor=pointer]
+              - cell "sum purchase 2" [ref=e1152] [cursor=pointer]
+    - region "Notifications Alt+T"
+  - dialog "Создать агрегат" [ref=e1154]:
+    - banner [ref=e1155]:
+      - heading "Создать агрегат" [level=2] [ref=e1156]
+      - button [active] [ref=e1157] [cursor=pointer]:
+        - img [ref=e1158]
+    - generic [ref=e1162]:
+      - generic [ref=e1163]:
+        - generic [ref=e1164]:
+          - generic [ref=e1165]: Название агрегата
+          - textbox "Название агрегата" [ref=e1167]
+        - button "За всё время" [ref=e1168] [cursor=pointer]:
+          - generic [ref=e1170]:
+            - img [ref=e1171]
+            - paragraph [ref=e1173]: За всё время
+      - generic [ref=e1174]:
+        - generic [ref=e1175]:
+          - generic [ref=e1176]: Функция
+          - generic [ref=e1177]:
+            - textbox "Функция" [ref=e1178]
+            - generic:
+              - img
+        - generic [ref=e1179]:
+          - generic [ref=e1180]: Тип события
+          - generic [ref=e1181]:
+            - textbox "Тип события" [ref=e1182]
+            - generic:
+              - img
+        - generic [ref=e1183]:
+          - generic [ref=e1184]: Поля
+          - generic [ref=e1185]:
+            - textbox "Поля" [disabled] [ref=e1186]
+            - generic:
+              - img
+      - generic [ref=e1188]:
+        - generic [ref=e1190]:
+          - switch "Группировать события перед применением фильтра"
+          - generic [ref=e1195]: Группировать события перед применением фильтра
+        - img [ref=e1197] [cursor=pointer]
+      - separator [ref=e1200]:
+        - generic [ref=e1201]: Фильтр событий (необязательно)
+      - generic:
+        - generic:
+          - generic:
+            - paragraph: Группа
+            - generic:
+              - generic:
+                - generic:
+                  - switch "НЕ"
+                  - generic:
+                    - generic: НЕ
+              - radiogroup:
+                - generic:
+                  - radio "И" [checked]
+                  - generic: И
+                - generic:
+                  - radio "ИЛИ"
+                  - generic: ИЛИ
+        - generic:
+          - paragraph: Нет условий или групп
+          - generic:
+            - button "Добавить условие":
+              - generic:
+                - generic: Добавить условие
+            - button "Добавить группу":
+              - generic:
+                - generic: Добавить группу
+      - generic [ref=e1202]:
+        - button "Создать агрегат" [ref=e1203] [cursor=pointer]:
+          - generic [ref=e1205]: Создать агрегат
+        - button "Сбросить" [ref=e1206] [cursor=pointer]:
+          - generic [ref=e1208]: Сбросить

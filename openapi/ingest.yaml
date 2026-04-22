@@ -1,0 +1,129 @@
+openapi: "3.0.3"
+info:
+  title: "CDP Ingest project"
+  version: "0.0.1"
+  description: "Cluster Ingest API doc"
+servers: []
+tags:
+  - name: "tenant"
+paths:
+  /cdp-ingest/ingest/tenant/{tenantId}/async/events:
+    post:
+      tags:
+        - "tenant"
+      description: "API to Send Event to CDP system"
+      operationId: postEventData
+      summary: "Send Events"
+      parameters:
+        - in: path
+          name: tenantId
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: 'Just tenantId'
+      requestBody:
+        description: "Event Payload"
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                required: [primary_id, event_type]
+                properties:
+                  primary_id: {type: integer, nullable: false}
+                  event_type: {type: string, nullable: false}
+                additionalProperties: true
+      responses:
+        '500':
+          description: internal server error
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/BadRequest'
+        '404':
+          description: Tenant deos not exist or not ready
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/IngestResult'
+  /cdp-ingest/ingest/tenant/{tenantId}/async/customers:
+    post:
+      tags:
+        - "tenant"
+      description: "API to Send Customer to CDP system"
+      operationId: postCustomerData
+      summary: "Send Customer"
+      parameters:
+        - in: path
+          name: tenantId
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: 'Just tenantId'
+      requestBody:
+        description: "Customer Payload"
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                required: [primary_id]
+                properties:
+                  primary_id: {type: integer, nullable: false}
+                additionalProperties: true
+      responses:
+        '500':
+          description: internal server error
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/BadRequest'
+        '404':
+          description: Tenant deos not exist or not ready
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                '$ref': '#/components/schemas/IngestResult'
+components:
+  schemas:
+    BadRequest:
+      type: object
+      required: [message]
+      properties:
+        message: {type: string}
+    JsonError:
+      type: object
+      required: [key, message]
+      properties:
+        key: {type: string}
+        message: {type: string}
+    IngestResultItem:
+      type: object
+      required: [status, ignoredFields]
+      properties:
+        status: {type:  string, enum: [accepted, rejected]}
+        ignoredFields:
+          type: array
+          items: {type: string}
+        error: {'$ref': '#/components/schemas/JsonError'}
+    IngestResult:
+      type: object
+      required: [accepted, rejected, items]
+      properties:
+        accepted: {type: integer}
+        rejected: {type: integer}
+        items:
+          type: array
+          items: {'$ref': '#/components/schemas/IngestResultItem'}

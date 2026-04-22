@@ -1,0 +1,71 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Панель управления" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+          - generic [ref=e9]: Панель управления
+        - generic [ref=e10]:
+          - paragraph [ref=e11]: Данные
+          - generic:
+            - link "Клиенты":
+              - /url: /data/clients
+              - img
+              - generic: Клиенты
+            - button "События":
+              - img
+              - generic: События
+            - link "Сценарий":
+              - /url: /data/scenario
+              - img
+              - generic: Сценарий
+            - link "Файлы":
+              - /url: /data/files
+              - img
+              - generic: Файлы
+        - generic [ref=e12]:
+          - paragraph [ref=e13]: Маркетинг
+          - generic:
+            - link "Агрегаты":
+              - /url: /marketing/aggregate
+              - img
+              - generic: Агрегаты
+            - link "Сегменты":
+              - /url: /marketing/segments
+              - img
+              - generic: Сегменты
+            - link "Рассылки":
+              - /url: /marketing/campaigns
+              - img
+              - generic: Рассылки
+            - link "Коммуникации":
+              - /url: /marketing/communication
+              - img
+              - generic: Коммуникации
+        - generic [ref=e14]:
+          - paragraph [ref=e15]: Аналитика
+          - generic:
+            - link "Статистика полей":
+              - /url: /statistics/field
+              - img
+              - generic: Статистика полей
+      - generic [ref=e16]:
+        - separator [ref=e17]
+        - generic [ref=e19]:
+          - img [ref=e22]
+          - paragraph
+    - generic [ref=e28]:
+      - paragraph [ref=e31]: Сценарии
+      - separator [ref=e32]
+      - button "Добавить" [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]:
+          - img [ref=e37]
+          - generic [ref=e38]: Добавить
+      - table [ref=e41]:
+        - rowgroup [ref=e42]:
+          - row "Название Создано Статус" [ref=e43]:
+            - columnheader "Название" [ref=e44]
+            - columnheader "Создано" [ref=e45]
+            - columnheader "Статус" [ref=e46]
+        - rowgroup
+  - region "Notifications Alt+T"

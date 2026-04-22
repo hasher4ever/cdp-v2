@@ -1,0 +1,391 @@
+- generic [ref=e2]:
+  - generic [ref=e33]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - link "Панель управления" [ref=e38] [cursor=pointer]:
+          - /url: /dashboard
+          - generic [ref=e39]: Панель управления
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Данные
+          - generic [ref=e42]:
+            - link "Клиенты 342279" [ref=e43] [cursor=pointer]:
+              - /url: /data/clients
+              - img [ref=e44]
+              - generic [ref=e46]: Клиенты
+              - generic [ref=e48]: "342279"
+            - button "События 66245" [ref=e49] [cursor=pointer]:
+              - img [ref=e50]
+              - generic [ref=e52]: События
+              - generic [ref=e54]: "66245"
+            - link "Сценарий" [ref=e55] [cursor=pointer]:
+              - /url: /data/scenario
+              - img [ref=e56]
+              - generic [ref=e58]: Сценарий
+            - link "Файлы" [ref=e59] [cursor=pointer]:
+              - /url: /data/files
+              - img [ref=e60]
+              - generic [ref=e64]: Файлы
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: Маркетинг
+          - generic [ref=e67]:
+            - link "Агрегаты" [ref=e68] [cursor=pointer]:
+              - /url: /marketing/aggregate
+              - img [ref=e69]
+              - generic [ref=e82]: Агрегаты
+            - link "Сегменты" [ref=e83] [cursor=pointer]:
+              - /url: /marketing/segments
+              - img [ref=e84]
+              - generic [ref=e87]: Сегменты
+            - link "Рассылки" [ref=e88] [cursor=pointer]:
+              - /url: /marketing/campaigns
+              - img [ref=e89]
+              - generic [ref=e91]: Рассылки
+            - link "Коммуникации" [ref=e92] [cursor=pointer]:
+              - /url: /marketing/communication
+              - img [ref=e93]
+              - generic [ref=e95]: Коммуникации
+        - generic [ref=e96]:
+          - paragraph [ref=e97]: Аналитика
+          - link "Статистика полей" [ref=e99] [cursor=pointer]:
+            - /url: /statistics/field
+            - img [ref=e100]
+            - generic [ref=e125]: Статистика полей
+      - generic [ref=e126]:
+        - separator [ref=e127]
+        - generic [ref=e129]:
+          - generic [ref=e131]: c
+          - paragraph [ref=e132] [cursor=pointer]: cdp_1762934640267
+    - generic [ref=e137]:
+      - paragraph [ref=e219]: Панель управления
+      - tablist [ref=e221]:
+        - tab "Артефакты арендатора" [ref=e222] [cursor=pointer]:
+          - generic [ref=e223]: Артефакты арендатора
+        - tab "Поля схемы клиента" [selected] [ref=e224] [cursor=pointer]:
+          - generic [ref=e225]: Поля схемы клиента
+        - tab "Поля схемы событий" [ref=e226] [cursor=pointer]:
+          - generic [ref=e227]: Поля схемы событий
+        - tab "Конкретные сопоставления полей" [ref=e228] [cursor=pointer]:
+          - generic [ref=e229]: Конкретные сопоставления полей
+        - tab "Создать шаблон" [ref=e230] [cursor=pointer]:
+          - generic [ref=e231]: Создать шаблон
+      - generic [ref=e232]:
+        - generic [ref=e233]:
+          - button "Применить черновики" [disabled] [ref=e234]:
+            - generic [ref=e236]: Применить черновики
+          - button "Отменить черновики" [disabled] [ref=e237]:
+            - generic [ref=e239]: Отменить черновики
+        - button "Добавить" [ref=e240] [cursor=pointer]:
+          - generic [ref=e241]:
+            - img [ref=e243]
+            - generic [ref=e244]: Добавить
+      - table [ref=e247]:
+        - rowgroup [ref=e248]:
+          - row "Название API имя Тип данных Множественное значение Доступ" [ref=e249]:
+            - columnheader "Название" [ref=e250]
+            - columnheader "API имя" [ref=e251]
+            - columnheader "Тип данных" [ref=e252]
+            - columnheader "Множественное значение" [ref=e253]
+            - columnheader "Доступ" [ref=e254]
+            - columnheader [ref=e255]
+        - rowgroup [ref=e256]:
+          - row "Created Time At CDT cdp_created_at DATETIME Одиночное значение hidden" [ref=e257]:
+            - cell "Created Time At CDT" [ref=e258]:
+              - generic [ref=e259]: Created Time At CDT
+            - cell "cdp_created_at" [ref=e261]
+            - cell "DATETIME" [ref=e262]
+            - cell "Одиночное значение" [ref=e263]
+            - cell "hidden" [ref=e264]
+            - cell [ref=e265]:
+              - button [disabled] [ref=e266]:
+                - img [ref=e268]
+          - row "Customer Primary ID primary_id BIGINT Одиночное значение required" [ref=e272]:
+            - cell "Customer Primary ID" [ref=e273]:
+              - generic [ref=e274]: Customer Primary ID
+            - cell "primary_id" [ref=e276]
+            - cell "BIGINT" [ref=e277]
+            - cell "Одиночное значение" [ref=e278]
+            - cell "required" [ref=e279]
+            - cell [ref=e280]:
+              - button [disabled] [ref=e281]:
+                - img [ref=e283]
+          - row "Birth Date birthdate DATE Одиночное значение optional" [ref=e287]:
+            - cell "Birth Date" [ref=e288]:
+              - generic [ref=e289]: Birth Date
+            - cell "birthdate" [ref=e291]
+            - cell "DATE" [ref=e292]
+            - cell "Одиночное значение" [ref=e293]
+            - cell "optional" [ref=e294]
+            - cell [ref=e295]:
+              - button [ref=e296] [cursor=pointer]:
+                - img [ref=e298]
+          - row "birth year birth_year BIGINT Одиночное значение optional" [ref=e302]:
+            - cell "birth year" [ref=e303]:
+              - generic [ref=e304]: birth year
+            - cell "birth_year" [ref=e306]
+            - cell "BIGINT" [ref=e307]
+            - cell "Одиночное значение" [ref=e308]
+            - cell "optional" [ref=e309]
+            - cell [ref=e310]:
+              - button [ref=e311] [cursor=pointer]:
+                - img [ref=e313]
+          - row "Customer Age customer_age BIGINT Одиночное значение optional" [ref=e317]:
+            - cell "Customer Age" [ref=e318]:
+              - generic [ref=e319]: Customer Age
+            - cell "customer_age" [ref=e321]
+            - cell "BIGINT" [ref=e322]
+            - cell "Одиночное значение" [ref=e323]
+            - cell "optional" [ref=e324]
+            - cell [ref=e325]:
+              - button [ref=e326] [cursor=pointer]:
+                - img [ref=e328]
+          - row "customer first name api_customer_name_first VARCHAR Одиночное значение required" [ref=e332]:
+            - cell "customer first name" [ref=e333]:
+              - generic [ref=e334]: customer first name
+            - cell "api_customer_name_first" [ref=e336]
+            - cell "VARCHAR" [ref=e337]
+            - cell "Одиночное значение" [ref=e338]
+            - cell "required" [ref=e339]
+            - cell [ref=e340]:
+              - button [ref=e341] [cursor=pointer]:
+                - img [ref=e343]
+          - row "customer interests customer_interests VARCHAR Множественное значение optional" [ref=e347]:
+            - cell "customer interests" [ref=e348]:
+              - generic [ref=e349]: customer interests
+            - cell "customer_interests" [ref=e351]
+            - cell "VARCHAR" [ref=e352]
+            - cell "Множественное значение" [ref=e353]
+            - cell "optional" [ref=e354]
+            - cell [ref=e355]:
+              - button [ref=e356] [cursor=pointer]:
+                - img [ref=e358]
+          - row "customer last name api_customer_name_last VARCHAR Одиночное значение required" [ref=e362]:
+            - cell "customer last name" [ref=e363]:
+              - generic [ref=e364]: customer last name
+            - cell "api_customer_name_last" [ref=e366]
+            - cell "VARCHAR" [ref=e367]
+            - cell "Одиночное значение" [ref=e368]
+            - cell "required" [ref=e369]
+            - cell [ref=e370]:
+              - button [ref=e371] [cursor=pointer]:
+                - img [ref=e373]
+          - row "Customer phone number phone_number BIGINT Одиночное значение optional" [ref=e377]:
+            - cell "Customer phone number" [ref=e378]:
+              - generic [ref=e379]: Customer phone number
+            - cell "phone_number" [ref=e381]
+            - cell "BIGINT" [ref=e382]
+            - cell "Одиночное значение" [ref=e383]
+            - cell "optional" [ref=e384]
+            - cell [ref=e385]:
+              - button [ref=e386] [cursor=pointer]:
+                - img [ref=e388]
+          - row "Customers yearly income income DOUBLE Одиночное значение optional" [ref=e392]:
+            - cell "Customers yearly income" [ref=e393]:
+              - generic [ref=e394]: Customers yearly income
+            - cell "income" [ref=e396]
+            - cell "DOUBLE" [ref=e397]
+            - cell "Одиночное значение" [ref=e398]
+            - cell "optional" [ref=e399]
+            - cell [ref=e400]:
+              - button [ref=e401] [cursor=pointer]:
+                - img [ref=e403]
+          - row "Customers yearly income y_income DOUBLE Одиночное значение optional" [ref=e407]:
+            - cell "Customers yearly income" [ref=e408]:
+              - generic [ref=e409]: Customers yearly income
+            - cell "y_income" [ref=e411]
+            - cell "DOUBLE" [ref=e412]
+            - cell "Одиночное значение" [ref=e413]
+            - cell "optional" [ref=e414]
+            - cell [ref=e415]:
+              - button [ref=e416] [cursor=pointer]:
+                - img [ref=e418]
+          - row "Draft Apply Test 1775016807695 test_draft_apply_1775016807695 VARCHAR Одиночное значение optional" [ref=e422]:
+            - cell "Draft Apply Test 1775016807695" [ref=e423]:
+              - generic [ref=e424]: Draft Apply Test 1775016807695
+            - cell "test_draft_apply_1775016807695" [ref=e426]
+            - cell "VARCHAR" [ref=e427]
+            - cell "Одиночное значение" [ref=e428]
+            - cell "optional" [ref=e429]
+            - cell [ref=e430]:
+              - button [ref=e431] [cursor=pointer]:
+                - img [ref=e433]
+          - row "Draft Apply Test 1775016858981 test_draft_apply_1775016858981 VARCHAR Одиночное значение optional" [ref=e437]:
+            - cell "Draft Apply Test 1775016858981" [ref=e438]:
+              - generic [ref=e439]: Draft Apply Test 1775016858981
+            - cell "test_draft_apply_1775016858981" [ref=e441]
+            - cell "VARCHAR" [ref=e442]
+            - cell "Одиночное значение" [ref=e443]
+            - cell "optional" [ref=e444]
+            - cell [ref=e445]:
+              - button [ref=e446] [cursor=pointer]:
+                - img [ref=e448]
+          - row "Draft Apply Test 1775016866823 test_draft_apply_1775016866823 VARCHAR Одиночное значение optional" [ref=e452]:
+            - cell "Draft Apply Test 1775016866823" [ref=e453]:
+              - generic [ref=e454]: Draft Apply Test 1775016866823
+            - cell "test_draft_apply_1775016866823" [ref=e456]
+            - cell "VARCHAR" [ref=e457]
+            - cell "Одиночное значение" [ref=e458]
+            - cell "optional" [ref=e459]
+            - cell [ref=e460]:
+              - button [ref=e461] [cursor=pointer]:
+                - img [ref=e463]
+          - row "Draft Apply Test 1775016894528 test_draft_apply_1775016894528 VARCHAR Одиночное значение optional" [ref=e467]:
+            - cell "Draft Apply Test 1775016894528" [ref=e468]:
+              - generic [ref=e469]: Draft Apply Test 1775016894528
+            - cell "test_draft_apply_1775016894528" [ref=e471]
+            - cell "VARCHAR" [ref=e472]
+            - cell "Одиночное значение" [ref=e473]
+            - cell "optional" [ref=e474]
+            - cell [ref=e475]:
+              - button [ref=e476] [cursor=pointer]:
+                - img [ref=e478]
+          - row "Draft Apply Test 1775019997719 test_draft_apply_1775019997719 VARCHAR Одиночное значение optional" [ref=e482]:
+            - cell "Draft Apply Test 1775019997719" [ref=e483]:
+              - generic [ref=e484]: Draft Apply Test 1775019997719
+            - cell "test_draft_apply_1775019997719" [ref=e486]
+            - cell "VARCHAR" [ref=e487]
+            - cell "Одиночное значение" [ref=e488]
+            - cell "optional" [ref=e489]
+            - cell [ref=e490]:
+              - button [ref=e491] [cursor=pointer]:
+                - img [ref=e493]
+          - row "Draft Apply Test 1775020276963 test_draft_apply_1775020276963 VARCHAR Одиночное значение optional" [ref=e497]:
+            - cell "Draft Apply Test 1775020276963" [ref=e498]:
+              - generic [ref=e499]: Draft Apply Test 1775020276963
+            - cell "test_draft_apply_1775020276963" [ref=e501]
+            - cell "VARCHAR" [ref=e502]
+            - cell "Одиночное значение" [ref=e503]
+            - cell "optional" [ref=e504]
+            - cell [ref=e505]:
+              - button [ref=e506] [cursor=pointer]:
+                - img [ref=e508]
+          - row "Draft Apply Test 1775024995554 test_draft_apply_1775024995554 VARCHAR Одиночное значение optional" [ref=e512]:
+            - cell "Draft Apply Test 1775024995554" [ref=e513]:
+              - generic [ref=e514]: Draft Apply Test 1775024995554
+            - cell "test_draft_apply_1775024995554" [ref=e516]
+            - cell "VARCHAR" [ref=e517]
+            - cell "Одиночное значение" [ref=e518]
+            - cell "optional" [ref=e519]
+            - cell [ref=e520]:
+              - button [ref=e521] [cursor=pointer]:
+                - img [ref=e523]
+          - row "Draft Apply Test 1775028069408 test_draft_apply_1775028069408 VARCHAR Одиночное значение optional" [ref=e527]:
+            - cell "Draft Apply Test 1775028069408" [ref=e528]:
+              - generic [ref=e529]: Draft Apply Test 1775028069408
+            - cell "test_draft_apply_1775028069408" [ref=e531]
+            - cell "VARCHAR" [ref=e532]
+            - cell "Одиночное значение" [ref=e533]
+            - cell "optional" [ref=e534]
+            - cell [ref=e535]:
+              - button [ref=e536] [cursor=pointer]:
+                - img [ref=e538]
+          - row "Draft Apply Test 1775028080718 test_draft_apply_1775028080718 VARCHAR Одиночное значение optional" [ref=e542]:
+            - cell "Draft Apply Test 1775028080718" [ref=e543]:
+              - generic [ref=e544]: Draft Apply Test 1775028080718
+            - cell "test_draft_apply_1775028080718" [ref=e546]
+            - cell "VARCHAR" [ref=e547]
+            - cell "Одиночное значение" [ref=e548]
+            - cell "optional" [ref=e549]
+            - cell [ref=e550]:
+              - button [ref=e551] [cursor=pointer]:
+                - img [ref=e553]
+          - row "Draft Apply Test 1775040656828 test_draft_apply_1775040656828 VARCHAR Одиночное значение optional" [ref=e557]:
+            - cell "Draft Apply Test 1775040656828" [ref=e558]:
+              - generic [ref=e559]: Draft Apply Test 1775040656828
+            - cell "test_draft_apply_1775040656828" [ref=e561]
+            - cell "VARCHAR" [ref=e562]
+            - cell "Одиночное значение" [ref=e563]
+            - cell "optional" [ref=e564]
+            - cell [ref=e565]:
+              - button [ref=e566] [cursor=pointer]:
+                - img [ref=e568]
+          - row "Draft Apply Test 1775040665651 test_draft_apply_1775040665651 VARCHAR Одиночное значение optional" [ref=e572]:
+            - cell "Draft Apply Test 1775040665651" [ref=e573]:
+              - generic [ref=e574]: Draft Apply Test 1775040665651
+            - cell "test_draft_apply_1775040665651" [ref=e576]
+            - cell "VARCHAR" [ref=e577]
+            - cell "Одиночное значение" [ref=e578]
+            - cell "optional" [ref=e579]
+            - cell [ref=e580]:
+              - button [ref=e581] [cursor=pointer]:
+                - img [ref=e583]
+          - row "email email VARCHAR Одиночное значение optional" [ref=e587]:
+            - cell "email" [ref=e588]:
+              - generic [ref=e589]: email
+            - cell "email" [ref=e591]
+            - cell "VARCHAR" [ref=e592]
+            - cell "Одиночное значение" [ref=e593]
+            - cell "optional" [ref=e594]
+            - cell [ref=e595]:
+              - button [ref=e596] [cursor=pointer]:
+                - img [ref=e598]
+          - row "First Name first_name VARCHAR Одиночное значение optional" [ref=e602]:
+            - cell "First Name" [ref=e603]:
+              - generic [ref=e604]: First Name
+            - cell "first_name" [ref=e606]
+            - cell "VARCHAR" [ref=e607]
+            - cell "Одиночное значение" [ref=e608]
+            - cell "optional" [ref=e609]
+            - cell [ref=e610]:
+              - button [ref=e611] [cursor=pointer]:
+                - img [ref=e613]
+          - row "Gender gender VARCHAR Одиночное значение optional" [ref=e617]:
+            - cell "Gender" [ref=e618]:
+              - generic [ref=e619]: Gender
+            - cell "gender" [ref=e621]
+            - cell "VARCHAR" [ref=e622]
+            - cell "Одиночное значение" [ref=e623]
+            - cell "optional" [ref=e624]
+            - cell [ref=e625]:
+              - button [ref=e626] [cursor=pointer]:
+                - img [ref=e628]
+          - row "isAdult is_adult BOOL Одиночное значение optional" [ref=e632]:
+            - cell "isAdult" [ref=e633]:
+              - generic [ref=e634]: isAdult
+            - cell "is_adult" [ref=e636]
+            - cell "BOOL" [ref=e637]
+            - cell "Одиночное значение" [ref=e638]
+            - cell "optional" [ref=e639]
+            - cell [ref=e640]:
+              - button [ref=e641] [cursor=pointer]:
+                - img [ref=e643]
+          - row "Last Name last_name1 VARCHAR Одиночное значение optional" [ref=e647]:
+            - cell "Last Name" [ref=e648]:
+              - generic [ref=e649]: Last Name
+            - cell "last_name1" [ref=e651]
+            - cell "VARCHAR" [ref=e652]
+            - cell "Одиночное значение" [ref=e653]
+            - cell "optional" [ref=e654]
+            - cell [ref=e655]:
+              - button [ref=e656] [cursor=pointer]:
+                - img [ref=e658]
+          - row "subscribed to marketing messaging is_subscribed BOOL Одиночное значение optional" [ref=e662]:
+            - cell "subscribed to marketing messaging" [ref=e663]:
+              - generic [ref=e664]: subscribed to marketing messaging
+            - cell "is_subscribed" [ref=e666]
+            - cell "BOOL" [ref=e667]
+            - cell "Одиночное значение" [ref=e668]
+            - cell "optional" [ref=e669]
+            - cell [ref=e670]:
+              - button [ref=e671] [cursor=pointer]:
+                - img [ref=e673]
+          - row "subscription list subscription_list JSON Одиночное значение optional" [ref=e677]:
+            - cell "subscription list" [ref=e678]:
+              - generic [ref=e679]: subscription list
+            - cell "subscription_list" [ref=e681]
+            - cell "JSON" [ref=e682]
+            - cell "Одиночное значение" [ref=e683]
+            - cell "optional" [ref=e684]
+            - cell [ref=e685]:
+              - button [ref=e686] [cursor=pointer]:
+                - img [ref=e688]
+          - row "user local time user_local_time DATETIME Одиночное значение optional" [ref=e692]:
+            - cell "user local time" [ref=e693]:
+              - generic [ref=e694]: user local time
+            - cell "user_local_time" [ref=e696]
+            - cell "DATETIME" [ref=e697]
+            - cell "Одиночное значение" [ref=e698]
+            - cell "optional" [ref=e699]
+            - cell [ref=e700]:
+              - button [ref=e701] [cursor=pointer]:
+                - img [ref=e703]
+  - region "Notifications Alt+T"

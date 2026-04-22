@@ -1,0 +1,99 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Панель управления" [ref=e8] [cursor=pointer]:
+          - /url: /dashboard
+          - generic [ref=e9]: Панель управления
+        - generic [ref=e10]:
+          - paragraph [ref=e11]: Данные
+          - generic [ref=e31]:
+            - link "Клиенты 342279" [ref=e32] [cursor=pointer]:
+              - /url: /data/clients
+              - img [ref=e33]
+              - generic [ref=e35]: Клиенты
+              - generic [ref=e37]: "342279"
+            - button "События 66245" [ref=e38] [cursor=pointer]:
+              - img [ref=e39]
+              - generic [ref=e41]: События
+              - generic [ref=e43]: "66245"
+            - link "Сценарий" [ref=e44] [cursor=pointer]:
+              - /url: /data/scenario
+              - img [ref=e45]
+              - generic [ref=e47]: Сценарий
+            - link "Файлы" [ref=e48] [cursor=pointer]:
+              - /url: /data/files
+              - img [ref=e49]
+              - generic [ref=e53]: Файлы
+        - generic [ref=e12]:
+          - paragraph [ref=e13]: Маркетинг
+          - generic [ref=e54]:
+            - link "Агрегаты" [ref=e55] [cursor=pointer]:
+              - /url: /marketing/aggregate
+              - img [ref=e56]
+              - generic [ref=e69]: Агрегаты
+            - link "Сегменты" [ref=e70] [cursor=pointer]:
+              - /url: /marketing/segments
+              - img [ref=e71]
+              - generic [ref=e74]: Сегменты
+            - link "Рассылки" [ref=e75] [cursor=pointer]:
+              - /url: /marketing/campaigns
+              - img [ref=e76]
+              - generic [ref=e78]: Рассылки
+            - link "Коммуникации" [ref=e79] [cursor=pointer]:
+              - /url: /marketing/communication
+              - img [ref=e80]
+              - generic [ref=e82]: Коммуникации
+        - generic [ref=e14]:
+          - paragraph [ref=e15]: Аналитика
+          - link "Статистика полей" [ref=e84] [cursor=pointer]:
+            - /url: /statistics/field
+            - img [ref=e85]
+            - generic [ref=e110]: Статистика полей
+      - generic [ref=e16]:
+        - separator [ref=e17]
+        - generic [ref=e19]:
+          - generic [ref=e21]: c
+          - paragraph [ref=e111] [cursor=pointer]: cdp_1762934640267
+    - generic [ref=e28]:
+      - paragraph [ref=e193]: Панель управления
+      - tablist [ref=e195]:
+        - tab "Артефакты арендатора" [ref=e196] [cursor=pointer]:
+          - generic [ref=e197]: Артефакты арендатора
+        - tab "Поля схемы клиента" [ref=e198] [cursor=pointer]:
+          - generic [ref=e199]: Поля схемы клиента
+        - tab "Поля схемы событий" [ref=e200] [cursor=pointer]:
+          - generic [ref=e201]: Поля схемы событий
+        - tab "Конкретные сопоставления полей" [selected] [ref=e202] [cursor=pointer]:
+          - generic [ref=e203]: Конкретные сопоставления полей
+        - tab "Создать шаблон" [ref=e204] [cursor=pointer]:
+          - generic [ref=e205]: Создать шаблон
+      - generic [ref=e206]:
+        - generic [ref=e207]:
+          - paragraph [ref=e208]: №
+          - paragraph [ref=e209]: Тип поля
+          - paragraph [ref=e210]: Поля схемы клиента
+        - separator [ref=e211]
+        - generic [ref=e212]:
+          - generic [ref=e213]:
+            - generic [ref=e214]: "1"
+            - generic [ref=e215]: email
+            - generic [ref=e218]:
+              - textbox [ref=e219]: "email: VARCHAR"
+              - generic:
+                - img
+            - button [ref=e221] [cursor=pointer]:
+              - img [ref=e223]
+          - separator [ref=e225]
+        - generic [ref=e226]:
+          - generic [ref=e227]:
+            - generic [ref=e228]: "2"
+            - generic [ref=e229]: phone
+            - generic [ref=e232]:
+              - textbox [ref=e233]: "Customer phone number: BIGINT"
+              - generic:
+                - img
+            - button [ref=e235] [cursor=pointer]:
+              - img [ref=e237]
+          - separator [ref=e239]
+  - region "Notifications Alt+T"

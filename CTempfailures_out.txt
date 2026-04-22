@@ -1,0 +1,37 @@
+fail_summary_idx=None
+total lines=1333
+Last 40 lines:
+'\x1b[1A\x1b[2K[431/437] [chromium] Ы tests_e2e\\specs\\statistics.spec.ts:521:7 Ы Field Statistics Ч L4 Edge Cases Ы L4: no console errors on page load and du'
+'\x1b[1A\x1b[2K[432/437] [chromium] Ы tests_e2e\\specs\\statistics.spec.ts:540:7 Ы Field Statistics Ч L4 Edge Cases Ы L4: tab switch resets field selection and'
+'\x1b[1A\x1b[2K[433/437] [chromium] Ы tests_e2e\\specs\\statistics.spec.ts:575:7 Ы Field Statistics Ч L4 Edge Cases Ы L4: switching back to customer tab after '
+"\x1b[1A\x1b[2K[434/437] [chromium] Ы tests_e2e\\specs\\statistics.spec.ts:601:7 Ы Field Statistics Ч L4 Edge Cases Ы L4: duplicate 'Customers yearly income' e"
+'\x1b[1A\x1b[2K[435/437] [chromium] Ы tests_e2e\\specs\\statistics.spec.ts:620:7 Ы Field Statistics Ч L4 Edge Cases Ы L4: rapid tab switching does not crash th'
+'\x1b[1A\x1b[2K[436/437] [chromium] Ы tests_e2e\\specs\\statistics.spec.ts:639:7 Ы Field Statistics Ч L4 Edge Cases Ы L4: navigating directly to ?page=1 withou'
+'\x1b[1A\x1b[2K[437/437] [chromium] Ы tests_e2e\\specs\\statistics.spec.ts:654:7 Ы Field Statistics Ч L4 Edge Cases Ы L4: 11 event types are available in the e'
+'\x1b[1A\x1b[2K  30 failed'
+'    [chromium] Ы tests_e2e\\specs\\aggregates.spec.ts:53:7 Ы Aggregates Ч Creation Form Ы should show event type dropdown in creation form '
+'    [chromium] Ы tests_e2e\\specs\\aggregates.spec.ts:107:7 Ы Aggregates Ч Creation Form Ы should have Save button in creation form '
+'    [chromium] Ы tests_e2e\\specs\\aggregates.spec.ts:117:7 Ы Aggregates Ч Creation Form Ы should show field dropdown that updates based on event type '
+'    [chromium] Ы tests_e2e\\specs\\aggregates.spec.ts:443:7 Ы Aggregates Ч L4 Edge Cases @generated Ы BUG-022: table contains rows with empty Ќазвание @'
+'    [chromium] Ы tests_e2e\\specs\\campaigns.spec.ts:53:7 Ы Campaigns Ч Creation Form Ы should show segment dropdown in campaign form '
+'    [chromium] Ы tests_e2e\\specs\\campaigns.spec.ts:81:7 Ы Campaigns Ч Creation Form Ы should show channel dropdown in campaign form '
+'    [chromium] Ы tests_e2e\\specs\\campaigns.spec.ts:94:7 Ы Campaigns Ч Creation Form Ы should show template dropdown in campaign form '
+'    [chromium] Ы tests_e2e\\specs\\campaigns.spec.ts:105:7 Ы Campaigns Ч Creation Form Ы should have Save button in creation form '
+'    [chromium] Ы tests_e2e\\specs\\clients.spec.ts:479:7 Ы Client Detail Ч L4 Edge Cases Ы should have /calculate API errors in console (documents BUG-0'
+'    [chromium] Ы tests_e2e\\specs\\clients.spec.ts:550:7 Ы Clients List Ч L1 Column Headers Ы should display phone column header after adding it '
+'    [chromium] Ы tests_e2e\\specs\\communications.spec.ts:75:7 Ы Communications Ч Channel Creation Ы should show channel type selection (Email, Webhook)'
+'    [chromium] Ы tests_e2e\\specs\\communications.spec.ts:125:7 Ы Communications Ч Channel Creation Ы should have Save button in creation form '
+'    [chromium] Ы tests_e2e\\specs\\dashboard.spec.ts:42:7 Ы Dashboard Ч Tenant Artifacts Tab Ы should show tenant database and readiness info '
+'    [chromium] Ы tests_e2e\\specs\\dashboard.spec.ts:187:7 Ы Dashboard Ч Create Template Tab Ы should show template creation form fields '
+'    [chromium] Ы tests_e2e\\specs\\dashboard.spec.ts:204:7 Ы Dashboard Ч Create Template Tab Ы should have Save button for template creation '
+'    [chromium] Ы tests_e2e\\specs\\dashboard.spec.ts:277:7 Ы Dashboard Ч Artifacts tab: info items visible (L1) Ы should have copy icons next to all 5 k'
+'    [chromium] Ы tests_e2e\\specs\\dashboard.spec.ts:354:7 Ы Dashboard Ч Customer Schema tab: table and controls (L2) Ы should have 19 schema field rows'
+'    [chromium] Ы tests_e2e\\specs\\events.spec.ts:89:7 Ы Events Ч Table View Ы should have filter and column controls '
+'    [chromium] Ы tests_e2e\\specs\\events.spec.ts:123:7 Ы Events Ч Filter Panel Ы should open filter panel with field options '
+'    [chromium] Ы tests_e2e\\specs\\events.spec.ts:144:7 Ы Events Ч Column Selector Ы should open column selector for events '
+Traceback (most recent call last):
+  File "<stdin>", line 21, in <module>
+  File "C:\Python313\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 102: character maps to <undefined>

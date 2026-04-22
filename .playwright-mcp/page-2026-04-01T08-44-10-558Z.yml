@@ -1,0 +1,562 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "Панель управления" [ref=e8] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e9]: Панель управления
+          - generic [ref=e10]:
+            - paragraph [ref=e11]: Данные
+            - generic [ref=e12]:
+              - link "Клиенты 342279" [ref=e130] [cursor=pointer]:
+                - /url: /data/clients
+                - img [ref=e14]
+                - generic [ref=e16]: Клиенты
+                - generic [ref=e132]: "342279"
+              - button "События 66245" [ref=e133] [cursor=pointer]:
+                - img [ref=e18]
+                - generic [ref=e20]: События
+                - generic [ref=e135]: "66245"
+              - link "Сценарий" [ref=e21] [cursor=pointer]:
+                - /url: /data/scenario
+                - img [ref=e22]
+                - generic [ref=e24]: Сценарий
+              - link "Файлы" [ref=e25] [cursor=pointer]:
+                - /url: /data/files
+                - img [ref=e26]
+                - generic [ref=e30]: Файлы
+          - generic [ref=e31]:
+            - paragraph [ref=e32]: Маркетинг
+            - generic [ref=e33]:
+              - link "Агрегаты" [ref=e34] [cursor=pointer]:
+                - /url: /marketing/aggregate
+                - img [ref=e35]
+                - generic [ref=e48]: Агрегаты
+              - link "Сегменты" [ref=e49] [cursor=pointer]:
+                - /url: /marketing/segments
+                - img [ref=e50]
+                - generic [ref=e53]: Сегменты
+              - link "Рассылки" [ref=e54] [cursor=pointer]:
+                - /url: /marketing/campaigns
+                - img [ref=e55]
+                - generic [ref=e57]: Рассылки
+              - link "Коммуникации" [ref=e58] [cursor=pointer]:
+                - /url: /marketing/communication
+                - img [ref=e59]
+                - generic [ref=e61]: Коммуникации
+          - generic [ref=e62]:
+            - paragraph [ref=e63]: Аналитика
+            - link "Статистика полей" [ref=e65] [cursor=pointer]:
+              - /url: /statistics/field
+              - img [ref=e66]
+              - generic [ref=e91]: Статистика полей
+        - generic [ref=e92]:
+          - separator [ref=e93]
+          - generic [ref=e95]:
+            - generic [ref=e97]: c
+            - paragraph [ref=e98] [cursor=pointer]: cdp_1762934640267
+      - generic [ref=e103]:
+        - paragraph [ref=e106]: Клиенты
+        - separator [ref=e107]
+        - generic [ref=e108]:
+          - button "Сбросить фильтры" [ref=e109] [cursor=pointer]:
+            - generic [ref=e111]: Сбросить фильтры
+          - button "Фильтры" [ref=e112] [cursor=pointer]:
+            - generic [ref=e113]:
+              - img [ref=e115]
+              - generic [ref=e117]: Фильтры
+          - button "Добавить столбцы" [expanded] [active] [ref=e118] [cursor=pointer]:
+            - generic [ref=e120]: Добавить столбцы
+        - table [ref=e138]:
+          - rowgroup [ref=e139]:
+            - row "email isAdult avg delivery cost for purchase sum purchase 1 sum purchase 2 Created Time At CDT" [ref=e140]:
+              - columnheader "email" [ref=e141]:
+                - generic [ref=e142]:
+                  - text: email
+                  - button [ref=e143] [cursor=pointer]:
+                    - img [ref=e145]
+                  - button [ref=e148] [cursor=pointer]:
+                    - img [ref=e150]
+              - columnheader "isAdult" [ref=e154]:
+                - generic [ref=e155]:
+                  - text: isAdult
+                  - button [ref=e156] [cursor=pointer]:
+                    - img [ref=e158]
+                  - button [ref=e161] [cursor=pointer]:
+                    - img [ref=e163]
+              - columnheader "avg delivery cost for purchase" [ref=e166]:
+                - generic [ref=e167]:
+                  - text: avg delivery cost for purchase
+                  - button [ref=e168] [cursor=pointer]:
+                    - img [ref=e170]
+                  - button [ref=e173] [cursor=pointer]:
+                    - img [ref=e175]
+              - columnheader "sum purchase 1" [ref=e178]:
+                - generic [ref=e179]:
+                  - text: sum purchase 1
+                  - button [ref=e180] [cursor=pointer]:
+                    - img [ref=e182]
+                  - button [ref=e185] [cursor=pointer]:
+                    - img [ref=e187]
+              - columnheader "sum purchase 2" [ref=e190]:
+                - generic [ref=e191]:
+                  - text: sum purchase 2
+                  - button [ref=e192] [cursor=pointer]:
+                    - img [ref=e194]
+                  - button [ref=e197] [cursor=pointer]:
+                    - img [ref=e199]
+              - columnheader "Created Time At CDT" [ref=e202]:
+                - generic [ref=e203]:
+                  - text: Created Time At CDT
+                  - button [ref=e204] [cursor=pointer]:
+                    - img [ref=e206]
+                  - button [ref=e209] [cursor=pointer]:
+                    - img [ref=e211]
+          - rowgroup [ref=e214]:
+            - row "- - - - - 05.12.2025 11:10" [ref=e215]:
+              - cell "-" [ref=e216] [cursor=pointer]
+              - cell "-" [ref=e217] [cursor=pointer]
+              - cell "-" [ref=e218] [cursor=pointer]
+              - cell "-" [ref=e219] [cursor=pointer]
+              - cell "-" [ref=e220] [cursor=pointer]
+              - cell "05.12.2025 11:10" [ref=e221] [cursor=pointer]
+            - row "- - - - - 01.12.2025 11:17" [ref=e222]:
+              - cell "-" [ref=e223] [cursor=pointer]
+              - cell "-" [ref=e224] [cursor=pointer]
+              - cell "-" [ref=e225] [cursor=pointer]
+              - cell "-" [ref=e226] [cursor=pointer]
+              - cell "-" [ref=e227] [cursor=pointer]
+              - cell "01.12.2025 11:17" [ref=e228] [cursor=pointer]
+            - row "- 1 48.84615384615385 635 635 30.01.2026 16:09" [ref=e229]:
+              - cell "-" [ref=e230] [cursor=pointer]
+              - cell "1" [ref=e231] [cursor=pointer]
+              - cell "48.84615384615385" [ref=e232] [cursor=pointer]
+              - cell "635" [ref=e233] [cursor=pointer]
+              - cell "635" [ref=e234] [cursor=pointer]
+              - cell "30.01.2026 16:09" [ref=e235] [cursor=pointer]
+            - row "- 1 64.4 966 966 30.01.2026 16:09" [ref=e236]:
+              - cell "-" [ref=e237] [cursor=pointer]
+              - cell "1" [ref=e238] [cursor=pointer]
+              - cell "64.4" [ref=e239] [cursor=pointer]
+              - cell "966" [ref=e240] [cursor=pointer]
+              - cell "966" [ref=e241] [cursor=pointer]
+              - cell "30.01.2026 16:09" [ref=e242] [cursor=pointer]
+            - row "- 1 56 784 784 30.01.2026 16:09" [ref=e243]:
+              - cell "-" [ref=e244] [cursor=pointer]
+              - cell "1" [ref=e245] [cursor=pointer]
+              - cell "56" [ref=e246] [cursor=pointer]
+              - cell "784" [ref=e247] [cursor=pointer]
+              - cell "784" [ref=e248] [cursor=pointer]
+              - cell "30.01.2026 16:09" [ref=e249] [cursor=pointer]
+            - row "- - - - - 01.12.2025 11:17" [ref=e250]:
+              - cell "-" [ref=e251] [cursor=pointer]
+              - cell "-" [ref=e252] [cursor=pointer]
+              - cell "-" [ref=e253] [cursor=pointer]
+              - cell "-" [ref=e254] [cursor=pointer]
+              - cell "-" [ref=e255] [cursor=pointer]
+              - cell "01.12.2025 11:17" [ref=e256] [cursor=pointer]
+            - row "- - - - - 05.12.2025 11:10" [ref=e257]:
+              - cell "-" [ref=e258] [cursor=pointer]
+              - cell "-" [ref=e259] [cursor=pointer]
+              - cell "-" [ref=e260] [cursor=pointer]
+              - cell "-" [ref=e261] [cursor=pointer]
+              - cell "-" [ref=e262] [cursor=pointer]
+              - cell "05.12.2025 11:10" [ref=e263] [cursor=pointer]
+            - row "- - - - - 01.12.2025 11:17" [ref=e264]:
+              - cell "-" [ref=e265] [cursor=pointer]
+              - cell "-" [ref=e266] [cursor=pointer]
+              - cell "-" [ref=e267] [cursor=pointer]
+              - cell "-" [ref=e268] [cursor=pointer]
+              - cell "-" [ref=e269] [cursor=pointer]
+              - cell "01.12.2025 11:17" [ref=e270] [cursor=pointer]
+            - row "- - - - - 05.12.2025 11:10" [ref=e271]:
+              - cell "-" [ref=e272] [cursor=pointer]
+              - cell "-" [ref=e273] [cursor=pointer]
+              - cell "-" [ref=e274] [cursor=pointer]
+              - cell "-" [ref=e275] [cursor=pointer]
+              - cell "-" [ref=e276] [cursor=pointer]
+              - cell "05.12.2025 11:10" [ref=e277] [cursor=pointer]
+            - row "- - - - - 01.12.2025 11:17" [ref=e278]:
+              - cell "-" [ref=e279] [cursor=pointer]
+              - cell "-" [ref=e280] [cursor=pointer]
+              - cell "-" [ref=e281] [cursor=pointer]
+              - cell "-" [ref=e282] [cursor=pointer]
+              - cell "-" [ref=e283] [cursor=pointer]
+              - cell "01.12.2025 11:17" [ref=e284] [cursor=pointer]
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - paragraph [ref=e123]: "Всего:"
+            - generic [ref=e125]: "342279"
+          - generic [ref=e126]:
+            - generic [ref=e286]:
+              - button [disabled] [ref=e287]:
+                - img [ref=e288]
+              - button "1" [ref=e290] [cursor=pointer]
+              - button "2" [ref=e291] [cursor=pointer]
+              - button "3" [ref=e292] [cursor=pointer]
+              - button "4" [ref=e293] [cursor=pointer]
+              - button "5" [ref=e294] [cursor=pointer]
+              - generic:
+                - img
+              - button "34228" [ref=e295] [cursor=pointer]
+              - button [ref=e296] [cursor=pointer]:
+                - img [ref=e297]
+            - generic [ref=e128]:
+              - textbox [ref=e129] [cursor=pointer]: "10"
+              - generic:
+                - img
+    - region "Notifications Alt+T"
+  - dialog "Добавить столбцы" [ref=e299]:
+    - generic [ref=e300]:
+      - generic [ref=e301]:
+        - button "Сбросить" [ref=e302] [cursor=pointer]:
+          - generic [ref=e304]: Сбросить
+        - button "Сохранить" [ref=e305] [cursor=pointer]:
+          - generic [ref=e307]: Сохранить
+      - generic [ref=e308]:
+        - paragraph [ref=e309]: 6 столбцов
+        - paragraph [ref=e310]: макс 10
+      - generic [ref=e314]:
+        - paragraph [ref=e315]: Поля
+        - generic [ref=e318] [cursor=pointer]: Birth Date
+        - generic [ref=e321] [cursor=pointer]: birth year
+        - generic [ref=e324] [cursor=pointer]: Customer Age
+        - generic [ref=e327] [cursor=pointer]: customer first name
+        - generic [ref=e330] [cursor=pointer]: customer interests
+        - generic [ref=e333] [cursor=pointer]: customer last name
+        - generic [ref=e336] [cursor=pointer]: Customer phone number
+        - generic [ref=e339] [cursor=pointer]: Customers yearly income
+        - generic [ref=e342] [cursor=pointer]: Customers yearly income
+        - generic [ref=e345] [cursor=pointer]: Draft Apply Test 1775016807695
+        - generic [ref=e348] [cursor=pointer]: Draft Apply Test 1775016858981
+        - generic [ref=e351] [cursor=pointer]: Draft Apply Test 1775016866823
+        - generic [ref=e354] [cursor=pointer]: Draft Apply Test 1775016894528
+        - generic [ref=e357] [cursor=pointer]: Draft Apply Test 1775019997719
+        - generic [ref=e360] [cursor=pointer]: Draft Apply Test 1775020276963
+        - generic [ref=e363] [cursor=pointer]: Draft Apply Test 1775024995554
+        - generic [ref=e366] [cursor=pointer]: Draft Apply Test 1775028069408
+        - generic [ref=e369] [cursor=pointer]: Draft Apply Test 1775028080718
+        - generic [ref=e372] [cursor=pointer]: First Name
+        - generic [ref=e375] [cursor=pointer]: Gender
+        - generic [ref=e378] [cursor=pointer]: Last Name
+        - generic [ref=e381] [cursor=pointer]: subscribed to marketing messaging
+        - generic [ref=e384] [cursor=pointer]: subscription list
+        - generic [ref=e387] [cursor=pointer]: user local time
+        - paragraph [ref=e388]: Агрегаты
+        - generic [ref=e391] [cursor=pointer]: test_count_1775028125312
+        - generic [ref=e394] [cursor=pointer]: test_dup_1775028125244
+        - generic [ref=e397] [cursor=pointer]: test_dup_1775028125244
+        - generic [ref=e400] [cursor=pointer]: test_delete_1775028125168
+        - generic [ref=e403] [cursor=pointer]: test_update_1775028125058
+        - generic [ref=e406] [cursor=pointer]: test_count_1775028119003
+        - generic [ref=e409] [cursor=pointer]: test_dup_1775028118943
+        - generic [ref=e412] [cursor=pointer]: test_dup_1775028118943
+        - generic [ref=e415] [cursor=pointer]: test_delete_1775028118875
+        - generic [ref=e418] [cursor=pointer]: test_update_1775028118743
+        - generic [ref=e421] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e424] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e427] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e430] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e435] [cursor=pointer]: test_count_1775028081115
+        - generic [ref=e438] [cursor=pointer]: test_udaf_1775028081093
+        - generic [ref=e441] [cursor=pointer]: test_dup_1775028081060
+        - generic [ref=e444] [cursor=pointer]: test_dup_1775028081060
+        - generic [ref=e447] [cursor=pointer]: test_delete_1775028080972
+        - generic [ref=e450] [cursor=pointer]: test_update_1775028080766
+        - generic [ref=e453] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e456] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e459] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e462] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e467] [cursor=pointer]: test_count_1775028070301
+        - generic [ref=e470] [cursor=pointer]: test_udaf_1775028070274
+        - generic [ref=e473] [cursor=pointer]: test_dup_1775028070216
+        - generic [ref=e476] [cursor=pointer]: test_dup_1775028070216
+        - generic [ref=e479] [cursor=pointer]: test_delete_1775028070152
+        - generic [ref=e482] [cursor=pointer]: test_update_1775028069496
+        - generic [ref=e485] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e488] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e491] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e494] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e499] [cursor=pointer]: test_count_1775024996005
+        - generic [ref=e502] [cursor=pointer]: test_udaf_1775024995969
+        - generic [ref=e505] [cursor=pointer]: test_dup_1775024995946
+        - generic [ref=e508] [cursor=pointer]: test_dup_1775024995946
+        - generic [ref=e511] [cursor=pointer]: test_delete_1775024995791
+        - generic [ref=e514] [cursor=pointer]: test_update_1775024995592
+        - generic [ref=e517] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e520] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e523] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e526] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e531] [cursor=pointer]: test_udaf_1775020277410
+        - generic [ref=e534] [cursor=pointer]: test_count_1775020277372
+        - generic [ref=e537] [cursor=pointer]: test_dup_1775020277286
+        - generic [ref=e540] [cursor=pointer]: test_dup_1775020277286
+        - generic [ref=e543] [cursor=pointer]: test_delete_1775020277203
+        - generic [ref=e546] [cursor=pointer]: test_update_1775020277043
+        - generic [ref=e549] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e552] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e555] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e558] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e563] [cursor=pointer]: test_count_1775019998116
+        - generic [ref=e566] [cursor=pointer]: test_udaf_1775019998108
+        - generic [ref=e569] [cursor=pointer]: test_dup_1775019998057
+        - generic [ref=e572] [cursor=pointer]: test_dup_1775019998057
+        - generic [ref=e575] [cursor=pointer]: test_delete_1775019997987
+        - generic [ref=e578] [cursor=pointer]: test_update_1775019997830
+        - generic [ref=e581] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e584] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e587] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e590] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e595] [cursor=pointer]: test_count_1775016894971
+        - generic [ref=e598] [cursor=pointer]: test_dup_1775016894910
+        - generic [ref=e601] [cursor=pointer]: test_udaf_1775016894907
+        - generic [ref=e604] [cursor=pointer]: test_dup_1775016894910
+        - generic [ref=e607] [cursor=pointer]: test_delete_1775016894771
+        - generic [ref=e610] [cursor=pointer]: test_update_1775016894608
+        - generic [ref=e613] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e616] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e619] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e622] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e627] [cursor=pointer]: test_udaf_1775016867167
+        - generic [ref=e630] [cursor=pointer]: test_count_1775016867166
+        - generic [ref=e633] [cursor=pointer]: test_dup_1775016867099
+        - generic [ref=e636] [cursor=pointer]: test_dup_1775016867099
+        - generic [ref=e639] [cursor=pointer]: test_delete_1775016867023
+        - generic [ref=e642] [cursor=pointer]: test_update_1775016866869
+        - generic [ref=e645] [cursor=pointer]: bug025_original_name
+        - generic [ref=e650] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e653] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e656] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e659] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e664] [cursor=pointer]: test_count_1774989981646
+        - generic [ref=e667] [cursor=pointer]: test_dup_1774989981592
+        - generic [ref=e670] [cursor=pointer]: test_udaf_1774989981594
+        - generic [ref=e673] [cursor=pointer]: test_dup_1774989981592
+        - generic [ref=e676] [cursor=pointer]: test_delete_1774989981519
+        - generic [ref=e679] [cursor=pointer]: test_update_1774989981353
+        - generic [ref=e682] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e685] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e688] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e691] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e696] [cursor=pointer]: test_udaf_1774851114294
+        - generic [ref=e699] [cursor=pointer]: test_count_1774851114247
+        - generic [ref=e702] [cursor=pointer]: test_dup_1774851114137
+        - generic [ref=e705] [cursor=pointer]: test_dup_1774851114137
+        - generic [ref=e708] [cursor=pointer]: test_delete_1774851114072
+        - generic [ref=e711] [cursor=pointer]: test_update_1774851113892
+        - generic [ref=e714] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e717] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e720] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e723] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e728] [cursor=pointer]: test_count_1774849411235
+        - generic [ref=e731] [cursor=pointer]: test_dup_1774849411154
+        - generic [ref=e734] [cursor=pointer]: test_udaf_1774849411191
+        - generic [ref=e737] [cursor=pointer]: test_dup_1774849411154
+        - generic [ref=e740] [cursor=pointer]: test_delete_1774849410895
+        - generic [ref=e743] [cursor=pointer]: test_update_1774849410677
+        - generic [ref=e746] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e749] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e752] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e755] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e760] [cursor=pointer]: test_count_1774849397817
+        - generic [ref=e763] [cursor=pointer]: test_dup_1774849397739
+        - generic [ref=e766] [cursor=pointer]: test_dup_1774849397739
+        - generic [ref=e769] [cursor=pointer]: test_udaf_1774849397727
+        - generic [ref=e772] [cursor=pointer]: test_delete_1774849397668
+        - generic [ref=e775] [cursor=pointer]: test_update_1774849397501
+        - generic [ref=e778] [cursor=pointer]: triage_bug002_filtered_samarkand
+        - generic [ref=e781] [cursor=pointer]: triage_bug002_unfiltered_count
+        - generic [ref=e784] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e787] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e790] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e793] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e798] [cursor=pointer]: test_count_1774780609203
+        - generic [ref=e801] [cursor=pointer]: test_udaf_1774780609184
+        - generic [ref=e804] [cursor=pointer]: test_dup_1774780609142
+        - generic [ref=e807] [cursor=pointer]: test_dup_1774780609142
+        - generic [ref=e810] [cursor=pointer]: test_delete_1774780609068
+        - generic [ref=e813] [cursor=pointer]: test_update_1774780608902
+        - generic [ref=e816] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e819] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e822] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e825] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e830] [cursor=pointer]: test_count_1774780559244
+        - generic [ref=e833] [cursor=pointer]: test_dup_1774780559137
+        - generic [ref=e836] [cursor=pointer]: test_dup_1774780559137
+        - generic [ref=e839] [cursor=pointer]: test_delete_1774780559056
+        - generic [ref=e842] [cursor=pointer]: test_update_1774780558920
+        - generic [ref=e845] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e848] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e851] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e854] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e859] [cursor=pointer]: test_count_1774780530405
+        - generic [ref=e862] [cursor=pointer]: test_dup_1774780530331
+        - generic [ref=e865] [cursor=pointer]: test_udaf_1774780530349
+        - generic [ref=e868] [cursor=pointer]: test_dup_1774780530331
+        - generic [ref=e871] [cursor=pointer]: test_delete_1774780530078
+        - generic [ref=e874] [cursor=pointer]: test_update_1774780529834
+        - generic [ref=e877] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e880] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e883] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e886] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e891] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e894] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e897] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e900] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e905] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e908] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e911] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e914] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e919] [cursor=pointer]: test_delete_1774780498505
+        - generic [ref=e922] [cursor=pointer]: test_update_1774780498342
+        - generic [ref=e925] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e928] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e931] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e934] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e939] [cursor=pointer]: test_count_1774780490956
+        - generic [ref=e942] [cursor=pointer]: test_dup_1774780490907
+        - generic [ref=e945] [cursor=pointer]: test_dup_1774780490907
+        - generic [ref=e948] [cursor=pointer]: test_udaf_1774780490897
+        - generic [ref=e951] [cursor=pointer]: test_delete_1774780490839
+        - generic [ref=e954] [cursor=pointer]: test_update_1774780490695
+        - generic [ref=e957] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e960] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e963] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e966] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e971] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e974] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e977] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e980] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e985] [cursor=pointer]: test_count_1774780383491
+        - generic [ref=e988] [cursor=pointer]: test_dup_1774780383412
+        - generic [ref=e991] [cursor=pointer]: test_dup_1774780383412
+        - generic [ref=e994] [cursor=pointer]: test_udaf_1774780383375
+        - generic [ref=e997] [cursor=pointer]: test_delete_1774780383354
+        - generic [ref=e1000] [cursor=pointer]: test_update_1774780383178
+        - generic [ref=e1003] [cursor=pointer]: 1; DELETE FROM events WHERE 1=1
+        - generic [ref=e1006] [cursor=pointer]: "' UNION SELECT * FROM users --"
+        - generic [ref=e1009] [cursor=pointer]: 1 OR 1=1
+        - generic [ref=e1012] [cursor=pointer]: "'; DROP TABLE customers; --"
+        - generic [ref=e1017] [cursor=pointer]: test_count_1774780374811
+        - generic [ref=e1020] [cursor=pointer]: test_dup_1774780374728
+        - generic [ref=e1023] [cursor=pointer]: test_dup_1774780374728
+        - generic [ref=e1026] [cursor=pointer]: test_delete_1774780374657
+        - generic [ref=e1029] [cursor=pointer]: test_udaf_1774780374496
+        - generic [ref=e1032] [cursor=pointer]: test_update_1774780374474
+        - generic [ref=e1035] [cursor=pointer]: test_udaf_1774702006744
+        - generic [ref=e1038] [cursor=pointer]: test_udaf_1774696158141
+        - generic [ref=e1041] [cursor=pointer]: test_udaf_1774695215942
+        - generic [ref=e1044] [cursor=pointer]: test_udaf_1774693812806
+        - generic [ref=e1047] [cursor=pointer]: test_udaf_1774693804415
+        - generic [ref=e1050] [cursor=pointer]: test_udaf_1774692487092
+        - generic [ref=e1053] [cursor=pointer]: test_udaf_1774692188654
+        - generic [ref=e1056] [cursor=pointer]: test_udaf_1774692180464
+        - generic [ref=e1059] [cursor=pointer]: test_udaf_1774692098034
+        - generic [ref=e1062] [cursor=pointer]: test_udaf_1774691606070
+        - generic [ref=e1065] [cursor=pointer]: test_udaf_1774691598036
+        - generic [ref=e1068] [cursor=pointer]: test_udaf_1774690972716
+        - generic [ref=e1071] [cursor=pointer]: test_udaf_1774689492757
+        - generic [ref=e1074] [cursor=pointer]: test_udaf_1774689413444
+        - generic [ref=e1077] [cursor=pointer]: test_udaf_1774687170673
+        - generic [ref=e1080] [cursor=pointer]: test_udaf_1774686302188
+        - generic [ref=e1083] [cursor=pointer]: cdptest_1774686294497_sum_tashkent
+        - generic [ref=e1086] [cursor=pointer]: cdptest_1774686294497_count_30d
+        - generic [ref=e1089] [cursor=pointer]: cdptest_1774686294497_avg_delivery
+        - generic [ref=e1092] [cursor=pointer]: cdptest_1774686294497_count_purchases
+        - generic [ref=e1095] [cursor=pointer]: cdptest_1774686294497_sum_price
+        - generic [ref=e1098] [cursor=pointer]: cdptest_1774686275266_sum_tashkent
+        - generic [ref=e1101] [cursor=pointer]: cdptest_1774686275266_count_30d
+        - generic [ref=e1104] [cursor=pointer]: cdptest_1774686275266_avg_delivery
+        - generic [ref=e1107] [cursor=pointer]: cdptest_1774686275266_count_purchases
+        - generic [ref=e1110] [cursor=pointer]: cdptest_1774686268806_count_purchases
+        - generic [ref=e1113] [cursor=pointer]: cdptest_1774682954170_sum_tashkent
+        - generic [ref=e1116] [cursor=pointer]: cdptest_1774682954170_count_30d
+        - generic [ref=e1119] [cursor=pointer]: cdptest_1774682954170_avg_delivery
+        - generic [ref=e1122] [cursor=pointer]: cdptest_1774682954170_count_purchases
+        - generic [ref=e1125] [cursor=pointer]: cdptest_1774682954170_sum_price
+        - generic [ref=e1128] [cursor=pointer]: test_udaf_1774682951895
+        - generic [ref=e1131] [cursor=pointer]: test_udaf_1774682932380
+        - generic [ref=e1134] [cursor=pointer]: test_udaf_1774682925758
+        - generic [ref=e1137] [cursor=pointer]: test_udaf_1774682919034
+        - generic [ref=e1140] [cursor=pointer]: cdptest_1774682910577_sum_tashkent
+        - generic [ref=e1143] [cursor=pointer]: cdptest_1774682910577_count_30d
+        - generic [ref=e1146] [cursor=pointer]: cdptest_1774682910577_avg_delivery
+        - generic [ref=e1149] [cursor=pointer]: cdptest_1774682910577_count_purchases
+        - generic [ref=e1152] [cursor=pointer]: cdptest_1774682910577_sum_price
+        - generic [ref=e1155] [cursor=pointer]: cdptest_1774682820458_sum_tashkent
+        - generic [ref=e1158] [cursor=pointer]: cdptest_1774682820458_count_30d
+        - generic [ref=e1161] [cursor=pointer]: cdptest_1774682820458_avg_delivery
+        - generic [ref=e1164] [cursor=pointer]: cdptest_1774682820458_count_purchases
+        - generic [ref=e1167] [cursor=pointer]: cdptest_1774682820458_sum_price
+        - generic [ref=e1170] [cursor=pointer]: cdptest_1774682743111_avg_delivery
+        - generic [ref=e1173] [cursor=pointer]: cdptest_1774682743111_count_purchases
+        - generic [ref=e1176] [cursor=pointer]: cdptest_1774682743111_sum_price
+        - generic [ref=e1179] [cursor=pointer]: biz_timewindow_1774682034862
+        - generic [ref=e1182] [cursor=pointer]: biz_max_1774682034818
+        - generic [ref=e1185] [cursor=pointer]: biz_min_1774682034759
+        - generic [ref=e1188] [cursor=pointer]: biz_avg_1774682034715
+        - generic [ref=e1191] [cursor=pointer]: biz_count_1774682034658
+        - generic [ref=e1194] [cursor=pointer]: biz_sum_1774682034603
+        - generic [ref=e1197] [cursor=pointer]: test_udaf_1774682032350
+        - generic [ref=e1200] [cursor=pointer]: biz_timewindow_1774682025181
+        - generic [ref=e1203] [cursor=pointer]: biz_max_1774682025136
+        - generic [ref=e1206] [cursor=pointer]: biz_min_1774682025080
+        - generic [ref=e1209] [cursor=pointer]: biz_avg_1774682025036
+        - generic [ref=e1212] [cursor=pointer]: biz_count_1774682024987
+        - generic [ref=e1215] [cursor=pointer]: biz_sum_1774682024931
+        - generic [ref=e1218] [cursor=pointer]: biz_timewindow_1774682011521
+        - generic [ref=e1221] [cursor=pointer]: biz_max_1774682011468
+        - generic [ref=e1224] [cursor=pointer]: biz_min_1774682011416
+        - generic [ref=e1227] [cursor=pointer]: biz_avg_1774682011374
+        - generic [ref=e1230] [cursor=pointer]: biz_count_1774682011333
+        - generic [ref=e1233] [cursor=pointer]: biz_sum_1774682011282
+        - generic [ref=e1236] [cursor=pointer]: biz_timewindow_1774681970265
+        - generic [ref=e1239] [cursor=pointer]: biz_max_1774681970209
+        - generic [ref=e1242] [cursor=pointer]: biz_min_1774681970144
+        - generic [ref=e1245] [cursor=pointer]: biz_avg_1774681970088
+        - generic [ref=e1248] [cursor=pointer]: biz_count_1774681970019
+        - generic [ref=e1251] [cursor=pointer]: biz_sum_1774681969952
+        - generic [ref=e1254] [cursor=pointer]: biz_timewindow_1774681963619
+        - generic [ref=e1257] [cursor=pointer]: biz_max_1774681963574
+        - generic [ref=e1260] [cursor=pointer]: biz_min_1774681963524
+        - generic [ref=e1263] [cursor=pointer]: biz_avg_1774681963474
+        - generic [ref=e1266] [cursor=pointer]: biz_count_1774681963425
+        - generic [ref=e1269] [cursor=pointer]: biz_sum_1774681963360
+        - generic [ref=e1272] [cursor=pointer]: biz_timewindow_1774681902617
+        - generic [ref=e1275] [cursor=pointer]: biz_max_1774681902570
+        - generic [ref=e1278] [cursor=pointer]: biz_min_1774681902518
+        - generic [ref=e1281] [cursor=pointer]: biz_avg_1774681902466
+        - generic [ref=e1284] [cursor=pointer]: biz_count_1774681902406
+        - generic [ref=e1287] [cursor=pointer]: biz_sum_1774681902350
+        - generic [ref=e1290] [cursor=pointer]: biz_timewindow_1774681896062
+        - generic [ref=e1293] [cursor=pointer]: biz_max_1774681896015
+        - generic [ref=e1296] [cursor=pointer]: biz_min_1774681895966
+        - generic [ref=e1299] [cursor=pointer]: biz_avg_1774681895920
+        - generic [ref=e1302] [cursor=pointer]: biz_count_1774681895869
+        - generic [ref=e1305] [cursor=pointer]: biz_sum_1774681895819
+        - generic [ref=e1308] [cursor=pointer]: test_udaf_1774681888989
+        - generic [ref=e1311] [cursor=pointer]: test_udaf_1774681858176
+        - generic [ref=e1314] [cursor=pointer]: test_udaf_1774681833936
+        - generic [ref=e1317] [cursor=pointer]: test_udaf_1774681793703
+        - generic [ref=e1320] [cursor=pointer]: Islombeks predicate
+        - generic [ref=e1323] [cursor=pointer]: Islombeks predicate
+        - generic [ref=e1326] [cursor=pointer]: Islombeks predicate
+        - generic [ref=e1329] [cursor=pointer]: count test events for last 60 days
+        - generic [ref=e1332] [cursor=pointer]: good aggregate sum float
+        - generic [ref=e1335] [cursor=pointer]: good aggregate sum float
+        - generic [ref=e1338] [cursor=pointer]: total_price_L
+        - generic [ref=e1341] [cursor=pointer]: Sum Total Price
+        - generic [ref=e1344] [cursor=pointer]: Islombeks predicate
+        - generic [ref=e1347] [cursor=pointer]: Islombeks predicate
+        - generic [ref=e1350] [cursor=pointer]: sum_delivery_cost
+        - generic [ref=e1353] [cursor=pointer]: fsfes
+        - generic [ref=e1356] [cursor=pointer]: test
+        - generic [ref=e1359] [cursor=pointer]: test
+        - generic [ref=e1362] [cursor=pointer]: test
+        - generic [ref=e1365] [cursor=pointer]: test
+        - generic [ref=e1368] [cursor=pointer]: sum by delivery cost
+        - generic [ref=e1371] [cursor=pointer]: test agg
+        - generic [ref=e1374] [cursor=pointer]: tertrwtr
+        - generic [ref=e1377] [cursor=pointer]: test
+        - generic [ref=e1380] [cursor=pointer]: count purchase 1

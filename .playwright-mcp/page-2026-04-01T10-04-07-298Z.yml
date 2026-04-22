@@ -1,0 +1,332 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "Панель управления" [ref=e8] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e9]: Панель управления
+          - generic [ref=e10]:
+            - paragraph [ref=e11]: Данные
+            - generic [ref=e31]:
+              - link "Клиенты 342279" [ref=e32] [cursor=pointer]:
+                - /url: /data/clients
+                - img [ref=e33]
+                - generic [ref=e35]: Клиенты
+                - generic [ref=e37]: "342279"
+              - button "События 66245" [ref=e38] [cursor=pointer]:
+                - img [ref=e39]
+                - generic [ref=e41]: События
+                - generic [ref=e43]: "66245"
+              - link "Сценарий" [ref=e44] [cursor=pointer]:
+                - /url: /data/scenario
+                - img [ref=e45]
+                - generic [ref=e47]: Сценарий
+              - link "Файлы" [ref=e48] [cursor=pointer]:
+                - /url: /data/files
+                - img [ref=e49]
+                - generic [ref=e53]: Файлы
+          - generic [ref=e12]:
+            - paragraph [ref=e13]: Маркетинг
+            - generic [ref=e54]:
+              - link "Агрегаты" [ref=e55] [cursor=pointer]:
+                - /url: /marketing/aggregate
+                - img [ref=e56]
+                - generic [ref=e69]: Агрегаты
+              - link "Сегменты" [ref=e70] [cursor=pointer]:
+                - /url: /marketing/segments
+                - img [ref=e71]
+                - generic [ref=e74]: Сегменты
+              - link "Рассылки" [ref=e75] [cursor=pointer]:
+                - /url: /marketing/campaigns
+                - img [ref=e76]
+                - generic [ref=e78]: Рассылки
+              - link "Коммуникации" [ref=e79] [cursor=pointer]:
+                - /url: /marketing/communication
+                - img [ref=e80]
+                - generic [ref=e82]: Коммуникации
+          - generic [ref=e14]:
+            - paragraph [ref=e15]: Аналитика
+            - link "Статистика полей" [ref=e84] [cursor=pointer]:
+              - /url: /statistics/field
+              - img [ref=e85]
+              - generic [ref=e110]: Статистика полей
+        - generic [ref=e16]:
+          - separator [ref=e17]
+          - generic [ref=e19]:
+            - generic [ref=e21]: c
+            - paragraph [ref=e111] [cursor=pointer]: cdp_1762934640267
+      - generic [ref=e28]:
+        - paragraph [ref=e242]: Панель управления
+        - tablist [ref=e244]:
+          - tab "Артефакты арендатора" [ref=e245] [cursor=pointer]:
+            - generic [ref=e246]: Артефакты арендатора
+          - tab "Поля схемы клиента" [ref=e247] [cursor=pointer]:
+            - generic [ref=e248]: Поля схемы клиента
+          - tab "Поля схемы событий" [ref=e249] [cursor=pointer]:
+            - generic [ref=e250]: Поля схемы событий
+          - tab "Конкретные сопоставления полей" [ref=e251] [cursor=pointer]:
+            - generic [ref=e252]: Конкретные сопоставления полей
+          - tab "Создать шаблон" [selected] [ref=e253] [cursor=pointer]:
+            - generic [ref=e254]: Создать шаблон
+        - button "Добавить" [ref=e256] [cursor=pointer]:
+          - generic [ref=e257]:
+            - img [ref=e259]
+            - generic [ref=e260]: Добавить
+        - table [ref=e263]:
+          - rowgroup [ref=e264]:
+            - row "Название шаблона Тема Тип контента" [ref=e265]:
+              - columnheader "Название шаблона" [ref=e266]
+              - columnheader "Тема" [ref=e267]
+              - columnheader "Тип контента" [ref=e268]
+          - rowgroup [ref=e269]:
+            - row "test_template_updated_1774692188521 Updated Subject text" [ref=e270]:
+              - cell "test_template_updated_1774692188521" [ref=e271] [cursor=pointer]
+              - cell "Updated Subject" [ref=e272] [cursor=pointer]
+              - cell "text" [ref=e273] [cursor=pointer]
+            - row "test_template_updated_1774780491378 Updated Subject text" [ref=e274]:
+              - cell "test_template_updated_1774780491378" [ref=e275] [cursor=pointer]
+              - cell "Updated Subject" [ref=e276] [cursor=pointer]
+              - cell "text" [ref=e277] [cursor=pointer]
+            - row "scenario_tmpl_1775024995851 Test text" [ref=e278]:
+              - cell "scenario_tmpl_1775024995851" [ref=e279] [cursor=pointer]
+              - cell "Test" [ref=e280] [cursor=pointer]
+              - cell "text" [ref=e281] [cursor=pointer]
+            - row "string string html" [ref=e282]:
+              - cell "string" [ref=e283] [cursor=pointer]
+              - cell "string" [ref=e284] [cursor=pointer]
+              - cell "html" [ref=e285] [cursor=pointer]
+            - row "test_template_updated_1775020278159 Updated Subject text" [ref=e286]:
+              - cell "test_template_updated_1775020278159" [ref=e287] [cursor=pointer]
+              - cell "Updated Subject" [ref=e288] [cursor=pointer]
+              - cell "text" [ref=e289] [cursor=pointer]
+            - row "test_template_updated_1774692097882 Updated Subject text" [ref=e290]:
+              - cell "test_template_updated_1774692097882" [ref=e291] [cursor=pointer]
+              - cell "Updated Subject" [ref=e292] [cursor=pointer]
+              - cell "text" [ref=e293] [cursor=pointer]
+            - row "scenario_tmpl_1775028080833 Test text" [ref=e294]:
+              - cell "scenario_tmpl_1775028080833" [ref=e295] [cursor=pointer]
+              - cell "Test" [ref=e296] [cursor=pointer]
+              - cell "text" [ref=e297] [cursor=pointer]
+            - row "test_html_template_1775019998951 HTML Test html" [ref=e298]:
+              - cell "test_html_template_1775019998951" [ref=e299] [cursor=pointer]
+              - cell "HTML Test" [ref=e300] [cursor=pointer]
+              - cell "html" [ref=e301] [cursor=pointer]
+            - row "test_template_updated_1775028081772 Updated Subject text" [ref=e302]:
+              - cell "test_template_updated_1775028081772" [ref=e303] [cursor=pointer]
+              - cell "Updated Subject" [ref=e304] [cursor=pointer]
+              - cell "text" [ref=e305] [cursor=pointer]
+            - row "scenario_tmpl_1775019997885 Test text" [ref=e306]:
+              - cell "scenario_tmpl_1775019997885" [ref=e307] [cursor=pointer]
+              - cell "Test" [ref=e308] [cursor=pointer]
+              - cell "text" [ref=e309] [cursor=pointer]
+            - row "test_template_updated_1774690972616 Updated Subject text" [ref=e310]:
+              - cell "test_template_updated_1774690972616" [ref=e311] [cursor=pointer]
+              - cell "Updated Subject" [ref=e312] [cursor=pointer]
+              - cell "text" [ref=e313] [cursor=pointer]
+            - row "biz_template_1774681969955 Campaign Test text" [ref=e314]:
+              - cell "biz_template_1774681969955" [ref=e315] [cursor=pointer]
+              - cell "Campaign Test" [ref=e316] [cursor=pointer]
+              - cell "text" [ref=e317] [cursor=pointer]
+            - row "test_template_updated_1774682918915 Updated Subject text" [ref=e318]:
+              - cell "test_template_updated_1774682918915" [ref=e319] [cursor=pointer]
+              - cell "Updated Subject" [ref=e320] [cursor=pointer]
+              - cell "text" [ref=e321] [cursor=pointer]
+            - row "test 25-02-26 Test template html" [ref=e322]:
+              - cell "test 25-02-26" [ref=e323] [cursor=pointer]
+              - cell "Test template" [ref=e324] [cursor=pointer]
+              - cell "html" [ref=e325] [cursor=pointer]
+            - row "test_template_updated_1775019998982 Updated Subject text" [ref=e326]:
+              - cell "test_template_updated_1775019998982" [ref=e327] [cursor=pointer]
+              - cell "Updated Subject" [ref=e328] [cursor=pointer]
+              - cell "text" [ref=e329] [cursor=pointer]
+            - row "test_html_template_1774851114577 HTML Test html" [ref=e330]:
+              - cell "test_html_template_1774851114577" [ref=e331] [cursor=pointer]
+              - cell "HTML Test" [ref=e332] [cursor=pointer]
+              - cell "html" [ref=e333] [cursor=pointer]
+            - row "scenario_tmpl_1774780498473 Test text" [ref=e334]:
+              - cell "scenario_tmpl_1774780498473" [ref=e335] [cursor=pointer]
+              - cell "Test" [ref=e336] [cursor=pointer]
+              - cell "text" [ref=e337] [cursor=pointer]
+            - row "scenario_tmpl_1774780383336 Test text" [ref=e338]:
+              - cell "scenario_tmpl_1774780383336" [ref=e339] [cursor=pointer]
+              - cell "Test" [ref=e340] [cursor=pointer]
+              - cell "text" [ref=e341] [cursor=pointer]
+            - row "test_html_template_1775028081740 HTML Test html" [ref=e342]:
+              - cell "test_html_template_1775028081740" [ref=e343] [cursor=pointer]
+              - cell "HTML Test" [ref=e344] [cursor=pointer]
+              - cell "html" [ref=e345] [cursor=pointer]
+            - row "__test_autopilot__tmpl_json_1775024995970 JSON Template Test json" [ref=e346]:
+              - cell "__test_autopilot__tmpl_json_1775024995970" [ref=e347] [cursor=pointer]
+              - cell "JSON Template Test" [ref=e348] [cursor=pointer]
+              - cell "json" [ref=e349] [cursor=pointer]
+            - row "test_template_updated_1774695215825 Updated Subject text" [ref=e350]:
+              - cell "test_template_updated_1774695215825" [ref=e351] [cursor=pointer]
+              - cell "Updated Subject" [ref=e352] [cursor=pointer]
+              - cell "text" [ref=e353] [cursor=pointer]
+            - row "test_html_template_1775016867819 HTML Test html" [ref=e354]:
+              - cell "test_html_template_1775016867819" [ref=e355] [cursor=pointer]
+              - cell "HTML Test" [ref=e356] [cursor=pointer]
+              - cell "html" [ref=e357] [cursor=pointer]
+            - row "test_html_template_1774681833833 HTML Test html" [ref=e358]:
+              - cell "test_html_template_1774681833833" [ref=e359] [cursor=pointer]
+              - cell "HTML Test" [ref=e360] [cursor=pointer]
+              - cell "html" [ref=e361] [cursor=pointer]
+            - row "biz_template_1774681963361 Campaign Test text" [ref=e362]:
+              - cell "biz_template_1774681963361" [ref=e363] [cursor=pointer]
+              - cell "Campaign Test" [ref=e364] [cursor=pointer]
+              - cell "text" [ref=e365] [cursor=pointer]
+            - row "scenario_tmpl_1774780530151 Test text" [ref=e366]:
+              - cell "scenario_tmpl_1774780530151" [ref=e367] [cursor=pointer]
+              - cell "Test" [ref=e368] [cursor=pointer]
+              - cell "text" [ref=e369] [cursor=pointer]
+            - row "test_html_template_1774691605885 HTML Test html" [ref=e370]:
+              - cell "test_html_template_1774691605885" [ref=e371] [cursor=pointer]
+              - cell "HTML Test" [ref=e372] [cursor=pointer]
+              - cell "html" [ref=e373] [cursor=pointer]
+            - row "biz_template_1774682024931 Campaign Test text" [ref=e374]:
+              - cell "biz_template_1774682024931" [ref=e375] [cursor=pointer]
+              - cell "Campaign Test" [ref=e376] [cursor=pointer]
+              - cell "text" [ref=e377] [cursor=pointer]
+            - row "scenario_tmpl_1775016867003 Test text" [ref=e378]:
+              - cell "scenario_tmpl_1775016867003" [ref=e379] [cursor=pointer]
+              - cell "Test" [ref=e380] [cursor=pointer]
+              - cell "text" [ref=e381] [cursor=pointer]
+            - row "test_html_template_1774693804287 HTML Test html" [ref=e382]:
+              - cell "test_html_template_1774693804287" [ref=e383] [cursor=pointer]
+              - cell "HTML Test" [ref=e384] [cursor=pointer]
+              - cell "html" [ref=e385] [cursor=pointer]
+            - row "scenario_tmpl_1774849397664 Test text" [ref=e386]:
+              - cell "scenario_tmpl_1774849397664" [ref=e387] [cursor=pointer]
+              - cell "Test" [ref=e388] [cursor=pointer]
+              - cell "text" [ref=e389] [cursor=pointer]
+            - row "test_template_updated_1774686302017 Updated Subject text" [ref=e390]:
+              - cell "test_template_updated_1774686302017" [ref=e391] [cursor=pointer]
+              - cell "Updated Subject" [ref=e392] [cursor=pointer]
+              - cell "text" [ref=e393] [cursor=pointer]
+            - row "__test_autopilot__tmpl_updated_1775019998076 Updated Subject text" [ref=e394]:
+              - cell "__test_autopilot__tmpl_updated_1775019998076" [ref=e395] [cursor=pointer]
+              - cell "Updated Subject" [ref=e396] [cursor=pointer]
+              - cell "text" [ref=e397] [cursor=pointer]
+            - row "test_html_template_1774682918879 HTML Test html" [ref=e398]:
+              - cell "test_html_template_1774682918879" [ref=e399] [cursor=pointer]
+              - cell "HTML Test" [ref=e400] [cursor=pointer]
+              - cell "html" [ref=e401] [cursor=pointer]
+            - row "test new subject new html" [ref=e402]:
+              - cell "test new" [ref=e403] [cursor=pointer]
+              - cell "subject new" [ref=e404] [cursor=pointer]
+              - cell "html" [ref=e405] [cursor=pointer]
+            - row "__test_autopilot__tmpl_html_1775019998118 HTML Template Test html" [ref=e406]:
+              - cell "__test_autopilot__tmpl_html_1775019998118" [ref=e407] [cursor=pointer]
+              - cell "HTML Template Test" [ref=e408] [cursor=pointer]
+              - cell "html" [ref=e409] [cursor=pointer]
+            - row "scenario_tmpl_1774702006682 Test text" [ref=e410]:
+              - cell "scenario_tmpl_1774702006682" [ref=e411] [cursor=pointer]
+              - cell "Test" [ref=e412] [cursor=pointer]
+              - cell "text" [ref=e413] [cursor=pointer]
+            - row "test_html_template_1774689413343 HTML Test html" [ref=e414]:
+              - cell "test_html_template_1774689413343" [ref=e415] [cursor=pointer]
+              - cell "HTML Test" [ref=e416] [cursor=pointer]
+              - cell "html" [ref=e417] [cursor=pointer]
+            - row "test_html_template_1774696157898 HTML Test html" [ref=e418]:
+              - cell "test_html_template_1774696157898" [ref=e419] [cursor=pointer]
+              - cell "HTML Test" [ref=e420] [cursor=pointer]
+              - cell "html" [ref=e421] [cursor=pointer]
+            - row "scenario_tmpl_1774695215869 Test text" [ref=e422]:
+              - cell "scenario_tmpl_1774695215869" [ref=e423] [cursor=pointer]
+              - cell "Test" [ref=e424] [cursor=pointer]
+              - cell "text" [ref=e425] [cursor=pointer]
+            - row "test_template_updated_1774682951793 Updated Subject text" [ref=e426]:
+              - cell "test_template_updated_1774682951793" [ref=e427] [cursor=pointer]
+              - cell "Updated Subject" [ref=e428] [cursor=pointer]
+              - cell "text" [ref=e429] [cursor=pointer]
+            - row "test_html_template_1774692188472 HTML Test html" [ref=e430]:
+              - cell "test_html_template_1774692188472" [ref=e431] [cursor=pointer]
+              - cell "HTML Test" [ref=e432] [cursor=pointer]
+              - cell "html" [ref=e433] [cursor=pointer]
+            - row "bug029_list_test BUG-029 Test text" [ref=e434]:
+              - cell "bug029_list_test" [ref=e435] [cursor=pointer]
+              - cell "BUG-029 Test" [ref=e436] [cursor=pointer]
+              - cell "text" [ref=e437] [cursor=pointer]
+            - row "test_template_updated_1774693812658 Updated Subject text" [ref=e438]:
+              - cell "test_template_updated_1774693812658" [ref=e439] [cursor=pointer]
+              - cell "Updated Subject" [ref=e440] [cursor=pointer]
+              - cell "text" [ref=e441] [cursor=pointer]
+            - row "test_html_template_1774780530706 HTML Test html" [ref=e442]:
+              - cell "test_html_template_1774780530706" [ref=e443] [cursor=pointer]
+              - cell "HTML Test" [ref=e444] [cursor=pointer]
+              - cell "html" [ref=e445] [cursor=pointer]
+            - row "test_template_updated_1774849398283 Updated Subject text" [ref=e446]:
+              - cell "test_template_updated_1774849398283" [ref=e447] [cursor=pointer]
+              - cell "Updated Subject" [ref=e448] [cursor=pointer]
+              - cell "text" [ref=e449] [cursor=pointer]
+            - row "__test_autopilot__tmpl_json_1775028081059 JSON Template Test json" [ref=e450]:
+              - cell "__test_autopilot__tmpl_json_1775028081059" [ref=e451] [cursor=pointer]
+              - cell "JSON Template Test" [ref=e452] [cursor=pointer]
+              - cell "json" [ref=e453] [cursor=pointer]
+            - 'row "cdptest_1774682910577_template Hello {{first_name}}! html" [ref=e454]':
+              - cell "cdptest_1774682910577_template" [ref=e455] [cursor=pointer]
+              - 'cell "Hello {{first_name}}!" [ref=e456] [cursor=pointer]'
+              - cell "html" [ref=e457] [cursor=pointer]
+            - row "test_template_updated_1774691597931 Updated Subject text" [ref=e458]:
+              - cell "test_template_updated_1774691597931" [ref=e459] [cursor=pointer]
+              - cell "Updated Subject" [ref=e460] [cursor=pointer]
+              - cell "text" [ref=e461] [cursor=pointer]
+            - row "test_template_updated_1774691605922 Updated Subject text" [ref=e462]:
+              - cell "test_template_updated_1774691605922" [ref=e463] [cursor=pointer]
+              - cell "Updated Subject" [ref=e464] [cursor=pointer]
+              - cell "text" [ref=e465] [cursor=pointer]
+            - row "test_template_updated_1774689413387 Updated Subject text" [ref=e466]:
+              - cell "test_template_updated_1774689413387" [ref=e467] [cursor=pointer]
+              - cell "Updated Subject" [ref=e468] [cursor=pointer]
+              - cell "text" [ref=e469] [cursor=pointer]
+    - region "Notifications Alt+T"
+  - dialog "Создать шаблон" [ref=e471]:
+    - banner [ref=e472]:
+      - heading "Создать шаблон" [level=2] [ref=e473]
+      - button [active] [ref=e474] [cursor=pointer]:
+        - img [ref=e475]
+    - generic [ref=e479]:
+      - generic [ref=e480]:
+        - generic [ref=e481]: Название шаблона
+        - textbox "Название шаблона" [ref=e483]
+      - generic [ref=e484]:
+        - generic [ref=e485]: Тема
+        - textbox "Тема" [ref=e487]
+      - generic [ref=e489]:
+        - generic [ref=e490]:
+          - generic [ref=e491]:
+            - button "Bold" [ref=e492] [cursor=pointer]:
+              - img [ref=e493]
+            - button "Italic" [ref=e497] [cursor=pointer]:
+              - img [ref=e498]
+            - button "Underline" [ref=e501] [cursor=pointer]:
+              - img [ref=e502]
+            - button "Text color" [ref=e505] [cursor=pointer]
+            - button "Highlight text" [ref=e511] [cursor=pointer]:
+              - img [ref=e512]
+          - generic [ref=e518]:
+            - button "Heading 1" [ref=e519] [cursor=pointer]:
+              - img [ref=e520]
+            - button "Heading 2" [ref=e523] [cursor=pointer]:
+              - img [ref=e524]
+            - button "Heading 3" [ref=e527] [cursor=pointer]:
+              - img [ref=e528]
+          - generic [ref=e532]:
+            - button "Bullet list" [ref=e533] [cursor=pointer]:
+              - img [ref=e534]
+            - button "Ordered list" [ref=e536] [cursor=pointer]:
+              - img [ref=e537]
+            - button "Horizontal line" [ref=e541] [cursor=pointer]:
+              - img [ref=e542]
+          - generic [ref=e544]:
+            - button "Undo" [disabled] [ref=e545]:
+              - img [ref=e546]
+            - button "Redo" [disabled] [ref=e550]:
+              - img [ref=e551]
+        - textbox [ref=e557]:
+          - paragraph [ref=e558]
+      - button "+ Добавить переменную" [ref=e560] [cursor=pointer]:
+        - generic [ref=e562]: + Добавить переменную
+      - button "Добавить" [ref=e563] [cursor=pointer]:
+        - generic [ref=e565]: Добавить

@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: compute
+  labels:
+    app: compute
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: compute
+  template:
+    metadata:
+      labels:
+        app: compute
+    spec:
+      imagePullSecrets:
+        - name: docker-registry-cdp-monorepo
+      containers:
+        - name: compute
+          image: git2.ssdsoftwaresolutions.com:5050/cdp/newstack/cdp-go-monorepo/compute:{{ .Version }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: GIN_MODE
+              value: release
+            - name: DB_MAIN_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: DB_MAIN_USER
+            - name: DB_MAIN_PASS
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: DB_MAIN_PASS
+            - name: DB_MAIN_ADDR
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: DB_MAIN_ADDR
+            - name: DB_MAIN_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: DB_MAIN_NAME
+            - name: API_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: COMPUTE_API_PORT
+            - name: ETCD_ENDPOINTS
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: ETCD_ENDPOINTS
+            - name: S3_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: S3_HOST
+            - name: S3_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: S3_PORT
+            - name: S3_HTTP
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: S3_HTTP
+            - name: S3_ACCESS_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: S3_ACCESS_KEY
+            - name: S3_SECRET_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: S3_SECRET_KEY
+            - name: S3_REGION
+              valueFrom:
+                configMapKeyRef:
+                  name: cdp-config
+                  key: S3_REGION
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: compute-service
+spec:
+  selector:
+    app: compute
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP

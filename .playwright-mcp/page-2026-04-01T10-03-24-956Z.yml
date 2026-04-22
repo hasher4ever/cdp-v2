@@ -1,0 +1,1136 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "Панель управления" [ref=e8] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e9]: Панель управления
+          - generic [ref=e10]:
+            - paragraph [ref=e11]: Данные
+            - generic [ref=e41]:
+              - link "Клиенты 342279" [ref=e42] [cursor=pointer]:
+                - /url: /data/clients
+                - img [ref=e43]
+                - generic [ref=e45]: Клиенты
+                - generic [ref=e47]: "342279"
+              - button "События 66245" [ref=e48] [cursor=pointer]:
+                - img [ref=e49]
+                - generic [ref=e51]: События
+                - generic [ref=e53]: "66245"
+              - link "Сценарий" [ref=e54] [cursor=pointer]:
+                - /url: /data/scenario
+                - img [ref=e55]
+                - generic [ref=e57]: Сценарий
+              - link "Файлы" [ref=e58] [cursor=pointer]:
+                - /url: /data/files
+                - img [ref=e59]
+                - generic [ref=e63]: Файлы
+          - generic [ref=e12]:
+            - paragraph [ref=e13]: Маркетинг
+            - generic [ref=e64]:
+              - link "Агрегаты" [ref=e65] [cursor=pointer]:
+                - /url: /marketing/aggregate
+                - img [ref=e66]
+                - generic [ref=e79]: Агрегаты
+              - link "Сегменты" [ref=e80] [cursor=pointer]:
+                - /url: /marketing/segments
+                - img [ref=e81]
+                - generic [ref=e84]: Сегменты
+              - link "Рассылки" [ref=e85] [cursor=pointer]:
+                - /url: /marketing/campaigns
+                - img [ref=e86]
+                - generic [ref=e88]: Рассылки
+              - link "Коммуникации" [ref=e89] [cursor=pointer]:
+                - /url: /marketing/communication
+                - img [ref=e90]
+                - generic [ref=e92]: Коммуникации
+          - generic [ref=e14]:
+            - paragraph [ref=e15]: Аналитика
+            - link "Статистика полей" [ref=e94] [cursor=pointer]:
+              - /url: /statistics/field
+              - img [ref=e95]
+              - generic [ref=e120]: Статистика полей
+        - generic [ref=e16]:
+          - separator [ref=e17]
+          - generic [ref=e19]:
+            - generic [ref=e21]: c
+            - paragraph [ref=e121] [cursor=pointer]: cdp_1762934640267
+      - generic [ref=e28]:
+        - paragraph [ref=e31]: Коммуникации
+        - separator [ref=e32]
+        - button "Добавить" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]:
+            - img [ref=e37]
+            - generic [ref=e38]: Добавить
+        - table [ref=e124]:
+          - rowgroup [ref=e125]:
+            - row "ID Название Тип Проверен" [ref=e126]:
+              - columnheader "ID" [ref=e127]
+              - columnheader "Название" [ref=e128]
+              - columnheader "Тип" [ref=e129]
+              - columnheader "Проверен" [ref=e130]
+              - columnheader [ref=e131]
+          - rowgroup [ref=e132]:
+            - row "f91eccdc-f18e-4e7f-bbfa-aeef6b060d4a test blackhole Да" [ref=e133]:
+              - cell "f91eccdc-f18e-4e7f-bbfa-aeef6b060d4a" [ref=e134] [cursor=pointer]
+              - cell "test" [ref=e135] [cursor=pointer]
+              - cell "blackhole" [ref=e136] [cursor=pointer]
+              - cell "Да" [ref=e137] [cursor=pointer]:
+                - generic [ref=e139]: Да
+              - cell [ref=e140] [cursor=pointer]:
+                - button [ref=e141]:
+                  - img [ref=e143]
+            - row "26e1beb4-fb9c-400a-9bff-ef625a41d058 test1 webhook Да" [ref=e147]:
+              - cell "26e1beb4-fb9c-400a-9bff-ef625a41d058" [ref=e148] [cursor=pointer]
+              - cell "test1" [ref=e149] [cursor=pointer]
+              - cell "webhook" [ref=e150] [cursor=pointer]
+              - cell "Да" [ref=e151] [cursor=pointer]:
+                - generic [ref=e153]: Да
+              - cell [ref=e154] [cursor=pointer]:
+                - button [ref=e155]:
+                  - img [ref=e157]
+            - row "111e1c11-2cdf-4183-bfb0-7e5b7e4ea39b test2 webhook Да" [ref=e161]:
+              - cell "111e1c11-2cdf-4183-bfb0-7e5b7e4ea39b" [ref=e162] [cursor=pointer]
+              - cell "test2" [ref=e163] [cursor=pointer]
+              - cell "webhook" [ref=e164] [cursor=pointer]
+              - cell "Да" [ref=e165] [cursor=pointer]:
+                - generic [ref=e167]: Да
+              - cell [ref=e168] [cursor=pointer]:
+                - button [ref=e169]:
+                  - img [ref=e171]
+            - row "eb23bdd4-ef56-4b08-876f-c5af1a136663 test thu dec 11 webhook webhook Да" [ref=e175]:
+              - cell "eb23bdd4-ef56-4b08-876f-c5af1a136663" [ref=e176] [cursor=pointer]
+              - cell "test thu dec 11 webhook" [ref=e177] [cursor=pointer]
+              - cell "webhook" [ref=e178] [cursor=pointer]
+              - cell "Да" [ref=e179] [cursor=pointer]:
+                - generic [ref=e181]: Да
+              - cell [ref=e182] [cursor=pointer]:
+                - button [ref=e183]:
+                  - img [ref=e185]
+            - row "bd25f19a-7735-4547-b7ba-573d58ced986 test fri dec 12 webhook Нет" [ref=e189]:
+              - cell "bd25f19a-7735-4547-b7ba-573d58ced986" [ref=e190] [cursor=pointer]
+              - cell "test fri dec 12" [ref=e191] [cursor=pointer]
+              - cell "webhook" [ref=e192] [cursor=pointer]
+              - cell "Нет" [ref=e193] [cursor=pointer]:
+                - generic [ref=e195]: Нет
+              - cell [ref=e196] [cursor=pointer]:
+                - button [ref=e197]:
+                  - img [ref=e199]
+            - row "b485e6c1-7d86-494b-ab8b-1d5f11cb4a93 test fri dec 12 test 1 webhook Нет" [ref=e203]:
+              - cell "b485e6c1-7d86-494b-ab8b-1d5f11cb4a93" [ref=e204] [cursor=pointer]
+              - cell "test fri dec 12 test 1" [ref=e205] [cursor=pointer]
+              - cell "webhook" [ref=e206] [cursor=pointer]
+              - cell "Нет" [ref=e207] [cursor=pointer]:
+                - generic [ref=e209]: Нет
+              - cell [ref=e210] [cursor=pointer]:
+                - button [ref=e211]:
+                  - img [ref=e213]
+            - row "86ba4073-7a07-4244-bb77-3a77566afadd email_smtp2go_api Да" [ref=e217]:
+              - cell "86ba4073-7a07-4244-bb77-3a77566afadd" [ref=e218] [cursor=pointer]
+              - cell [ref=e219] [cursor=pointer]
+              - cell "email_smtp2go_api" [ref=e220] [cursor=pointer]
+              - cell "Да" [ref=e221] [cursor=pointer]:
+                - generic [ref=e223]: Да
+              - cell [ref=e224] [cursor=pointer]:
+                - button [ref=e225]:
+                  - img [ref=e227]
+            - row "68c7bba6-74be-4d19-b1ad-9401ccc24989 email_smtp2go_api Да" [ref=e231]:
+              - cell "68c7bba6-74be-4d19-b1ad-9401ccc24989" [ref=e232] [cursor=pointer]
+              - cell [ref=e233] [cursor=pointer]
+              - cell "email_smtp2go_api" [ref=e234] [cursor=pointer]
+              - cell "Да" [ref=e235] [cursor=pointer]:
+                - generic [ref=e237]: Да
+              - cell [ref=e238] [cursor=pointer]:
+                - button [ref=e239]:
+                  - img [ref=e241]
+            - row "87fa5d44-9fa8-4795-bf0e-4eff436280bc Test blackhole Нет" [ref=e245]:
+              - cell "87fa5d44-9fa8-4795-bf0e-4eff436280bc" [ref=e246] [cursor=pointer]
+              - cell "Test" [ref=e247] [cursor=pointer]
+              - cell "blackhole" [ref=e248] [cursor=pointer]
+              - cell "Нет" [ref=e249] [cursor=pointer]:
+                - generic [ref=e251]: Нет
+              - cell [ref=e252] [cursor=pointer]:
+                - button [ref=e253]:
+                  - img [ref=e255]
+            - row "007b809f-1c36-48f1-953f-3afba12e0613 test blackhole Нет" [ref=e259]:
+              - cell "007b809f-1c36-48f1-953f-3afba12e0613" [ref=e260] [cursor=pointer]
+              - cell "test" [ref=e261] [cursor=pointer]
+              - cell "blackhole" [ref=e262] [cursor=pointer]
+              - cell "Нет" [ref=e263] [cursor=pointer]:
+                - generic [ref=e265]: Нет
+              - cell [ref=e266] [cursor=pointer]:
+                - button [ref=e267]:
+                  - img [ref=e269]
+            - row "9f7f9c72-5953-4164-9abb-912a1c69c454 test blackhole Нет" [ref=e273]:
+              - cell "9f7f9c72-5953-4164-9abb-912a1c69c454" [ref=e274] [cursor=pointer]
+              - cell "test" [ref=e275] [cursor=pointer]
+              - cell "blackhole" [ref=e276] [cursor=pointer]
+              - cell "Нет" [ref=e277] [cursor=pointer]:
+                - generic [ref=e279]: Нет
+              - cell [ref=e280] [cursor=pointer]:
+                - button [ref=e281]:
+                  - img [ref=e283]
+            - row "b8d4736c-b69c-4074-b0f2-f3b2cbdf0b07 email_smtp Да" [ref=e287]:
+              - cell "b8d4736c-b69c-4074-b0f2-f3b2cbdf0b07" [ref=e288] [cursor=pointer]
+              - cell [ref=e289] [cursor=pointer]
+              - cell "email_smtp" [ref=e290] [cursor=pointer]
+              - cell "Да" [ref=e291] [cursor=pointer]:
+                - generic [ref=e293]: Да
+              - cell [ref=e294] [cursor=pointer]:
+                - button [ref=e295]:
+                  - img [ref=e297]
+            - row "0609d1fd-cdef-445a-80c2-de67e4dfc0cb itoshev fake 1 email_smtp2go_api Нет" [ref=e301]:
+              - cell "0609d1fd-cdef-445a-80c2-de67e4dfc0cb" [ref=e302] [cursor=pointer]
+              - cell "itoshev fake 1" [ref=e303] [cursor=pointer]
+              - cell "email_smtp2go_api" [ref=e304] [cursor=pointer]
+              - cell "Нет" [ref=e305] [cursor=pointer]:
+                - generic [ref=e307]: Нет
+              - cell [ref=e308] [cursor=pointer]:
+                - button [ref=e309]:
+                  - img [ref=e311]
+            - row "567e2af0-f382-45ed-8e4f-e334472be0bf islombek 22 dec email_smtp2go_api Нет" [ref=e315]:
+              - cell "567e2af0-f382-45ed-8e4f-e334472be0bf" [ref=e316] [cursor=pointer]
+              - cell "islombek 22 dec" [ref=e317] [cursor=pointer]
+              - cell "email_smtp2go_api" [ref=e318] [cursor=pointer]
+              - cell "Нет" [ref=e319] [cursor=pointer]:
+                - generic [ref=e321]: Нет
+              - cell [ref=e322] [cursor=pointer]:
+                - button [ref=e323]:
+                  - img [ref=e325]
+            - row "bd781932-1479-449e-b15e-eb3d4fb50c95 test email_smtp2go_api Нет" [ref=e329]:
+              - cell "bd781932-1479-449e-b15e-eb3d4fb50c95" [ref=e330] [cursor=pointer]
+              - cell "test" [ref=e331] [cursor=pointer]
+              - cell "email_smtp2go_api" [ref=e332] [cursor=pointer]
+              - cell "Нет" [ref=e333] [cursor=pointer]:
+                - generic [ref=e335]: Нет
+              - cell [ref=e336] [cursor=pointer]:
+                - button [ref=e337]:
+                  - img [ref=e339]
+            - row "95e0ef86-816b-449e-b0fb-9558b6707ab8 test email_smtp2go_api Нет" [ref=e343]:
+              - cell "95e0ef86-816b-449e-b0fb-9558b6707ab8" [ref=e344] [cursor=pointer]
+              - cell "test" [ref=e345] [cursor=pointer]
+              - cell "email_smtp2go_api" [ref=e346] [cursor=pointer]
+              - cell "Нет" [ref=e347] [cursor=pointer]:
+                - generic [ref=e349]: Нет
+              - cell [ref=e350] [cursor=pointer]:
+                - button [ref=e351]:
+                  - img [ref=e353]
+            - row "9d2a6dfa-ec8b-42f3-a958-3273cd3c8637 test email_smtp2go_api Нет" [ref=e357]:
+              - cell "9d2a6dfa-ec8b-42f3-a958-3273cd3c8637" [ref=e358] [cursor=pointer]
+              - cell "test" [ref=e359] [cursor=pointer]
+              - cell "email_smtp2go_api" [ref=e360] [cursor=pointer]
+              - cell "Нет" [ref=e361] [cursor=pointer]:
+                - generic [ref=e363]: Нет
+              - cell [ref=e364] [cursor=pointer]:
+                - button [ref=e365]:
+                  - img [ref=e367]
+            - row "22324358-4a0c-4961-a4f2-8bbca2f23f1b email_smtp2go_api Да" [ref=e371]:
+              - cell "22324358-4a0c-4961-a4f2-8bbca2f23f1b" [ref=e372] [cursor=pointer]
+              - cell [ref=e373] [cursor=pointer]
+              - cell "email_smtp2go_api" [ref=e374] [cursor=pointer]
+              - cell "Да" [ref=e375] [cursor=pointer]:
+                - generic [ref=e377]: Да
+              - cell [ref=e378] [cursor=pointer]:
+                - button [ref=e379]:
+                  - img [ref=e381]
+            - row "863255f0-503d-4ba3-81e1-5de554c6dd43 test_chan_1774681793595 blackhole Да" [ref=e385]:
+              - cell "863255f0-503d-4ba3-81e1-5de554c6dd43" [ref=e386] [cursor=pointer]
+              - cell "test_chan_1774681793595" [ref=e387] [cursor=pointer]
+              - cell "blackhole" [ref=e388] [cursor=pointer]
+              - cell "Да" [ref=e389] [cursor=pointer]:
+                - generic [ref=e391]: Да
+              - cell [ref=e392] [cursor=pointer]:
+                - button [ref=e393]:
+                  - img [ref=e395]
+            - row "1597d026-0f51-492a-8cb4-99c6a882f2a2 test_chan_1774681833810 blackhole Да" [ref=e399]:
+              - cell "1597d026-0f51-492a-8cb4-99c6a882f2a2" [ref=e400] [cursor=pointer]
+              - cell "test_chan_1774681833810" [ref=e401] [cursor=pointer]
+              - cell "blackhole" [ref=e402] [cursor=pointer]
+              - cell "Да" [ref=e403] [cursor=pointer]:
+                - generic [ref=e405]: Да
+              - cell [ref=e406] [cursor=pointer]:
+                - button [ref=e407]:
+                  - img [ref=e409]
+            - row "402a7e65-ebdc-43b7-b0f9-db7f61d1be79 test_chan_1774681858051 blackhole Да" [ref=e413]:
+              - cell "402a7e65-ebdc-43b7-b0f9-db7f61d1be79" [ref=e414] [cursor=pointer]
+              - cell "test_chan_1774681858051" [ref=e415] [cursor=pointer]
+              - cell "blackhole" [ref=e416] [cursor=pointer]
+              - cell "Да" [ref=e417] [cursor=pointer]:
+                - generic [ref=e419]: Да
+              - cell [ref=e420] [cursor=pointer]:
+                - button [ref=e421]:
+                  - img [ref=e423]
+            - row "0457420e-0333-4723-ace3-206b5e91af8f test_chan_1774681888864 blackhole Да" [ref=e427]:
+              - cell "0457420e-0333-4723-ace3-206b5e91af8f" [ref=e428] [cursor=pointer]
+              - cell "test_chan_1774681888864" [ref=e429] [cursor=pointer]
+              - cell "blackhole" [ref=e430] [cursor=pointer]
+              - cell "Да" [ref=e431] [cursor=pointer]:
+                - generic [ref=e433]: Да
+              - cell [ref=e434] [cursor=pointer]:
+                - button [ref=e435]:
+                  - img [ref=e437]
+            - row "e2213cbe-921f-4469-8384-ed5c4674c65e biz_chan_1774681895775 blackhole Да" [ref=e441]:
+              - cell "e2213cbe-921f-4469-8384-ed5c4674c65e" [ref=e442] [cursor=pointer]
+              - cell "biz_chan_1774681895775" [ref=e443] [cursor=pointer]
+              - cell "blackhole" [ref=e444] [cursor=pointer]
+              - cell "Да" [ref=e445] [cursor=pointer]:
+                - generic [ref=e447]: Да
+              - cell [ref=e448] [cursor=pointer]:
+                - button [ref=e449]:
+                  - img [ref=e451]
+            - row "1f5d7090-c99c-448d-ace3-0f3fc6684b1a biz_chan_1774681902326 blackhole Да" [ref=e455]:
+              - cell "1f5d7090-c99c-448d-ace3-0f3fc6684b1a" [ref=e456] [cursor=pointer]
+              - cell "biz_chan_1774681902326" [ref=e457] [cursor=pointer]
+              - cell "blackhole" [ref=e458] [cursor=pointer]
+              - cell "Да" [ref=e459] [cursor=pointer]:
+                - generic [ref=e461]: Да
+              - cell [ref=e462] [cursor=pointer]:
+                - button [ref=e463]:
+                  - img [ref=e465]
+            - row "e1f0de71-91a6-4d02-94ea-3ebac654fa98 biz_chan_1774681963326 blackhole Да" [ref=e469]:
+              - cell "e1f0de71-91a6-4d02-94ea-3ebac654fa98" [ref=e470] [cursor=pointer]
+              - cell "biz_chan_1774681963326" [ref=e471] [cursor=pointer]
+              - cell "blackhole" [ref=e472] [cursor=pointer]
+              - cell "Да" [ref=e473] [cursor=pointer]:
+                - generic [ref=e475]: Да
+              - cell [ref=e476] [cursor=pointer]:
+                - button [ref=e477]:
+                  - img [ref=e479]
+            - row "63a552be-310e-40fd-8ba9-87fdbe1583a2 biz_chan_1774681969926 blackhole Да" [ref=e483]:
+              - cell "63a552be-310e-40fd-8ba9-87fdbe1583a2" [ref=e484] [cursor=pointer]
+              - cell "biz_chan_1774681969926" [ref=e485] [cursor=pointer]
+              - cell "blackhole" [ref=e486] [cursor=pointer]
+              - cell "Да" [ref=e487] [cursor=pointer]:
+                - generic [ref=e489]: Да
+              - cell [ref=e490] [cursor=pointer]:
+                - button [ref=e491]:
+                  - img [ref=e493]
+            - row "5416dcd4-052a-4f1f-9e6a-f121371ce09a biz_chan_1774682011251 blackhole Да" [ref=e497]:
+              - cell "5416dcd4-052a-4f1f-9e6a-f121371ce09a" [ref=e498] [cursor=pointer]
+              - cell "biz_chan_1774682011251" [ref=e499] [cursor=pointer]
+              - cell "blackhole" [ref=e500] [cursor=pointer]
+              - cell "Да" [ref=e501] [cursor=pointer]:
+                - generic [ref=e503]: Да
+              - cell [ref=e504] [cursor=pointer]:
+                - button [ref=e505]:
+                  - img [ref=e507]
+            - row "85741c5f-0b83-43aa-9a10-6b52c7132b24 biz_chan_1774682024901 blackhole Да" [ref=e511]:
+              - cell "85741c5f-0b83-43aa-9a10-6b52c7132b24" [ref=e512] [cursor=pointer]
+              - cell "biz_chan_1774682024901" [ref=e513] [cursor=pointer]
+              - cell "blackhole" [ref=e514] [cursor=pointer]
+              - cell "Да" [ref=e515] [cursor=pointer]:
+                - generic [ref=e517]: Да
+              - cell [ref=e518] [cursor=pointer]:
+                - button [ref=e519]:
+                  - img [ref=e521]
+            - row "4e308f23-9076-4d3d-ae6b-a59a2e843145 test_chan_1774682032247 blackhole Да" [ref=e525]:
+              - cell "4e308f23-9076-4d3d-ae6b-a59a2e843145" [ref=e526] [cursor=pointer]
+              - cell "test_chan_1774682032247" [ref=e527] [cursor=pointer]
+              - cell "blackhole" [ref=e528] [cursor=pointer]
+              - cell "Да" [ref=e529] [cursor=pointer]:
+                - generic [ref=e531]: Да
+              - cell [ref=e532] [cursor=pointer]:
+                - button [ref=e533]:
+                  - img [ref=e535]
+            - row "353767b6-2be3-44bd-b725-c64fbad0c523 biz_chan_1774682034569 blackhole Да" [ref=e539]:
+              - cell "353767b6-2be3-44bd-b725-c64fbad0c523" [ref=e540] [cursor=pointer]
+              - cell "biz_chan_1774682034569" [ref=e541] [cursor=pointer]
+              - cell "blackhole" [ref=e542] [cursor=pointer]
+              - cell "Да" [ref=e543] [cursor=pointer]:
+                - generic [ref=e545]: Да
+              - cell [ref=e546] [cursor=pointer]:
+                - button [ref=e547]:
+                  - img [ref=e549]
+            - row "27d8d3d7-cb77-473b-8e01-56ebc4ddeb4e cdptest_1774682743111_chan blackhole Да" [ref=e553]:
+              - cell "27d8d3d7-cb77-473b-8e01-56ebc4ddeb4e" [ref=e554] [cursor=pointer]
+              - cell "cdptest_1774682743111_chan" [ref=e555] [cursor=pointer]
+              - cell "blackhole" [ref=e556] [cursor=pointer]
+              - cell "Да" [ref=e557] [cursor=pointer]:
+                - generic [ref=e559]: Да
+              - cell [ref=e560] [cursor=pointer]:
+                - button [ref=e561]:
+                  - img [ref=e563]
+            - row "ac42f1cf-b673-410d-ada7-378d189df040 cdptest_1774682820458_chan blackhole Да" [ref=e567]:
+              - cell "ac42f1cf-b673-410d-ada7-378d189df040" [ref=e568] [cursor=pointer]
+              - cell "cdptest_1774682820458_chan" [ref=e569] [cursor=pointer]
+              - cell "blackhole" [ref=e570] [cursor=pointer]
+              - cell "Да" [ref=e571] [cursor=pointer]:
+                - generic [ref=e573]: Да
+              - cell [ref=e574] [cursor=pointer]:
+                - button [ref=e575]:
+                  - img [ref=e577]
+            - row "4070c333-e200-4a2b-86e6-41b0f34b1203 cdptest_1774682910577_chan blackhole Да" [ref=e581]:
+              - cell "4070c333-e200-4a2b-86e6-41b0f34b1203" [ref=e582] [cursor=pointer]
+              - cell "cdptest_1774682910577_chan" [ref=e583] [cursor=pointer]
+              - cell "blackhole" [ref=e584] [cursor=pointer]
+              - cell "Да" [ref=e585] [cursor=pointer]:
+                - generic [ref=e587]: Да
+              - cell [ref=e588] [cursor=pointer]:
+                - button [ref=e589]:
+                  - img [ref=e591]
+            - row "4386fc84-c458-47b2-96a5-01764a3c4fc0 test_chan_1774682918885 blackhole Да" [ref=e595]:
+              - cell "4386fc84-c458-47b2-96a5-01764a3c4fc0" [ref=e596] [cursor=pointer]
+              - cell "test_chan_1774682918885" [ref=e597] [cursor=pointer]
+              - cell "blackhole" [ref=e598] [cursor=pointer]
+              - cell "Да" [ref=e599] [cursor=pointer]:
+                - generic [ref=e601]: Да
+              - cell [ref=e602] [cursor=pointer]:
+                - button [ref=e603]:
+                  - img [ref=e605]
+            - row "a85dcf61-0a2b-486a-99f0-9f229d89b6cd test_chan_1774682925651 blackhole Да" [ref=e609]:
+              - cell "a85dcf61-0a2b-486a-99f0-9f229d89b6cd" [ref=e610] [cursor=pointer]
+              - cell "test_chan_1774682925651" [ref=e611] [cursor=pointer]
+              - cell "blackhole" [ref=e612] [cursor=pointer]
+              - cell "Да" [ref=e613] [cursor=pointer]:
+                - generic [ref=e615]: Да
+              - cell [ref=e616] [cursor=pointer]:
+                - button [ref=e617]:
+                  - img [ref=e619]
+            - row "b1bbdb4f-873b-4bab-b4ed-82e9c19b4ca0 test_chan_1774682951790 blackhole Да" [ref=e623]:
+              - cell "b1bbdb4f-873b-4bab-b4ed-82e9c19b4ca0" [ref=e624] [cursor=pointer]
+              - cell "test_chan_1774682951790" [ref=e625] [cursor=pointer]
+              - cell "blackhole" [ref=e626] [cursor=pointer]
+              - cell "Да" [ref=e627] [cursor=pointer]:
+                - generic [ref=e629]: Да
+              - cell [ref=e630] [cursor=pointer]:
+                - button [ref=e631]:
+                  - img [ref=e633]
+            - row "51e6363a-4636-4dd8-bc65-f63aabf1923e cdptest_1774682954169_chan blackhole Да" [ref=e637]:
+              - cell "51e6363a-4636-4dd8-bc65-f63aabf1923e" [ref=e638] [cursor=pointer]
+              - cell "cdptest_1774682954169_chan" [ref=e639] [cursor=pointer]
+              - cell "blackhole" [ref=e640] [cursor=pointer]
+              - cell "Да" [ref=e641] [cursor=pointer]:
+                - generic [ref=e643]: Да
+              - cell [ref=e644] [cursor=pointer]:
+                - button [ref=e645]:
+                  - img [ref=e647]
+            - row "993b66dd-4fff-4a8e-853c-444e16330443 cdptest_1774686294496_chan blackhole Да" [ref=e651]:
+              - cell "993b66dd-4fff-4a8e-853c-444e16330443" [ref=e652] [cursor=pointer]
+              - cell "cdptest_1774686294496_chan" [ref=e653] [cursor=pointer]
+              - cell "blackhole" [ref=e654] [cursor=pointer]
+              - cell "Да" [ref=e655] [cursor=pointer]:
+                - generic [ref=e657]: Да
+              - cell [ref=e658] [cursor=pointer]:
+                - button [ref=e659]:
+                  - img [ref=e661]
+            - row "2d7cb810-397d-47fc-91f9-87f722a31f63 test_chan_1774686302036 blackhole Да" [ref=e665]:
+              - cell "2d7cb810-397d-47fc-91f9-87f722a31f63" [ref=e666] [cursor=pointer]
+              - cell "test_chan_1774686302036" [ref=e667] [cursor=pointer]
+              - cell "blackhole" [ref=e668] [cursor=pointer]
+              - cell "Да" [ref=e669] [cursor=pointer]:
+                - generic [ref=e671]: Да
+              - cell [ref=e672] [cursor=pointer]:
+                - button [ref=e673]:
+                  - img [ref=e675]
+            - row "ed9325d1-62ec-419b-9a34-a92ca105b966 test_chan_1774687170485 blackhole Да" [ref=e679]:
+              - cell "ed9325d1-62ec-419b-9a34-a92ca105b966" [ref=e680] [cursor=pointer]
+              - cell "test_chan_1774687170485" [ref=e681] [cursor=pointer]
+              - cell "blackhole" [ref=e682] [cursor=pointer]
+              - cell "Да" [ref=e683] [cursor=pointer]:
+                - generic [ref=e685]: Да
+              - cell [ref=e686] [cursor=pointer]:
+                - button [ref=e687]:
+                  - img [ref=e689]
+            - row "a13c7b24-e4b5-4fd4-b000-830de9ea4e58 test_chan_1774689413365 blackhole Да" [ref=e693]:
+              - cell "a13c7b24-e4b5-4fd4-b000-830de9ea4e58" [ref=e694] [cursor=pointer]
+              - cell "test_chan_1774689413365" [ref=e695] [cursor=pointer]
+              - cell "blackhole" [ref=e696] [cursor=pointer]
+              - cell "Да" [ref=e697] [cursor=pointer]:
+                - generic [ref=e699]: Да
+              - cell [ref=e700] [cursor=pointer]:
+                - button [ref=e701]:
+                  - img [ref=e703]
+            - row "8911ee6a-1918-42dd-9c2e-c620ce319951 test_chan_1774689492571 blackhole Да" [ref=e707]:
+              - cell "8911ee6a-1918-42dd-9c2e-c620ce319951" [ref=e708] [cursor=pointer]
+              - cell "test_chan_1774689492571" [ref=e709] [cursor=pointer]
+              - cell "blackhole" [ref=e710] [cursor=pointer]
+              - cell "Да" [ref=e711] [cursor=pointer]:
+                - generic [ref=e713]: Да
+              - cell [ref=e714] [cursor=pointer]:
+                - button [ref=e715]:
+                  - img [ref=e717]
+            - row "ef139950-8da6-4610-ad35-c58af7cf0dd7 test_chan_1774690972608 blackhole Да" [ref=e721]:
+              - cell "ef139950-8da6-4610-ad35-c58af7cf0dd7" [ref=e722] [cursor=pointer]
+              - cell "test_chan_1774690972608" [ref=e723] [cursor=pointer]
+              - cell "blackhole" [ref=e724] [cursor=pointer]
+              - cell "Да" [ref=e725] [cursor=pointer]:
+                - generic [ref=e727]: Да
+              - cell [ref=e728] [cursor=pointer]:
+                - button [ref=e729]:
+                  - img [ref=e731]
+            - row "595d6f2a-a91c-4cc0-93d2-90258fecf5cc test_chan_1774691597930 blackhole Да" [ref=e735]:
+              - cell "595d6f2a-a91c-4cc0-93d2-90258fecf5cc" [ref=e736] [cursor=pointer]
+              - cell "test_chan_1774691597930" [ref=e737] [cursor=pointer]
+              - cell "blackhole" [ref=e738] [cursor=pointer]
+              - cell "Да" [ref=e739] [cursor=pointer]:
+                - generic [ref=e741]: Да
+              - cell [ref=e742] [cursor=pointer]:
+                - button [ref=e743]:
+                  - img [ref=e745]
+            - row "fe4ba543-feaf-450f-8c41-c2f4f711c8ce test_chan_1774691605943 blackhole Да" [ref=e749]:
+              - cell "fe4ba543-feaf-450f-8c41-c2f4f711c8ce" [ref=e750] [cursor=pointer]
+              - cell "test_chan_1774691605943" [ref=e751] [cursor=pointer]
+              - cell "blackhole" [ref=e752] [cursor=pointer]
+              - cell "Да" [ref=e753] [cursor=pointer]:
+                - generic [ref=e755]: Да
+              - cell [ref=e756] [cursor=pointer]:
+                - button [ref=e757]:
+                  - img [ref=e759]
+            - row "9717a0d5-2168-4137-af8e-d29dc04fd991 test_chan_1774692097938 blackhole Да" [ref=e763]:
+              - cell "9717a0d5-2168-4137-af8e-d29dc04fd991" [ref=e764] [cursor=pointer]
+              - cell "test_chan_1774692097938" [ref=e765] [cursor=pointer]
+              - cell "blackhole" [ref=e766] [cursor=pointer]
+              - cell "Да" [ref=e767] [cursor=pointer]:
+                - generic [ref=e769]: Да
+              - cell [ref=e770] [cursor=pointer]:
+                - button [ref=e771]:
+                  - img [ref=e773]
+            - row "06f62bf6-78b8-4c8c-98a6-24d30c2f01ff test_chan_1774692180320 blackhole Да" [ref=e777]:
+              - cell "06f62bf6-78b8-4c8c-98a6-24d30c2f01ff" [ref=e778] [cursor=pointer]
+              - cell "test_chan_1774692180320" [ref=e779] [cursor=pointer]
+              - cell "blackhole" [ref=e780] [cursor=pointer]
+              - cell "Да" [ref=e781] [cursor=pointer]:
+                - generic [ref=e783]: Да
+              - cell [ref=e784] [cursor=pointer]:
+                - button [ref=e785]:
+                  - img [ref=e787]
+            - row "987f0238-4158-44cb-9998-8eeb79b9174b test_chan_1774692188510 blackhole Да" [ref=e791]:
+              - cell "987f0238-4158-44cb-9998-8eeb79b9174b" [ref=e792] [cursor=pointer]
+              - cell "test_chan_1774692188510" [ref=e793] [cursor=pointer]
+              - cell "blackhole" [ref=e794] [cursor=pointer]
+              - cell "Да" [ref=e795] [cursor=pointer]:
+                - generic [ref=e797]: Да
+              - cell [ref=e798] [cursor=pointer]:
+                - button [ref=e799]:
+                  - img [ref=e801]
+            - row "e36ed0be-7b41-4fbb-8986-ace995526bb9 test_chan_1774692486977 blackhole Да" [ref=e805]:
+              - cell "e36ed0be-7b41-4fbb-8986-ace995526bb9" [ref=e806] [cursor=pointer]
+              - cell "test_chan_1774692486977" [ref=e807] [cursor=pointer]
+              - cell "blackhole" [ref=e808] [cursor=pointer]
+              - cell "Да" [ref=e809] [cursor=pointer]:
+                - generic [ref=e811]: Да
+              - cell [ref=e812] [cursor=pointer]:
+                - button [ref=e813]:
+                  - img [ref=e815]
+            - row "2eef4d48-a42f-45af-b680-109951e0fea4 test_chan_1774693804289 blackhole Да" [ref=e819]:
+              - cell "2eef4d48-a42f-45af-b680-109951e0fea4" [ref=e820] [cursor=pointer]
+              - cell "test_chan_1774693804289" [ref=e821] [cursor=pointer]
+              - cell "blackhole" [ref=e822] [cursor=pointer]
+              - cell "Да" [ref=e823] [cursor=pointer]:
+                - generic [ref=e825]: Да
+              - cell [ref=e826] [cursor=pointer]:
+                - button [ref=e827]:
+                  - img [ref=e829]
+            - row "4f106f0e-ecbb-4873-bf08-85fac8ddd7d6 test_chan_1774693812660 blackhole Да" [ref=e833]:
+              - cell "4f106f0e-ecbb-4873-bf08-85fac8ddd7d6" [ref=e834] [cursor=pointer]
+              - cell "test_chan_1774693812660" [ref=e835] [cursor=pointer]
+              - cell "blackhole" [ref=e836] [cursor=pointer]
+              - cell "Да" [ref=e837] [cursor=pointer]:
+                - generic [ref=e839]: Да
+              - cell [ref=e840] [cursor=pointer]:
+                - button [ref=e841]:
+                  - img [ref=e843]
+            - row "9bbc8799-0c81-40e1-b71e-990374084577 scenario_chan_1774695186295 blackhole Нет" [ref=e847]:
+              - cell "9bbc8799-0c81-40e1-b71e-990374084577" [ref=e848] [cursor=pointer]
+              - cell "scenario_chan_1774695186295" [ref=e849] [cursor=pointer]
+              - cell "blackhole" [ref=e850] [cursor=pointer]
+              - cell "Нет" [ref=e851] [cursor=pointer]:
+                - generic [ref=e853]: Нет
+              - cell [ref=e854] [cursor=pointer]:
+                - button [ref=e855]:
+                  - img [ref=e857]
+            - row "c9dac318-f5b1-42ee-8619-4b13bc84dbd4 scenario_chan_1774695195706 blackhole Нет" [ref=e861]:
+              - cell "c9dac318-f5b1-42ee-8619-4b13bc84dbd4" [ref=e862] [cursor=pointer]
+              - cell "scenario_chan_1774695195706" [ref=e863] [cursor=pointer]
+              - cell "blackhole" [ref=e864] [cursor=pointer]
+              - cell "Нет" [ref=e865] [cursor=pointer]:
+                - generic [ref=e867]: Нет
+              - cell [ref=e868] [cursor=pointer]:
+                - button [ref=e869]:
+                  - img [ref=e871]
+            - row "3f0df05e-669d-4b8a-8258-af3a48230a6d test_chan_1774695215767 blackhole Да" [ref=e875]:
+              - cell "3f0df05e-669d-4b8a-8258-af3a48230a6d" [ref=e876] [cursor=pointer]
+              - cell "test_chan_1774695215767" [ref=e877] [cursor=pointer]
+              - cell "blackhole" [ref=e878] [cursor=pointer]
+              - cell "Да" [ref=e879] [cursor=pointer]:
+                - generic [ref=e881]: Да
+              - cell [ref=e882] [cursor=pointer]:
+                - button [ref=e883]:
+                  - img [ref=e885]
+            - row "bd8559dd-a650-4090-a77e-47ac68d5451d scenario_chan_1774695215826 blackhole Да" [ref=e889]:
+              - cell "bd8559dd-a650-4090-a77e-47ac68d5451d" [ref=e890] [cursor=pointer]
+              - cell "scenario_chan_1774695215826" [ref=e891] [cursor=pointer]
+              - cell "blackhole" [ref=e892] [cursor=pointer]
+              - cell "Да" [ref=e893] [cursor=pointer]:
+                - generic [ref=e895]: Да
+              - cell [ref=e896] [cursor=pointer]:
+                - button [ref=e897]:
+                  - img [ref=e899]
+            - row "54ba48ac-7c10-4cdb-bd01-89c7867a8598 test_chan_1774696157958 blackhole Да" [ref=e903]:
+              - cell "54ba48ac-7c10-4cdb-bd01-89c7867a8598" [ref=e904] [cursor=pointer]
+              - cell "test_chan_1774696157958" [ref=e905] [cursor=pointer]
+              - cell "blackhole" [ref=e906] [cursor=pointer]
+              - cell "Да" [ref=e907] [cursor=pointer]:
+                - generic [ref=e909]: Да
+              - cell [ref=e910] [cursor=pointer]:
+                - button [ref=e911]:
+                  - img [ref=e913]
+            - row "01942f94-d8c4-4ceb-b184-b8c90fd0515e scenario_chan_1774696157968 blackhole Да" [ref=e917]:
+              - cell "01942f94-d8c4-4ceb-b184-b8c90fd0515e" [ref=e918] [cursor=pointer]
+              - cell "scenario_chan_1774696157968" [ref=e919] [cursor=pointer]
+              - cell "blackhole" [ref=e920] [cursor=pointer]
+              - cell "Да" [ref=e921] [cursor=pointer]:
+                - generic [ref=e923]: Да
+              - cell [ref=e924] [cursor=pointer]:
+                - button [ref=e925]:
+                  - img [ref=e927]
+            - row "79869b67-3135-4783-86cd-de883c2698d0 test_chan_1774702006596 blackhole Да" [ref=e931]:
+              - cell "79869b67-3135-4783-86cd-de883c2698d0" [ref=e932] [cursor=pointer]
+              - cell "test_chan_1774702006596" [ref=e933] [cursor=pointer]
+              - cell "blackhole" [ref=e934] [cursor=pointer]
+              - cell "Да" [ref=e935] [cursor=pointer]:
+                - generic [ref=e937]: Да
+              - cell [ref=e938] [cursor=pointer]:
+                - button [ref=e939]:
+                  - img [ref=e941]
+            - row "b08d0e07-8fc9-4de7-8b4b-ba5294d0a8e9 scenario_chan_1774702006644 blackhole Да" [ref=e945]:
+              - cell "b08d0e07-8fc9-4de7-8b4b-ba5294d0a8e9" [ref=e946] [cursor=pointer]
+              - cell "scenario_chan_1774702006644" [ref=e947] [cursor=pointer]
+              - cell "blackhole" [ref=e948] [cursor=pointer]
+              - cell "Да" [ref=e949] [cursor=pointer]:
+                - generic [ref=e951]: Да
+              - cell [ref=e952] [cursor=pointer]:
+                - button [ref=e953]:
+                  - img [ref=e955]
+            - row "a9acf70a-7565-4563-86cc-79821f494ed5 test_chan_1774780374601 blackhole Да" [ref=e959]:
+              - cell "a9acf70a-7565-4563-86cc-79821f494ed5" [ref=e960] [cursor=pointer]
+              - cell "test_chan_1774780374601" [ref=e961] [cursor=pointer]
+              - cell "blackhole" [ref=e962] [cursor=pointer]
+              - cell "Да" [ref=e963] [cursor=pointer]:
+                - generic [ref=e965]: Да
+              - cell [ref=e966] [cursor=pointer]:
+                - button [ref=e967]:
+                  - img [ref=e969]
+            - row "9a4b847f-1a31-4abb-a562-e8aa7699be19 scenario_chan_1774780374683 blackhole Да" [ref=e973]:
+              - cell "9a4b847f-1a31-4abb-a562-e8aa7699be19" [ref=e974] [cursor=pointer]
+              - cell "scenario_chan_1774780374683" [ref=e975] [cursor=pointer]
+              - cell "blackhole" [ref=e976] [cursor=pointer]
+              - cell "Да" [ref=e977] [cursor=pointer]:
+                - generic [ref=e979]: Да
+              - cell [ref=e980] [cursor=pointer]:
+                - button [ref=e981]:
+                  - img [ref=e983]
+            - row "97f18c88-f158-4d52-8959-4687790cf0bf test_chan_1774780383203 blackhole Да" [ref=e987]:
+              - cell "97f18c88-f158-4d52-8959-4687790cf0bf" [ref=e988] [cursor=pointer]
+              - cell "test_chan_1774780383203" [ref=e989] [cursor=pointer]
+              - cell "blackhole" [ref=e990] [cursor=pointer]
+              - cell "Да" [ref=e991] [cursor=pointer]:
+                - generic [ref=e993]: Да
+              - cell [ref=e994] [cursor=pointer]:
+                - button [ref=e995]:
+                  - img [ref=e997]
+            - row "65ea4418-2bec-4240-a196-854b5fbfc36b scenario_chan_1774780383297 blackhole Да" [ref=e1001]:
+              - cell "65ea4418-2bec-4240-a196-854b5fbfc36b" [ref=e1002] [cursor=pointer]
+              - cell "scenario_chan_1774780383297" [ref=e1003] [cursor=pointer]
+              - cell "blackhole" [ref=e1004] [cursor=pointer]
+              - cell "Да" [ref=e1005] [cursor=pointer]:
+                - generic [ref=e1007]: Да
+              - cell [ref=e1008] [cursor=pointer]:
+                - button [ref=e1009]:
+                  - img [ref=e1011]
+            - row "cdd19419-56ca-47ab-8747-bd467ec569d6 test_chan_1774780490764 blackhole Да" [ref=e1015]:
+              - cell "cdd19419-56ca-47ab-8747-bd467ec569d6" [ref=e1016] [cursor=pointer]
+              - cell "test_chan_1774780490764" [ref=e1017] [cursor=pointer]
+              - cell "blackhole" [ref=e1018] [cursor=pointer]
+              - cell "Да" [ref=e1019] [cursor=pointer]:
+                - generic [ref=e1021]: Да
+              - cell [ref=e1022] [cursor=pointer]:
+                - button [ref=e1023]:
+                  - img [ref=e1025]
+            - row "5bd8862f-e9b8-495e-b4a8-294d228c0f12 scenario_chan_1774780490853 blackhole Да" [ref=e1029]:
+              - cell "5bd8862f-e9b8-495e-b4a8-294d228c0f12" [ref=e1030] [cursor=pointer]
+              - cell "scenario_chan_1774780490853" [ref=e1031] [cursor=pointer]
+              - cell "blackhole" [ref=e1032] [cursor=pointer]
+              - cell "Да" [ref=e1033] [cursor=pointer]:
+                - generic [ref=e1035]: Да
+              - cell [ref=e1036] [cursor=pointer]:
+                - button [ref=e1037]:
+                  - img [ref=e1039]
+            - row "d2a9b0c5-3295-4ca2-8db5-168619faee01 scenario_chan_1774780498391 blackhole Да" [ref=e1043]:
+              - cell "d2a9b0c5-3295-4ca2-8db5-168619faee01" [ref=e1044] [cursor=pointer]
+              - cell "scenario_chan_1774780498391" [ref=e1045] [cursor=pointer]
+              - cell "blackhole" [ref=e1046] [cursor=pointer]
+              - cell "Да" [ref=e1047] [cursor=pointer]:
+                - generic [ref=e1049]: Да
+              - cell [ref=e1050] [cursor=pointer]:
+                - button [ref=e1051]:
+                  - img [ref=e1053]
+            - row "4801c266-4539-4f1c-b9c6-be348d79eb17 test_chan_1774780498484 blackhole Да" [ref=e1057]:
+              - cell "4801c266-4539-4f1c-b9c6-be348d79eb17" [ref=e1058] [cursor=pointer]
+              - cell "test_chan_1774780498484" [ref=e1059] [cursor=pointer]
+              - cell "blackhole" [ref=e1060] [cursor=pointer]
+              - cell "Да" [ref=e1061] [cursor=pointer]:
+                - generic [ref=e1063]: Да
+              - cell [ref=e1064] [cursor=pointer]:
+                - button [ref=e1065]:
+                  - img [ref=e1067]
+            - row "e4ec89de-d6ba-43fc-b10b-5b48b8442976 test_chan_1774780530060 blackhole Да" [ref=e1071]:
+              - cell "e4ec89de-d6ba-43fc-b10b-5b48b8442976" [ref=e1072] [cursor=pointer]
+              - cell "test_chan_1774780530060" [ref=e1073] [cursor=pointer]
+              - cell "blackhole" [ref=e1074] [cursor=pointer]
+              - cell "Да" [ref=e1075] [cursor=pointer]:
+                - generic [ref=e1077]: Да
+              - cell [ref=e1078] [cursor=pointer]:
+                - button [ref=e1079]:
+                  - img [ref=e1081]
+            - row "4305f1e5-7a41-4ab6-ab3a-6d8ba361ccf8 scenario_chan_1774780530066 blackhole Да" [ref=e1085]:
+              - cell "4305f1e5-7a41-4ab6-ab3a-6d8ba361ccf8" [ref=e1086] [cursor=pointer]
+              - cell "scenario_chan_1774780530066" [ref=e1087] [cursor=pointer]
+              - cell "blackhole" [ref=e1088] [cursor=pointer]
+              - cell "Да" [ref=e1089] [cursor=pointer]:
+                - generic [ref=e1091]: Да
+              - cell [ref=e1092] [cursor=pointer]:
+                - button [ref=e1093]:
+                  - img [ref=e1095]
+            - row "a7f47aac-42d9-46ef-8c9a-45ffe3f1b304 scenario_chan_1774780609038 blackhole Да" [ref=e1099]:
+              - cell "a7f47aac-42d9-46ef-8c9a-45ffe3f1b304" [ref=e1100] [cursor=pointer]
+              - cell "scenario_chan_1774780609038" [ref=e1101] [cursor=pointer]
+              - cell "blackhole" [ref=e1102] [cursor=pointer]
+              - cell "Да" [ref=e1103] [cursor=pointer]:
+                - generic [ref=e1105]: Да
+              - cell [ref=e1106] [cursor=pointer]:
+                - button [ref=e1107]:
+                  - img [ref=e1109]
+            - row "8665045b-b4c7-4841-abf7-321fbb36fd79 test_chan_1774780609058 blackhole Да" [ref=e1113]:
+              - cell "8665045b-b4c7-4841-abf7-321fbb36fd79" [ref=e1114] [cursor=pointer]
+              - cell "test_chan_1774780609058" [ref=e1115] [cursor=pointer]
+              - cell "blackhole" [ref=e1116] [cursor=pointer]
+              - cell "Да" [ref=e1117] [cursor=pointer]:
+                - generic [ref=e1119]: Да
+              - cell [ref=e1120] [cursor=pointer]:
+                - button [ref=e1121]:
+                  - img [ref=e1123]
+            - row "3988a7f9-c429-4d6a-8679-b253e95e6b05 test_chan_1774849397507 blackhole Да" [ref=e1127]:
+              - cell "3988a7f9-c429-4d6a-8679-b253e95e6b05" [ref=e1128] [cursor=pointer]
+              - cell "test_chan_1774849397507" [ref=e1129] [cursor=pointer]
+              - cell "blackhole" [ref=e1130] [cursor=pointer]
+              - cell "Да" [ref=e1131] [cursor=pointer]:
+                - generic [ref=e1133]: Да
+              - cell [ref=e1134] [cursor=pointer]:
+                - button [ref=e1135]:
+                  - img [ref=e1137]
+            - row "a3e0ea51-5a7f-4a41-b5de-861eb07756c2 scenario_chan_1774849397616 blackhole Да" [ref=e1141]:
+              - cell "a3e0ea51-5a7f-4a41-b5de-861eb07756c2" [ref=e1142] [cursor=pointer]
+              - cell "scenario_chan_1774849397616" [ref=e1143] [cursor=pointer]
+              - cell "blackhole" [ref=e1144] [cursor=pointer]
+              - cell "Да" [ref=e1145] [cursor=pointer]:
+                - generic [ref=e1147]: Да
+              - cell [ref=e1148] [cursor=pointer]:
+                - button [ref=e1149]:
+                  - img [ref=e1151]
+            - row "afd9b17d-ca5e-4da6-a103-b364e019d439 scenario_chan_1774849410867 blackhole Да" [ref=e1155]:
+              - cell "afd9b17d-ca5e-4da6-a103-b364e019d439" [ref=e1156] [cursor=pointer]
+              - cell "scenario_chan_1774849410867" [ref=e1157] [cursor=pointer]
+              - cell "blackhole" [ref=e1158] [cursor=pointer]
+              - cell "Да" [ref=e1159] [cursor=pointer]:
+                - generic [ref=e1161]: Да
+              - cell [ref=e1162] [cursor=pointer]:
+                - button [ref=e1163]:
+                  - img [ref=e1165]
+            - row "4106e03e-5f70-43c4-8ba0-915ece591306 test_chan_1774849410846 blackhole Да" [ref=e1169]:
+              - cell "4106e03e-5f70-43c4-8ba0-915ece591306" [ref=e1170] [cursor=pointer]
+              - cell "test_chan_1774849410846" [ref=e1171] [cursor=pointer]
+              - cell "blackhole" [ref=e1172] [cursor=pointer]
+              - cell "Да" [ref=e1173] [cursor=pointer]:
+                - generic [ref=e1175]: Да
+              - cell [ref=e1176] [cursor=pointer]:
+                - button [ref=e1177]:
+                  - img [ref=e1179]
+            - row "a896b30c-bdad-4590-93e2-24e411ef8c35 test_chan_1774851114018 blackhole Да" [ref=e1183]:
+              - cell "a896b30c-bdad-4590-93e2-24e411ef8c35" [ref=e1184] [cursor=pointer]
+              - cell "test_chan_1774851114018" [ref=e1185] [cursor=pointer]
+              - cell "blackhole" [ref=e1186] [cursor=pointer]
+              - cell "Да" [ref=e1187] [cursor=pointer]:
+                - generic [ref=e1189]: Да
+              - cell [ref=e1190] [cursor=pointer]:
+                - button [ref=e1191]:
+                  - img [ref=e1193]
+            - row "518e5471-70a7-4fbe-8687-72c9c6e23a04 scenario_chan_1774851114079 blackhole Да" [ref=e1197]:
+              - cell "518e5471-70a7-4fbe-8687-72c9c6e23a04" [ref=e1198] [cursor=pointer]
+              - cell "scenario_chan_1774851114079" [ref=e1199] [cursor=pointer]
+              - cell "blackhole" [ref=e1200] [cursor=pointer]
+              - cell "Да" [ref=e1201] [cursor=pointer]:
+                - generic [ref=e1203]: Да
+              - cell [ref=e1204] [cursor=pointer]:
+                - button [ref=e1205]:
+                  - img [ref=e1207]
+            - row "7cbaa6c9-1a98-42f8-8ec3-01d1fbfd997c test_chan_1774989981423 blackhole Да" [ref=e1211]:
+              - cell "7cbaa6c9-1a98-42f8-8ec3-01d1fbfd997c" [ref=e1212] [cursor=pointer]
+              - cell "test_chan_1774989981423" [ref=e1213] [cursor=pointer]
+              - cell "blackhole" [ref=e1214] [cursor=pointer]
+              - cell "Да" [ref=e1215] [cursor=pointer]:
+                - generic [ref=e1217]: Да
+              - cell [ref=e1218] [cursor=pointer]:
+                - button [ref=e1219]:
+                  - img [ref=e1221]
+            - row "692f8881-c391-4ade-a74c-6f9334984113 scenario_chan_1774989981467 blackhole Да" [ref=e1225]:
+              - cell "692f8881-c391-4ade-a74c-6f9334984113" [ref=e1226] [cursor=pointer]
+              - cell "scenario_chan_1774989981467" [ref=e1227] [cursor=pointer]
+              - cell "blackhole" [ref=e1228] [cursor=pointer]
+              - cell "Да" [ref=e1229] [cursor=pointer]:
+                - generic [ref=e1231]: Да
+              - cell [ref=e1232] [cursor=pointer]:
+                - button [ref=e1233]:
+                  - img [ref=e1235]
+            - row "7050e3ff-fc6d-486f-9144-fc4062cc2daf bug009_commchan_delete blackhole Нет" [ref=e1239]:
+              - cell "7050e3ff-fc6d-486f-9144-fc4062cc2daf" [ref=e1240] [cursor=pointer]
+              - cell "bug009_commchan_delete" [ref=e1241] [cursor=pointer]
+              - cell "blackhole" [ref=e1242] [cursor=pointer]
+              - cell "Нет" [ref=e1243] [cursor=pointer]:
+                - generic [ref=e1245]: Нет
+              - cell [ref=e1246] [cursor=pointer]:
+                - button [ref=e1247]:
+                  - img [ref=e1249]
+            - row "67390695-b9c9-4eff-9d9c-8ab257b046f8 bug011_put_test_original blackhole Нет" [ref=e1253]:
+              - cell "67390695-b9c9-4eff-9d9c-8ab257b046f8" [ref=e1254] [cursor=pointer]
+              - cell "bug011_put_test_original" [ref=e1255] [cursor=pointer]
+              - cell "blackhole" [ref=e1256] [cursor=pointer]
+              - cell "Нет" [ref=e1257] [cursor=pointer]:
+                - generic [ref=e1259]: Нет
+              - cell [ref=e1260] [cursor=pointer]:
+                - button [ref=e1261]:
+                  - img [ref=e1263]
+            - row "30ae151c-2a64-4540-8f0c-237f97506b14 test_delete_chan_1775016556416 blackhole Нет" [ref=e1267]:
+              - cell "30ae151c-2a64-4540-8f0c-237f97506b14" [ref=e1268] [cursor=pointer]
+              - cell "test_delete_chan_1775016556416" [ref=e1269] [cursor=pointer]
+              - cell "blackhole" [ref=e1270] [cursor=pointer]
+              - cell "Нет" [ref=e1271] [cursor=pointer]:
+                - generic [ref=e1273]: Нет
+              - cell [ref=e1274] [cursor=pointer]:
+                - button [ref=e1275]:
+                  - img [ref=e1277]
+            - row "e3ab2ffb-4ea6-4c3b-ada6-463818f8bc51 test_delete_chan_1775016807803 blackhole Нет" [ref=e1281]:
+              - cell "e3ab2ffb-4ea6-4c3b-ada6-463818f8bc51" [ref=e1282] [cursor=pointer]
+              - cell "test_delete_chan_1775016807803" [ref=e1283] [cursor=pointer]
+              - cell "blackhole" [ref=e1284] [cursor=pointer]
+              - cell "Нет" [ref=e1285] [cursor=pointer]:
+                - generic [ref=e1287]: Нет
+              - cell [ref=e1288] [cursor=pointer]:
+                - button [ref=e1289]:
+                  - img [ref=e1291]
+            - row "a2dbdae4-8909-4e03-8496-6eab30856f40 test_delete_chan_1775016859117 blackhole Нет" [ref=e1295]:
+              - cell "a2dbdae4-8909-4e03-8496-6eab30856f40" [ref=e1296] [cursor=pointer]
+              - cell "test_delete_chan_1775016859117" [ref=e1297] [cursor=pointer]
+              - cell "blackhole" [ref=e1298] [cursor=pointer]
+              - cell "Нет" [ref=e1299] [cursor=pointer]:
+                - generic [ref=e1301]: Нет
+              - cell [ref=e1302] [cursor=pointer]:
+                - button [ref=e1303]:
+                  - img [ref=e1305]
+            - row "5791c37d-5844-4af6-8165-913140b0219e scenario_chan_1775016866957 blackhole Да" [ref=e1309]:
+              - cell "5791c37d-5844-4af6-8165-913140b0219e" [ref=e1310] [cursor=pointer]
+              - cell "scenario_chan_1775016866957" [ref=e1311] [cursor=pointer]
+              - cell "blackhole" [ref=e1312] [cursor=pointer]
+              - cell "Да" [ref=e1313] [cursor=pointer]:
+                - generic [ref=e1315]: Да
+              - cell [ref=e1316] [cursor=pointer]:
+                - button [ref=e1317]:
+                  - img [ref=e1319]
+            - row "23ca57d8-9f9a-4e29-b7f5-42cf41ccf458 test_delete_chan_1775016867713 blackhole Нет" [ref=e1323]:
+              - cell "23ca57d8-9f9a-4e29-b7f5-42cf41ccf458" [ref=e1324] [cursor=pointer]
+              - cell "test_delete_chan_1775016867713" [ref=e1325] [cursor=pointer]
+              - cell "blackhole" [ref=e1326] [cursor=pointer]
+              - cell "Нет" [ref=e1327] [cursor=pointer]:
+                - generic [ref=e1329]: Нет
+              - cell [ref=e1330] [cursor=pointer]:
+                - button [ref=e1331]:
+                  - img [ref=e1333]
+            - row "7522d3df-c858-444d-96ab-f246f07c56e6 test_chan_1775016867713 blackhole Да" [ref=e1337]:
+              - cell "7522d3df-c858-444d-96ab-f246f07c56e6" [ref=e1338] [cursor=pointer]
+              - cell "test_chan_1775016867713" [ref=e1339] [cursor=pointer]
+              - cell "blackhole" [ref=e1340] [cursor=pointer]
+              - cell "Да" [ref=e1341] [cursor=pointer]:
+                - generic [ref=e1343]: Да
+              - cell [ref=e1344] [cursor=pointer]:
+                - button [ref=e1345]:
+                  - img [ref=e1347]
+            - row "af72ed89-ebb0-46c3-a6a4-362718c62c79 scenario_chan_1775016894740 blackhole Да" [ref=e1351]:
+              - cell "af72ed89-ebb0-46c3-a6a4-362718c62c79" [ref=e1352] [cursor=pointer]
+              - cell "scenario_chan_1775016894740" [ref=e1353] [cursor=pointer]
+              - cell "blackhole" [ref=e1354] [cursor=pointer]
+              - cell "Да" [ref=e1355] [cursor=pointer]:
+                - generic [ref=e1357]: Да
+              - cell [ref=e1358] [cursor=pointer]:
+                - button [ref=e1359]:
+                  - img [ref=e1361]
+            - row "f37ad3d5-12f7-451a-82fb-24ee1d7f451c test_delete_chan_1775016895406 blackhole Нет" [ref=e1365]:
+              - cell "f37ad3d5-12f7-451a-82fb-24ee1d7f451c" [ref=e1366] [cursor=pointer]
+              - cell "test_delete_chan_1775016895406" [ref=e1367] [cursor=pointer]
+              - cell "blackhole" [ref=e1368] [cursor=pointer]
+              - cell "Нет" [ref=e1369] [cursor=pointer]:
+                - generic [ref=e1371]: Нет
+              - cell [ref=e1372] [cursor=pointer]:
+                - button [ref=e1373]:
+                  - img [ref=e1375]
+            - row "7e921bfa-9c60-468d-a3bb-2e49b5b5d89d test_chan_1775016895462 blackhole Да" [ref=e1379]:
+              - cell "7e921bfa-9c60-468d-a3bb-2e49b5b5d89d" [ref=e1380] [cursor=pointer]
+              - cell "test_chan_1775016895462" [ref=e1381] [cursor=pointer]
+              - cell "blackhole" [ref=e1382] [cursor=pointer]
+              - cell "Да" [ref=e1383] [cursor=pointer]:
+                - generic [ref=e1385]: Да
+              - cell [ref=e1386] [cursor=pointer]:
+                - button [ref=e1387]:
+                  - img [ref=e1389]
+            - row "1a142054-2c4e-4025-a772-f393258e43c3 scenario_chan_1775019682911 blackhole Да" [ref=e1393]:
+              - cell "1a142054-2c4e-4025-a772-f393258e43c3" [ref=e1394] [cursor=pointer]
+              - cell "scenario_chan_1775019682911" [ref=e1395] [cursor=pointer]
+              - cell "blackhole" [ref=e1396] [cursor=pointer]
+              - cell "Да" [ref=e1397] [cursor=pointer]:
+                - generic [ref=e1399]: Да
+              - cell [ref=e1400] [cursor=pointer]:
+                - button [ref=e1401]:
+                  - img [ref=e1403]
+            - row "aa8dcb21-35b2-4881-9709-5e9dd889db43 scenario_chan_1775019710259 blackhole Да" [ref=e1407]:
+              - cell "aa8dcb21-35b2-4881-9709-5e9dd889db43" [ref=e1408] [cursor=pointer]
+              - cell "scenario_chan_1775019710259" [ref=e1409] [cursor=pointer]
+              - cell "blackhole" [ref=e1410] [cursor=pointer]
+              - cell "Да" [ref=e1411] [cursor=pointer]:
+                - generic [ref=e1413]: Да
+              - cell [ref=e1414] [cursor=pointer]:
+                - button [ref=e1415]:
+                  - img [ref=e1417]
+            - row "ee8150d4-afcf-4a49-bdfd-1806c2e6f19e __test_autopilot__chan_1775019803849 blackhole Да" [ref=e1421]:
+              - cell "ee8150d4-afcf-4a49-bdfd-1806c2e6f19e" [ref=e1422] [cursor=pointer]
+              - cell "__test_autopilot__chan_1775019803849" [ref=e1423] [cursor=pointer]
+              - cell "blackhole" [ref=e1424] [cursor=pointer]
+              - cell "Да" [ref=e1425] [cursor=pointer]:
+                - generic [ref=e1427]: Да
+              - cell [ref=e1428] [cursor=pointer]:
+                - button [ref=e1429]:
+                  - img [ref=e1431]
+            - row "9e187375-02b7-4fb3-ad0f-1690958aa928 __test_autopilot__chan_1775019880543 blackhole Да" [ref=e1435]:
+              - cell "9e187375-02b7-4fb3-ad0f-1690958aa928" [ref=e1436] [cursor=pointer]
+              - cell "__test_autopilot__chan_1775019880543" [ref=e1437] [cursor=pointer]
+              - cell "blackhole" [ref=e1438] [cursor=pointer]
+              - cell "Да" [ref=e1439] [cursor=pointer]:
+                - generic [ref=e1441]: Да
+              - cell [ref=e1442] [cursor=pointer]:
+                - button [ref=e1443]:
+                  - img [ref=e1445]
+            - row "70dde176-14a0-465f-84ac-d66f28f4fd27 bug027_put_test blackhole Нет" [ref=e1449]:
+              - cell "70dde176-14a0-465f-84ac-d66f28f4fd27" [ref=e1450] [cursor=pointer]
+              - cell "bug027_put_test" [ref=e1451] [cursor=pointer]
+              - cell "blackhole" [ref=e1452] [cursor=pointer]
+              - cell "Нет" [ref=e1453] [cursor=pointer]:
+                - generic [ref=e1455]: Нет
+              - cell [ref=e1456] [cursor=pointer]:
+                - button [ref=e1457]:
+                  - img [ref=e1459]
+            - row "533ac57f-cb95-4a27-8903-e4ef1831cec6 scenario_chan_1775019997838 blackhole Да" [ref=e1463]:
+              - cell "533ac57f-cb95-4a27-8903-e4ef1831cec6" [ref=e1464] [cursor=pointer]
+              - cell "scenario_chan_1775019997838" [ref=e1465] [cursor=pointer]
+              - cell "blackhole" [ref=e1466] [cursor=pointer]
+              - cell "Да" [ref=e1467] [cursor=pointer]:
+                - generic [ref=e1469]: Да
+              - cell [ref=e1470] [cursor=pointer]:
+                - button [ref=e1471]:
+                  - img [ref=e1473]
+            - row "5ba3dbc5-ec99-4d26-92ca-69bd26f7235b __test_autopilot__chan_1775019997865 blackhole Да" [ref=e1477]:
+              - cell "5ba3dbc5-ec99-4d26-92ca-69bd26f7235b" [ref=e1478] [cursor=pointer]
+              - cell "__test_autopilot__chan_1775019997865" [ref=e1479] [cursor=pointer]
+              - cell "blackhole" [ref=e1480] [cursor=pointer]
+              - cell "Да" [ref=e1481] [cursor=pointer]:
+                - generic [ref=e1483]: Да
+              - cell [ref=e1484] [cursor=pointer]:
+                - button [ref=e1485]:
+                  - img [ref=e1487]
+            - row "0af247e1-08e6-45a3-8ba8-a038426fe587 test_delete_chan_1775019998779 blackhole Нет" [ref=e1491]:
+              - cell "0af247e1-08e6-45a3-8ba8-a038426fe587" [ref=e1492] [cursor=pointer]
+              - cell "test_delete_chan_1775019998779" [ref=e1493] [cursor=pointer]
+              - cell "blackhole" [ref=e1494] [cursor=pointer]
+              - cell "Нет" [ref=e1495] [cursor=pointer]:
+                - generic [ref=e1497]: Нет
+              - cell [ref=e1498] [cursor=pointer]:
+                - button [ref=e1499]:
+                  - img [ref=e1501]
+            - row "a5a9c981-5c79-49c2-9068-e4674f5cb558 test_chan_1775019998829 blackhole Да" [ref=e1505]:
+              - cell "a5a9c981-5c79-49c2-9068-e4674f5cb558" [ref=e1506] [cursor=pointer]
+              - cell "test_chan_1775019998829" [ref=e1507] [cursor=pointer]
+              - cell "blackhole" [ref=e1508] [cursor=pointer]
+              - cell "Да" [ref=e1509] [cursor=pointer]:
+                - generic [ref=e1511]: Да
+              - cell [ref=e1512] [cursor=pointer]:
+                - button [ref=e1513]:
+                  - img [ref=e1515]
+            - row "6bf77e65-4064-4917-95af-6972af167f17 __test_autopilot__chan_1775020277021 blackhole Да" [ref=e1519]:
+              - cell "6bf77e65-4064-4917-95af-6972af167f17" [ref=e1520] [cursor=pointer]
+              - cell "__test_autopilot__chan_1775020277021" [ref=e1521] [cursor=pointer]
+              - cell "blackhole" [ref=e1522] [cursor=pointer]
+              - cell "Да" [ref=e1523] [cursor=pointer]:
+                - generic [ref=e1525]: Да
+              - cell [ref=e1526] [cursor=pointer]:
+                - button [ref=e1527]:
+                  - img [ref=e1529]
+            - row "ff779ffe-ddeb-4919-9f6a-d7f0f5fa632b scenario_chan_1775020277242 blackhole Да" [ref=e1533]:
+              - cell "ff779ffe-ddeb-4919-9f6a-d7f0f5fa632b" [ref=e1534] [cursor=pointer]
+              - cell "scenario_chan_1775020277242" [ref=e1535] [cursor=pointer]
+              - cell "blackhole" [ref=e1536] [cursor=pointer]
+              - cell "Да" [ref=e1537] [cursor=pointer]:
+                - generic [ref=e1539]: Да
+              - cell [ref=e1540] [cursor=pointer]:
+                - button [ref=e1541]:
+                  - img [ref=e1543]
+            - row "5588d416-c82b-4d46-9c26-24ea7a2561f2 test_delete_chan_1775020277939 blackhole Нет" [ref=e1547]:
+              - cell "5588d416-c82b-4d46-9c26-24ea7a2561f2" [ref=e1548] [cursor=pointer]
+              - cell "test_delete_chan_1775020277939" [ref=e1549] [cursor=pointer]
+              - cell "blackhole" [ref=e1550] [cursor=pointer]
+              - cell "Нет" [ref=e1551] [cursor=pointer]:
+                - generic [ref=e1553]: Нет
+              - cell [ref=e1554] [cursor=pointer]:
+                - button [ref=e1555]:
+                  - img [ref=e1557]
+            - row "0881ffbb-1de4-4a4b-9fac-d774f0535860 test_chan_1775020278110 blackhole Да" [ref=e1561]:
+              - cell "0881ffbb-1de4-4a4b-9fac-d774f0535860" [ref=e1562] [cursor=pointer]
+              - cell "test_chan_1775020278110" [ref=e1563] [cursor=pointer]
+              - cell "blackhole" [ref=e1564] [cursor=pointer]
+              - cell "Да" [ref=e1565] [cursor=pointer]:
+                - generic [ref=e1567]: Да
+              - cell [ref=e1568] [cursor=pointer]:
+                - button [ref=e1569]:
+                  - img [ref=e1571]
+            - row "dcec5405-3083-48c6-8faf-851906aaa51c __test_autopilot__chan_1775024995575 blackhole Да" [ref=e1575]:
+              - cell "dcec5405-3083-48c6-8faf-851906aaa51c" [ref=e1576] [cursor=pointer]
+              - cell "__test_autopilot__chan_1775024995575" [ref=e1577] [cursor=pointer]
+              - cell "blackhole" [ref=e1578] [cursor=pointer]
+              - cell "Да" [ref=e1579] [cursor=pointer]:
+                - generic [ref=e1581]: Да
+              - cell [ref=e1582] [cursor=pointer]:
+                - button [ref=e1583]:
+                  - img [ref=e1585]
+            - row "3957fb16-5c59-45f6-9801-cfb4fcca84aa scenario_chan_1775024995789 blackhole Да" [ref=e1589]:
+              - cell "3957fb16-5c59-45f6-9801-cfb4fcca84aa" [ref=e1590] [cursor=pointer]
+              - cell "scenario_chan_1775024995789" [ref=e1591] [cursor=pointer]
+              - cell "blackhole" [ref=e1592] [cursor=pointer]
+              - cell "Да" [ref=e1593] [cursor=pointer]:
+                - generic [ref=e1595]: Да
+              - cell [ref=e1596] [cursor=pointer]:
+                - button [ref=e1597]:
+                  - img [ref=e1599]
+            - row "fde793a6-51a1-4364-b70f-12cba49eb333 test_delete_chan_1775024996521 blackhole Нет" [ref=e1603]:
+              - cell "fde793a6-51a1-4364-b70f-12cba49eb333" [ref=e1604] [cursor=pointer]
+              - cell "test_delete_chan_1775024996521" [ref=e1605] [cursor=pointer]
+              - cell "blackhole" [ref=e1606] [cursor=pointer]
+              - cell "Нет" [ref=e1607] [cursor=pointer]:
+                - generic [ref=e1609]: Нет
+              - cell [ref=e1610] [cursor=pointer]:
+                - button [ref=e1611]:
+                  - img [ref=e1613]
+            - row "d3268723-6208-4b51-b07c-5e7b82ed8061 test_chan_1775024996621 blackhole Да" [ref=e1617]:
+              - cell "d3268723-6208-4b51-b07c-5e7b82ed8061" [ref=e1618] [cursor=pointer]
+              - cell "test_chan_1775024996621" [ref=e1619] [cursor=pointer]
+              - cell "blackhole" [ref=e1620] [cursor=pointer]
+              - cell "Да" [ref=e1621] [cursor=pointer]:
+                - generic [ref=e1623]: Да
+              - cell [ref=e1624] [cursor=pointer]:
+                - button [ref=e1625]:
+                  - img [ref=e1627]
+            - row "d40eefc5-73bd-4136-b1e0-fc994d96cb09 __test_autopilot__chan_1775028069495 blackhole Да" [ref=e1631]:
+              - cell "d40eefc5-73bd-4136-b1e0-fc994d96cb09" [ref=e1632] [cursor=pointer]
+              - cell "__test_autopilot__chan_1775028069495" [ref=e1633] [cursor=pointer]
+              - cell "blackhole" [ref=e1634] [cursor=pointer]
+              - cell "Да" [ref=e1635] [cursor=pointer]:
+                - generic [ref=e1637]: Да
+              - cell [ref=e1638] [cursor=pointer]:
+                - button [ref=e1639]:
+                  - img [ref=e1641]
+            - row "24cbc5cb-babb-439f-bf7c-ee8e2fce6270 scenario_chan_1775028069953 blackhole Да" [ref=e1645]:
+              - cell "24cbc5cb-babb-439f-bf7c-ee8e2fce6270" [ref=e1646] [cursor=pointer]
+              - cell "scenario_chan_1775028069953" [ref=e1647] [cursor=pointer]
+              - cell "blackhole" [ref=e1648] [cursor=pointer]
+              - cell "Да" [ref=e1649] [cursor=pointer]:
+                - generic [ref=e1651]: Да
+              - cell [ref=e1652] [cursor=pointer]:
+                - button [ref=e1653]:
+                  - img [ref=e1655]
+            - row "7adac227-37a4-4280-ab40-af3b16cfdfb2 test_delete_chan_1775028070893 blackhole Нет" [ref=e1659]:
+              - cell "7adac227-37a4-4280-ab40-af3b16cfdfb2" [ref=e1660] [cursor=pointer]
+              - cell "test_delete_chan_1775028070893" [ref=e1661] [cursor=pointer]
+              - cell "blackhole" [ref=e1662] [cursor=pointer]
+              - cell "Нет" [ref=e1663] [cursor=pointer]:
+                - generic [ref=e1665]: Нет
+              - cell [ref=e1666] [cursor=pointer]:
+                - button [ref=e1667]:
+                  - img [ref=e1669]
+            - row "08c54be7-2ca2-4414-8d68-2b5574ed0928 test_chan_1775028070965 blackhole Да" [ref=e1673]:
+              - cell "08c54be7-2ca2-4414-8d68-2b5574ed0928" [ref=e1674] [cursor=pointer]
+              - cell "test_chan_1775028070965" [ref=e1675] [cursor=pointer]
+              - cell "blackhole" [ref=e1676] [cursor=pointer]
+              - cell "Да" [ref=e1677] [cursor=pointer]:
+                - generic [ref=e1679]: Да
+              - cell [ref=e1680] [cursor=pointer]:
+                - button [ref=e1681]:
+                  - img [ref=e1683]
+            - row "856ba563-2b5f-499c-9362-7573ae23584b __test_autopilot__chan_1775028080754 blackhole Да" [ref=e1687]:
+              - cell "856ba563-2b5f-499c-9362-7573ae23584b" [ref=e1688] [cursor=pointer]
+              - cell "__test_autopilot__chan_1775028080754" [ref=e1689] [cursor=pointer]
+              - cell "blackhole" [ref=e1690] [cursor=pointer]
+              - cell "Да" [ref=e1691] [cursor=pointer]:
+                - generic [ref=e1693]: Да
+              - cell [ref=e1694] [cursor=pointer]:
+                - button [ref=e1695]:
+                  - img [ref=e1697]
+            - row "1559cc1b-1270-4c3a-9071-cb0b678cbfe5 scenario_chan_1775028080768 blackhole Да" [ref=e1701]:
+              - cell "1559cc1b-1270-4c3a-9071-cb0b678cbfe5" [ref=e1702] [cursor=pointer]
+              - cell "scenario_chan_1775028080768" [ref=e1703] [cursor=pointer]
+              - cell "blackhole" [ref=e1704] [cursor=pointer]
+              - cell "Да" [ref=e1705] [cursor=pointer]:
+                - generic [ref=e1707]: Да
+              - cell [ref=e1708] [cursor=pointer]:
+                - button [ref=e1709]:
+                  - img [ref=e1711]
+            - row "12252d57-654a-4578-901b-651624c31554 test_delete_chan_1775028081725 blackhole Нет" [ref=e1715]:
+              - cell "12252d57-654a-4578-901b-651624c31554" [ref=e1716] [cursor=pointer]
+              - cell "test_delete_chan_1775028081725" [ref=e1717] [cursor=pointer]
+              - cell "blackhole" [ref=e1718] [cursor=pointer]
+              - cell "Нет" [ref=e1719] [cursor=pointer]:
+                - generic [ref=e1721]: Нет
+              - cell [ref=e1722] [cursor=pointer]:
+                - button [ref=e1723]:
+                  - img [ref=e1725]
+            - row "3cc2b208-606a-4160-991b-48a7bc2cda7a test_chan_1775028081734 blackhole Да" [ref=e1729]:
+              - cell "3cc2b208-606a-4160-991b-48a7bc2cda7a" [ref=e1730] [cursor=pointer]
+              - cell "test_chan_1775028081734" [ref=e1731] [cursor=pointer]
+              - cell "blackhole" [ref=e1732] [cursor=pointer]
+              - cell "Да" [ref=e1733] [cursor=pointer]:
+                - generic [ref=e1735]: Да
+              - cell [ref=e1736] [cursor=pointer]:
+                - button [ref=e1737]:
+                  - img [ref=e1739]
+    - region "Notifications Alt+T"
+  - dialog "Создать коммуникацию" [ref=e1744]:
+    - banner [ref=e1745]:
+      - heading "Создать коммуникацию" [level=2] [ref=e1746]
+      - button [active] [ref=e1747] [cursor=pointer]:
+        - img [ref=e1748]
+    - generic [ref=e1751]:
+      - generic [ref=e1752]:
+        - generic [ref=e1753]: Название
+        - textbox "Название" [ref=e1755]:
+          - /placeholder: Введите название
+      - generic [ref=e1756]:
+        - generic [ref=e1757]: Kind
+        - generic [ref=e1758]:
+          - textbox "Kind" [ref=e1759]
+          - generic:
+            - img
+      - separator [ref=e1760]
+      - generic [ref=e1761]:
+        - paragraph [ref=e1762]: Сопоставления
+        - button [ref=e1763] [cursor=pointer]:
+          - img [ref=e1765]
+      - generic [ref=e1766]:
+        - button "Создать коммуникацию" [ref=e1767] [cursor=pointer]:
+          - generic [ref=e1769]: Создать коммуникацию
+        - button "Сбросить" [ref=e1770] [cursor=pointer]:
+          - generic [ref=e1772]: Сбросить

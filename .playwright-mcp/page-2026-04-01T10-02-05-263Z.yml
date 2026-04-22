@@ -1,0 +1,113 @@
+- generic [ref=e2]:
+  - generic [ref=e33]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - link "Панель управления" [ref=e38] [cursor=pointer]:
+          - /url: /dashboard
+          - generic [ref=e39]: Панель управления
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Данные
+          - generic [ref=e42]:
+            - link "Клиенты 342279" [ref=e43] [cursor=pointer]:
+              - /url: /data/clients
+              - img [ref=e44]
+              - generic [ref=e46]: Клиенты
+              - generic [ref=e48]: "342279"
+            - button "События 66245" [ref=e49] [cursor=pointer]:
+              - img [ref=e50]
+              - generic [ref=e52]: События
+              - generic [ref=e54]: "66245"
+            - link "Сценарий" [ref=e55] [cursor=pointer]:
+              - /url: /data/scenario
+              - img [ref=e56]
+              - generic [ref=e58]: Сценарий
+            - link "Файлы" [ref=e59] [cursor=pointer]:
+              - /url: /data/files
+              - img [ref=e60]
+              - generic [ref=e64]: Файлы
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: Маркетинг
+          - generic [ref=e67]:
+            - link "Агрегаты" [ref=e68] [cursor=pointer]:
+              - /url: /marketing/aggregate
+              - img [ref=e69]
+              - generic [ref=e82]: Агрегаты
+            - link "Сегменты" [ref=e83] [cursor=pointer]:
+              - /url: /marketing/segments
+              - img [ref=e84]
+              - generic [ref=e87]: Сегменты
+            - link "Рассылки" [ref=e88] [cursor=pointer]:
+              - /url: /marketing/campaigns
+              - img [ref=e89]
+              - generic [ref=e91]: Рассылки
+            - link "Коммуникации" [ref=e92] [cursor=pointer]:
+              - /url: /marketing/communication
+              - img [ref=e93]
+              - generic [ref=e95]: Коммуникации
+        - generic [ref=e96]:
+          - paragraph [ref=e97]: Аналитика
+          - link "Статистика полей" [ref=e99] [cursor=pointer]:
+            - /url: /statistics/field
+            - img [ref=e100]
+            - generic [ref=e125]: Статистика полей
+      - generic [ref=e126]:
+        - separator [ref=e127]
+        - generic [ref=e129]:
+          - generic [ref=e131]: c
+          - paragraph [ref=e132] [cursor=pointer]: cdp_1762934640267
+    - generic [ref=e137]:
+      - paragraph [ref=e140]: Панель управления
+      - tablist [ref=e142]:
+        - tab "Артефакты арендатора" [selected] [ref=e143] [cursor=pointer]:
+          - generic [ref=e144]: Артефакты арендатора
+        - tab "Поля схемы клиента" [ref=e145] [cursor=pointer]:
+          - generic [ref=e146]: Поля схемы клиента
+        - tab "Поля схемы событий" [ref=e147] [cursor=pointer]:
+          - generic [ref=e148]: Поля схемы событий
+        - tab "Конкретные сопоставления полей" [ref=e149] [cursor=pointer]:
+          - generic [ref=e150]: Конкретные сопоставления полей
+        - tab "Создать шаблон" [ref=e151] [cursor=pointer]:
+          - generic [ref=e152]: Создать шаблон
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - paragraph [ref=e156]: База данных
+          - generic [ref=e157]:
+            - paragraph [ref=e158]: cdp_1762934640267
+            - img [ref=e160]
+        - generic [ref=e163]:
+          - paragraph [ref=e164]: isReady
+          - paragraph [ref=e165]: "true"
+        - generic [ref=e166]:
+          - paragraph [ref=e167]: Загрузка клиентов
+          - generic [ref=e168]:
+            - paragraph [ref=e169]: job_cdp_1762934640267__customers
+            - img [ref=e171]
+        - generic [ref=e174]:
+          - paragraph [ref=e175]: Загрузка событий
+          - generic [ref=e176]:
+            - paragraph [ref=e177]: job_cdp_1762934640267__events
+            - img [ref=e179]
+        - generic [ref=e182]:
+          - paragraph [ref=e183]: Таблица клиентов
+          - generic [ref=e184]:
+            - paragraph [ref=e185]: customers
+            - img [ref=e187]
+        - generic [ref=e190]:
+          - paragraph [ref=e191]: Таблица событий
+          - generic [ref=e192]:
+            - paragraph [ref=e193]: events
+            - img [ref=e195]
+        - generic [ref=e198]:
+          - paragraph [ref=e199]: ID арендатора
+          - paragraph [ref=e200]: "1762934640267"
+        - generic [ref=e201]:
+          - paragraph [ref=e202]: Топик клиентов
+          - generic [ref=e203]:
+            - paragraph [ref=e204]: cdp_1762934640267__customers
+            - img [ref=e206]
+        - generic [ref=e209]:
+          - paragraph [ref=e210]: Топик событий
+          - generic [ref=e211]:
+            - paragraph [ref=e212]: cdp_1762934640267__events
+            - img [ref=e214]
+  - region "Notifications Alt+T"
