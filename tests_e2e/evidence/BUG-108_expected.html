@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>BUG-108 expected — Campaign list with full columns</title>
+<style>
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#f5f7fa;color:#222}
+.banner{background:#16a34a;color:#fff;padding:12px 24px;font-size:14px;font-weight:600}
+.page{padding:24px}
+h2{margin:0 0 16px}
+.controls{display:flex;gap:12px;margin-bottom:12px}
+.btn{background:#0ea5e9;color:white;padding:8px 14px;border-radius:6px;border:none;font-size:14px;cursor:pointer}
+.btn-secondary{background:#e5e7eb;color:#222}
+input[type=search]{padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;width:300px;font-size:14px}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08);border-radius:8px;overflow:hidden}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid #f0f0f0;font-size:14px}
+th{background:#fafafa;color:#374151;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.04em}
+tr:hover{background:#fafafa}
+.badge{padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600}
+.b-draft{background:#fef3c7;color:#92400e}
+.b-active{background:#dcfce7;color:#166534}
+.b-sent{background:#dbeafe;color:#1e40af}
+.b-failed{background:#fee2e2;color:#991b1b}
+.count{font-weight:600;color:#0ea5e9}
+.meta{color:#6b7280;font-size:13px}
+</style></head>
+<body>
+<div class="banner">✅ EXPECTED: Campaign list with status + channel + segment + recipient count + last-sent columns (BUG-108 / CDP-1785)</div>
+<div class="page">
+<h2>Рассылки</h2>
+<div class="controls">
+  <input type="search" placeholder="Поиск по названию...">
+  <button class="btn">+ Добавить</button>
+  <button class="btn btn-secondary">Фильтр</button>
+</div>
+<table>
+<thead><tr>
+  <th>Название</th>
+  <th>Статус</th>
+  <th>Канал</th>
+  <th>Шаблон</th>
+  <th>Сегмент</th>
+  <th>Получателей</th>
+  <th>Последняя отправка</th>
+</tr></thead>
+<tbody>
+<tr><td>VIP отправка июнь</td><td><span class="badge b-sent">Отправлено</span></td><td>email_primary</td><td>vip_offer</td><td>top_spenders</td><td class="count">1 245</td><td>02.06.2026 10:23</td></tr>
+<tr><td>Реактивация лапсед</td><td><span class="badge b-draft">Черновик</span></td><td>email_primary</td><td>lapsed_winback</td><td>lapsed_90d</td><td class="count">543</td><td class="meta">—</td></tr>
+<tr><td>Welcome серия</td><td><span class="badge b-active">Активна</span></td><td>email_primary</td><td>welcome_1</td><td>new_signups</td><td class="count">128</td><td>01.06.2026 18:00</td></tr>
+<tr><td>Корзина abandon</td><td><span class="badge b-failed">Ошибка</span></td><td>email_secondary</td><td>cart_abandon</td><td>cart_abandoners</td><td class="count">87</td><td>31.05.2026 14:11</td></tr>
+<tr><td>День рождения</td><td><span class="badge b-active">Активна</span></td><td>email_primary</td><td>birthday_card</td><td>birthday_this_month</td><td class="count">42</td><td>02.06.2026 09:00</td></tr>
+</tbody></table>
+</div>
+</body></html>

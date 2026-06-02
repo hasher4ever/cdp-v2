@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>BUG-111 expected — Search input on segment list</title>
+<style>
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#f5f7fa}
+.banner{background:#16a34a;color:#fff;padding:12px 24px;font-size:14px;font-weight:600}
+.page{padding:24px}
+h2{margin:0 0 16px}
+.controls{display:flex;gap:12px;margin-bottom:16px;align-items:center}
+.search{position:relative;flex:1;max-width:400px}
+.search input{width:100%;padding:10px 12px 10px 38px;border:2px solid #0ea5e9;border-radius:8px;font-size:14px;background:#fff;box-shadow:0 2px 8px rgba(14,165,233,.15)}
+.search::before{content:"🔍";position:absolute;left:12px;top:10px;font-size:14px}
+.btn{background:#0ea5e9;color:white;padding:8px 14px;border-radius:6px;border:none;cursor:pointer;font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip{padding:4px 10px;background:#dbeafe;color:#1e40af;border-radius:999px;font-size:12px;display:flex;gap:6px;align-items:center}
+.chip .x{cursor:pointer;font-weight:bold}
+.results{color:#6b7280;font-size:13px;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid #f0f0f0;font-size:13px}
+th{background:#fafafa;color:#374151;font-weight:600;font-size:12px;text-transform:uppercase}
+.match{background:#fef9c3}
+</style></head>
+<body>
+<div class="banner">✅ EXPECTED: Segment list with search input filtering 1687 segments live (BUG-111 / CDP-1788)</div>
+<div class="page">
+<h2>Сегменты</h2>
+<div class="controls">
+  <div class="search"><input type="search" placeholder="Поиск по названию сегмента..." value="VIP"></div>
+  <button class="btn">+ Добавить</button>
+</div>
+<div class="chips">
+  <span class="chip">VIP <span class="x">×</span></span>
+</div>
+<div class="results">Найдено 12 из 1 687 сегментов</div>
+<table>
+<thead><tr><th>Название</th><th>Создан</th><th>Изменён</th><th>Клиентов</th></tr></thead>
+<tbody>
+<tr><td><span class="match">VIP</span> — лояльные покупатели</td><td>14.04.2026</td><td>02.06.2026</td><td>1 245</td></tr>
+<tr><td><span class="match">VIP</span> 2025-Q4</td><td>10.10.2025</td><td>02.06.2026</td><td>987</td></tr>
+<tr><td>Top-spenders <span class="match">VIP</span></td><td>05.12.2025</td><td>30.05.2026</td><td>432</td></tr>
+<tr><td><span class="match">VIP</span> birthday-this-month</td><td>02.06.2026</td><td>02.06.2026</td><td>42</td></tr>
+<tr><td>Pre-<span class="match">VIP</span> warm-up</td><td>15.03.2026</td><td>28.05.2026</td><td>2 100</td></tr>
+</tbody></table>
+<p style="margin-top:12px;color:#16a34a;font-size:13px"><b>Note:</b> typing in the search box hits <code>?search=VIP</code> server-side. As-you-type debounce 200ms. Empty search restores full list.</p>
+</div>
+</body></html>

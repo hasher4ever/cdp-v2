@@ -12,8 +12,35 @@
  * Node types: node_trigger, node_wait, node_branch, node_action
  * Edge types: link_next_node, link_yes_branch, link_no_branch
  */
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeAll } from "vitest";
 import { get, post, del } from "./client";
+
+// Replaces the previously-hardcoded "1111" scenario UUID (BUG-098). At suite start,
+// scan the tenant for an existing scenario that contains all 4 node types
+// (trigger / wait / branch / action). If found, reuse it. If not, COMPLEX_OK=false
+// and the dependent describe is skipped.
+let complexScenarioId = "";
+let COMPLEX_OK = false;
+
+beforeAll(async () => {
+  const list = await get("/api/tenant/scenario/crud", { page: 0, size: 100 });
+  const items: Array<{ id?: string; scenarioId?: string }> =
+    list.data?.list ?? list.data?.items ?? list.data ?? [];
+  for (const s of items) {
+    const id = s.id ?? s.scenarioId;
+    if (!id) continue;
+    const r = await get("/api/tenant/scenario/crud/get-by-id", { scenario_id: id });
+    if (r.status !== 200) continue;
+    const types = new Set<string>((r.data?.nodes ?? []).map((n: { nodeType: string }) => n.nodeType));
+    if (types.has("node_trigger") && types.has("node_wait") &&
+        types.has("node_branch") && types.has("node_action") &&
+        (r.data?.edges ?? []).length > 0) {
+      complexScenarioId = id;
+      COMPLEX_OK = true;
+      break;
+    }
+  }
+});
 
 describe("Scenario CRUD - /api/tenant/scenario/crud", () => {
   let scenarioId: string;
@@ -182,11 +209,11 @@ describe("Scenario Node CRUD - /api/tenant/scenario/node/crud", () => {
   });
 });
 
-describe("Scenario Edge CRUD - /api/tenant/scenario/edge/crud", () => {
+describe.skipIf(!COMPLEX_OK)("Scenario Edge CRUD - /api/tenant/scenario/edge/crud", () => {
   it("should create an edge on existing scenario", async () => {
-    // Use the existing "1111" scenario which has nodes
+    // Reuses the discovered "complex" fixture (replaces hardcoded UUID — BUG-098)
     const { data: scenario } = await get("/api/tenant/scenario/crud/get-by-id", {
-      scenario_id: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3",
+      scenario_id: complexScenarioId,
     });
 
     if (!scenario.nodes || scenario.nodes.length < 2) return;
@@ -195,7 +222,7 @@ describe("Scenario Edge CRUD - /api/tenant/scenario/edge/crud", () => {
     const to = scenario.nodes[1].nodeId;
 
     const { status, data } = await post("/api/tenant/scenario/edge/crud", {
-      scenarioId: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3",
+      scenarioId: complexScenarioId,
       edgeType: "link_next_node",
       fromNodeId: from,
       toNodeId: to,
@@ -230,10 +257,10 @@ describe("Scenario Save - /api/tenant/scenario/crud/save-changes", () => {
   });
 });
 
-describe("Scenario: read existing complex scenario", () => {
-  it("should read the '1111' scenario with all node types", async () => {
+describe.skipIf(!COMPLEX_OK)("Scenario: read existing complex scenario", () => {
+  it("should read a complex scenario with all node types", async () => {
     const { status, data } = await get("/api/tenant/scenario/crud/get-by-id", {
-      scenario_id: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3",
+      scenario_id: complexScenarioId,
     });
     expect(status).toBe(200);
     expect(data.nodes.length).toBeGreaterThan(0);
@@ -249,7 +276,7 @@ describe("Scenario: read existing complex scenario", () => {
 
   it("should have valid trigger node structure", async () => {
     const { data } = await get("/api/tenant/scenario/crud/get-by-id", {
-      scenario_id: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3",
+      scenario_id: complexScenarioId,
     });
     const trigger = data.nodes.find((n: any) => n.nodeType === "node_trigger");
     expect(trigger).toHaveProperty("nodeId");
@@ -261,7 +288,7 @@ describe("Scenario: read existing complex scenario", () => {
 
   it("should have valid wait node structure", async () => {
     const { data } = await get("/api/tenant/scenario/crud/get-by-id", {
-      scenario_id: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3",
+      scenario_id: complexScenarioId,
     });
     const wait = data.nodes.find((n: any) => n.nodeType === "node_wait");
     expect(wait).toHaveProperty("waitNode");
@@ -272,7 +299,7 @@ describe("Scenario: read existing complex scenario", () => {
 
   it("should have valid branch node with predicate", async () => {
     const { data } = await get("/api/tenant/scenario/crud/get-by-id", {
-      scenario_id: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3",
+      scenario_id: complexScenarioId,
     });
     const branch = data.nodes.find((n: any) => n.nodeType === "node_branch");
     expect(branch).toHaveProperty("branchNode");
@@ -282,7 +309,7 @@ describe("Scenario: read existing complex scenario", () => {
 
   it("should have valid action node with email config", async () => {
     const { data } = await get("/api/tenant/scenario/crud/get-by-id", {
-      scenario_id: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3",
+      scenario_id: complexScenarioId,
     });
     const action = data.nodes.find((n: any) => n.nodeType === "node_action");
     expect(action).toHaveProperty("actionNode");
@@ -294,7 +321,7 @@ describe("Scenario: read existing complex scenario", () => {
 
   it("should have valid edge types including branch edges", async () => {
     const { data } = await get("/api/tenant/scenario/crud/get-by-id", {
-      scenario_id: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3",
+      scenario_id: complexScenarioId,
     });
     const edgeTypes = new Set(data.edges.map((e: any) => e.edgeType));
     expect(edgeTypes.has("link_next_node")).toBe(true);

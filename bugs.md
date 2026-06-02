@@ -454,7 +454,7 @@ curl -s -X PUT 'https://cdpv2.ssd.uz/api/tenants/commchan/67390695-b9c9-4eff-9d9
 
 **Severity:** High
 **Endpoint:** `POST /api/tenant/employee`
-**Status:** Open — UPDATED S21: endpoint now has OpenAPI schema {username, password, firstName, lastName}, still crashes 500 on correct payload
+**Status:** **RESOLVED 2026-06-02** — qa:triage shows employee CREATE + duplicate-username tests now pass. Likely fixed by the broader claude-agent backend rewrite. Kept here for history.
 
 ### Setup
 ```bash
@@ -1953,7 +1953,7 @@ curl -s -X POST 'https://cdpv2.ssd.uz/api/tenant/data/events?size=1&page=1&event
 
 **Severity:** High
 **Endpoints:** `GET /api/tenants/schema/customers/fields` (symptom), `DELETE /api/tenants/schema/draft-schema/cancel` (no-op for this state), `POST /api/tenants/schema/draft-schema/apply` (blocked)
-**Status:** Open — filed S14. **DIAGNOSIS REVISED S30/S31.** Originally thought to be cancellable drafts stuck; actually `field_not_ready` orphans in the field lifecycle with no cleanup API.
+**Status:** **RESOLVED 2026-06-02** — qa:triage shows draft-create/apply + draft-cancel + event-type draft + zero-pending tests now pass. Likely cleaned up server-side during the claude-agent migration. Kept here for history.
 
 ### Revised understanding (S30-C3)
 The counter returned by `draft-schema/status` (currently `numberOfChanges: 59`) does **not** represent cancellable drafts. Enumerating `/api/tenants/schema/customers/fields` reveals:
@@ -2892,3 +2892,711 @@ curl -s -X POST "https://cdpv2.ssd.uz/api/tenants/udafs/<newId>/calculate?primar
 - Source: S30-C2 timing probe on fresh UDAF `f7c73a20-...`.
 - Reopens IMP-18/IMP-27 (previously marked resolved S27 — scope was narrow).
 - Sibling of IMP-1 (NARROWED root cause candidate as of S30).
+
+---
+
+## BUG-079: Categorization PUT (rename or tier-change) returns 500
+
+**Severity:** High — entire categorization edit flow broken in FE.
+**Endpoint:** `PUT /api/tenants/categorizations/{id}`
+**Status:** Open. Filed 2026-06-01 from `tests_business/categorizations-logic.test.ts`.
+
+### Reproduce
+```bash
+# Create a categorization (works):
+curl -s -X POST https://cdpv2.ssd.uz/api/tenants/categorizations \
+  -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+  -d '{"name":"probe_cat","source_kind":"field","source_field_name":"<num field col>","tiers":[{"label":"low","threshold":0.33},{"label":"mid","threshold":0.66},{"label":"high","threshold":1.0}]}'
+# → 200 { "id": "...", "rev": 1, ... }
+
+# Rename or change tiers via PUT (crashes):
+curl -s -X PUT https://cdpv2.ssd.uz/api/tenants/categorizations/<id> \
+  -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+  -d '{"name":"renamed"}'
+# → 500
+```
+
+### Expected
+PUT returns `{applied, categorization?, affected_segments?}` per OpenAPI `CategorizationUpdateRes`. With no dependent segments, name-only update should apply (`applied:true`) immediately.
+
+### Actual
+500 on every PUT. Failure surface includes both name-only and tier-change shapes — i.e. the entire update path is broken, not just a particular field validation.
+
+### Impact
+Marketing user cannot rename or retune a categorization. Workaround: delete + recreate (but DELETE is also broken — see BUG-080).
+
+---
+
+## BUG-080: Categorization DELETE returns 500
+
+**Severity:** High — cleanup path broken.
+**Endpoint:** `DELETE /api/tenants/categorizations/{id}`
+**Status:** Open. Filed 2026-06-01 from `tests_business/categorizations-logic.test.ts`.
+
+### Reproduce
+Create a categorization (no dependent segments) and immediately DELETE it. Expect 204; actual 500.
+
+### Expected
+- 204 on successful soft-delete (per OpenAPI).
+- 409 if dependent segments still reference it.
+- 404 if non-existent.
+
+### Actual
+500 regardless of state. DELETE on non-existent ID still correctly returns 404 — so the 500 path is specific to the actual-delete branch.
+
+### Impact
+Once created, categorizations cannot be removed via API. Combined with BUG-079, the lifecycle is *create-only*.
+
+---
+
+## BUG-081: Categorization `small_population` flag never set on small tenants
+
+**Severity:** Medium — data-quality signal misleading.
+**Endpoint:** `GET /api/tenants/categorizations/{id}` (current_breakpoint field)
+**Status:** Open. Filed 2026-06-01.
+
+### Reproduce
+Create a categorization on shared tenant (~20 customers). GET it back.
+
+```
+current_breakpoint.customer_count: 20
+current_breakpoint.small_population: false   ← OpenAPI says this must be true when customer_count < 1000
+```
+
+### Expected
+Per OpenAPI: `small_population: True when customer_count < 1000`.
+
+### Actual
+Always `false`, even on a 20-customer tenant.
+
+### Impact
+FE relies on this flag to show a "low sample size" warning to marketers. They will trust statistically meaningless breakpoints.
+
+---
+
+## BUG-082: CommChan deactivate from state=new returns 500 instead of 409
+
+**Severity:** Medium — error masking; surfaces as opaque crash.
+**Endpoint:** `POST /api/tenants/commchan/{id}/deactivate`
+**Status:** Open. Filed 2026-06-01.
+
+### Reproduce
+```bash
+# Create + verify (state stays "new"):
+ID=$(curl -s -X POST .../api/tenants/commchan -d '{...,"kind":"blackhole",...}' | jq -r .id)
+curl -X POST .../api/tenants/commchan/$ID/verify   # → 200, state still "new"
+curl -X POST .../api/tenants/commchan/$ID/deactivate
+# → 500
+# Debug body: "cannot deactivate from state \"new\"" (commchan_labor.go:193)
+```
+
+### Expected
+409 Conflict with the same human-readable message.
+
+### Actual
+500 with the message in `Debug` field. Backend correctly detects the invalid state transition but wraps it as an internal server error.
+
+### Fix suggestion
+Map invalid-state-transition errors to 409 in the API layer.
+
+---
+
+## BUG-083: CommChan reactivate from state=inactive returns 500 (Kafka topic not idempotent)
+
+**Severity:** Critical — channels cannot be re-enabled once disabled.
+**Endpoint:** `POST /api/tenants/commchan/{id}/activate`
+**Status:** Open. Filed 2026-06-01.
+
+### Reproduce
+```bash
+# Full lifecycle:
+ID=$(... create blackhole commchan ...)
+curl -X POST .../api/tenants/commchan/$ID/verify     # → 200
+curl -X POST .../api/tenants/commchan/$ID/activate   # → 200, state=active
+curl -X POST .../api/tenants/commchan/$ID/deactivate # → 200, state=inactive
+curl -X POST .../api/tenants/commchan/$ID/activate   # → 500
+# Debug: "failed to create kafka topic: TOPIC_ALREADY_EXISTS"
+# Call site: flow_commchan_lifecycle.go:94 → mainkafka.go:49
+```
+
+### Expected
+Reactivation succeeds (state → active). Kafka topic creation should be idempotent — detect existing topic and proceed.
+
+### Actual
+Backend tries to create a Kafka topic that already exists from the first activation. Crashes.
+
+### Impact
+A marketer who pauses a channel for any reason — to halt a misconfigured campaign, to do maintenance — **cannot resume it** via API. Workaround: create a new channel and migrate references.
+
+### Fix suggestion
+In `flow_commchan_lifecycle.Activate`, catch `TOPIC_ALREADY_EXISTS` and treat it as a no-op on re-activation. Or skip topic creation when reactivating from `inactive`.
+
+---
+
+## BUG-084: Metric CREATE always returns 500 (tenant-id assertion failure)
+
+**Severity:** Critical — entire Metrics feature non-functional.
+**Endpoint:** `POST /api/tenants/metrics`
+**Status:** Open. Filed 2026-06-01.
+
+### Reproduce
+```bash
+# Any valid payload — same outcome:
+curl -s -X POST https://cdpv2.ssd.uz/api/tenants/metrics \
+  -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+  -d '{"name":"x","type":"event","function":"count","event_type_id":"<event-uid>","scope":"global"}'
+# → 500
+# Debug: "[/flows.FlowMetric.Create at flow_metric.go:36]>> assert equal failed,
+#         left: 1762934640267, right: 0"
+```
+
+### Expected
+200 with the created `MetricInfo` body.
+
+### Actual
+Always 500. Backend assertion `assrt.Equals(metric.TenantID, int64(0))` fails because the DTO mapping pre-fills `TenantID` from the auth context before reaching the flow. Comment at the call site says: *"metric.TenantID must be 0 (caller must not pre-fill it)"* — but the API layer does pre-fill it.
+
+### Impact
+Every KPI tile / dashboard widget that creates a metric fails. The entire Metrics feature shipped broken.
+
+### Fix suggestion
+Either: (a) remove the `assrt.Equals(..., 0)` precondition and accept pre-filled tenant id; or (b) zero out `metric.TenantID` in the DTO mapper before calling `Flow.Create`.
+
+### Notes
+Discovered via `tests_business/metrics-logic.test.ts` canary probe. All behavioral metric tests are skipped via `describe.skipIf(!METRIC_CREATE_OK)` until fixed.
+
+---
+
+## BUG-085: Heatmap query returns 500 with developer "remove" TODO marker
+
+**Severity:** Critical — Heatmap feature non-functional.
+**Endpoint:** `POST /api/tenants/heatmap/query`
+**Status:** Open. Filed 2026-06-01.
+
+### Reproduce
+Create 2 categorizations (any valid shape), then query:
+```bash
+curl -X POST .../api/tenants/heatmap/query \
+  -d '{"x_axis":{"kind":"categorization","categorization_id":"<id1>"},
+       "y_axis":{"kind":"categorization","categorization_id":"<id2>"}}'
+# → 500
+# Debug includes: "remove: use BuildHeatmapQuery free function"
+# Call chain: api.go:1852 → flow_heatmap.go:101 → handle_compute.go:1067 → compute service
+```
+
+### Expected
+200 with `cells[]`, `x_labels[]`, `y_labels[]`, `small_population`, `customer_count`.
+
+### Actual
+500 on every call. The error message reads like a TODO that was left in production — possibly a refactor marker the dev intended to follow up on.
+
+### Impact
+Heatmap (cross-tab segment-builder UI) is completely dead. Marketers cannot use the "high-LTV in city X" style analytics this feature was built for.
+
+### Fix suggestion
+Inspect `handle_compute.go:1067` and the compute service `BuildHeatmapQuery` path. Likely a missed call-site update during a recent refactor.
+
+### Notes
+Discovered via `tests_business/heatmap-logic.test.ts` canary. Validation tests still run and pass (input rejects work) — only the actual compute path is broken.
+
+---
+
+## BUG-086: Campaign CREATE error message misleading — "communication channel not verified" when channel IS verified
+
+**Severity:** Medium — UX/error-message bug; blocks marketers from understanding why create fails.
+**Endpoint:** `POST /api/tenants/campaign`
+**Status:** Open. Filed 2026-06-01.
+
+### Reproduce
+```bash
+# Create + verify channel (verified:true but state still "new"):
+ID=$(... create blackhole commchan ...)
+curl -X POST .../api/tenants/commchan/$ID/verify   # → 200, verified:true
+# Don't activate.
+curl -X POST .../api/tenants/campaign -d '{"name":"x","commChanId":"'$ID'",...}'
+# → 409 {"code":9,"description":"communication channel not verified"}
+```
+
+### Expected
+Either:
+- (a) Accept create — campaign refs an unactivated channel, send-time enforcement instead; OR
+- (b) Refuse with a clear message: `"communication channel not activated (current state: new)"`.
+
+### Actual
+Returns "not verified" — but the channel HAS `verified:true`. The actual missing precondition is `state=active`.
+
+### Impact
+A marketer who completes the verify step assumes they're done. The error message points them at the wrong knob.
+
+### Fix suggestion
+Distinguish `verified` (proof of ownership) from `active` (operational state) in the error. See also BUG-082 / BUG-083 which expose the same state-machine fragility.
+
+---
+
+## BUG-087: Template POST contract changed — old shape silently rejected with 400
+
+**Severity:** High — every existing test/client using the old shape breaks.
+**Endpoint:** `POST /api/tenant/template`
+**Status:** Open (contract drift, may be intentional). Filed 2026-06-01.
+
+### Reproduce
+Old shape (worked pre-2026-05-21):
+```json
+{"content_type":"html","name":"x","subject":"s","content":"<p>x</p>","variables":{"first_name":"col__..."}}
+```
+→ 400 `"doesn't match schema #/components/schemas/TemplateRe..."`
+
+New required shape (claude-agent, commit "[MILESTONE-A] CommChan + Template orphan-table cutover and activation orchestration", 2026-05-21):
+```json
+{"content_type":"html","name":"x","subject":"s","htmlBody":"<p>x</p>","css":"","grepejs":"{}","variables":[{"name":"first_name","fieldName":"col__..."}]}
+```
+
+### Diff
+- `content` → `htmlBody`
+- New required: `css`, `grepejs`
+- `variables` shape: object `{name: fieldName}` → array `[{name, fieldName}]`
+- ID type: BIGSERIAL → UUID (per migration; affects clients hardcoding numeric template IDs)
+
+### Impact
+- 9+ template-related tests fail.
+- FE may be already migrated; backend tests + any old integrations break.
+
+### Fix suggestion
+- Update `docs/API-REFERENCE.md` and `tests_backend/template*.test.ts` + `tests_business/*.test.ts` to use new shape.
+- Confirm with backend whether the old shape will be accepted at any compatibility layer.
+
+---
+
+## BUG-088: Campaign /compute/preview contract changed — `{include, exclude}` → `{data: CampaignReq}` or `{campaignId}`
+
+**Severity:** High — explains BUG-031 (which was misdiagnosed as "500/EOF").
+**Endpoint:** `POST /api/tenants/campaign/compute/preview`
+**Status:** Open contract drift. Filed 2026-06-01. **Likely supersedes BUG-031 once the call sites are updated.**
+
+### Old shape (legacy)
+```json
+{"include": ["<segId>"], "exclude": []}
+```
+→ 409 `"campaign data invalid"` (code:18) in claude-agent.
+
+### New shape (per `/api/tenants/campaign/compute/preview` operation in claude-agent OpenAPI)
+- Option A: `{ "campaignId": "<existing-campaign-id>" }`
+- Option B: `{ "data": { name, commChanId, templateId, includeSegment, excludeSegment } }`
+
+Response: `{ "numberOfCustomer": <int> }`
+
+### Impact
+Tests using the old shape return 409 instead of crashing — easy to miss in logs. Probably the root cause of 4+ campaign-preview tests still in `expected-failures.json` under BUG-031.
+
+### Fix suggestion
+Update all callers to pass `{campaignId}` (preview existing) or `{data: ...}` (preview hypothetical). Mark BUG-031 as duplicate/superseded once callers are migrated.
+
+---
+
+## BUG-105: Newly-ingested customers invisible to `/api/v2/tenant/data/customers` for an extended window
+
+**Severity:** High — breaks the marketer's "build segment now → see results" expectation.
+**Endpoints:** `POST /cdp-ingest/ingest/tenant/{tid}/async/customers` (write), `POST /api/v2/tenant/data/customers` (read)
+**Status:** Open. Filed 2026-06-02 from `tests_business/cohort-changes.test.ts`.
+
+### Reproduce
+```ts
+// 1. Ingest 3 fresh customers
+await ingestAndWait(baseUrl, tenantId, token, cohort, []);
+// ingestAndWait confirms each customer is reachable via v1: GET /api/tenant/data/customers/{id} → 200
+
+// 2. Immediately query v2
+const r = await post("/api/v2/tenant/data/customers", {
+  columns: [{ fieldName: "primary_id", kind: "field" }],
+  filter: { intersects: { customPredicate: { type:"group", group:{ logicalOp:"AND", negate:false, predicates:[
+    { type:"condition", condition:{ operator:"in", param:{ kind:"field", fieldName:"primary_id" },
+      value:{ int64: cohortIds, string:[], float64:[], bool:[], time:[] }}}
+  ]}}}},
+  page: 0, size: 1000,
+});
+// → { list: [], totalCount: <large> }   v2 doesn't see the 3 customers
+```
+
+### Expected
+v1 and v2 query both reflect ingested writes within a short, bounded delay (≤ a few seconds).
+
+### Actual
+v1 sees the writes (confirmed via `ingestAndWait`'s polling). v2 returns empty for these primary_ids — observed for 20+ seconds.
+
+### Marketer impact
+After ingesting new customers (e.g. bulk import via CSV), the marketer builds a segment and previews it — the new customers don't appear. They retry, give up, or — worse — re-ingest and produce duplicates.
+
+### Hypothesis
+v1 and v2 read from different projections. v2 has its own materialized view fed by Kafka/CDC that lags the primary write. The lag isn't bounded or surfaced to the client.
+
+### Fix
+Either:
+- (a) v2 should read from the same source-of-truth as v1 (single read path), OR
+- (b) surface the projection lag (e.g. `X-Stale-By` header, or a `freshness` field in the response), OR
+- (c) make ingest write-through to v2's projection synchronously when the API call returns 2xx.
+
+### Related
+Different from BUG-104 (which is "upsert of existing customer doesn't reflect updated fields"). BUG-105 is "fresh insert isn't readable via v2 yet."
+
+---
+
+## BUG-099: Employee CRUD list/get/update/delete all return 4xx — endpoint regressed
+
+**Severity:** High — tenant admin cannot manage users.
+**Endpoints:** `GET /api/tenant/employee`, `GET/PUT/DELETE /api/tenant/employee/{id}`
+**Status:** Open. Filed 2026-06-02.
+
+### Observation
+After the recent backend rewrite, `POST /api/tenant/employee` now works (BUG-012 resolved). But the rest of the Employee CRUD is broken:
+- `GET /api/tenant/employee` (list) → 400
+- `GET /api/tenant/employee/{id}` → 404 even for just-created employees
+- `PUT /api/tenant/employee/{id}` → 404
+- `DELETE /api/tenant/employee/{id}` → 404
+
+### Hypothesis
+The list/get/update/delete handlers reference an ID format/index that the new create flow doesn't emit. Possibly BIGSERIAL→UUID drift specific to employees (same pattern as templates in BUG-087).
+
+### Test impact
+`tests_backend/employees.test.ts` — 4 failures.
+
+---
+
+## BUG-100: CommChan list filter by `verified` status not applied
+
+**Severity:** Low — list returns unfiltered.
+**Endpoint:** `GET /api/tenants/commchan?verified=true|false`
+**Status:** Open. Filed 2026-06-02.
+
+### Observation
+Test asserts all returned commchans match the `verified` filter; backend returns mixed (verified + unverified).
+
+### Hypothesis
+Same root-cause pattern as BUG-090 — query param parsing or filter application skipped. Different code path though; needs inspection of list handler.
+
+### Test impact
+`tests_backend/commchan.test.ts` — 1 failure.
+
+---
+
+## BUG-101: UDAF grouping validation accepts invalid payloads (missing fields → 200 instead of 400)
+
+**Severity:** Medium — backend persists malformed UDAFs that may crash downstream (see BUG-077).
+**Endpoint:** `POST /api/tenants/udafs` with `grouping.enable: true`
+**Status:** Open. Filed 2026-06-02.
+
+### Observation
+- `grouping.enable=true` with `take` field missing → backend accepts (200)
+- `grouping.enable=true` with `field` missing → backend accepts (200)
+
+Tests expect 400 or 500; backend now silently succeeds, persisting a broken UDAF.
+
+### Connection to BUG-077
+BUG-077 is about invalid UDAFs poisoning `/udafs/types` listing. BUG-101 is the CREATE side: backend accepts invalid → BUG-077 hits on list. Fix is symmetric — tighten CREATE validation, and `/udafs/types` will recover.
+
+### Test impact
+`tests_backend/udaf-grouping.test.ts` — 2 failures.
+
+---
+
+## BUG-102: DELETE on `/segmentation/{id}` and `/commchan/{id}` returns 400
+
+**Severity:** High — cleanup path broken for two core entities (mirrors BUG-080 for categorizations).
+**Endpoints:** `DELETE /api/tenants/segmentation/{id}`, `DELETE /api/tenants/commchan/{id}`
+**Status:** Open. Filed 2026-06-02.
+
+### Reproduce
+Create entity → DELETE by id → 400 (should be 200/204).
+
+### Test impact
+`tests_business/crud-delete.test.ts` — 2 failures (Segmentation + CommChan). Pattern matches BUG-080 (categorizations DELETE).
+
+### Hypothesis
+Common refactor likely lost path-param parsing or shifted to body-based DELETE. May need `Content-Type: application/json` + body shape, OR the route now expects query-param id.
+
+---
+
+## BUG-103: Template list pagination ignored — returns more items than `size`
+
+**Severity:** Medium — FE table breaks on pagination.
+**Endpoint:** `GET /api/tenant/template?size=5&page=0`
+**Status:** Open. Filed 2026-06-02.
+
+### Observation
+- `size=5` → returns 6 items.
+- `page=99` (out of range) → returns 6 items instead of empty.
+
+### Test impact
+`tests_backend/commchan-template-full.test.ts` — 2 failures.
+
+### Hypothesis
+Same family as BUG-090 (query param filter ignored). Likely the listing handler isn't applying `page`/`size` from the request.
+
+---
+
+## BUG-104: Customer upsert via re-ingest doesn't reflect updated fields
+
+**Severity:** Medium — data freshness contract broken; v2 query returns stale values after upsert.
+**Endpoint:** `POST /api/tenants/ingest/customers` + `POST /api/v2/tenant/data/customers`
+**Status:** Open. Filed 2026-06-02.
+
+### Observation
+After re-ingesting a customer with changed `last_name`, the v2 query for that customer returns the OLD value. Pattern occurs for single-customer and 3-customer bulk re-ingests.
+
+### Test impact
+- `tests_business/crud-update.test.ts` — 1 failure
+- `tests_business/customer-update-cascade.test.ts` — 1 failure
+
+### Hypothesis
+Either: (a) ingest write isn't being committed/flushed before test reads; (b) v2 query reads from a stale projection; (c) upsert logic isn't actually updating existing rows. Needs trace through the ingest → main DB → query path.
+
+---
+
+## BUG-094: Scenario DELETE not implemented — DELETE on `/api/tenant/scenario/crud` returns 400 "method not allowed"
+
+**Severity:** Medium — marketers cannot remove scenarios via API.
+**Endpoint:** `DELETE /api/tenant/scenario/crud`
+**Status:** Open. Filed 2026-06-02.
+
+### Reproduce
+```bash
+curl -X DELETE -H "Authorization: Bearer $TOKEN" \
+  "https://cdpv2.ssd.uz/api/tenant/scenario/crud?scenario_id=<id>"
+# → 400 {"error":"method not allowed"}
+```
+
+### Observation
+OpenAPI exposes DELETE for: `/scenario/crud/cancel-changes`, `/scenario/edge/crud`, `/scenario/node/crud` — but NOT for the scenario itself. The router rejects DELETE on `/scenario/crud` with "method not allowed".
+
+### Fix
+Either implement DELETE on `/scenario/crud` (preferred), or document the intentional omission and provide an alternative (e.g. `/scenario/crud` POST with `archived:true`).
+
+---
+
+## BUG-095: Scenario `status` field returns empty string on newly created scenario
+
+**Severity:** Low — FE may display empty state badge.
+**Endpoint:** `GET /api/tenant/scenario/crud/get-by-id`
+**Status:** Open. Filed 2026-06-02.
+
+### Reproduce
+Create a scenario via `POST /scenario/crud`, then GET it. Response shows `"status": ""` instead of `"NEW"` (or any default).
+
+### Fix
+Initialize `status="NEW"` on scenario create; persist consistently.
+
+---
+
+## BUG-096: Scenario input validation gaps — accepts whitespace-only names, HTML/script injection, invalid wait durations, invalid edge refs
+
+**Severity:** High — data integrity + security (XSS via name).
+**Endpoint:** `POST /api/tenant/scenario/crud`, `POST /api/tenant/scenario/node/crud`, `POST /api/tenant/scenario/edge/crud`
+**Status:** Open. Filed 2026-06-02.
+
+### Cases accepted (all return 200, should reject 400)
+1. Scenario name = `"   "` (whitespace only)
+2. Scenario name = `"<script>alert(1)</script>"`
+3. Wait node `durationMin: 0`
+4. Wait node `durationMin: -5`
+5. Edge with `fromNodeId` referencing a non-existent node
+
+### Fix
+Add basic validation in the node/edge/scenario CRUD handlers. Trim names, reject empty/whitespace; sanitize-or-reject names containing HTML tags; validate `durationMin > 0`; validate `fromNodeId` exists in the scenario's node set.
+
+### Test impact
+`tests_backend/scenario-creation.test.ts` — 5 failures.
+
+---
+
+## BUG-097: Scenario get-by-id on non-existent UUID returns 409 instead of 404
+
+**Severity:** Low — minor contract drift.
+**Endpoint:** `GET /api/tenant/scenario/crud/get-by-id?scenario_id=<non-existent>`
+**Status:** Open. Filed 2026-06-02.
+
+### Reproduce
+GET with a syntactically valid but non-existent scenario UUID → 409 (should be 404).
+
+---
+
+## BUG-098: Scenario tests reference hardcoded "1111" scenario UUID that doesn't exist on shared tenant
+
+**Severity:** Low — test fixture issue, NOT a backend bug.
+**Status:** **Test-side fix needed.** Filed 2026-06-02.
+
+### Observation
+`tests_backend/scenario-builder.test.ts` hardcodes `scenario_id: "5d01266d-5733-46d4-8dcf-86aa6ed4c5c3"` — a stale fixture from an earlier test run. Two tests depend on it ("read '1111' scenario", "action node with email config") and fail with TypeError when the scenario isn't returned.
+
+### Fix
+Replace hardcoded UUID with a `beforeAll` that creates the test scenario with the expected node graph.
+
+---
+
+## BUG-091: Segmentation rejects UDAF predicate values as "requires non-empty value"
+
+**Severity:** High — entire UDAF-as-predicate path is dead.
+**Endpoint:** `POST /api/tenants/segmentation` (and any path that builds a predicate over a UDAF artifact)
+**Status:** Open. Filed 2026-06-02.
+
+### Reproduce
+```bash
+# Valid COUNT UDAF, primaryId-scoped, predicate "udaf > 0":
+curl -X POST .../api/tenants/segmentation \
+  -d '{"name":"x","segments":[{"name":"HighSpenders","customerProfileFilter":{
+       "type":"group","group":{"logicalOp":"AND","negate":false,"predicates":[
+         {"type":"condition","condition":{
+           "operator":">",
+           "param":{"kind":"udaf","artifactID":"<COUNT-UDAF-uuid>"},
+           "value":{"int64":[0],"string":[],"float64":[],"bool":[],"time":[]}
+         }}]}}}]}'
+# → 409
+# "[/querybuilder.buildCondition at simplified.go:165]>> Invalid Condition
+#  comparision operation, error: operator > requires non-empty value"
+```
+
+### Root cause hypothesis
+At `simplified.go:269 validateOpArity`, the code calls `fv.Len(t.TypeName)`. The left-part `t.TypeName` for a UDAF artifact reference is likely resolving to an empty / non-canonical typename, so `Len()` hits the default branch (or returns 0 via `t.TypeName == ""`). Investigate `ResolveConditionLeftPart` for `kind: "udaf"` — it probably needs to map UDAF result-type → matching `FieldValue` slice (Int64 for COUNT/SUM, Float64 for AVG, etc.) before length validation.
+
+### Test impact
+`tests_business/segmentation-udaf.test.ts` — 9 failures, all 409 with the same message.
+
+---
+
+## BUG-092: CommChan `batch_size` validation regressed — accepts -1, 0, 999999, "abc", 0.5
+
+**Severity:** Medium — backend data quality / safety regression.
+**Endpoint:** `POST /api/tenants/commchan`
+**Status:** Open. Filed 2026-06-02.
+
+### Reproduce
+Previously these `chanconf.batch_size` values were rejected (409). They now return 200:
+- `batch_size: "-1"` — negative
+- `batch_size: "0"` — zero
+- `batch_size: "0.5"` — float
+- `batch_size: "999999"` — out of range
+- `batch_size: "abc"` — non-numeric
+
+### Impact
+A malformed channel config can be persisted. Downstream batch dispatchers will either crash or send a single email at a time (batch_size=0) without any client signal.
+
+### Test impact
+`tests_backend/commchan-boundary.test.ts` — 5 failures expecting 409, now getting 200.
+
+### Fix
+Restore the batch_size sanitization in the commchan CRUD handler (likely lost during the 2026-05-21 "MILESTONE-A: CommChan + Template orphan-table cutover" refactor).
+
+---
+
+## BUG-093: Pagination negative inputs now return 409 (input validation fixed — tests are stale)
+
+**Severity:** Low — this is a FIX masquerading as a regression.
+**Endpoints:** `POST /api/v2/tenant/data/customers`, `/calculate` etc. with negative size/page
+**Status:** **No backend action needed.** Tests need update. Filed 2026-06-02 to clear the punchlist.
+
+### Observation
+Previously the backend crashed (500) on `size=-1` / `page=-999` (formerly tracked as a bug — tests assert `expected status == 500` as "documenting the bug"). claude-agent now correctly rejects with 409.
+
+### Action
+Update `tests_backend/boundary-edge-cases.test.ts` to expect `409` (or `400`) instead of `500` for these inputs. 3 test cases affected:
+- `2. size=-1`
+- `5. page=-999`
+- `11c. UDAF calculate with non-existent UDAF ID`
+
+---
+
+## BUG-090: AND/OR group predicates after the first are silently dropped (querybuilder bug)
+
+**Severity:** Critical — single-line bug breaks all multi-predicate segmentations + v2 list filtering across the API.
+**Location:** `pkg/shrd_types/querybuilder/simplified.go:115-127`, `buildPredicate` → GroupType branch
+**Endpoints affected:**
+- `POST /api/v2/tenant/data/customers` (Filter)
+- `POST /api/v2/tenant/data/events` (Filter)
+- `POST /api/tenants/segmentation` (predicate evaluation)
+- `POST /api/tenants/segmentation/preview`
+- All campaign preview paths that consume a segmentation predicate
+**Status:** Open. Filed 2026-06-02.
+
+### Buggy code
+```go
+case GroupType:
+    var root *PredicateAst
+    for _, p1 := range p.Group.Predicates {
+        ast, err := buildPredicate(p1, sch, cteReqs)
+        if err != nil { return nil, err }
+        if ast == nil { continue }
+        ast.Op = p.Group.LogicalOp
+        if root == nil {
+            root = ast          // ← only the FIRST predicate is kept
+        }
+        // ← no else branch. Subsequent predicates are built but discarded.
+    }
+```
+
+### Reproduce (live, no test framework)
+```bash
+# AND( primary_id IN [20 test ids], gender = "female" )
+# Expected: ~6 (females among the 20 test customers)
+# Actual:   20 (all 20 — gender predicate silently ignored)
+curl -X POST https://cdpv2.ssd.uz/api/v2/tenant/data/customers \
+  -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+  -d '{"columns":[{"fieldName":"primary_id","kind":"field"}],"orderBy":[],
+       "filter":{"intersects":{"customPredicate":{"type":"group","group":{
+         "logicalOp":"AND","negate":false,"predicates":[
+           {"type":"condition","condition":{"operator":"in","param":{"fieldName":"primary_id","kind":"field"},"value":{"int64":[<20 ids>]}}},
+           {"type":"condition","condition":{"operator":"=","param":{"fieldName":"<gender_col>","kind":"field"},"value":{"string":["female"]}}}
+         ]}}}},"page":0,"size":1000}'
+# → returns ALL 20, ignoring the gender predicate.
+# Reverse predicate order — same bug, only first predicate is honored.
+```
+
+### Fix
+Chain each subsequent predicate into the root with the group's LogicalOp:
+```go
+if root == nil {
+    root = ast
+} else {
+    root = &PredicateAst{Op: p.Group.LogicalOp, Left: root, Right: ast}
+}
+```
+(Exact shape depends on the PredicateAst struct — adjust to whatever the rest of the codebase uses for left/right combination.)
+
+### Test impact
+~63 tests across these files reconcile to this bug:
+- `tests_business/segmentation-advanced-predicates.test.ts` (16)
+- `tests_business/segmentation-field-types.test.ts` (14)
+- `tests_business/segmentation-complex.test.ts` (9)
+- `tests_business/v2-events-query.test.ts` (9)
+- `tests_business/data-filtering.test.ts` (6)
+- `tests_business/data-integrity-edge-cases.test.ts` (6)
+- `tests_backend/segmentation-preview-logic.test.ts` (3)
+- `tests_backend/segmentation-preview-correctness.test.ts` (2)
+
+### Notes
+- The `desugar.go:43` loop iterates correctly; the bug is isolated to the simplified-AST build path.
+- High-confidence fix because the call site already computes the discarded `ast` — only the combination step is missing.
+
+---
+
+## BUG-089: Metrics `event_type_id` requires UUID, but `/schema/event-types` returns integer IDs
+
+**Severity:** Medium — contract inconsistency across endpoints.
+**Endpoints:** `POST /api/tenants/metrics` vs `GET /api/tenants/schema/event-types`
+**Status:** Open contract inconsistency. Filed 2026-06-01.
+
+### Reproduce
+- `/schema/event-types` returns `{eventTypeId: 100, uid: "04f3afb3-...", eventTypeName: "purchase"}`.
+- `/api/tenants/metrics` create with `event_type_id: "100"` → 500 `"invalid UUID length: 3"`.
+- `/api/tenants/metrics` create with `event_type_id: "<uid>"` → still 500 (now hits BUG-084), but past the UUID check.
+
+### Expected
+Either:
+- (a) Metrics accept the same `eventTypeId` integer that other endpoints use; OR
+- (b) Schema endpoint surfaces the UUID as the *primary* identifier so clients consistently use it.
+
+### Impact
+- Tests using `purchaseTypeId()` (integer) get an unhelpful 500.
+- FE must do an extra lookup (int → uid) before creating a metric.
+
+### Fix suggestion
+Pick one identifier surface and apply uniformly. Update OpenAPI spec to mark `event_type_id` as `format: uuid` if UUID is canonical.
+
+---

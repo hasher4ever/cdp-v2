@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>BUG-113 expected — Customer profile with default visible fields</title>
+<style>
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#f5f7fa}
+.banner{background:#16a34a;color:#fff;padding:12px 24px;font-size:14px;font-weight:600}
+.page{padding:24px;max-width:1000px}
+.header{background:#fff;padding:20px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08);margin-bottom:16px}
+h2{margin:0 0 4px;font-size:22px}
+.id-line{color:#6b7280;font-size:13px;font-family:monospace}
+.fields{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.field{display:flex;flex-direction:column;gap:4px}
+.label{color:#6b7280;font-size:12px;text-transform:uppercase;font-weight:600;letter-spacing:.04em}
+.value{font-size:15px;color:#222}
+.value.muted{color:#6b7280;font-style:italic}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;width:fit-content}
+.b-yes{background:#dcfce7;color:#166534}
+.b-no{background:#fee2e2;color:#991b1b}
+.section-title{font-size:18px;font-weight:600;margin:24px 0 12px}
+.section{background:#fff;padding:16px 20px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.show-more-btn{display:inline-flex;align-items:center;gap:4px;background:#f3f4f6;color:#374151;padding:6px 12px;border:none;border-radius:6px;cursor:pointer;font-size:13px;margin-top:16px}
+.highlight{background:#dcfce7;padding:0 2px;border-radius:3px}
+</style></head>
+<body>
+<div class="banner">✅ EXPECTED: Customer profile with name / email / gender / age / subscribed visible by default (BUG-113 / CDP-1789)</div>
+<div class="page">
+<div class="header">
+  <h2><span class="highlight">Дилноза Юсупова</span></h2>
+  <span class="id-line">ID: 9 465 444 593</span>
+  <div class="fields">
+    <div class="field"><span class="label">Email</span><span class="value">d.yusupova@test.cdp</span></div>
+    <div class="field"><span class="label">Телефон</span><span class="value">+998 90 123 45 67</span></div>
+    <div class="field"><span class="label">Пол</span><span class="value">женский</span></div>
+    <div class="field"><span class="label">Возраст</span><span class="value">22 года</span></div>
+    <div class="field"><span class="label">Дата рождения</span><span class="value">07.07.2002</span></div>
+    <div class="field"><span class="label">Доход</span><span class="value">85 000 ₽</span></div>
+    <div class="field"><span class="label">Подписан</span><span class="value"><span class="badge b-yes">Да</span></span></div>
+    <div class="field"><span class="label">Добавлен в систему</span><span class="value">03.05.2026 14:22</span></div>
+    <div class="field"><span class="label">Город доставки</span><span class="value">Ташкент</span></div>
+  </div>
+  <button class="show-more-btn">Показать остальные 137 полей ▾</button>
+</div>
+<div class="section-title">Агрегаты (UDAF)</div>
+<div class="section" style="color:#6b7280;font-size:14px">Total purchases: 7  •  Lifetime spend: 124 500 ₽  •  Avg basket: 17 786 ₽  •  Last purchase: 28.05.2026</div>
+</div>
+</body></html>

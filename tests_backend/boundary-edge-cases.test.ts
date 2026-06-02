@@ -39,11 +39,11 @@ describe("Customer List — Pagination Boundary Conditions", () => {
     expect(data.list.length).toBeGreaterThan(0);
   });
 
-  it("2. size=-1 — BUG: server crashes with 500 (no input validation on negative size)", async () => {
-    // BUG FINDING: negative size causes 500 internal server error.
-    // Expected: 400 (invalid input). Actual: 500 (unhandled exception).
+  it("2. size=-1 — server should reject with 4xx, not crash", async () => {
+    // Backend was 500 (BUG). claude-agent (>=2026-05) now correctly rejects with 4xx.
     const { status } = await customerList(["primary_id"], { page: 0, size: -1 });
-    expect(status).toBe(500);
+    expect(status).not.toBe(500);
+    expect([400, 409, 422]).toContain(status);
   });
 
   it("3. size=999999 — huge page request should not crash the server", async () => {
@@ -61,11 +61,11 @@ describe("Customer List — Pagination Boundary Conditions", () => {
     expect(data).toHaveProperty("totalCount");
   });
 
-  it("5. page=-999 — BUG: server crashes with 500 (no input validation on negative page)", async () => {
-    // BUG FINDING: negative page causes 500 internal server error.
-    // Expected: 400 (invalid input). Actual: 500 (unhandled exception).
+  it("5. page=-999 — server should reject with 4xx, not crash", async () => {
+    // Backend was 500 (BUG). claude-agent now correctly rejects with 4xx.
     const { status } = await customerList(["primary_id"], { page: -999, size: 5 });
-    expect(status).toBe(500);
+    expect(status).not.toBe(500);
+    expect([400, 409, 422]).toContain(status);
   });
 });
 
@@ -270,15 +270,16 @@ describe("UDAF — Boundary Conditions", () => {
     expect(status).not.toBe(500);
   });
 
-  it("11c. UDAF calculate with non-existent UDAF ID — BUG: returns 500 instead of 404", async () => {
-    // BUG FINDING: non-existent UDAF UUID causes 500 — no existence check before compute.
-    // Expected: 404 (UDAF not found). Actual: 500.
+  it("11c. UDAF calculate with non-existent UDAF ID — should not crash", async () => {
+    // Backend was 500 (BUG). claude-agent now rejects with 4xx (409 currently;
+    // 404 would be more idiomatic but 409 acceptable until backend tightens).
     const { status } = await post(
       "/api/tenants/udafs/00000000-0000-0000-0000-000000000000/calculate",
       undefined,
       { primaryId: realPrimaryId ?? "1" } as any
     );
-    expect(status).toBe(500);
+    expect(status).not.toBe(500);
+    expect([400, 404, 409, 422]).toContain(status);
   });
 
   it("13b. UDAF types endpoint — should return proper structure", async () => {

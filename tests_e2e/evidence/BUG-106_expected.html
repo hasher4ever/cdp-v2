@@ -1,0 +1,66 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>BUG-106 expected — 5 missing FE features wired</title>
+<style>
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#f5f7fa}
+.banner{background:#16a34a;color:#fff;padding:12px 24px;font-size:14px;font-weight:600}
+.layout{display:flex;min-height:calc(100vh - 50px)}
+.sidebar{width:240px;background:#1e293b;color:#cbd5e1;padding:16px}
+.sidebar h4{color:#94a3b8;font-size:11px;text-transform:uppercase;margin:16px 0 8px;letter-spacing:.06em}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{padding:8px 10px;font-size:14px;border-radius:6px;margin-bottom:2px;cursor:pointer}
+.sidebar li.new{background:#0f172a;color:#fbbf24;font-weight:600}
+.sidebar li.new::after{content:" NEW";font-size:10px;background:#fbbf24;color:#1e293b;padding:1px 5px;border-radius:3px;margin-left:6px}
+.main{flex:1;padding:24px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{background:#fff;padding:20px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.tile h3{margin:0 0 8px;font-size:14px;color:#6b7280;text-transform:uppercase;letter-spacing:.04em}
+.tile .num{font-size:32px;font-weight:700;color:#0ea5e9}
+.tile .label{font-size:13px;color:#6b7280;margin-top:4px}
+.heatmap{margin-top:24px;background:#fff;padding:20px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.heatmap h3{margin:0 0 12px}
+.grid{display:grid;grid-template-columns:auto repeat(3,1fr);gap:4px}
+.cell{padding:12px;text-align:center;border-radius:4px;font-weight:600;cursor:pointer}
+.h-low{background:#e0f2fe;color:#0c4a6e}
+.h-mid{background:#7dd3fc;color:#fff}
+.h-high{background:#0c4a6e;color:#fff}
+.lbl{display:flex;align-items:center;justify-content:center;color:#6b7280;font-size:13px}
+</style></head>
+<body>
+<div class="banner">✅ EXPECTED: 5 missing FE features wired — Metrics dashboard, Categorizations editor, Heatmap, Funnel, Activate/Deactivate (BUG-106 / CDP-1783)</div>
+<div class="layout">
+<aside class="sidebar">
+  <h4>Marketing</h4>
+  <ul>
+    <li>Сегменты</li>
+    <li>Рассылки</li>
+    <li>Коммуникации</li>
+    <li class="new">Метрики</li>
+    <li class="new">Категоризации</li>
+    <li class="new">Heatmap</li>
+  </ul>
+  <h4>Analytics</h4>
+  <ul>
+    <li>Статистика полей</li>
+    <li class="new">Воронки рассылок</li>
+  </ul>
+</aside>
+<div class="main">
+<h2>Метрики</h2>
+<div class="tiles">
+  <div class="tile"><h3>Покупки за 30 дней</h3><div class="num">12 405</div><div class="label">+8% vs prev</div></div>
+  <div class="tile"><h3>Средний чек</h3><div class="num">17 786 ₽</div><div class="label">+2% vs prev</div></div>
+  <div class="tile"><h3>Активные клиенты</h3><div class="num">87 432</div><div class="label">25% от базы</div></div>
+</div>
+<div class="heatmap">
+  <h3>Heatmap: Возраст × Уровень дохода</h3>
+  <div class="grid">
+    <div class="lbl"></div><div class="lbl">low</div><div class="lbl">mid</div><div class="lbl">high</div>
+    <div class="lbl">18-30</div><div class="cell h-low">142</div><div class="cell h-mid">2 105</div><div class="cell h-high">3 854</div>
+    <div class="lbl">31-50</div><div class="cell h-mid">1 287</div><div class="cell h-high">8 410</div><div class="cell h-high">12 105</div>
+    <div class="lbl">51+</div><div class="cell h-low">523</div><div class="cell h-mid">2 944</div><div class="cell h-mid">3 218</div>
+  </div>
+  <p style="font-size:13px;color:#6b7280;margin-top:12px">Кликни на ячейку, чтобы создать сегмент.</p>
+</div>
+</div>
+</div>
+</body></html>

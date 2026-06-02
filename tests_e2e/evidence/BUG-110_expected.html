@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>BUG-110 expected — Working pagination</title>
+<style>
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#f5f7fa}
+.banner{background:#16a34a;color:#fff;padding:12px 24px;font-size:14px;font-weight:600}
+.page{padding:24px}
+h2{margin:0 0 16px}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08);border-radius:8px;overflow:hidden}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid #f0f0f0;font-size:13px}
+th{background:#fafafa;color:#374151;font-weight:600;font-size:12px;text-transform:uppercase}
+tr.current{background:#dbeafe}
+.pager{display:flex;justify-content:space-between;align-items:center;padding:16px;background:#fff;margin-top:12px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.pages{display:flex;gap:6px}
+.pages button{padding:6px 12px;border:1px solid #d1d5db;background:#fff;border-radius:6px;cursor:pointer;font-size:13px}
+.pages button.active{background:#0ea5e9;color:#fff;border-color:#0ea5e9}
+.meta{color:#6b7280;font-size:13px}
+.arrow{padding:6px 10px;border:1px solid #d1d5db;background:#fff;border-radius:6px;cursor:pointer}
+</style></head>
+<body>
+<div class="banner">✅ EXPECTED: Pagination shows page 2 with different customer IDs than page 1 (BUG-110 / CDP-1787)</div>
+<div class="page">
+<h2>Клиенты — страница 2 из 23 305</h2>
+<table>
+<thead><tr><th>Primary ID</th><th>Имя</th><th>Email</th><th>Возраст</th></tr></thead>
+<tbody>
+<tr><td>9 465 444 606</td><td>Нодира Алимова</td><td>n.alimova@test.cdp</td><td>31</td></tr>
+<tr><td>9 465 444 607</td><td>Хасан Юлдашев</td><td>h.yuldashev@test.cdp</td><td>45</td></tr>
+<tr><td>9 465 444 608</td><td>Гульшат Каримова</td><td>g.karimova@test.cdp</td><td>27</td></tr>
+<tr><td>9 465 444 609</td><td>Шерзод Юсупов</td><td>sh.yusupov@test.cdp</td><td>52</td></tr>
+<tr><td>9 465 444 610</td><td>Мадина Назарова</td><td>m.nazarova@test.cdp</td><td>33</td></tr>
+</tbody></table>
+<div class="pager">
+  <span class="meta">Показано 16-30 из 349 582 клиентов</span>
+  <div class="pages">
+    <button class="arrow">←</button>
+    <button>1</button>
+    <button class="active">2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <span class="meta">...</span>
+    <button>23 305</button>
+    <button class="arrow">→</button>
+  </div>
+</div>
+<p style="color:#16a34a;font-size:13px;margin-top:12px"><b>Note:</b> clicking page 2 fetches <code>?page=1&size=15</code> from /api/v2/tenant/data/customers and renders 15 distinct rows. The "Showing X-Y of N" indicator updates accordingly.</p>
+</div>
+</body></html>

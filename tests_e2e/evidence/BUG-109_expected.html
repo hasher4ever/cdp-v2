@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>BUG-109 expected — Customer list with date columns</title>
+<style>
+body{font-family:'Segoe UI',Roboto,sans-serif;margin:0;background:#f5f7fa;color:#222}
+.banner{background:#16a34a;color:#fff;padding:12px 24px;font-size:14px;font-weight:600}
+.page{padding:24px}
+h2{margin:0 0 16px}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08);border-radius:8px;overflow:hidden}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid #f0f0f0;font-size:13px}
+th{background:#fafafa;color:#374151;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.04em}
+tr:hover{background:#fafafa}
+.id{font-family:monospace;color:#6b7280;font-size:12px}
+.highlight{background:#fef9c3}
+</style></head>
+<body>
+<div class="banner">✅ EXPECTED: Customer list with birthdate + cdp_created_at (added) columns rendered in locale (BUG-109 / CDP-1786)</div>
+<div class="page">
+<h2>Клиенты</h2>
+<table>
+<thead><tr>
+  <th>Primary ID</th>
+  <th>Имя</th>
+  <th>Email</th>
+  <th>Возраст</th>
+  <th>Пол</th>
+  <th class="highlight">Дата рождения</th>
+  <th class="highlight">Добавлен</th>
+  <th>Подписан</th>
+</tr></thead>
+<tbody>
+<tr><td class="id">9 465 444 591</td><td>Айгуль Каримова</td><td>aigul@test.cdp</td><td>28</td><td>ж</td><td class="highlight">15.03.1996</td><td class="highlight">14.04.2026</td><td>Да</td></tr>
+<tr><td class="id">9 465 444 592</td><td>Бахтиёр Усманов</td><td>baha@test.cdp</td><td>34</td><td>м</td><td class="highlight">22.11.1990</td><td class="highlight">12.04.2026</td><td>Нет</td></tr>
+<tr><td class="id">9 465 444 593</td><td>Дилноза Юсупова</td><td>d.yusupova@test.cdp</td><td>22</td><td>ж</td><td class="highlight">07.07.2002</td><td class="highlight">03.05.2026</td><td>Да</td></tr>
+<tr><td class="id">9 465 444 594</td><td>Тимур Раджабов</td><td>timur@test.cdp</td><td>41</td><td>м</td><td class="highlight">19.09.1983</td><td class="highlight">28.05.2026</td><td>Нет</td></tr>
+<tr><td class="id">9 465 444 595</td><td>Зилола Хасанова</td><td>z.hasanova@test.cdp</td><td>17</td><td>ж</td><td class="highlight">02.01.2007</td><td class="highlight">02.06.2026</td><td>Да</td></tr>
+</tbody></table>
+<p style="color:#6b7280;font-size:13px;margin-top:12px">Дата рождения и дата добавления — обязательные колонки для marketer-журнала (welcome / birthday / lapsed campaigns).</p>
+</div>
+</body></html>
